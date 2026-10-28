@@ -1,0 +1,75 @@
+{
+  "status": "MEASURED",
+  "network_search_used": false,
+  "model_download_allowed": false,
+  "model": "cross-encoder/nli-deberta-v3-xsmall",
+  "model_revision": "03d06b2f6f06023bd596151a16477e2fcec601fb",
+  "run_count": 15,
+  "repeats_per_probe": 5,
+  "probe_count": 3,
+  "warmup_inferences": 3,
+  "model_load_seconds": 1.2921974999999999,
+  "inference_latency_all_probes": {
+    "sample_count": 15,
+    "min_ms": 10.0562500000001,
+    "median_ms": 10.389417000000067,
+    "mean_ms": 10.640489066666673,
+    "max_ms": 11.459291999999843
+  },
+  "per_probe": [
+    {
+      "case_id": "dev_earth_orbit_support",
+      "latency": {
+        "sample_count": 5,
+        "min_ms": 10.263083999999978,
+        "median_ms": 10.389417000000067,
+        "mean_ms": 10.386533600000014,
+        "max_ms": 10.502542000000004
+      }
+    },
+    {
+      "case_id": "dev_historical_belief",
+      "latency": {
+        "sample_count": 5,
+        "min_ms": 10.0562500000001,
+        "median_ms": 10.103874999999984,
+        "mean_ms": 10.118866799999982,
+        "max_ms": 10.169917000000028
+      }
+    },
+    {
+      "case_id": "dev_qualified_frame",
+      "latency": {
+        "sample_count": 5,
+        "min_ms": 11.346500000000148,
+        "median_ms": 11.431208000000082,
+        "mean_ms": 11.416066800000024,
+        "max_ms": 11.459291999999843
+      }
+    }
+  ],
+  "end_to_end_verification": {
+    "status": "NOT MEASURED",
+    "reason": "This benchmark times model loading and predictor calls only; it does not measure Tavily, relevance filtering, or complete claim aggregation."
+  },
+  "timing_methodology": "perf_counter wall-clock timing; model loader duration includes local initialization; one untimed predictor call per probe warms each input; reported inference values are repeated predictor calls only.",
+  "peak_process_rss_bytes_since_process_start": 541671424,
+  "hardware": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python_version": "3.9.6",
+    "torch_version": "2.8.0",
+    "inference_device": "cpu"
+  },
+  "energy": {
+    "status": "NOT MEASURED",
+    "reason": "No reliable energy telemetry tool is configured."
+  },
+  "interpretation": [
+    "Peak RSS is the process high-water mark and includes Python, model loading, and inference; it is not inference-only memory.",
+    "Peak RSS may not include all accelerator or unified-memory details, so treat it as a process-level estimate.",
+    "Inference timings are local to this machine and run; they are not a comparison with a hosted service.",
+    "Local execution does not by itself establish lower energy use or carbon emissions."
+  ]
+}

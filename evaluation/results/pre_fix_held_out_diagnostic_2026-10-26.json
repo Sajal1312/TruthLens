@@ -1,0 +1,343 @@
+{
+  "model": "cross-encoder/nli-deberta-v3-xsmall",
+  "network_search_used": false,
+  "case_count": 3,
+  "case_counts_by_expected_verdict": {
+    "SUPPORTED": 1,
+    "CONTRADICTED": 1,
+    "INCONCLUSIVE": 1
+  },
+  "passage_count": 4,
+  "metrics": {
+    "final_verdict": {
+      "count": 3,
+      "labels": [
+        "SUPPORTED",
+        "CONTRADICTED",
+        "INCONCLUSIVE"
+      ],
+      "confusion_matrix": {
+        "SUPPORTED": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "INCONCLUSIVE": 1
+        },
+        "CONTRADICTED": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "INCONCLUSIVE": 1
+        },
+        "INCONCLUSIVE": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "INCONCLUSIVE": 1
+        }
+      },
+      "per_class": {
+        "SUPPORTED": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "CONTRADICTED": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "INCONCLUSIVE": {
+          "support": 1,
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5
+        }
+      },
+      "macro_f1": 0.16666666666666666,
+      "accuracy": 0.3333333333333333
+    },
+    "selective": {
+      "count": 3,
+      "selective_count": 0,
+      "selective_accuracy": null,
+      "coverage": 0.0,
+      "abstention_rate": 1.0
+    },
+    "effective_passage_stance": {
+      "count": 4,
+      "labels": [
+        "SUPPORTS",
+        "CONTRADICTS",
+        "NOT ENOUGH INFORMATION"
+      ],
+      "confusion_matrix": {
+        "SUPPORTS": {
+          "SUPPORTS": 1,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 1
+        },
+        "CONTRADICTS": {
+          "SUPPORTS": 1,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 1
+        },
+        "NOT ENOUGH INFORMATION": {
+          "SUPPORTS": 0,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 0
+        }
+      },
+      "per_class": {
+        "SUPPORTS": {
+          "support": 2,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5
+        },
+        "CONTRADICTS": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "NOT ENOUGH INFORMATION": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1": 0.16666666666666666,
+      "accuracy": 0.25
+    },
+    "raw_model_stance": {
+      "count": 4,
+      "labels": [
+        "SUPPORTS",
+        "CONTRADICTS",
+        "NOT ENOUGH INFORMATION"
+      ],
+      "confusion_matrix": {
+        "SUPPORTS": {
+          "SUPPORTS": 1,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 1
+        },
+        "CONTRADICTS": {
+          "SUPPORTS": 2,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 0
+        },
+        "NOT ENOUGH INFORMATION": {
+          "SUPPORTS": 0,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 0
+        }
+      },
+      "per_class": {
+        "SUPPORTS": {
+          "support": 2,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4
+        },
+        "CONTRADICTS": {
+          "support": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "NOT ENOUGH INFORMATION": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1": 0.13333333333333333,
+      "accuracy": 0.25
+    },
+    "relevance": {
+      "count": 4,
+      "labels": [
+        "relevant",
+        "weakly_related",
+        "unrelated"
+      ],
+      "confusion_matrix": {
+        "relevant": {
+          "relevant": 4,
+          "weakly_related": 0,
+          "unrelated": 0
+        },
+        "weakly_related": {
+          "relevant": 0,
+          "weakly_related": 0,
+          "unrelated": 0
+        },
+        "unrelated": {
+          "relevant": 0,
+          "weakly_related": 0,
+          "unrelated": 0
+        }
+      },
+      "per_class": {
+        "relevant": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "weakly_related": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "unrelated": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1": 0.3333333333333333,
+      "accuracy": 1.0
+    }
+  },
+  "stress_groups": {
+    "clear_contradiction": {
+      "case_count": 1,
+      "passage_count": 2,
+      "final_verdict_accuracy": 0.0
+    },
+    "clear_support": {
+      "case_count": 1,
+      "passage_count": 2,
+      "final_verdict_accuracy": 0.0
+    },
+    "insufficient": {
+      "case_count": 1,
+      "passage_count": 0,
+      "final_verdict_accuracy": 1.0
+    },
+    "private_event": {
+      "case_count": 1,
+      "passage_count": 0,
+      "final_verdict_accuracy": 1.0
+    }
+  },
+  "cases": [
+    {
+      "case_id": "holdout_moon_satellite",
+      "split": "held_out",
+      "tags": [
+        "clear_support"
+      ],
+      "claim": "The Moon is Earth's only natural satellite.",
+      "expected_final_verdict": "SUPPORTED",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "Only one distinct URL produced a clear directional NLI result. TruthLens requires agreement from at least two distinct URLs.",
+      "evidence": [
+        {
+          "evidence_id": "nasa_moon_satellite",
+          "source_kind": "public_excerpt",
+          "title": "Moon Facts",
+          "url": "https://science.nasa.gov/moon/facts/",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "SUPPORTS",
+          "raw_model_label": "SUPPORTS",
+          "effective_assessment": "SUPPORTS",
+          "contributed": true,
+          "status": "Relevant passage; clear model score"
+        },
+        {
+          "evidence_id": "esa_moon_satellite",
+          "source_kind": "public_excerpt",
+          "title": "Earth from Space: Eyes on our Moon",
+          "url": "https://www.esa.int/ESA_Multimedia/Images/2026/04/Earth_from_Space_Eyes_on_our_Moon",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "SUPPORTS",
+          "raw_model_label": "NOT ENOUGH INFORMATION",
+          "effective_assessment": "NOT ENOUGH INFORMATION",
+          "contributed": false,
+          "status": "Relevant passage; below threshold or non-directional"
+        }
+      ]
+    },
+    {
+      "case_id": "holdout_sun_earth_motion",
+      "split": "held_out",
+      "tags": [
+        "clear_contradiction"
+      ],
+      "claim": "The Sun revolves around the Earth.",
+      "expected_final_verdict": "CONTRADICTED",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "Only one distinct URL produced a clear directional NLI result. TruthLens requires agreement from at least two distinct URLs.",
+      "evidence": [
+        {
+          "evidence_id": "nasa_earth_facts",
+          "source_kind": "public_excerpt",
+          "title": "Facts About Earth",
+          "url": "https://science.nasa.gov/earth/facts/",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "CONTRADICTS",
+          "raw_model_label": "SUPPORTS",
+          "effective_assessment": "NOT ENOUGH INFORMATION",
+          "contributed": false,
+          "status": "Excluded as directional evidence: Passage states the reverse motion relationship; model support was not counted"
+        },
+        {
+          "evidence_id": "esa_earth_movement",
+          "source_kind": "public_excerpt",
+          "title": "Background: The Earth's movement around the Sun",
+          "url": "https://www.esa.int/SPECIALS/Eduspace_Weather_EN/SEMLD3KTYRF_0.html",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "CONTRADICTS",
+          "raw_model_label": "SUPPORTS",
+          "effective_assessment": "SUPPORTS",
+          "contributed": true,
+          "status": "Relevant passage; clear model score"
+        }
+      ]
+    },
+    {
+      "case_id": "holdout_private_event",
+      "split": "held_out",
+      "tags": [
+        "insufficient",
+        "private_event"
+      ],
+      "claim": "A person promised to launch a new company next week during an unrecorded private meeting.",
+      "expected_final_verdict": "INCONCLUSIVE",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+      "evidence": []
+    }
+  ],
+  "metric_notes": [
+    "Effective stance maps uncertain, context-excluded, duplicate-excluded, and unassessed passages to NOT ENOUGH INFORMATION.",
+    "Raw model stance is scored only when the assessor emitted a recognized model_label; its denominator may be smaller.",
+    "Relevant includes the pipeline's Directly relevant candidate and Different time period diagnostics; the latter is separately visible in case notes.",
+    "Synthetic fixtures are controlled probes, not real-world evidence. A .invalid URL is supplied internally only to exercise URL validation and is never a citation.",
+    "Small, purpose-selected cases are pilot diagnostics, not an estimate of population accuracy."
+  ],
+  "status": "MEASURED",
+  "split": "held_out",
+  "measurement_state": "PRE-FIX DIAGNOSTIC; not a final estimate for the corrected code",
+  "diagnostic_note": "Run once before the motion-language safeguard regression fix. The held-out examples exposed an issue and must not be used to tune or claim post-fix performance. A fresh held-out set is needed for an unbiased post-fix evaluation.",
+  "dataset_sha256": {
+    "held_out.jsonl": "07c77096af2e60f03a09edc2c1b6fd59d9ccb5af51c97e1782e03a9bf099e07e"
+  },
+  "model_revision": "03d06b2f6f06023bd596151a16477e2fcec601fb",
+  "assessment_thresholds": {
+    "confidence": 0.7,
+    "margin": 0.15,
+    "directional_sources": 2
+  }
+}

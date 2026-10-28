@@ -1,0 +1,68 @@
+{
+  "status": "MEASURED",
+  "network_search_used": false,
+  "model_download_allowed": false,
+  "model": "cross-encoder/nli-deberta-v3-xsmall",
+  "model_revision": "03d06b2f6f06023bd596151a16477e2fcec601fb",
+  "repeats_per_probe": 5,
+  "probe_count": 3,
+  "model_load_seconds": 1.272617833,
+  "inference_latency_all_probes": {
+    "sample_count": 15,
+    "min_ms": 9.98529200000009,
+    "median_ms": 10.304541,
+    "mean_ms": 10.582802733333304,
+    "max_ms": 11.402750000000017
+  },
+  "per_probe": [
+    {
+      "case_id": "dev_earth_orbit_support",
+      "latency": {
+        "sample_count": 5,
+        "min_ms": 10.269624999999838,
+        "median_ms": 10.304541,
+        "mean_ms": 10.352558199999917,
+        "max_ms": 10.516041999999892
+      }
+    },
+    {
+      "case_id": "dev_historical_belief",
+      "latency": {
+        "sample_count": 5,
+        "min_ms": 9.98529200000009,
+        "median_ms": 10.036375000000097,
+        "mean_ms": 10.047450000000024,
+        "max_ms": 10.150791999999909
+      }
+    },
+    {
+      "case_id": "dev_qualified_frame",
+      "latency": {
+        "sample_count": 5,
+        "min_ms": 11.313541000000038,
+        "median_ms": 11.348666999999812,
+        "mean_ms": 11.34839999999997,
+        "max_ms": 11.402750000000017
+      }
+    }
+  ],
+  "peak_process_rss_bytes_since_process_start": 542031872,
+  "hardware": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "python_version": "3.9.6",
+    "torch_version": "2.8.0",
+    "inference_device": "cpu"
+  },
+  "energy": {
+    "status": "NOT MEASURED",
+    "reason": "No reliable energy telemetry tool is configured."
+  },
+  "interpretation": [
+    "Peak RSS is the process high-water mark and includes Python, model loading, and inference; it is not inference-only memory.",
+    "Peak RSS may not include all accelerator or unified-memory details, so treat it as a process-level estimate.",
+    "Inference timings are local to this machine and run; they are not a comparison with a hosted service.",
+    "Local execution does not by itself establish lower energy use or carbon emissions."
+  ]
+}

@@ -1,0 +1,2234 @@
+{
+  "python_version": "3.9.6",
+  "model": "cross-encoder/nli-deberta-v3-xsmall",
+  "model_revision": "03d06b2f6f06023bd596151a16477e2fcec601fb",
+  "assessment_thresholds": {
+    "confidence": 0.7,
+    "margin": 0.15,
+    "directional_sources": 2
+  },
+  "network_search_used": false,
+  "case_count": 9,
+  "case_counts_by_expected_verdict": {
+    "SUPPORTED": 1,
+    "INCONCLUSIVE": 7,
+    "CONTRADICTED": 1
+  },
+  "passage_count": 13,
+  "passage_counts_by_expected_stance": {
+    "SUPPORTS": 6,
+    "NOT ENOUGH INFORMATION": 3,
+    "CONTRADICTS": 4
+  },
+  "passage_counts_by_expected_relevance": {
+    "relevant": 12,
+    "weakly_related": 1
+  },
+  "metrics": {
+    "final_verdict": {
+      "count": 9,
+      "labels": [
+        "SUPPORTED",
+        "CONTRADICTED",
+        "INCONCLUSIVE"
+      ],
+      "confusion_matrix": {
+        "SUPPORTED": {
+          "SUPPORTED": 1,
+          "CONTRADICTED": 0,
+          "INCONCLUSIVE": 0
+        },
+        "CONTRADICTED": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "INCONCLUSIVE": 1
+        },
+        "INCONCLUSIVE": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "INCONCLUSIVE": 7
+        }
+      },
+      "per_class": {
+        "SUPPORTED": {
+          "support": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "CONTRADICTED": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "INCONCLUSIVE": {
+          "support": 7,
+          "precision": 0.875,
+          "recall": 1.0,
+          "f1": 0.9333333333333333
+        }
+      },
+      "macro_f1": 0.6444444444444445,
+      "macro_f1_class_count": 3,
+      "macro_f1_labels": [
+        "SUPPORTED",
+        "CONTRADICTED",
+        "INCONCLUSIVE"
+      ],
+      "accuracy": 0.8888888888888888
+    },
+    "selective": {
+      "count": 9,
+      "selective_count": 1,
+      "selective_accuracy": 1.0,
+      "coverage": 0.1111111111111111,
+      "abstention_rate": 0.8888888888888888
+    },
+    "effective_passage_stance": {
+      "count": 13,
+      "labels": [
+        "SUPPORTS",
+        "CONTRADICTS",
+        "NOT ENOUGH INFORMATION"
+      ],
+      "confusion_matrix": {
+        "SUPPORTS": {
+          "SUPPORTS": 5,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 1
+        },
+        "CONTRADICTS": {
+          "SUPPORTS": 0,
+          "CONTRADICTS": 1,
+          "NOT ENOUGH INFORMATION": 3
+        },
+        "NOT ENOUGH INFORMATION": {
+          "SUPPORTS": 0,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 3
+        }
+      },
+      "per_class": {
+        "SUPPORTS": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091
+        },
+        "CONTRADICTS": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4
+        },
+        "NOT ENOUGH INFORMATION": {
+          "support": 3,
+          "precision": 0.42857142857142855,
+          "recall": 1.0,
+          "f1": 0.6
+        }
+      },
+      "macro_f1": 0.6363636363636364,
+      "macro_f1_class_count": 3,
+      "macro_f1_labels": [
+        "SUPPORTS",
+        "CONTRADICTS",
+        "NOT ENOUGH INFORMATION"
+      ],
+      "accuracy": 0.6923076923076923
+    },
+    "raw_model_stance": {
+      "count": 11,
+      "labels": [
+        "SUPPORTS",
+        "CONTRADICTS",
+        "NOT ENOUGH INFORMATION"
+      ],
+      "confusion_matrix": {
+        "SUPPORTS": {
+          "SUPPORTS": 6,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 0
+        },
+        "CONTRADICTS": {
+          "SUPPORTS": 2,
+          "CONTRADICTS": 1,
+          "NOT ENOUGH INFORMATION": 1
+        },
+        "NOT ENOUGH INFORMATION": {
+          "SUPPORTS": 0,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 1
+        }
+      },
+      "per_class": {
+        "SUPPORTS": {
+          "support": 6,
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571
+        },
+        "CONTRADICTS": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4
+        },
+        "NOT ENOUGH INFORMATION": {
+          "support": 1,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        }
+      },
+      "macro_f1": 0.6412698412698412,
+      "macro_f1_class_count": 3,
+      "macro_f1_labels": [
+        "SUPPORTS",
+        "CONTRADICTS",
+        "NOT ENOUGH INFORMATION"
+      ],
+      "accuracy": 0.7272727272727273
+    },
+    "relevance": {
+      "count": 13,
+      "labels": [
+        "relevant",
+        "weakly_related",
+        "unrelated"
+      ],
+      "confusion_matrix": {
+        "relevant": {
+          "relevant": 11,
+          "weakly_related": 1,
+          "unrelated": 0
+        },
+        "weakly_related": {
+          "relevant": 0,
+          "weakly_related": 1,
+          "unrelated": 0
+        },
+        "unrelated": {
+          "relevant": 0,
+          "weakly_related": 0,
+          "unrelated": 0
+        }
+      },
+      "per_class": {
+        "relevant": {
+          "support": 12,
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1": 0.9565217391304348
+        },
+        "weakly_related": {
+          "support": 1,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        },
+        "unrelated": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "macro_f1": 0.8115942028985508,
+      "macro_f1_class_count": 2,
+      "macro_f1_labels": [
+        "relevant",
+        "weakly_related"
+      ],
+      "accuracy": 0.9230769230769231
+    }
+  },
+  "aggregation_comparison": {
+    "production_default": {
+      "verdict_metrics": {
+        "count": 9,
+        "labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 1,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 0
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 1
+          },
+          "INCONCLUSIVE": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 7
+          }
+        },
+        "per_class": {
+          "SUPPORTED": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "CONTRADICTED": {
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "INCONCLUSIVE": {
+            "support": 7,
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1": 0.9333333333333333
+          }
+        },
+        "macro_f1": 0.6444444444444445,
+        "macro_f1_class_count": 3,
+        "macro_f1_labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "accuracy": 0.8888888888888888
+      },
+      "selective_metrics": {
+        "count": 9,
+        "selective_count": 1,
+        "selective_accuracy": 1.0,
+        "coverage": 0.1111111111111111,
+        "abstention_rate": 0.8888888888888888
+      },
+      "verdict_distribution": {
+        "SUPPORTED": 1,
+        "INCONCLUSIVE": 8
+      },
+      "expected_distribution": {
+        "SUPPORTED": 1,
+        "INCONCLUSIVE": 7,
+        "CONTRADICTED": 1
+      },
+      "errors": [
+        {
+          "case_id": "dev_reverse_motion_contradiction",
+          "expected": "CONTRADICTED",
+          "predicted": "INCONCLUSIVE",
+          "tags": [
+            "clear_contradiction",
+            "reversed_relation"
+          ]
+        }
+      ],
+      "error_counts_by_tag": {
+        "clear_contradiction": 1,
+        "reversed_relation": 1
+      }
+    },
+    "one_vote_per_normalized_publisher": {
+      "verdict_metrics": {
+        "count": 9,
+        "labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 1,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 0
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 1
+          },
+          "INCONCLUSIVE": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 7
+          }
+        },
+        "per_class": {
+          "SUPPORTED": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "CONTRADICTED": {
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "INCONCLUSIVE": {
+            "support": 7,
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1": 0.9333333333333333
+          }
+        },
+        "macro_f1": 0.6444444444444445,
+        "macro_f1_class_count": 3,
+        "macro_f1_labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "accuracy": 0.8888888888888888
+      },
+      "selective_metrics": {
+        "count": 9,
+        "selective_count": 1,
+        "selective_accuracy": 1.0,
+        "coverage": 0.1111111111111111,
+        "abstention_rate": 0.8888888888888888
+      },
+      "verdict_distribution": {
+        "SUPPORTED": 1,
+        "INCONCLUSIVE": 8
+      },
+      "expected_distribution": {
+        "SUPPORTED": 1,
+        "INCONCLUSIVE": 7,
+        "CONTRADICTED": 1
+      },
+      "error_counts_by_tag": {
+        "clear_contradiction": 1,
+        "reversed_relation": 1
+      },
+      "errors": [
+        {
+          "case_id": "dev_reverse_motion_contradiction",
+          "expected": "CONTRADICTED",
+          "predicted": "INCONCLUSIVE",
+          "tags": [
+            "clear_contradiction",
+            "reversed_relation"
+          ]
+        }
+      ]
+    },
+    "distinct_declared_publishers_only": {
+      "verdict_metrics": {
+        "count": 9,
+        "labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 1,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 0
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 1
+          },
+          "INCONCLUSIVE": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 7
+          }
+        },
+        "per_class": {
+          "SUPPORTED": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "CONTRADICTED": {
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "INCONCLUSIVE": {
+            "support": 7,
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1": 0.9333333333333333
+          }
+        },
+        "macro_f1": 0.6444444444444445,
+        "macro_f1_class_count": 3,
+        "macro_f1_labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "accuracy": 0.8888888888888888
+      },
+      "selective_metrics": {
+        "count": 9,
+        "selective_count": 1,
+        "selective_accuracy": 1.0,
+        "coverage": 0.1111111111111111,
+        "abstention_rate": 0.8888888888888888
+      },
+      "verdict_distribution": {
+        "SUPPORTED": 1,
+        "INCONCLUSIVE": 8
+      },
+      "expected_distribution": {
+        "SUPPORTED": 1,
+        "INCONCLUSIVE": 7,
+        "CONTRADICTED": 1
+      },
+      "error_counts_by_tag": {
+        "clear_contradiction": 1,
+        "reversed_relation": 1
+      },
+      "errors": [
+        {
+          "case_id": "dev_reverse_motion_contradiction",
+          "expected": "CONTRADICTED",
+          "predicted": "INCONCLUSIVE",
+          "tags": [
+            "clear_contradiction",
+            "reversed_relation"
+          ]
+        }
+      ]
+    },
+    "note": "Experimental modes are evaluation-only. Publisher metadata and domains do not establish source independence; missing declared IDs cannot count in distinct-publisher mode."
+  },
+  "semantic_interpretation_comparison": {
+    "production_default": {
+      "verdict_metrics": {
+        "count": 9,
+        "labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 1,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 0
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 1
+          },
+          "INCONCLUSIVE": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 7
+          }
+        },
+        "per_class": {
+          "SUPPORTED": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "CONTRADICTED": {
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "INCONCLUSIVE": {
+            "support": 7,
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1": 0.9333333333333333
+          }
+        },
+        "macro_f1": 0.6444444444444445,
+        "macro_f1_class_count": 3,
+        "macro_f1_labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "accuracy": 0.8888888888888888
+      },
+      "selective_metrics": {
+        "count": 9,
+        "selective_count": 1,
+        "selective_accuracy": 1.0,
+        "coverage": 0.1111111111111111,
+        "abstention_rate": 0.8888888888888888
+      },
+      "errors": [
+        {
+          "case_id": "dev_reverse_motion_contradiction",
+          "expected": "CONTRADICTED",
+          "predicted": "INCONCLUSIVE",
+          "tags": [
+            "clear_contradiction",
+            "reversed_relation"
+          ]
+        }
+      ]
+    },
+    "experimental_semantic": {
+      "verdict_metrics": {
+        "count": 9,
+        "labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 1,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 0
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 1,
+            "INCONCLUSIVE": 0
+          },
+          "INCONCLUSIVE": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 7
+          }
+        },
+        "per_class": {
+          "SUPPORTED": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "CONTRADICTED": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "INCONCLUSIVE": {
+            "support": 7,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "macro_f1": 1.0,
+        "macro_f1_class_count": 3,
+        "macro_f1_labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "accuracy": 1.0
+      },
+      "selective_metrics": {
+        "count": 9,
+        "selective_count": 2,
+        "selective_accuracy": 1.0,
+        "coverage": 0.2222222222222222,
+        "abstention_rate": 0.7777777777777778
+      },
+      "effective_passage_stance_metrics": {
+        "count": 13,
+        "labels": [
+          "SUPPORTS",
+          "CONTRADICTS",
+          "NOT ENOUGH INFORMATION"
+        ],
+        "confusion_matrix": {
+          "SUPPORTS": {
+            "SUPPORTS": 5,
+            "CONTRADICTS": 0,
+            "NOT ENOUGH INFORMATION": 1
+          },
+          "CONTRADICTS": {
+            "SUPPORTS": 0,
+            "CONTRADICTS": 3,
+            "NOT ENOUGH INFORMATION": 1
+          },
+          "NOT ENOUGH INFORMATION": {
+            "SUPPORTS": 0,
+            "CONTRADICTS": 0,
+            "NOT ENOUGH INFORMATION": 3
+          }
+        },
+        "per_class": {
+          "SUPPORTS": {
+            "support": 6,
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1": 0.9090909090909091
+          },
+          "CONTRADICTS": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "NOT ENOUGH INFORMATION": {
+            "support": 3,
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.7499999999999999
+          }
+        },
+        "macro_f1": 0.8387445887445887,
+        "macro_f1_class_count": 3,
+        "macro_f1_labels": [
+          "SUPPORTS",
+          "CONTRADICTS",
+          "NOT ENOUGH INFORMATION"
+        ],
+        "accuracy": 0.8461538461538461
+      },
+      "raw_model_stance_metrics": {
+        "count": 11,
+        "labels": [
+          "SUPPORTS",
+          "CONTRADICTS",
+          "NOT ENOUGH INFORMATION"
+        ],
+        "confusion_matrix": {
+          "SUPPORTS": {
+            "SUPPORTS": 6,
+            "CONTRADICTS": 0,
+            "NOT ENOUGH INFORMATION": 0
+          },
+          "CONTRADICTS": {
+            "SUPPORTS": 2,
+            "CONTRADICTS": 1,
+            "NOT ENOUGH INFORMATION": 1
+          },
+          "NOT ENOUGH INFORMATION": {
+            "SUPPORTS": 1,
+            "CONTRADICTS": 0,
+            "NOT ENOUGH INFORMATION": 0
+          }
+        },
+        "per_class": {
+          "SUPPORTS": {
+            "support": 6,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "CONTRADICTS": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "NOT ENOUGH INFORMATION": {
+            "support": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "macro_f1": 0.4000000000000001,
+        "macro_f1_class_count": 3,
+        "macro_f1_labels": [
+          "SUPPORTS",
+          "CONTRADICTS",
+          "NOT ENOUGH INFORMATION"
+        ],
+        "accuracy": 0.6363636363636364
+      },
+      "relevance_metrics": {
+        "count": 13,
+        "labels": [
+          "relevant",
+          "weakly_related",
+          "unrelated"
+        ],
+        "confusion_matrix": {
+          "relevant": {
+            "relevant": 11,
+            "weakly_related": 1,
+            "unrelated": 0
+          },
+          "weakly_related": {
+            "relevant": 0,
+            "weakly_related": 1,
+            "unrelated": 0
+          },
+          "unrelated": {
+            "relevant": 0,
+            "weakly_related": 0,
+            "unrelated": 0
+          }
+        },
+        "per_class": {
+          "relevant": {
+            "support": 12,
+            "precision": 1.0,
+            "recall": 0.9166666666666666,
+            "f1": 0.9565217391304348
+          },
+          "weakly_related": {
+            "support": 1,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "unrelated": {
+            "support": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        },
+        "macro_f1": 0.8115942028985508,
+        "macro_f1_class_count": 2,
+        "macro_f1_labels": [
+          "relevant",
+          "weakly_related"
+        ],
+        "accuracy": 0.9230769230769231
+      },
+      "verdict_distribution": {
+        "SUPPORTED": 1,
+        "INCONCLUSIVE": 7,
+        "CONTRADICTED": 1
+      },
+      "error_counts_by_tag": {},
+      "errors": []
+    },
+    "note": "The experimental mode is opt-in in the assessor and evaluation-only in this report; production call sites use the unchanged default."
+  },
+  "stress_groups": {
+    "clear_contradiction": {
+      "case_count": 1,
+      "passage_count": 2,
+      "final_verdict_accuracy": 0.0
+    },
+    "clear_support": {
+      "case_count": 1,
+      "passage_count": 2,
+      "final_verdict_accuracy": 1.0
+    },
+    "conflicting": {
+      "case_count": 1,
+      "passage_count": 2,
+      "final_verdict_accuracy": 1.0
+    },
+    "date_sensitive": {
+      "case_count": 1,
+      "passage_count": 1,
+      "final_verdict_accuracy": 1.0
+    },
+    "duplicate": {
+      "case_count": 1,
+      "passage_count": 2,
+      "final_verdict_accuracy": 1.0
+    },
+    "historical": {
+      "case_count": 1,
+      "passage_count": 1,
+      "final_verdict_accuracy": 1.0
+    },
+    "hypothetical": {
+      "case_count": 1,
+      "passage_count": 1,
+      "final_verdict_accuracy": 1.0
+    },
+    "irrelevant": {
+      "case_count": 1,
+      "passage_count": 1,
+      "final_verdict_accuracy": 1.0
+    },
+    "qualified_statement": {
+      "case_count": 1,
+      "passage_count": 1,
+      "final_verdict_accuracy": 1.0
+    },
+    "reversed_relation": {
+      "case_count": 1,
+      "passage_count": 2,
+      "final_verdict_accuracy": 0.0
+    }
+  },
+  "source_diversity": {
+    "directional_case_count": 1,
+    "cases_with_two_or_more_declared_publishers": 1,
+    "cases_with_one_declared_publisher": 0,
+    "cases_with_no_public_publisher_annotation": 0,
+    "independence_verified_for_any_case": false,
+    "note": "Diagnostic only; this publisher summary never changes a verdict."
+  },
+  "cases": [
+    {
+      "case_id": "dev_earth_orbit_support",
+      "split": "development",
+      "tags": [
+        "clear_support"
+      ],
+      "claim": "The Earth orbits the Sun.",
+      "expected_final_verdict": "SUPPORTED",
+      "actual_final_verdict": "SUPPORTED",
+      "reasoning": "At least two distinct relevant URLs yielded high-confidence support labels with no contradiction. This is the model's reading of the evidence, not proof that the claim is true.",
+      "evidence": [
+        {
+          "evidence_id": "nasa_earth_orbit",
+          "source_kind": "public_excerpt",
+          "title": "Chapter 2: Reference Systems",
+          "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter2-1/",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "SUPPORTS",
+          "raw_model_label": "SUPPORTS",
+          "model_confidence": 0.9842216968536377,
+          "model_margin": 0.9691685847938061,
+          "effective_assessment": "SUPPORTS",
+          "contributed": true,
+          "passage_normalized": "earth revolves in orbit around the sun in 365 days, 6 hours, 9 minutes with reference to the stars.",
+          "part_assessments": [
+            {
+              "claim_part": "The Earth orbits the Sun",
+              "label": "SUPPORTS",
+              "predicted_label": "SUPPORTS",
+              "model_label": "SUPPORTS",
+              "confidence": 0.9842216968536377,
+              "margin": 0.9691685847938061,
+              "passage": "Earth revolves in orbit around the Sun in 365 days, 6 hours, 9 minutes with reference to the stars.",
+              "scores": {
+                "CONTRADICTS": 0.0007251504575833678,
+                "SUPPORTS": 0.9842216968536377,
+                "NOT ENOUGH INFORMATION": 0.01505311205983162
+              },
+              "contributed": true,
+              "status": "Relevant passage; clear model score"
+            }
+          ],
+          "status": "Relevant passage; clear model score"
+        },
+        {
+          "evidence_id": "esa_earth_orbit",
+          "source_kind": "public_excerpt",
+          "title": "Mass affects orbiting bodies",
+          "url": "https://www.esa.int/ESA_Multimedia/Images/2020/03/Mass_affects_orbiting_bodies",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "SUPPORTS",
+          "raw_model_label": "SUPPORTS",
+          "model_confidence": 0.9036033749580383,
+          "model_margin": 0.811500571668148,
+          "effective_assessment": "SUPPORTS",
+          "contributed": true,
+          "passage_normalized": "in our solar system, the moon orbits earth, and earth orbits the sun, but that does not mean the larger object remains completely still.",
+          "part_assessments": [
+            {
+              "claim_part": "The Earth orbits the Sun",
+              "label": "SUPPORTS",
+              "predicted_label": "SUPPORTS",
+              "model_label": "SUPPORTS",
+              "confidence": 0.9036033749580383,
+              "margin": 0.811500571668148,
+              "passage": "In our Solar System, the Moon orbits Earth, and Earth orbits the Sun, but that does not mean the larger object remains completely still.",
+              "scores": {
+                "CONTRADICTS": 0.004293894395232201,
+                "SUPPORTS": 0.9036033749580383,
+                "NOT ENOUGH INFORMATION": 0.09210280328989029
+              },
+              "contributed": true,
+              "status": "Relevant passage; clear model score"
+            }
+          ],
+          "status": "Relevant passage; clear model score"
+        }
+      ],
+      "experimental_semantic": {
+        "verdict": "SUPPORTED",
+        "reasoning": "At least two distinct relevant URLs yielded high-confidence support labels with no contradiction. This is the model's reading of the evidence, not proof that the claim is true.",
+        "part_outcomes": [
+          {
+            "claim_part": "The Earth orbits the Sun.",
+            "verdict": "Supported"
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "nasa_earth_orbit",
+            "source_kind": "public_excerpt",
+            "title": "Chapter 2: Reference Systems",
+            "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter2-1/",
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "SUPPORTS",
+            "raw_model_label": "SUPPORTS",
+            "effective_assessment": "SUPPORTS",
+            "contributed": true,
+            "status": "Relevant passage; clear model score",
+            "assessed_passage": "Earth revolves in orbit around the Sun in 365 days, 6 hours, 9 minutes with reference to the stars.",
+            "part_assessments": [
+              {
+                "claim_part": "The Earth orbits the Sun.",
+                "model_label": "SUPPORTS",
+                "effective_label": "SUPPORTS",
+                "confidence": 0.9941204190254211,
+                "margin": 0.9887532517313957,
+                "contributed": true,
+                "status": "Relevant passage; clear model score",
+                "passage": "Earth revolves in orbit around the Sun in 365 days, 6 hours, 9 minutes with reference to the stars."
+              }
+            ]
+          },
+          {
+            "evidence_id": "esa_earth_orbit",
+            "source_kind": "public_excerpt",
+            "title": "Mass affects orbiting bodies",
+            "url": "https://www.esa.int/ESA_Multimedia/Images/2020/03/Mass_affects_orbiting_bodies",
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "SUPPORTS",
+            "raw_model_label": "SUPPORTS",
+            "effective_assessment": "SUPPORTS",
+            "contributed": true,
+            "status": "Relevant passage; clear model score",
+            "assessed_passage": "In our Solar System, the Moon orbits Earth, and Earth orbits the Sun, but that does not mean the larger object remains completely still.",
+            "part_assessments": [
+              {
+                "claim_part": "The Earth orbits the Sun.",
+                "model_label": "SUPPORTS",
+                "effective_label": "SUPPORTS",
+                "confidence": 0.9813472032546997,
+                "margin": 0.9655158519744873,
+                "contributed": true,
+                "status": "Relevant passage; clear model score",
+                "passage": "In our Solar System, the Moon orbits Earth, and Earth orbits the Sun, but that does not mean the larger object remains completely still."
+              }
+            ]
+          }
+        ]
+      },
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "SUPPORTED",
+          "part_outcomes": [
+            {
+              "claim_part": "The Earth orbits the Sun",
+              "verdict": "SUPPORTED",
+              "support_groups": 2,
+              "contradiction_groups": 0,
+              "reason": "At least two qualifying publisher groups support this component."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "SUPPORTED",
+          "part_outcomes": [
+            {
+              "claim_part": "The Earth orbits the Sun",
+              "verdict": "SUPPORTED",
+              "support_groups": 2,
+              "contradiction_groups": 0,
+              "reason": "At least two qualifying publisher groups support this component."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 2,
+        "counted_public_passages": 2,
+        "counted_synthetic_passages": 0,
+        "counted_unique_public_urls": 2,
+        "distinct_declared_publishers": 2,
+        "passages_per_declared_publisher": {
+          "esa": 1,
+          "nasa": 1
+        },
+        "largest_publisher_share": 0.5,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    },
+    {
+      "case_id": "dev_historical_belief",
+      "split": "development",
+      "tags": [
+        "historical"
+      ],
+      "claim": "The Sun revolves around the Earth.",
+      "expected_final_verdict": "INCONCLUSIVE",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+      "evidence": [
+        {
+          "evidence_id": "spacecom_survey_question",
+          "source_kind": "public_excerpt",
+          "title": "Geocentric model: Definition and history",
+          "url": "https://www.space.com/geocentric-model",
+          "expected_relevance": "relevant",
+          "actual_relevance": "weakly_related",
+          "expected_stance": "NOT ENOUGH INFORMATION",
+          "raw_model_label": null,
+          "model_confidence": null,
+          "model_margin": null,
+          "effective_assessment": "NOT ENOUGH INFORMATION",
+          "contributed": false,
+          "passage_normalized": "",
+          "part_assessments": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "label": "NOT ENOUGH INFORMATION",
+              "confidence": null,
+              "margin": null,
+              "scores": {},
+              "contributed": false,
+              "status": "Only weakly related wording; no direct evidence passage"
+            }
+          ],
+          "status": "Only weakly related wording; no direct evidence passage"
+        }
+      ],
+      "experimental_semantic": {
+        "verdict": "INCONCLUSIVE",
+        "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+        "part_outcomes": [
+          {
+            "claim_part": "The Sun revolves around the Earth.",
+            "verdict": "Inconclusive"
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "spacecom_survey_question",
+            "source_kind": "public_excerpt",
+            "title": "Geocentric model: Definition and history",
+            "url": "https://www.space.com/geocentric-model",
+            "expected_relevance": "relevant",
+            "actual_relevance": "weakly_related",
+            "expected_stance": "NOT ENOUGH INFORMATION",
+            "raw_model_label": null,
+            "effective_assessment": "NOT ENOUGH INFORMATION",
+            "contributed": false,
+            "status": "Only weakly related wording; no direct evidence passage",
+            "assessed_passage": null,
+            "part_assessments": [
+              {
+                "claim_part": "The Sun revolves around the Earth.",
+                "model_label": null,
+                "effective_label": "NOT ENOUGH INFORMATION",
+                "confidence": null,
+                "margin": null,
+                "contributed": false,
+                "status": "Only weakly related wording; no direct evidence passage",
+                "passage": null
+              }
+            ]
+          }
+        ]
+      },
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 0,
+        "counted_public_passages": 0,
+        "counted_synthetic_passages": 0,
+        "counted_unique_public_urls": 0,
+        "distinct_declared_publishers": 0,
+        "passages_per_declared_publisher": {},
+        "largest_publisher_share": null,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    },
+    {
+      "case_id": "dev_hypothetical",
+      "split": "development",
+      "tags": [
+        "hypothetical"
+      ],
+      "claim": "The Sun revolves around the Earth.",
+      "expected_final_verdict": "INCONCLUSIVE",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+      "evidence": [
+        {
+          "evidence_id": "synthetic_what_if",
+          "source_kind": "synthetic_fixture",
+          "title": "Constructed hypothetical test passage",
+          "url": null,
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "NOT ENOUGH INFORMATION",
+          "raw_model_label": "NOT ENOUGH INFORMATION",
+          "model_confidence": 0.6969967484474182,
+          "model_margin": 0.4882623553276062,
+          "effective_assessment": "NOT ENOUGH INFORMATION",
+          "contributed": false,
+          "passage_normalized": "what if the sun revolved around the earth?",
+          "part_assessments": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "label": "UNCERTAIN",
+              "predicted_label": "NOT ENOUGH INFORMATION",
+              "model_label": "NOT ENOUGH INFORMATION",
+              "confidence": 0.6969967484474182,
+              "margin": 0.4882623553276062,
+              "passage": "What if the Sun revolved around the Earth?",
+              "scores": {
+                "CONTRADICTS": 0.09426887333393097,
+                "SUPPORTS": 0.208734393119812,
+                "NOT ENOUGH INFORMATION": 0.6969967484474182
+              },
+              "contributed": false,
+              "status": "Excluded as directional evidence: Question or hypothetical framing, not a factual assertion"
+            }
+          ],
+          "status": "Excluded as directional evidence: Question or hypothetical framing, not a factual assertion"
+        }
+      ],
+      "experimental_semantic": {
+        "verdict": "INCONCLUSIVE",
+        "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+        "part_outcomes": [
+          {
+            "claim_part": "The Sun revolves around the Earth.",
+            "verdict": "Inconclusive"
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "synthetic_what_if",
+            "source_kind": "synthetic_fixture",
+            "title": "Constructed hypothetical test passage",
+            "url": null,
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "NOT ENOUGH INFORMATION",
+            "raw_model_label": "SUPPORTS",
+            "effective_assessment": "UNCERTAIN",
+            "contributed": false,
+            "status": "Excluded as directional evidence: Question or hypothetical framing, not a factual assertion",
+            "assessed_passage": "What if the Sun revolved around the Earth? In that hypothetical world, the apparent motion would be different.",
+            "part_assessments": [
+              {
+                "claim_part": "The Sun revolves around the Earth.",
+                "model_label": "SUPPORTS",
+                "effective_label": "UNCERTAIN",
+                "confidence": 0.6434133052825928,
+                "margin": 0.3030577301979065,
+                "contributed": false,
+                "status": "Excluded as directional evidence: Question or hypothetical framing, not a factual assertion",
+                "passage": "What if the Sun revolved around the Earth? In that hypothetical world, the apparent motion would be different."
+              }
+            ]
+          }
+        ]
+      },
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 0,
+        "counted_public_passages": 0,
+        "counted_synthetic_passages": 0,
+        "counted_unique_public_urls": 0,
+        "distinct_declared_publishers": 0,
+        "passages_per_declared_publisher": {},
+        "largest_publisher_share": null,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    },
+    {
+      "case_id": "dev_irrelevant_overlap",
+      "split": "development",
+      "tags": [
+        "irrelevant"
+      ],
+      "claim": "The Sun revolves around the Earth.",
+      "expected_final_verdict": "INCONCLUSIVE",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+      "evidence": [
+        {
+          "evidence_id": "synthetic_different_center",
+          "source_kind": "synthetic_fixture",
+          "title": "Constructed lexical-overlap test passage",
+          "url": null,
+          "expected_relevance": "weakly_related",
+          "actual_relevance": "weakly_related",
+          "expected_stance": "NOT ENOUGH INFORMATION",
+          "raw_model_label": null,
+          "model_confidence": null,
+          "model_margin": null,
+          "effective_assessment": "NOT ENOUGH INFORMATION",
+          "contributed": false,
+          "passage_normalized": "",
+          "part_assessments": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "label": "NOT ENOUGH INFORMATION",
+              "confidence": null,
+              "margin": null,
+              "scores": {},
+              "contributed": false,
+              "status": "Only weakly related wording; no direct evidence passage"
+            }
+          ],
+          "status": "Only weakly related wording; no direct evidence passage"
+        }
+      ],
+      "experimental_semantic": {
+        "verdict": "INCONCLUSIVE",
+        "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+        "part_outcomes": [
+          {
+            "claim_part": "The Sun revolves around the Earth.",
+            "verdict": "Inconclusive"
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "synthetic_different_center",
+            "source_kind": "synthetic_fixture",
+            "title": "Constructed lexical-overlap test passage",
+            "url": null,
+            "expected_relevance": "weakly_related",
+            "actual_relevance": "weakly_related",
+            "expected_stance": "NOT ENOUGH INFORMATION",
+            "raw_model_label": null,
+            "effective_assessment": "NOT ENOUGH INFORMATION",
+            "contributed": false,
+            "status": "Only weakly related wording; no direct evidence passage",
+            "assessed_passage": null,
+            "part_assessments": [
+              {
+                "claim_part": "The Sun revolves around the Earth.",
+                "model_label": null,
+                "effective_label": "NOT ENOUGH INFORMATION",
+                "confidence": null,
+                "margin": null,
+                "contributed": false,
+                "status": "Only weakly related wording; no direct evidence passage",
+                "passage": null
+              }
+            ]
+          }
+        ]
+      },
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 0,
+        "counted_public_passages": 0,
+        "counted_synthetic_passages": 0,
+        "counted_unique_public_urls": 0,
+        "distinct_declared_publishers": 0,
+        "passages_per_declared_publisher": {},
+        "largest_publisher_share": null,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    },
+    {
+      "case_id": "dev_conflicting",
+      "split": "development",
+      "tags": [
+        "conflicting"
+      ],
+      "claim": "Pure water boils at 100 degrees Celsius at standard atmospheric pressure.",
+      "expected_final_verdict": "INCONCLUSIVE",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "The local NLI model found both supporting and contradicting snippets. The evidence conflicts, so TruthLens cannot choose a direction.",
+      "evidence": [
+        {
+          "evidence_id": "synthetic_water_100",
+          "source_kind": "synthetic_fixture",
+          "title": "Constructed support passage",
+          "url": null,
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "SUPPORTS",
+          "raw_model_label": "SUPPORTS",
+          "model_confidence": 0.9847389459609985,
+          "model_margin": 0.9706338653340936,
+          "effective_assessment": "SUPPORTS",
+          "contributed": true,
+          "passage_normalized": "at standard atmospheric pressure, pure water boils at 100 degrees celsius.",
+          "part_assessments": [
+            {
+              "claim_part": "Pure water boils at 100 degrees Celsius at standard atmospheric pressure",
+              "label": "SUPPORTS",
+              "predicted_label": "SUPPORTS",
+              "model_label": "SUPPORTS",
+              "confidence": 0.9847389459609985,
+              "margin": 0.9706338653340936,
+              "passage": "At standard atmospheric pressure, pure water boils at 100 degrees Celsius.",
+              "scores": {
+                "CONTRADICTS": 0.001155890873633325,
+                "SUPPORTS": 0.9847389459609985,
+                "NOT ENOUGH INFORMATION": 0.014105080626904964
+              },
+              "contributed": true,
+              "status": "Relevant passage; clear model score"
+            }
+          ],
+          "status": "Relevant passage; clear model score"
+        },
+        {
+          "evidence_id": "synthetic_water_90",
+          "source_kind": "synthetic_fixture",
+          "title": "Constructed contradiction passage",
+          "url": null,
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "CONTRADICTS",
+          "raw_model_label": "CONTRADICTS",
+          "model_confidence": 0.9894953370094299,
+          "model_margin": 0.9799449471756816,
+          "effective_assessment": "CONTRADICTS",
+          "contributed": true,
+          "passage_normalized": "at standard atmospheric pressure, pure water boils at 90 degrees celsius.",
+          "part_assessments": [
+            {
+              "claim_part": "Pure water boils at 100 degrees Celsius at standard atmospheric pressure",
+              "label": "CONTRADICTS",
+              "predicted_label": "CONTRADICTS",
+              "model_label": "CONTRADICTS",
+              "confidence": 0.9894953370094299,
+              "margin": 0.9799449471756816,
+              "passage": "At standard atmospheric pressure, pure water boils at 90 degrees Celsius.",
+              "scores": {
+                "CONTRADICTS": 0.9894953370094299,
+                "SUPPORTS": 0.0009543092455714941,
+                "NOT ENOUGH INFORMATION": 0.00955038983374834
+              },
+              "contributed": true,
+              "status": "Relevant passage; clear model score"
+            }
+          ],
+          "status": "Relevant passage; clear model score"
+        }
+      ],
+      "experimental_semantic": {
+        "verdict": "INCONCLUSIVE",
+        "reasoning": "The local NLI model found both supporting and contradicting snippets. The evidence conflicts, so TruthLens cannot choose a direction.",
+        "part_outcomes": [
+          {
+            "claim_part": "Pure water boils at 100 degrees Celsius at standard atmospheric pressure.",
+            "verdict": "conflicting"
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "synthetic_water_100",
+            "source_kind": "synthetic_fixture",
+            "title": "Constructed support passage",
+            "url": null,
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "SUPPORTS",
+            "raw_model_label": "SUPPORTS",
+            "effective_assessment": "SUPPORTS",
+            "contributed": true,
+            "status": "Relevant passage; clear model score",
+            "assessed_passage": "At standard atmospheric pressure, pure water boils at 100 degrees Celsius.",
+            "part_assessments": [
+              {
+                "claim_part": "Pure water boils at 100 degrees Celsius at standard atmospheric pressure.",
+                "model_label": "SUPPORTS",
+                "effective_label": "SUPPORTS",
+                "confidence": 0.9898730516433716,
+                "margin": 0.9809759920462966,
+                "contributed": true,
+                "status": "Relevant passage; clear model score",
+                "passage": "At standard atmospheric pressure, pure water boils at 100 degrees Celsius."
+              }
+            ]
+          },
+          {
+            "evidence_id": "synthetic_water_90",
+            "source_kind": "synthetic_fixture",
+            "title": "Constructed contradiction passage",
+            "url": null,
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "CONTRADICTS",
+            "raw_model_label": "CONTRADICTS",
+            "effective_assessment": "CONTRADICTS",
+            "contributed": true,
+            "status": "Relevant passage; clear model score",
+            "assessed_passage": "At standard atmospheric pressure, pure water boils at 90 degrees Celsius.",
+            "part_assessments": [
+              {
+                "claim_part": "Pure water boils at 100 degrees Celsius at standard atmospheric pressure.",
+                "model_label": "CONTRADICTS",
+                "effective_label": "CONTRADICTS",
+                "confidence": 0.9904099702835083,
+                "margin": 0.9815697632730007,
+                "contributed": true,
+                "status": "Relevant passage; clear model score",
+                "passage": "At standard atmospheric pressure, pure water boils at 90 degrees Celsius."
+              }
+            ]
+          }
+        ]
+      },
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "Pure water boils at 100 degrees Celsius at standard atmospheric pressure",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 1,
+              "contradiction_groups": 1,
+              "reason": "Eligible evidence points in both directions after publisher grouping."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "Pure water boils at 100 degrees Celsius at standard atmospheric pressure",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 2,
+        "counted_public_passages": 0,
+        "counted_synthetic_passages": 2,
+        "counted_unique_public_urls": 0,
+        "distinct_declared_publishers": 0,
+        "passages_per_declared_publisher": {},
+        "largest_publisher_share": null,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    },
+    {
+      "case_id": "dev_duplicate",
+      "split": "development",
+      "tags": [
+        "duplicate"
+      ],
+      "claim": "The Earth revolves around the Sun.",
+      "expected_final_verdict": "INCONCLUSIVE",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "Only one distinct URL produced a clear directional NLI result. TruthLens requires agreement from at least two distinct URLs.",
+      "evidence": [
+        {
+          "evidence_id": "synthetic_duplicate_a",
+          "source_kind": "synthetic_fixture",
+          "title": "Constructed duplicate A",
+          "url": null,
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "SUPPORTS",
+          "raw_model_label": "SUPPORTS",
+          "model_confidence": 0.9573311805725098,
+          "model_margin": 0.9155148230493069,
+          "effective_assessment": "SUPPORTS",
+          "contributed": true,
+          "passage_normalized": "earth revolves around the sun in a regular yearly orbit around the sun.",
+          "part_assessments": [
+            {
+              "claim_part": "The Earth revolves around the Sun",
+              "label": "SUPPORTS",
+              "predicted_label": "SUPPORTS",
+              "model_label": "SUPPORTS",
+              "confidence": 0.9573311805725098,
+              "margin": 0.9155148230493069,
+              "passage": "Earth revolves around the Sun in a regular yearly orbit around the Sun.",
+              "scores": {
+                "CONTRADICTS": 0.000852341705467552,
+                "SUPPORTS": 0.9573311805725098,
+                "NOT ENOUGH INFORMATION": 0.041816357523202896
+              },
+              "contributed": true,
+              "status": "Relevant passage; clear model score"
+            }
+          ],
+          "status": "Relevant passage; clear model score"
+        },
+        {
+          "evidence_id": "synthetic_duplicate_b",
+          "source_kind": "synthetic_fixture",
+          "title": "Constructed duplicate B",
+          "url": null,
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "SUPPORTS",
+          "raw_model_label": "SUPPORTS",
+          "model_confidence": 0.9573311805725098,
+          "model_margin": 0.9155148230493069,
+          "effective_assessment": "SUPPORTS",
+          "contributed": false,
+          "passage_normalized": "earth revolves around the sun in a regular yearly orbit around the sun.",
+          "part_assessments": [
+            {
+              "claim_part": "The Earth revolves around the Sun",
+              "label": "SUPPORTS",
+              "predicted_label": "SUPPORTS",
+              "model_label": "SUPPORTS",
+              "confidence": 0.9573311805725098,
+              "margin": 0.9155148230493069,
+              "passage": "Earth revolves around the Sun in a regular yearly orbit around the Sun.",
+              "scores": {
+                "CONTRADICTS": 0.000852341705467552,
+                "SUPPORTS": 0.9573311805725098,
+                "NOT ENOUGH INFORMATION": 0.041816357523202896
+              },
+              "contributed": false,
+              "status": "Repeated passage; not counted as independent evidence"
+            }
+          ],
+          "status": "Repeated passage; not counted as independent evidence"
+        }
+      ],
+      "experimental_semantic": {
+        "verdict": "INCONCLUSIVE",
+        "reasoning": "Only one distinct URL produced a clear directional NLI result. TruthLens requires agreement from at least two distinct URLs.",
+        "part_outcomes": [
+          {
+            "claim_part": "The Earth revolves around the Sun.",
+            "verdict": "Inconclusive"
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "synthetic_duplicate_a",
+            "source_kind": "synthetic_fixture",
+            "title": "Constructed duplicate A",
+            "url": null,
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "SUPPORTS",
+            "raw_model_label": "SUPPORTS",
+            "effective_assessment": "SUPPORTS",
+            "contributed": true,
+            "status": "Relevant passage; clear model score",
+            "assessed_passage": "Earth revolves around the Sun in a regular yearly orbit around the Sun.",
+            "part_assessments": [
+              {
+                "claim_part": "The Earth revolves around the Sun.",
+                "model_label": "SUPPORTS",
+                "effective_label": "SUPPORTS",
+                "confidence": 0.9908820390701294,
+                "margin": 0.9821756845340133,
+                "contributed": true,
+                "status": "Relevant passage; clear model score",
+                "passage": "Earth revolves around the Sun in a regular yearly orbit around the Sun."
+              }
+            ]
+          },
+          {
+            "evidence_id": "synthetic_duplicate_b",
+            "source_kind": "synthetic_fixture",
+            "title": "Constructed duplicate B",
+            "url": null,
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "SUPPORTS",
+            "raw_model_label": "SUPPORTS",
+            "effective_assessment": "SUPPORTS",
+            "contributed": false,
+            "status": "Repeated passage; not counted as independent evidence",
+            "assessed_passage": "Earth revolves around the Sun in a regular yearly orbit around the Sun.",
+            "part_assessments": [
+              {
+                "claim_part": "The Earth revolves around the Sun.",
+                "model_label": "SUPPORTS",
+                "effective_label": "SUPPORTS",
+                "confidence": 0.9908820390701294,
+                "margin": 0.9821756845340133,
+                "contributed": false,
+                "status": "Repeated passage; not counted as independent evidence",
+                "passage": "Earth revolves around the Sun in a regular yearly orbit around the Sun."
+              }
+            ]
+          }
+        ]
+      },
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Earth revolves around the Sun",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 1,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Earth revolves around the Sun",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 1,
+        "counted_public_passages": 0,
+        "counted_synthetic_passages": 1,
+        "counted_unique_public_urls": 0,
+        "distinct_declared_publishers": 0,
+        "passages_per_declared_publisher": {},
+        "largest_publisher_share": null,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    },
+    {
+      "case_id": "dev_date_mismatch",
+      "split": "development",
+      "tags": [
+        "date_sensitive"
+      ],
+      "claim": "NASA's Curiosity rover landed on Mars in 2011.",
+      "expected_final_verdict": "INCONCLUSIVE",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+      "evidence": [
+        {
+          "evidence_id": "nasa_curiosity_date",
+          "source_kind": "public_excerpt",
+          "title": "Curiosity Has Landed!",
+          "url": "https://science.nasa.gov/resource/curiosity-has-landed/",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "CONTRADICTS",
+          "raw_model_label": "NOT ENOUGH INFORMATION",
+          "model_confidence": 0.9931524991989136,
+          "model_margin": 0.9873101022094488,
+          "effective_assessment": "NOT ENOUGH INFORMATION",
+          "contributed": false,
+          "passage_normalized": "nasa's curiosity rover successfully landed on mars the evening of aug. 5 pdt.",
+          "part_assessments": [
+            {
+              "claim_part": "NASA's Curiosity rover landed on Mars in 2011",
+              "label": "UNCERTAIN",
+              "predicted_label": "NOT ENOUGH INFORMATION",
+              "model_label": "NOT ENOUGH INFORMATION",
+              "confidence": 0.9931524991989136,
+              "margin": 0.9873101022094488,
+              "passage": "NASA's Curiosity rover successfully landed on Mars the evening of Aug. 5 PDT.",
+              "scores": {
+                "CONTRADICTS": 0.0010051052086055279,
+                "SUPPORTS": 0.00584239698946476,
+                "NOT ENOUGH INFORMATION": 0.9931524991989136
+              },
+              "contributed": false,
+              "status": "Relevant passage; below threshold or non-directional"
+            }
+          ],
+          "status": "Relevant passage; below threshold or non-directional"
+        }
+      ],
+      "experimental_semantic": {
+        "verdict": "INCONCLUSIVE",
+        "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+        "part_outcomes": [
+          {
+            "claim_part": "NASA's Curiosity rover landed on Mars in 2011.",
+            "verdict": "Inconclusive"
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "nasa_curiosity_date",
+            "source_kind": "public_excerpt",
+            "title": "Curiosity Has Landed!",
+            "url": "https://science.nasa.gov/resource/curiosity-has-landed/",
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "CONTRADICTS",
+            "raw_model_label": "NOT ENOUGH INFORMATION",
+            "effective_assessment": "UNCERTAIN",
+            "contributed": false,
+            "status": "Relevant passage; below threshold or non-directional",
+            "assessed_passage": "NASA's Curiosity rover successfully landed on Mars the evening of Aug. 5 PDT.",
+            "part_assessments": [
+              {
+                "claim_part": "NASA's Curiosity rover landed on Mars in 2011.",
+                "model_label": "NOT ENOUGH INFORMATION",
+                "effective_label": "UNCERTAIN",
+                "confidence": 0.9937887787818909,
+                "margin": 0.9885081052780151,
+                "contributed": false,
+                "status": "Relevant passage; below threshold or non-directional",
+                "passage": "NASA's Curiosity rover successfully landed on Mars the evening of Aug. 5 PDT."
+              }
+            ]
+          }
+        ]
+      },
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "NASA's Curiosity rover landed on Mars in 2011",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "NASA's Curiosity rover landed on Mars in 2011",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 0,
+        "counted_public_passages": 0,
+        "counted_synthetic_passages": 0,
+        "counted_unique_public_urls": 0,
+        "distinct_declared_publishers": 0,
+        "passages_per_declared_publisher": {},
+        "largest_publisher_share": null,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    },
+    {
+      "case_id": "dev_qualified_frame",
+      "split": "development",
+      "tags": [
+        "qualified_statement"
+      ],
+      "claim": "The Sun and planets orbit the solar-system barycenter.",
+      "expected_final_verdict": "INCONCLUSIVE",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+      "evidence": [
+        {
+          "evidence_id": "nasa_barycenter",
+          "source_kind": "public_excerpt",
+          "title": "What Is a Barycenter?",
+          "url": "https://spaceplace.nasa.gov/barycenter/en/",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "SUPPORTS",
+          "raw_model_label": "SUPPORTS",
+          "model_confidence": 0.9882758259773254,
+          "model_margin": 0.9770417455583811,
+          "effective_assessment": "NOT ENOUGH INFORMATION",
+          "contributed": false,
+          "passage_normalized": "the sun, earth, and all of the planets in the solar system orbit around this barycenter.",
+          "part_assessments": [
+            {
+              "claim_part": "The Sun and planets orbit the solar-system barycenter",
+              "label": "UNCERTAIN",
+              "predicted_label": "NOT ENOUGH INFORMATION",
+              "model_label": "SUPPORTS",
+              "confidence": 0.9882758259773254,
+              "margin": 0.9770417455583811,
+              "passage": "The sun, Earth, and all of the planets in the solar system orbit around this barycenter.",
+              "scores": {
+                "CONTRADICTS": 0.000490152626298368,
+                "SUPPORTS": 0.9882758259773254,
+                "NOT ENOUGH INFORMATION": 0.011234080418944359
+              },
+              "contributed": false,
+              "status": "Excluded as directional evidence: Passage qualifies the claim by reference frame or scope"
+            }
+          ],
+          "status": "Excluded as directional evidence: Passage qualifies the claim by reference frame or scope"
+        }
+      ],
+      "experimental_semantic": {
+        "verdict": "INCONCLUSIVE",
+        "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+        "part_outcomes": [
+          {
+            "claim_part": "The Sun and planets orbit the solar-system barycenter.",
+            "verdict": "Inconclusive"
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "nasa_barycenter",
+            "source_kind": "public_excerpt",
+            "title": "What Is a Barycenter?",
+            "url": "https://spaceplace.nasa.gov/barycenter/en/",
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "SUPPORTS",
+            "raw_model_label": "SUPPORTS",
+            "effective_assessment": "UNCERTAIN",
+            "contributed": false,
+            "status": "Excluded as directional evidence: Passage qualifies the claim by reference frame or scope",
+            "assessed_passage": "The sun, Earth, and all of the planets in the solar system orbit around this barycenter.",
+            "part_assessments": [
+              {
+                "claim_part": "The Sun and planets orbit the solar-system barycenter.",
+                "model_label": "SUPPORTS",
+                "effective_label": "UNCERTAIN",
+                "confidence": 0.9920320510864258,
+                "margin": 0.9845792022533715,
+                "contributed": false,
+                "status": "Excluded as directional evidence: Passage qualifies the claim by reference frame or scope",
+                "passage": "The sun, Earth, and all of the planets in the solar system orbit around this barycenter."
+              }
+            ]
+          }
+        ]
+      },
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Sun and planets orbit the solar-system barycenter",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Sun and planets orbit the solar-system barycenter",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 0,
+        "counted_public_passages": 0,
+        "counted_synthetic_passages": 0,
+        "counted_unique_public_urls": 0,
+        "distinct_declared_publishers": 0,
+        "passages_per_declared_publisher": {},
+        "largest_publisher_share": null,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    },
+    {
+      "case_id": "dev_reverse_motion_contradiction",
+      "split": "development",
+      "tags": [
+        "clear_contradiction",
+        "reversed_relation"
+      ],
+      "claim": "The Sun revolves around the Earth.",
+      "expected_final_verdict": "CONTRADICTED",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+      "evidence": [
+        {
+          "evidence_id": "nasa_earth_orbit_reverse",
+          "source_kind": "public_excerpt",
+          "title": "Chapter 2: Reference Systems",
+          "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter2-1/",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "CONTRADICTS",
+          "raw_model_label": "SUPPORTS",
+          "model_confidence": 0.9461865425109863,
+          "model_margin": 0.9024677313864231,
+          "effective_assessment": "NOT ENOUGH INFORMATION",
+          "contributed": false,
+          "passage_normalized": "earth revolves about the sun, producing the 365-day year.",
+          "part_assessments": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "label": "UNCERTAIN",
+              "predicted_label": "NOT ENOUGH INFORMATION",
+              "model_label": "SUPPORTS",
+              "confidence": 0.9461865425109863,
+              "margin": 0.9024677313864231,
+              "passage": "Earth revolves about the Sun, producing the 365-day year.",
+              "scores": {
+                "CONTRADICTS": 0.01009458489716053,
+                "SUPPORTS": 0.9461865425109863,
+                "NOT ENOUGH INFORMATION": 0.04371881112456322
+              },
+              "contributed": false,
+              "status": "Excluded as directional evidence: Passage states the reverse motion relationship; model support was not counted"
+            }
+          ],
+          "status": "Excluded as directional evidence: Passage states the reverse motion relationship; model support was not counted"
+        },
+        {
+          "evidence_id": "esa_earth_orbit_reverse",
+          "source_kind": "public_excerpt",
+          "title": "Background: The Earth's movement around the Sun",
+          "url": "https://www.esa.int/SPECIALS/Eduspace_Weather_EN/SEMLD3KTYRF_0.html",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "CONTRADICTS",
+          "raw_model_label": "SUPPORTS",
+          "model_confidence": 0.9273919463157654,
+          "model_margin": 0.8642922788858414,
+          "effective_assessment": "NOT ENOUGH INFORMATION",
+          "contributed": false,
+          "passage_normalized": "the earth moves around the sun in an elliptical orbit.",
+          "part_assessments": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "label": "UNCERTAIN",
+              "predicted_label": "NOT ENOUGH INFORMATION",
+              "model_label": "SUPPORTS",
+              "confidence": 0.9273919463157654,
+              "margin": 0.8642922788858414,
+              "passage": "The earth moves around the sun in an elliptical orbit.",
+              "scores": {
+                "CONTRADICTS": 0.009508427232503891,
+                "SUPPORTS": 0.9273919463157654,
+                "NOT ENOUGH INFORMATION": 0.06309966742992401
+              },
+              "contributed": false,
+              "status": "Excluded as directional evidence: Passage states the reverse motion relationship; model support was not counted"
+            }
+          ],
+          "status": "Excluded as directional evidence: Passage states the reverse motion relationship; model support was not counted"
+        }
+      ],
+      "experimental_semantic": {
+        "verdict": "CONTRADICTED",
+        "reasoning": "At least two distinct relevant URLs yielded high-confidence contradiction labels with no support. This is the model's reading of the evidence, not proof that the claim is false.",
+        "part_outcomes": [
+          {
+            "claim_part": "The Sun revolves around the Earth.",
+            "verdict": "Contradicted"
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "nasa_earth_orbit_reverse",
+            "source_kind": "public_excerpt",
+            "title": "Chapter 2: Reference Systems",
+            "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter2-1/",
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "CONTRADICTS",
+            "raw_model_label": "SUPPORTS",
+            "effective_assessment": "CONTRADICTS",
+            "contributed": true,
+            "status": "Explicit subject/object reversal treated as contradiction in experimental mode",
+            "assessed_passage": "Earth revolves about the Sun, producing the 365-day year.",
+            "part_assessments": [
+              {
+                "claim_part": "The Sun revolves around the Earth.",
+                "model_label": "SUPPORTS",
+                "effective_label": "CONTRADICTS",
+                "confidence": 0.985565721988678,
+                "margin": 0.9760313620790839,
+                "contributed": true,
+                "status": "Explicit subject/object reversal treated as contradiction in experimental mode",
+                "passage": "Earth revolves about the Sun, producing the 365-day year."
+              }
+            ]
+          },
+          {
+            "evidence_id": "esa_earth_orbit_reverse",
+            "source_kind": "public_excerpt",
+            "title": "Background: The Earth's movement around the Sun",
+            "url": "https://www.esa.int/SPECIALS/Eduspace_Weather_EN/SEMLD3KTYRF_0.html",
+            "expected_relevance": "relevant",
+            "actual_relevance": "relevant",
+            "expected_stance": "CONTRADICTS",
+            "raw_model_label": "SUPPORTS",
+            "effective_assessment": "CONTRADICTS",
+            "contributed": true,
+            "status": "Explicit subject/object reversal treated as contradiction in experimental mode",
+            "assessed_passage": "The earth moves around the sun in an elliptical orbit.",
+            "part_assessments": [
+              {
+                "claim_part": "The Sun revolves around the Earth.",
+                "model_label": "SUPPORTS",
+                "effective_label": "CONTRADICTS",
+                "confidence": 0.9803580045700073,
+                "margin": 0.9644939545542002,
+                "contributed": true,
+                "status": "Explicit subject/object reversal treated as contradiction in experimental mode",
+                "passage": "The earth moves around the sun in an elliptical orbit."
+              }
+            ]
+          }
+        ]
+      },
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "The Sun revolves around the Earth",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 0,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 0,
+        "counted_public_passages": 0,
+        "counted_synthetic_passages": 0,
+        "counted_unique_public_urls": 0,
+        "distinct_declared_publishers": 0,
+        "passages_per_declared_publisher": {},
+        "largest_publisher_share": null,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    }
+  ],
+  "metric_notes": [
+    "Effective stance maps uncertain, context-excluded, duplicate-excluded, and unassessed passages to NOT ENOUGH INFORMATION.",
+    "Raw model stance is scored only when the assessor emitted a recognized model_label; its denominator may be smaller.",
+    "Passage-level stance metrics use the first assessed claim component; diagnostic examples also record every experimental component assessment, but component-specific gold labels are not yet annotated.",
+    "Relevant includes the pipeline's Directly relevant candidate and Different time period diagnostics; the latter is separately visible in case notes.",
+    "Synthetic fixtures are controlled probes, not real-world evidence. A .invalid URL is supplied internally only to exercise URL validation and is never a citation.",
+    "Publisher diversity is descriptive metadata only; the evaluation cannot establish editorial independence and does not alter verdicts.",
+    "Experimental publisher aggregation modes are post-hoc comparisons and do not alter the production assessment or its thresholds.",
+    "Small, purpose-selected cases are pilot diagnostics, not an estimate of population accuracy."
+  ],
+  "status": "MEASURED",
+  "split": "development",
+  "dataset_sha256": {
+    "development.jsonl": "51a87bae80a6364f56759590ba73e98184a88702e0561c182b478218b094f6ee"
+  }
+}

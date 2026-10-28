@@ -1,0 +1,890 @@
+{
+  "python_version": "3.9.6",
+  "model": "cross-encoder/nli-deberta-v3-xsmall",
+  "model_revision": "03d06b2f6f06023bd596151a16477e2fcec601fb",
+  "assessment_thresholds": {
+    "confidence": 0.7,
+    "margin": 0.15,
+    "directional_sources": 2
+  },
+  "network_search_used": false,
+  "case_count": 3,
+  "case_counts_by_expected_verdict": {
+    "SUPPORTED": 1,
+    "CONTRADICTED": 1,
+    "INCONCLUSIVE": 1
+  },
+  "passage_count": 4,
+  "passage_counts_by_expected_stance": {
+    "SUPPORTS": 2,
+    "CONTRADICTS": 2
+  },
+  "passage_counts_by_expected_relevance": {
+    "relevant": 4
+  },
+  "metrics": {
+    "final_verdict": {
+      "count": 3,
+      "labels": [
+        "SUPPORTED",
+        "CONTRADICTED",
+        "INCONCLUSIVE"
+      ],
+      "confusion_matrix": {
+        "SUPPORTED": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "INCONCLUSIVE": 1
+        },
+        "CONTRADICTED": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 1,
+          "INCONCLUSIVE": 0
+        },
+        "INCONCLUSIVE": {
+          "SUPPORTED": 0,
+          "CONTRADICTED": 0,
+          "INCONCLUSIVE": 1
+        }
+      },
+      "per_class": {
+        "SUPPORTED": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "CONTRADICTED": {
+          "support": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "INCONCLUSIVE": {
+          "support": 1,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        }
+      },
+      "macro_f1": 0.5555555555555555,
+      "macro_f1_class_count": 3,
+      "macro_f1_labels": [
+        "SUPPORTED",
+        "CONTRADICTED",
+        "INCONCLUSIVE"
+      ],
+      "accuracy": 0.6666666666666666
+    },
+    "selective": {
+      "count": 3,
+      "selective_count": 1,
+      "selective_accuracy": 1.0,
+      "coverage": 0.3333333333333333,
+      "abstention_rate": 0.6666666666666666
+    },
+    "effective_passage_stance": {
+      "count": 4,
+      "labels": [
+        "SUPPORTS",
+        "CONTRADICTS",
+        "NOT ENOUGH INFORMATION"
+      ],
+      "confusion_matrix": {
+        "SUPPORTS": {
+          "SUPPORTS": 2,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 0
+        },
+        "CONTRADICTS": {
+          "SUPPORTS": 0,
+          "CONTRADICTS": 2,
+          "NOT ENOUGH INFORMATION": 0
+        },
+        "NOT ENOUGH INFORMATION": {
+          "SUPPORTS": 0,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 0
+        }
+      },
+      "per_class": {
+        "SUPPORTS": {
+          "support": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "CONTRADICTS": {
+          "support": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "NOT ENOUGH INFORMATION": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "macro_f1": 1.0,
+      "macro_f1_class_count": 2,
+      "macro_f1_labels": [
+        "SUPPORTS",
+        "CONTRADICTS"
+      ],
+      "accuracy": 1.0
+    },
+    "raw_model_stance": {
+      "count": 4,
+      "labels": [
+        "SUPPORTS",
+        "CONTRADICTS",
+        "NOT ENOUGH INFORMATION"
+      ],
+      "confusion_matrix": {
+        "SUPPORTS": {
+          "SUPPORTS": 2,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 0
+        },
+        "CONTRADICTS": {
+          "SUPPORTS": 0,
+          "CONTRADICTS": 2,
+          "NOT ENOUGH INFORMATION": 0
+        },
+        "NOT ENOUGH INFORMATION": {
+          "SUPPORTS": 0,
+          "CONTRADICTS": 0,
+          "NOT ENOUGH INFORMATION": 0
+        }
+      },
+      "per_class": {
+        "SUPPORTS": {
+          "support": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "CONTRADICTS": {
+          "support": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "NOT ENOUGH INFORMATION": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "macro_f1": 1.0,
+      "macro_f1_class_count": 2,
+      "macro_f1_labels": [
+        "SUPPORTS",
+        "CONTRADICTS"
+      ],
+      "accuracy": 1.0
+    },
+    "relevance": {
+      "count": 4,
+      "labels": [
+        "relevant",
+        "weakly_related",
+        "unrelated"
+      ],
+      "confusion_matrix": {
+        "relevant": {
+          "relevant": 4,
+          "weakly_related": 0,
+          "unrelated": 0
+        },
+        "weakly_related": {
+          "relevant": 0,
+          "weakly_related": 0,
+          "unrelated": 0
+        },
+        "unrelated": {
+          "relevant": 0,
+          "weakly_related": 0,
+          "unrelated": 0
+        }
+      },
+      "per_class": {
+        "relevant": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "weakly_related": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "unrelated": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "macro_f1": 1.0,
+      "macro_f1_class_count": 1,
+      "macro_f1_labels": [
+        "relevant"
+      ],
+      "accuracy": 1.0
+    }
+  },
+  "aggregation_comparison": {
+    "production_default": {
+      "verdict_metrics": {
+        "count": 3,
+        "labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 1
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 1,
+            "INCONCLUSIVE": 0
+          },
+          "INCONCLUSIVE": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 1
+          }
+        },
+        "per_class": {
+          "SUPPORTED": {
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "CONTRADICTED": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "INCONCLUSIVE": {
+            "support": 1,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          }
+        },
+        "macro_f1": 0.5555555555555555,
+        "macro_f1_class_count": 3,
+        "macro_f1_labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "accuracy": 0.6666666666666666
+      },
+      "selective_metrics": {
+        "count": 3,
+        "selective_count": 1,
+        "selective_accuracy": 1.0,
+        "coverage": 0.3333333333333333,
+        "abstention_rate": 0.6666666666666666
+      },
+      "verdict_distribution": {
+        "INCONCLUSIVE": 2,
+        "CONTRADICTED": 1
+      },
+      "expected_distribution": {
+        "SUPPORTED": 1,
+        "CONTRADICTED": 1,
+        "INCONCLUSIVE": 1
+      },
+      "errors": [
+        {
+          "case_id": "holdout_mars_two_moons_support",
+          "expected": "SUPPORTED",
+          "predicted": "INCONCLUSIVE",
+          "tags": [
+            "clear_support",
+            "astronomy"
+          ]
+        }
+      ],
+      "error_counts_by_tag": {
+        "astronomy": 1,
+        "clear_support": 1
+      }
+    },
+    "one_vote_per_normalized_publisher": {
+      "verdict_metrics": {
+        "count": 3,
+        "labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 1
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 1,
+            "INCONCLUSIVE": 0
+          },
+          "INCONCLUSIVE": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 1
+          }
+        },
+        "per_class": {
+          "SUPPORTED": {
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "CONTRADICTED": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "INCONCLUSIVE": {
+            "support": 1,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          }
+        },
+        "macro_f1": 0.5555555555555555,
+        "macro_f1_class_count": 3,
+        "macro_f1_labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "accuracy": 0.6666666666666666
+      },
+      "selective_metrics": {
+        "count": 3,
+        "selective_count": 1,
+        "selective_accuracy": 1.0,
+        "coverage": 0.3333333333333333,
+        "abstention_rate": 0.6666666666666666
+      },
+      "verdict_distribution": {
+        "INCONCLUSIVE": 2,
+        "CONTRADICTED": 1
+      },
+      "expected_distribution": {
+        "SUPPORTED": 1,
+        "CONTRADICTED": 1,
+        "INCONCLUSIVE": 1
+      },
+      "error_counts_by_tag": {
+        "astronomy": 1,
+        "clear_support": 1
+      },
+      "errors": [
+        {
+          "case_id": "holdout_mars_two_moons_support",
+          "expected": "SUPPORTED",
+          "predicted": "INCONCLUSIVE",
+          "tags": [
+            "clear_support",
+            "astronomy"
+          ]
+        }
+      ]
+    },
+    "distinct_declared_publishers_only": {
+      "verdict_metrics": {
+        "count": 3,
+        "labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 1
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 1,
+            "INCONCLUSIVE": 0
+          },
+          "INCONCLUSIVE": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "INCONCLUSIVE": 1
+          }
+        },
+        "per_class": {
+          "SUPPORTED": {
+            "support": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "CONTRADICTED": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "INCONCLUSIVE": {
+            "support": 1,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          }
+        },
+        "macro_f1": 0.5555555555555555,
+        "macro_f1_class_count": 3,
+        "macro_f1_labels": [
+          "SUPPORTED",
+          "CONTRADICTED",
+          "INCONCLUSIVE"
+        ],
+        "accuracy": 0.6666666666666666
+      },
+      "selective_metrics": {
+        "count": 3,
+        "selective_count": 1,
+        "selective_accuracy": 1.0,
+        "coverage": 0.3333333333333333,
+        "abstention_rate": 0.6666666666666666
+      },
+      "verdict_distribution": {
+        "INCONCLUSIVE": 2,
+        "CONTRADICTED": 1
+      },
+      "expected_distribution": {
+        "SUPPORTED": 1,
+        "CONTRADICTED": 1,
+        "INCONCLUSIVE": 1
+      },
+      "error_counts_by_tag": {
+        "astronomy": 1,
+        "clear_support": 1
+      },
+      "errors": [
+        {
+          "case_id": "holdout_mars_two_moons_support",
+          "expected": "SUPPORTED",
+          "predicted": "INCONCLUSIVE",
+          "tags": [
+            "clear_support",
+            "astronomy"
+          ]
+        }
+      ]
+    },
+    "note": "Experimental modes are evaluation-only. Publisher metadata and domains do not establish source independence; missing declared IDs cannot count in distinct-publisher mode."
+  },
+  "stress_groups": {
+    "astronomy": {
+      "case_count": 2,
+      "passage_count": 4,
+      "final_verdict_accuracy": 0.5
+    },
+    "clear_contradiction": {
+      "case_count": 1,
+      "passage_count": 2,
+      "final_verdict_accuracy": 1.0
+    },
+    "clear_support": {
+      "case_count": 1,
+      "passage_count": 2,
+      "final_verdict_accuracy": 0.0
+    },
+    "future_tense": {
+      "case_count": 1,
+      "passage_count": 0,
+      "final_verdict_accuracy": 1.0
+    },
+    "insufficient": {
+      "case_count": 1,
+      "passage_count": 0,
+      "final_verdict_accuracy": 1.0
+    },
+    "private_event": {
+      "case_count": 1,
+      "passage_count": 0,
+      "final_verdict_accuracy": 1.0
+    }
+  },
+  "source_diversity": {
+    "directional_case_count": 1,
+    "cases_with_two_or_more_declared_publishers": 1,
+    "cases_with_one_declared_publisher": 0,
+    "cases_with_no_public_publisher_annotation": 0,
+    "independence_verified_for_any_case": false,
+    "note": "Diagnostic only; this publisher summary never changes a verdict."
+  },
+  "cases": [
+    {
+      "case_id": "holdout_mars_two_moons_support",
+      "split": "held_out",
+      "tags": [
+        "clear_support",
+        "astronomy"
+      ],
+      "claim": "Mars has two moons, Phobos and Deimos.",
+      "expected_final_verdict": "SUPPORTED",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity. Component results: Mars has two moons, Phobos → Supported; Deimos → Inconclusive",
+      "evidence": [
+        {
+          "evidence_id": "nasa_mars_moons",
+          "source_kind": "public_excerpt",
+          "title": "Mars Moons",
+          "url": "https://science.nasa.gov/mars/moons/",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "SUPPORTS",
+          "raw_model_label": "SUPPORTS",
+          "model_confidence": 0.9925682544708252,
+          "model_margin": 0.9863218888640404,
+          "effective_assessment": "SUPPORTS",
+          "contributed": true,
+          "passage_normalized": "mars has two moons: phobos and deimos.",
+          "part_assessments": [
+            {
+              "claim_part": "Mars has two moons, Phobos",
+              "label": "SUPPORTS",
+              "predicted_label": "SUPPORTS",
+              "model_label": "SUPPORTS",
+              "confidence": 0.9925682544708252,
+              "margin": 0.9863218888640404,
+              "passage": "Mars has two moons: Phobos and Deimos.",
+              "scores": {
+                "CONTRADICTS": 0.0011853078613057733,
+                "SUPPORTS": 0.9925682544708252,
+                "NOT ENOUGH INFORMATION": 0.0062463656067848206
+              },
+              "contributed": true,
+              "status": "Relevant passage; clear model score"
+            },
+            {
+              "claim_part": "Deimos",
+              "label": "SUPPORTS",
+              "predicted_label": "SUPPORTS",
+              "model_label": "SUPPORTS",
+              "confidence": 0.7707239389419556,
+              "margin": 0.5440397709608078,
+              "passage": "Mars has two moons: Phobos and Deimos.",
+              "scores": {
+                "CONTRADICTS": 0.002591881202533841,
+                "SUPPORTS": 0.7707239389419556,
+                "NOT ENOUGH INFORMATION": 0.22668416798114777
+              },
+              "contributed": true,
+              "status": "Relevant passage; clear model score"
+            }
+          ],
+          "status": "Relevant passage; clear model score"
+        },
+        {
+          "evidence_id": "esa_mars_moons",
+          "source_kind": "public_excerpt",
+          "title": "Mars Express tracks the phases of Phobos",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_tracks_the_phases_of_Phobos",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "SUPPORTS",
+          "raw_model_label": "SUPPORTS",
+          "model_confidence": 0.9950782060623169,
+          "model_margin": 0.9906023950316012,
+          "effective_assessment": "SUPPORTS",
+          "contributed": true,
+          "passage_normalized": "mars has two moons, phobos and the smaller and more distant deimos.",
+          "part_assessments": [
+            {
+              "claim_part": "Mars has two moons, Phobos",
+              "label": "SUPPORTS",
+              "predicted_label": "SUPPORTS",
+              "model_label": "SUPPORTS",
+              "confidence": 0.9950782060623169,
+              "margin": 0.9906023950316012,
+              "passage": "Mars has two moons, Phobos and the smaller and more distant Deimos.",
+              "scores": {
+                "CONTRADICTS": 0.00044587289448827505,
+                "SUPPORTS": 0.9950782060623169,
+                "NOT ENOUGH INFORMATION": 0.004475811030715704
+              },
+              "contributed": true,
+              "status": "Relevant passage; clear model score"
+            },
+            {
+              "claim_part": "Deimos",
+              "label": "UNCERTAIN",
+              "predicted_label": "NOT ENOUGH INFORMATION",
+              "model_label": "NOT ENOUGH INFORMATION",
+              "confidence": 0.5625410079956055,
+              "margin": 0.12827849388122559,
+              "passage": "Mars has two moons, Phobos and the smaller and more distant Deimos.",
+              "scores": {
+                "CONTRADICTS": 0.0031964308582246304,
+                "SUPPORTS": 0.4342625141143799,
+                "NOT ENOUGH INFORMATION": 0.5625410079956055
+              },
+              "contributed": false,
+              "status": "Relevant passage; below threshold or non-directional"
+            }
+          ],
+          "status": "Relevant passage; clear model score"
+        }
+      ],
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "Mars has two moons, Phobos",
+              "verdict": "SUPPORTED",
+              "support_groups": 2,
+              "contradiction_groups": 0,
+              "reason": "At least two qualifying publisher groups support this component."
+            },
+            {
+              "claim_part": "Deimos",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 1,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [
+            {
+              "claim_part": "Mars has two moons, Phobos",
+              "verdict": "SUPPORTED",
+              "support_groups": 2,
+              "contradiction_groups": 0,
+              "reason": "At least two qualifying publisher groups support this component."
+            },
+            {
+              "claim_part": "Deimos",
+              "verdict": "INCONCLUSIVE",
+              "support_groups": 1,
+              "contradiction_groups": 0,
+              "reason": "Fewer than two qualifying publisher groups support one direction."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 2,
+        "counted_public_passages": 2,
+        "counted_synthetic_passages": 0,
+        "counted_unique_public_urls": 2,
+        "distinct_declared_publishers": 2,
+        "passages_per_declared_publisher": {
+          "esa": 1,
+          "nasa": 1
+        },
+        "largest_publisher_share": 0.5,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    },
+    {
+      "case_id": "holdout_mars_three_moons_contradiction",
+      "split": "held_out",
+      "tags": [
+        "clear_contradiction",
+        "astronomy"
+      ],
+      "claim": "Mars has three natural moons.",
+      "expected_final_verdict": "CONTRADICTED",
+      "actual_final_verdict": "CONTRADICTED",
+      "reasoning": "At least two distinct relevant URLs yielded high-confidence contradiction labels with no support. This is the model's reading of the evidence, not proof that the claim is false.",
+      "evidence": [
+        {
+          "evidence_id": "nasa_mars_two_vs_three",
+          "source_kind": "public_excerpt",
+          "title": "Mars Moons",
+          "url": "https://science.nasa.gov/mars/moons/",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "CONTRADICTS",
+          "raw_model_label": "CONTRADICTS",
+          "model_confidence": 0.9634895324707031,
+          "model_margin": 0.9327691588550806,
+          "effective_assessment": "CONTRADICTS",
+          "contributed": true,
+          "passage_normalized": "mars has two moons: phobos and deimos.",
+          "part_assessments": [
+            {
+              "claim_part": "Mars has three natural moons",
+              "label": "CONTRADICTS",
+              "predicted_label": "CONTRADICTS",
+              "model_label": "CONTRADICTS",
+              "confidence": 0.9634895324707031,
+              "margin": 0.9327691588550806,
+              "passage": "Mars has two moons: Phobos and Deimos.",
+              "scores": {
+                "CONTRADICTS": 0.9634895324707031,
+                "SUPPORTS": 0.005790112540125847,
+                "NOT ENOUGH INFORMATION": 0.03072037361562252
+              },
+              "contributed": true,
+              "status": "Relevant passage; clear model score"
+            }
+          ],
+          "status": "Relevant passage; clear model score"
+        },
+        {
+          "evidence_id": "esa_mars_two_vs_three",
+          "source_kind": "public_excerpt",
+          "title": "Mars Express tracks the phases of Phobos",
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_tracks_the_phases_of_Phobos",
+          "expected_relevance": "relevant",
+          "actual_relevance": "relevant",
+          "expected_stance": "CONTRADICTS",
+          "raw_model_label": "CONTRADICTS",
+          "model_confidence": 0.9742685556411743,
+          "model_margin": 0.9522105325013399,
+          "effective_assessment": "CONTRADICTS",
+          "contributed": true,
+          "passage_normalized": "mars has two moons, phobos and the smaller and more distant deimos.",
+          "part_assessments": [
+            {
+              "claim_part": "Mars has three natural moons",
+              "label": "CONTRADICTS",
+              "predicted_label": "CONTRADICTS",
+              "model_label": "CONTRADICTS",
+              "confidence": 0.9742685556411743,
+              "margin": 0.9522105325013399,
+              "passage": "Mars has two moons, Phobos and the smaller and more distant Deimos.",
+              "scores": {
+                "CONTRADICTS": 0.9742685556411743,
+                "SUPPORTS": 0.0036735069006681442,
+                "NOT ENOUGH INFORMATION": 0.022058023139834404
+              },
+              "contributed": true,
+              "status": "Relevant passage; clear model score"
+            }
+          ],
+          "status": "Relevant passage; clear model score"
+        }
+      ],
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "CONTRADICTED",
+          "part_outcomes": [
+            {
+              "claim_part": "Mars has three natural moons",
+              "verdict": "CONTRADICTED",
+              "support_groups": 0,
+              "contradiction_groups": 2,
+              "reason": "At least two qualifying publisher groups contradict this component."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        },
+        "distinct_publishers": {
+          "verdict": "CONTRADICTED",
+          "part_outcomes": [
+            {
+              "claim_part": "Mars has three natural moons",
+              "verdict": "CONTRADICTED",
+              "support_groups": 0,
+              "contradiction_groups": 2,
+              "reason": "At least two qualifying publisher groups contradict this component."
+            }
+          ],
+          "note": "Publisher grouping is a provenance diagnostic, not evidence of editorial or reporting independence. Production verdict logic is not changed."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 2,
+        "counted_public_passages": 2,
+        "counted_synthetic_passages": 0,
+        "counted_unique_public_urls": 2,
+        "distinct_declared_publishers": 2,
+        "passages_per_declared_publisher": {
+          "esa": 1,
+          "nasa": 1
+        },
+        "largest_publisher_share": 0.5,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    },
+    {
+      "case_id": "holdout_private_future_event",
+      "split": "held_out",
+      "tags": [
+        "insufficient",
+        "private_event",
+        "future_tense"
+      ],
+      "claim": "A person promised to launch a new company next week during an unrecorded private meeting.",
+      "expected_final_verdict": "INCONCLUSIVE",
+      "actual_final_verdict": "INCONCLUSIVE",
+      "reasoning": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction. Irrelevant, absent, or insufficient evidence does not establish falsity.",
+      "evidence": [],
+      "experimental_verdicts": {
+        "publisher_cap": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [],
+          "reason": "No eligible assessed claim parts."
+        },
+        "distinct_publishers": {
+          "verdict": "INCONCLUSIVE",
+          "part_outcomes": [],
+          "reason": "No eligible assessed claim parts."
+        }
+      },
+      "source_diversity": {
+        "counted_directional_passages": 0,
+        "counted_public_passages": 0,
+        "counted_synthetic_passages": 0,
+        "counted_unique_public_urls": 0,
+        "distinct_declared_publishers": 0,
+        "passages_per_declared_publisher": {},
+        "largest_publisher_share": null,
+        "independence_verified": false,
+        "note": "Publisher IDs are dataset annotations. Different publishers or URLs do not prove independent reporting."
+      }
+    }
+  ],
+  "metric_notes": [
+    "Effective stance maps uncertain, context-excluded, duplicate-excluded, and unassessed passages to NOT ENOUGH INFORMATION.",
+    "Raw model stance is scored only when the assessor emitted a recognized model_label; its denominator may be smaller.",
+    "Relevant includes the pipeline's Directly relevant candidate and Different time period diagnostics; the latter is separately visible in case notes.",
+    "Synthetic fixtures are controlled probes, not real-world evidence. A .invalid URL is supplied internally only to exercise URL validation and is never a citation.",
+    "Publisher diversity is descriptive metadata only; the evaluation cannot establish editorial independence and does not alter verdicts.",
+    "Experimental publisher aggregation modes are post-hoc comparisons and do not alter the production assessment or its thresholds.",
+    "Small, purpose-selected cases are pilot diagnostics, not an estimate of population accuracy."
+  ],
+  "status": "MEASURED",
+  "split": "held_out",
+  "dataset_sha256": {
+    "held_out.jsonl": "d9b9a974d16973b8fbccaa311ddde72325ae8e08ce3a4414cd5aa4fed234defa"
+  }
+}

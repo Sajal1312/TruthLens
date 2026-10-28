@@ -1,0 +1,6 @@
+# Optional local NLI mode (Python 3.9+, Apple Silicon or CPU supported)
+-r requirements.txt
+torch>=2.2,<2.9
+transformers>=4.44,<5
+safetensors>=0.4
+sentencepiece>=0.2
