@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"urn:truthlens:explanation-key-review:v1",
+  "title":"Human review of comprehension keys; empty until actually reviewed",
+  "type":"array","items":{
+    "type":"object","additionalProperties":false,
+    "required":["study_version","keys_sha256","reviewer_alias","independent_of_materials_author","decision","reviewed_at","rationale"],
+    "properties":{
+      "study_version":{"const":"truthlens-explanation-v1"},
+      "keys_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+      "reviewer_alias":{"type":"string","minLength":1,"maxLength":64},
+      "independent_of_materials_author":{"const":true},
+      "decision":{"enum":["verified","revision_required"]},
+      "reviewed_at":{"type":"string","format":"date-time"},
+      "rationale":{"type":"string","minLength":1,"maxLength":4000}
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "dry_run": true,
+  "eligible_candidate_ids": [],
+  "blocked": {
+    "candidate-p1-env-001": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-env-002": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-env-003": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-env-004": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-env-005": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-tech-001": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-tech-002": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-tech-003": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-tech-004": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-tech-005": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-general-001": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-general-002": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-general-003": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-general-004": [
+      "Human approval is missing"
+    ],
+    "candidate-p1-general-005": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-env-001": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-env-002": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-env-003": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-env-004": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-env-005": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-tech-001": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-tech-002": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-tech-003": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-tech-004": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-tech-005": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-general-001": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-general-002": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-general-003": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-general-004": [
+      "Human approval is missing"
+    ],
+    "candidate-p2-general-005": [
+      "Human approval is missing"
+    ]
+  },
+  "applied": false,
+  "existing_claim_count": 0,
+  "requested_candidate_ids": [
+    "candidate-p1-env-001",
+    "candidate-p1-env-002",
+    "candidate-p1-env-003",
+    "candidate-p1-env-004",
+    "candidate-p1-env-005",
+    "candidate-p1-tech-001",
+    "candidate-p1-tech-002",
+    "candidate-p1-tech-003",
+    "candidate-p1-tech-004",
+    "candidate-p1-tech-005",
+    "candidate-p1-general-001",
+    "candidate-p1-general-002",
+    "candidate-p1-general-003",
+    "candidate-p1-general-004",
+    "candidate-p1-general-005",
+    "candidate-p2-env-001",
+    "candidate-p2-env-002",
+    "candidate-p2-env-003",
+    "candidate-p2-env-004",
+    "candidate-p2-env-005",
+    "candidate-p2-tech-001",
+    "candidate-p2-tech-002",
+    "candidate-p2-tech-003",
+    "candidate-p2-tech-004",
+    "candidate-p2-tech-005",
+    "candidate-p2-general-001",
+    "candidate-p2-general-002",
+    "candidate-p2-general-003",
+    "candidate-p2-general-004",
+    "candidate-p2-general-005"
+  ],
+  "imported_candidate_ids": [],
+  "note": "All requested candidates must be eligible; no labels or adjudications are created."
+}

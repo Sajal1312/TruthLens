@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "review-SajalG-p1-tech-002-20261102T003108",
+  "candidate_id": "candidate-p1-tech-002",
+  "candidate_sha256": "4ccf1d38c49032319639c866849b4c1624bac74ec8975782966a0c01d1f72234",
+  "review_file_sha256": "335ce4c6520fd1044b609e7cd298c6658f614bacd519907eaf05b836d9ffcef4",
+  "snapshot_file_sha256": "8d21c4f0b111b4626ffa4a2eebbbbd7d32f3449cee545ffeaac440ed9f56e569",
+  "sealed_at": "2026-11-01T19:06:22.932291+00:00"
+}

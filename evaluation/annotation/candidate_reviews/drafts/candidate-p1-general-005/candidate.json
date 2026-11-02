@@ -1,0 +1,28 @@
+{
+  "claim_id": "candidate-p1-general-005",
+  "claim_text": "ESA lists Gaia Data Release 4 as expected in December 2026.",
+  "claim_family_id": "family-p1-general-005",
+  "event_group_id": null,
+  "claim_category": [
+    "future_intent_vs_event",
+    "event_vs_publication_date"
+  ],
+  "split": "pilot",
+  "annotation_status": "unannotated",
+  "evidence": [
+    {
+      "evidence_id": "candidate-p1-general-005-e01",
+      "passage": "Data Release 4 (based on 66 months of data): expected December 2026",
+      "source_title": "Gaia",
+      "source_identifier": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+      "publisher_id": "esa",
+      "publication_date": null,
+      "event_date": null,
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-p1-general-005",
+      "provenance_relation": "unknown",
+      "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+    }
+  ]
+}

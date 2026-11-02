@@ -1,0 +1,184 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_type",
+    "automated_checked_on",
+    "method",
+    "candidate_id",
+    "candidate_sha256",
+    "claim",
+    "human_review_priority",
+    "claim_clarity_assessment",
+    "claim_evidence_interpretation",
+    "date_assessment",
+    "provenance_assessment",
+    "research_concerns",
+    "recommended_action",
+    "recommendation_reason",
+    "evidence_checks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "record_type": {
+      "const": "automated_preliminary_assessment"
+    },
+    "automated_checked_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "method": {
+      "const": "web_tool_rendered_source_inspection"
+    },
+    "candidate_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+    },
+    "candidate_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "human_review_priority": {
+      "enum": [
+        "high",
+        "medium",
+        "routine"
+      ]
+    },
+    "claim_clarity_assessment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_evidence_interpretation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "date_assessment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance_assessment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "research_concerns": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "recommended_action": {
+      "enum": [
+        "suitable for human approval",
+        "needs revision",
+        "insufficient evidence"
+      ]
+    },
+    "recommendation_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "evidence_id",
+          "source_url",
+          "access_status",
+          "excerpt_match",
+          "observed_title",
+          "observed_publisher",
+          "source_role",
+          "locator",
+          "publication_date_status",
+          "observed_publication_date",
+          "other_date_notes",
+          "context_notes"
+        ],
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "access_status": {
+            "enum": [
+              "opened",
+              "inaccessible"
+            ]
+          },
+          "excerpt_match": {
+            "enum": [
+              "exact_fragment",
+              "format_normalized",
+              "structured_extract",
+              "incomplete"
+            ]
+          },
+          "observed_title": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "observed_publisher": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "source_role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publication_date_status": {
+            "enum": [
+              "matched_existing_date",
+              "publication_day_not_established",
+              "incomplete"
+            ]
+          },
+          "observed_publication_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "other_date_notes": {
+            "type": "string",
+            "minLength": 1
+          },
+          "context_notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:truthlens:schema:automated-source-assessment:v1",
+  "title": "Automated preliminary source assistance, never a human inclusion decision"
+}

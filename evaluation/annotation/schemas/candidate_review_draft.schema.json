@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:truthlens:schema:candidate-review-blank-draft:v1",
+  "title": "TruthLens blank candidate review packet",
+  "description": "Generated empty worksheet only. Completed human records use candidate_review.schema.json.",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "review_id", "candidate_id", "candidate_sha256", "reviewer_alias", "review_timestamp", "source_verification_status", "claim_scope_assessment", "evidence_context_assessment", "evidence_reviews", "decision", "review_rationale", "supersedes"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "review_id": {"type": "null"},
+    "candidate_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"},
+    "candidate_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "reviewer_alias": {"type": "null"},
+    "review_timestamp": {"type": "null"},
+    "source_verification_status": {"type": "null"},
+    "claim_scope_assessment": {
+      "type": "object", "additionalProperties": false, "required": ["status", "rationale"],
+      "properties": {"status": {"type": "null"}, "rationale": {"const": ""}}
+    },
+    "evidence_context_assessment": {
+      "type": "object", "additionalProperties": false, "required": ["status", "rationale"],
+      "properties": {"status": {"type": "null"}, "rationale": {"const": ""}}
+    },
+    "evidence_reviews": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["evidence_id", "source_status", "source_verification_basis", "publication_date_status", "verified_publication_date", "date_rationale", "provenance_assessment", "provenance_rationale"],
+        "properties": {
+          "evidence_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"},
+          "source_status": {"type": "null"}, "source_verification_basis": {"const": ""},
+          "publication_date_status": {"type": "null"}, "verified_publication_date": {"type": "null"},
+          "date_rationale": {"const": ""}, "provenance_assessment": {"type": "null"},
+          "provenance_rationale": {"const": ""}
+        }
+      }
+    },
+    "decision": {"type": "null"}, "review_rationale": {"const": ""}, "supersedes": {"type": "null"}
+  }
+}

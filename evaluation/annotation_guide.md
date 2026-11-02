@@ -7,10 +7,12 @@ relevance and textual stance, then annotate the conservative final verdict
 that the available passages justify. These are different labels: a passage
 can say something related without supporting or contradicting the claim.
 
-This is a pilot annotation guide, not a validated scientific protocol. A
-second reviewer should label a copy independently before discussion. Preserve
-both original label sets and record disagreements; do not report agreement
-until that independent pass has actually been completed.
+This is the label guide for the existing developer-authored pilot fixtures.
+It is not itself evidence of independent labeling or a validated scientific
+protocol. The annotation-ready schemas and fuller independent two-annotator
+workflow are in [`annotation/README.md`](annotation/README.md). Preserve both
+original label sets and record disagreements; do not report agreement until
+independent submissions actually exist.
 
 ## Passage labels
 
@@ -36,12 +38,20 @@ passage merely saying that the claim is unknown.
 
 ## Final verdict labels
 
-- `SUPPORTED` / `CONTRADICTED`: only when at least two distinct, directly
-  relevant passages clearly agree on that direction with no directional
-  conflict, in line with the current production policy.
-- `INCONCLUSIVE`: insufficient or absent evidence, conflict, irrelevant or
-  ambiguous text, duplicate evidence, or a claim whose parts do not all point
-  consistently in one direction.
+- `SUPPORTED`: the evidence bundle sufficiently supports the entire claim,
+  using the predeclared evidence policy and without unresolved conflict.
+- `CONTRADICTED`: the evidence bundle sufficiently establishes an incompatible
+  proposition, again without unresolved conflict. Absence or silence alone
+  never qualifies.
+- `INCONCLUSIVE`: evidence is absent, insufficient, conflicting, duplicated,
+  ambiguous, stale for the claim's time frame, or supports only part of a
+  compound claim. Do not force a direction for a claim that cannot be verified
+  from the supplied evidence.
+
+For the existing developer-fixture study, the production policy requires at
+least two distinct URLs for a directional result. In independent annotation,
+record evidence quality and provenance separately; two URLs do not prove
+independent reporting.
 
 The gold final label evaluates this evidence policy on the provided fixture;
 it is not a declaration of ground truth. For `synthetic_fixture` entries,
@@ -57,18 +67,40 @@ independent. If two pages repeat the same underlying reporting, annotate that
 known relationship in `independence_basis`; otherwise state that independence
 has not been verified. Do not use publisher category as a truth label.
 
-## Independent review workflow
+## Difficult cases
 
-1. Copy the JSONL corpus to a reviewer-specific file; retain stable `case_id`
-   and `evidence_id` values.
-2. Hide the first annotator's `expected_*` values from the reviewer.
-3. Ask the reviewer to label relevance, stance, and final verdict, with a
+The worked examples in [`annotation/README.md`](annotation/README.md#illustrative-examples-not-pilot-records-or-gold-labels)
+are illustrative only, not sourced pilot records or gold labels. Apply these
+principles:
+
+- Quantifiers (`all`, `some`, `most`, `none`, `not all`) and negation must be
+  interpreted in scope; word overlap does not establish entailment.
+- For numerical claims, compare the same quantity, units, population, and
+  rounding rule. If conversion or tolerance is unclear, annotate uncertainty.
+- Keep publication date separate from event date. A publication in a given
+  year does not establish that the event happened that year.
+- A plan, forecast, or intention is not confirmation that a future event
+  occurred. Historical attributed beliefs do not establish a current claim.
+- For compound claims, record which part the passage addresses. The whole
+  claim is not Supported when one component remains unaddressed.
+- When passages conflict, annotate each passage independently and mark the
+  claim Inconclusive until the conflict is resolved.
+
+## Review workflow for existing pilot fixtures
+
+1. Give both reviewers the same frozen JSONL corpus while keeping their
+   submission files separate; retain stable `case_id` and `evidence_id` values.
+2. Hide developer-authored `expected_*` values, model predictions, and each
+   reviewer's labels from the other reviewer.
+3. Ask each reviewer to label relevance, stance, and final verdict, with a
    short rationale and source check date for public excerpts.
-4. Compare annotations only after the independent pass. Summarize raw
+4. Compare both records only after both independent passes are locked. Summarize raw
    agreement and disagreements by label; use a suitable chance-corrected
    statistic only when the sample and class counts make it meaningful.
 5. Resolve labels with a documented adjudication note. Keep pre-adjudication
    labels for an honest agreement calculation.
 
-`second_annotator_template.csv` provides the fields for this workflow. It is
-blank by design; no second-annotator results or agreement are claimed.
+`second_annotator_template.csv` provides a simple flat worksheet for this
+workflow. It is blank by design; no second-annotator results or agreement are
+claimed. For the new claim/evidence/annotation/adjudication records, use the
+JSON schemas under `annotation/schemas/`.

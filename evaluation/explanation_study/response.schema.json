@@ -1,0 +1,36 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"urn:truthlens:explanation-response:v1",
+  "title":"Anonymous explanation-study response or explicitly blank template",
+  "type":"object","additionalProperties":false,
+  "required":["study_version","bundle_id","slot_id","record_type","consent","responses"],
+  "properties":{
+    "study_version":{"const":"truthlens-explanation-v1"},
+    "bundle_id":{"type":"string","pattern":"^B[0-9a-f]{16}$"},
+    "slot_id":{"type":"string","pattern":"^S[0-9a-f]{10}$"},
+    "record_type":{"enum":["blank_template","participant_response"]},
+    "consent":{"type":["boolean","null"]},
+    "responses":{"type":"array","items":{
+      "type":"object","additionalProperties":false,
+      "required":["trial_id","ratings","answers","answer_confidence","elapsed_seconds","timing_method","timing_interrupted","comment"],
+      "properties":{
+        "trial_id":{"type":"string","pattern":"^T[0-9a-f]{12}$"},
+        "ratings":{"type":"object","additionalProperties":false,
+          "required":["clarity","usefulness","limitations_help","verdict_understanding","reliance_without_checking"],
+          "properties":{
+            "clarity":{"$ref":"#/$defs/rating"},"usefulness":{"$ref":"#/$defs/rating"},
+            "limitations_help":{"$ref":"#/$defs/rating"},"verdict_understanding":{"$ref":"#/$defs/rating"},
+            "reliance_without_checking":{"$ref":"#/$defs/rating"}}},
+        "answers":{"type":"object","additionalProperties":false,"required":["reason","limitation"],
+          "properties":{"reason":{"$ref":"#/$defs/answer"},"limitation":{"$ref":"#/$defs/answer"}}},
+        "answer_confidence":{"type":["integer","null"],"minimum":0,"maximum":100},
+        "elapsed_seconds":{"type":["number","null"],"minimum":0,"maximum":7200},
+        "timing_method":{"enum":[null,"facilitator_stopwatch"]},
+        "timing_interrupted":{"type":["boolean","null"]},
+        "comment":{"type":"string","maxLength":2000}
+      }
+    }}
+  },
+  "$defs":{"rating":{"type":["integer","null"],"minimum":1,"maximum":5},"answer":{"enum":[null,"A","B","C"]}},
+  "allOf":[{"if":{"properties":{"record_type":{"const":"blank_template"}}},"then":{"properties":{"consent":{"type":"null"}}}}]
+}

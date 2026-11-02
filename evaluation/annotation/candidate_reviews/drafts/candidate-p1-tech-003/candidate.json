@@ -1,0 +1,42 @@
+{
+  "claim_id": "candidate-p1-tech-003",
+  "claim_text": "NIST announced its first three finalized post-quantum encryption standards on 13 August 2024.",
+  "claim_family_id": "family-p1-tech-003",
+  "event_group_id": "nist-pqc-standardization",
+  "claim_category": [
+    "numerical",
+    "event_vs_publication_date"
+  ],
+  "split": "pilot",
+  "annotation_status": "unannotated",
+  "evidence": [
+    {
+      "evidence_id": "candidate-p1-tech-003-e01",
+      "passage": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards\n\nAugust 13, 2024",
+      "source_title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+      "source_identifier": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+      "source_url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+      "publisher_id": "nist",
+      "publication_date": "2024-08-13",
+      "event_date": "2024-08-13",
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-p1-tech-003",
+      "provenance_relation": "unknown",
+      "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+    },
+    {
+      "evidence_id": "candidate-p1-tech-003-e02",
+      "passage": "FIPS 203\nModule-Lattice-Based Key-Encapsulation Mechanism Standard\nDate Published: August 13, 2024",
+      "source_title": "FIPS 203: Module-Lattice-Based Key-Encapsulation Mechanism Standard",
+      "source_identifier": "https://csrc.nist.gov/pubs/fips/203/final",
+      "source_url": "https://csrc.nist.gov/pubs/fips/203/final",
+      "publisher_id": "nist",
+      "publication_date": "2024-08-13",
+      "event_date": null,
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-p1-tech-003",
+      "provenance_relation": "related_suspected",
+      "provenance_basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "claim_id": "candidate-p2-env-002",
+  "claim_text": "A single year above 1.5°C does not by itself establish failure of the Paris Agreement long-term temperature goal.",
+  "claim_family_id": "family-p2-env-002",
+  "event_group_id": null,
+  "claim_category": [
+    "partial_negation",
+    "quantifier_scope",
+    "numerical",
+    "event_vs_publication_date"
+  ],
+  "split": "pilot",
+  "annotation_status": "unannotated",
+  "evidence": [
+    {
+      "evidence_id": "candidate-p2-env-002-e01",
+      "passage": "long-term temperature goals, which are measured over decades rather than an individual year",
+      "source_title": "WMO confirms 2024 as warmest year on record at about 1.55°C above pre-industrial level",
+      "source_identifier": "https://wmo.int/news/media-centre/wmo-confirms-2024-warmest-year-record-about-155degc-above-pre-industrial-level",
+      "source_url": "https://wmo.int/news/media-centre/wmo-confirms-2024-warmest-year-record-about-155degc-above-pre-industrial-level",
+      "publisher_id": "wmo",
+      "publication_date": "2025-01-10",
+      "event_date": null,
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-candidate-p2-env-002",
+      "provenance_relation": "unknown",
+      "provenance_basis": "Publisher-hosted document located; source independence has not been established."
+    }
+  ]
+}

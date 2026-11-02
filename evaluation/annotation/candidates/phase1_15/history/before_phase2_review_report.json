@@ -1,0 +1,260 @@
+{
+  "collection_id": "truthlens-phase1-15-v1",
+  "collected_on": "2026-11-01",
+  "claim_count": 15,
+  "evidence_count": 15,
+  "topic_distribution": {
+    "cybersecurity_technology": 5,
+    "general_factual": 5,
+    "sustainability_environment": 5
+  },
+  "challenge_category_distribution": {
+    "compound_claim": 2,
+    "conflicting_evidence": 0,
+    "direct_negation": 2,
+    "double_negation": 0,
+    "event_vs_publication_date": 4,
+    "future_intent_vs_event": 1,
+    "insufficient_evidence": 0,
+    "numerical": 8,
+    "ordinary_control": 3,
+    "partial_negation": 0,
+    "quantifier_scope": 0
+  },
+  "evidence_count_per_claim": {
+    "candidate-p1-env-001": 1,
+    "candidate-p1-env-002": 1,
+    "candidate-p1-env-003": 1,
+    "candidate-p1-env-004": 1,
+    "candidate-p1-env-005": 1,
+    "candidate-p1-tech-001": 1,
+    "candidate-p1-tech-002": 1,
+    "candidate-p1-tech-003": 1,
+    "candidate-p1-tech-004": 1,
+    "candidate-p1-tech-005": 1,
+    "candidate-p1-general-001": 1,
+    "candidate-p1-general-002": 1,
+    "candidate-p1-general-003": 1,
+    "candidate-p1-general-004": 1,
+    "candidate-p1-general-005": 1
+  },
+  "metadata_completeness": {
+    "evidence_count": 15,
+    "missing_counts_by_field": {
+      "publication_date": 14
+    }
+  },
+  "duplicate_flags": [],
+  "provenance_flags": [],
+  "publisher_document_counts": {
+    "noaa": 1,
+    "us-eia": 1,
+    "unep": 1,
+    "unep-ozone-secretariat": 1,
+    "nasa": 3,
+    "ietf-rfc-editor": 2,
+    "nist": 2,
+    "python-software-foundation": 1,
+    "cern": 1,
+    "bipm": 1,
+    "esa": 1
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-001 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-001-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-002 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-002-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-003 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-003-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-004 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-004-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-005 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-005-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-tech-001 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-tech-001-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-tech-002 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-tech-002-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-tech-004 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-tech-004-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-tech-005 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-tech-005-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-001 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-001-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-002 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-002-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-003 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-003-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-004 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-004-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-005 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-005-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "informational",
+      "code": "metadata_completeness",
+      "message": "Metadata completeness summary for publication_date.",
+      "field": "publication_date",
+      "missing_count": 14,
+      "evidence_count": 15
+    },
+    {
+      "severity": "informational",
+      "code": "dates_checked_separately",
+      "message": "Publication dates and event dates are checked as separate fields; an event date is never inferred from a publication date."
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category conflicting_evidence.",
+      "category": "conflicting_evidence"
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category double_negation.",
+      "category": "double_negation"
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category insufficient_evidence.",
+      "category": "insufficient_evidence"
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category partial_negation.",
+      "category": "partial_negation"
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category quantifier_scope.",
+      "category": "quantifier_scope"
+    },
+    {
+      "severity": "informational",
+      "code": "future_split_grouping",
+      "message": "For future development/diagnostic/final-test splits, keep claim-family, event, and documented provenance groups together; do not create a split in this audit."
+    }
+  ],
+  "finding_counts": {
+    "error": 0,
+    "warning": 19,
+    "informational": 3
+  },
+  "human_review_status": "pending_for_all_candidates",
+  "candidates_requiring_human_review": [
+    "candidate-p1-env-001",
+    "candidate-p1-env-002",
+    "candidate-p1-env-003",
+    "candidate-p1-env-004",
+    "candidate-p1-env-005",
+    "candidate-p1-general-001",
+    "candidate-p1-general-002",
+    "candidate-p1-general-003",
+    "candidate-p1-general-004",
+    "candidate-p1-general-005",
+    "candidate-p1-tech-001",
+    "candidate-p1-tech-002",
+    "candidate-p1-tech-003",
+    "candidate-p1-tech-004",
+    "candidate-p1-tech-005"
+  ],
+  "candidates_without_collector_located_passages": [],
+  "selection_limitations": [
+    "Convenience sample authored from accessible official pages, not a sample of organically occurring online claims.",
+    "One short source excerpt per claim; no source independence established; no claim-level verdicts assigned.",
+    "No NLI predictions, annotator submissions or adjudications were generated.",
+    "Institutional summaries are not necessarily the original research underlying the statement.",
+    "No target verdict distribution; no claim of balanced stance classes."
+  ],
+  "retrieval_failures": [
+    {
+      "url": "https://www.cisa.gov/secure-our-world/turn-mfa",
+      "outcome": "403 Forbidden; not used as evidence"
+    },
+    {
+      "url": "https://home.cern/science/computing/birth-web",
+      "outcome": "404; canonical CERN page subsequently opened"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc9110",
+      "outcome": "Timeout; .html form subsequently opened"
+    },
+    {
+      "url": "https://www.un.org/sites/un2.un.org/files/fasct_fact_-_ocean_oct_2022.pdf",
+      "outcome": "403 Forbidden; not used as evidence"
+    }
+  ],
+  "offline_check_limitation": "Schema, hashes and QC were checked offline; this command does not refetch pages or establish truth or human approval."
+}

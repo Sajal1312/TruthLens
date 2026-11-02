@@ -1,0 +1,30 @@
+{
+  "pilot_id": "truthlens-independent-annotation-pilot-v1",
+  "status": "collecting",
+  "target_claim_count": 90,
+  "target_verdict_distribution": {
+    "SUPPORTED": 30,
+    "CONTRADICTED": 30,
+    "INCONCLUSIVE": 30
+  },
+  "challenge_categories": [
+    "quantifier_scope",
+    "direct_negation",
+    "double_negation",
+    "partial_negation",
+    "numerical",
+    "event_vs_publication_date",
+    "future_intent_vs_event",
+    "compound_claim",
+    "conflicting_evidence",
+    "insufficient_evidence",
+    "ordinary_control"
+  ],
+  "claim_records_file": "claim_records.json",
+  "annotator_submission_files": {
+    "annotator_1": "submissions/annotator_1.json",
+    "annotator_2": "submissions/annotator_2.json"
+  },
+  "adjudications_file": "adjudications.json",
+  "assignment_policy": "assign_identical_claim_ids_to_both_annotators"
+}

@@ -1,0 +1,31 @@
+{
+  "study_version": "truthlens-explanation-v1",
+  "source_comparison": "evaluation/results/comparison_2026-11-02/comparison.json",
+  "example_replay_seed": 20261102,
+  "planned_slots": 24,
+  "selection": "Purposive development-only convenience sample of distinct claim families, frozen before responses; not random claim sampling or independent gold data",
+  "items": [
+    {"track":"current_rule_development","case_id":"dev_earth_orbit_support","family":"earth_orbit"},
+    {"track":"current_rule_development","case_id":"dev_conflicting","family":"water_boiling"},
+    {"track":"current_rule_development","case_id":"dev_date_mismatch","family":"curiosity_landing"},
+    {"track":"current_rule_diagnostics","case_id":"diag_partial_negation_scope","family":"planet_moon_quantifiers"},
+    {"track":"current_rule_diagnostics","case_id":"diag_numeric_contradiction","family":"triangle_sides"},
+    {"track":"current_rule_diagnostics","case_id":"diag_all_students_some_failed","family":"exam_quantifiers"},
+    {"track":"current_rule_diagnostics","case_id":"diag_unit_equivalence","family":"length_units"},
+    {"track":"current_rule_diagnostics","case_id":"diag_greater_than_comparison","family":"sample_mass"},
+    {"track":"current_rule_diagnostics","case_id":"diag_percentage_equivalence","family":"percentage_arithmetic"},
+    {"track":"current_rule_diagnostics","case_id":"diag_future_plan_not_event","family":"future_product_launch"},
+    {"track":"current_rule_diagnostics","case_id":"diag_ratio_equivalence","family":"red_blue_ratio"},
+    {"track":"current_rule_diagnostics","case_id":"diag_conflicting_event_dates","family":"conference_date"}
+  ],
+  "ratings": ["clarity", "usefulness", "limitations_help", "verdict_understanding", "reliance_without_checking"],
+  "primary_endpoint": "Within-slot enhanced-minus-baseline perceived usefulness; exploratory and conditional on these fixed items",
+  "confidence_intervals": {"method":"percentile bootstrap of complete counterbalance-block mean within-slot differences", "repetitions":2000, "seed":20261103, "minimum_complete_blocks":8},
+  "limitations": [
+    "All selected complete current production rule-mode snapshots have Inconclusive verdicts; decisive verdicts and current NLI usefulness are not evaluated",
+    "Stored evidence mixes constructed passages and public excerpts; synthetic evidence is labeled and no public source is rechecked",
+    "Presentation length/content can reveal differences, so masking labels does not provide full participant blinding",
+    "Repeated questionnaire concepts can cause learning or ceiling effects; no feedback is given during the study",
+    "24 unfilled assignment slots are a planning assumption, not recruited people, observations or a power calculation"
+  ]
+}

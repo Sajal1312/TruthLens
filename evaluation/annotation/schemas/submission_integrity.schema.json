@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:truthlens:schema:submission-integrity:v1",
+  "title": "TruthLens annotator submission integrity manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["pilot_version", "claim_manifest_sha256", "claim_records_sha256", "annotator_identifier", "submission_timestamp", "source_submission_file", "source_submission_sha256", "snapshot_file", "submission_file_sha256", "snapshot_sha256", "schema_version", "validation_status", "supersedes"],
+  "properties": {
+    "pilot_version": {"type": "string", "minLength": 1},
+    "claim_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "claim_records_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "annotator_identifier": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,63}$"},
+    "submission_timestamp": {"type": "string", "format": "date-time"},
+    "source_submission_file": {"type": "string", "minLength": 1},
+    "source_submission_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "snapshot_file": {"type": "string", "minLength": 1},
+    "submission_file_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "snapshot_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "schema_version": {"const": "1.0.0"},
+    "validation_status": {"enum": ["valid"]},
+    "supersedes": {"type": ["string", "null"]}
+  }
+}

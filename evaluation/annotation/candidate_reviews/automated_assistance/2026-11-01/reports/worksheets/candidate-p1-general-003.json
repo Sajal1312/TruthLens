@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-general-003",
+  "candidate_sha256": "3421b49b145d268c64fd3a99615f183cb3aa526c0d8ea60702a10a4fa0f01317",
+  "claim": "CERN placed the World Wide Web software in the public domain on 30 April 1993.",
+  "human_review_priority": "routine",
+  "claim_clarity_assessment": "Software public-domain event is separate from inventing the Web.",
+  "claim_evidence_interpretation": "CERN supplies the event date; later open licensing is described separately.",
+  "date_assessment": "candidate-p1-general-003-e01: Event 1993-04-30; original page publication day not established.",
+  "provenance_assessment": "Institutional participant historical account; no independent archival record checked.",
+  "research_concerns": [
+    "Keep the named software-release event and avoid mixing it with the 1989 invention date."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-general-003-e01",
+      "source_url": "https://home.cern/science/computing/the-birth-of-the-web/where-web-was-born/",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Where the web was born",
+      "observed_publisher": "CERN",
+      "source_role": "institutional historical account",
+      "locator": "Public-domain release paragraph",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "Event 1993-04-30; original page publication day not established.",
+      "context_notes": "CERN supplies the event date; later open licensing is described separately."
+    }
+  ]
+}

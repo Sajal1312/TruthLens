@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:truthlens:schema:candidate-review:v1",
+  "title": "TruthLens human candidate inclusion review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "review_id", "candidate_id", "candidate_sha256", "reviewer_alias", "review_timestamp", "source_verification_status", "claim_scope_assessment", "evidence_context_assessment", "evidence_reviews", "decision", "review_rationale", "supersedes"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "review_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"},
+    "candidate_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"},
+    "candidate_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "reviewer_alias": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,63}$"},
+    "review_timestamp": {"type": "string", "format": "date-time"},
+    "source_verification_status": {"enum": ["verified", "partially_verified", "unable_to_verify"]},
+    "claim_scope_assessment": {
+      "type": "object", "additionalProperties": false, "required": ["status", "rationale"],
+      "properties": {"status": {"enum": ["clear", "revision_required"]}, "rationale": {"type": "string", "pattern": "\\S"}}
+    },
+    "evidence_context_assessment": {
+      "type": "object", "additionalProperties": false, "required": ["status", "rationale"],
+      "properties": {"status": {"enum": ["adequate", "revision_required"]}, "rationale": {"type": "string", "pattern": "\\S"}}
+    },
+    "evidence_reviews": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["evidence_id", "source_status", "source_verification_basis", "publication_date_status", "verified_publication_date", "date_rationale", "provenance_assessment", "provenance_rationale"],
+        "properties": {
+          "evidence_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"},
+          "source_status": {"enum": ["verified", "inaccessible", "mismatch", "not_verified"]},
+          "source_verification_basis": {"type": "string", "pattern": "\\S"},
+          "publication_date_status": {"enum": ["verified_publication_date", "verified_undated_source", "publication_date_unknown", "conflicting_date_metadata"]},
+          "verified_publication_date": {"type": ["string", "null"], "format": "date"},
+          "date_rationale": {"type": "string", "pattern": "\\S"},
+          "provenance_assessment": {"enum": ["documented", "unknown", "conflicting"]},
+          "provenance_rationale": {"type": "string", "pattern": "\\S"}
+        }
+      }
+    },
+    "decision": {"enum": ["approved", "revision_required", "rejected"]},
+    "review_rationale": {"type": "string", "pattern": "\\S"},
+    "supersedes": {"type": ["string", "null"], "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"}
+  }
+}

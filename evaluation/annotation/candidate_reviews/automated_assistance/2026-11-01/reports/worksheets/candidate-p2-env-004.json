@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-env-004",
+  "candidate_sha256": "ae6f9886611f1835eabb8c8e160d22a671a2400b9045f3da112a68b91c396c3a",
+  "claim": "Microplastics in drinking water are harmless at current exposure levels.",
+  "human_review_priority": "high",
+  "claim_clarity_assessment": "Harmless is categorical; current exposure has no fixed as-of date.",
+  "claim_evidence_interpretation": "The 2019 source expresses limited-information uncertainty, not demonstrated absence of harm at all current exposures.",
+  "date_assessment": "candidate-p2-env-004-e01: Published 2019-08-22; current levels refers to the information available then.",
+  "provenance_assessment": "One WHO review summary, not independent contemporary measurements.",
+  "research_concerns": [
+    "A short historical risk statement cannot establish present-day harmlessness. Missing initial qualification needs reviewer attention."
+  ],
+  "recommended_action": "insufficient evidence",
+  "recommendation_reason": "A short historical risk statement cannot establish present-day harmlessness. Missing initial qualification needs reviewer attention.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-env-004-e01",
+      "source_url": "https://www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crackdown-on-plastic-pollution",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "WHO calls for more research into microplastics and a crackdown on plastic pollution",
+      "observed_publisher": "World Health Organization",
+      "source_role": "institutional press release summarizing a review",
+      "locator": "Maria Neira quotation; displayed date",
+      "publication_date_status": "matched_existing_date",
+      "observed_publication_date": "2019-08-22",
+      "other_date_notes": "Published 2019-08-22; current levels refers to the information available then.",
+      "context_notes": "The 2019 source expresses limited-information uncertainty, not demonstrated absence of harm at all current exposures."
+    }
+  ]
+}

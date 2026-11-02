@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-general-001",
+  "candidate_sha256": "e28463e61654863ab4cd55aa303ebc809c3aaa853d4fef7e2209cc10c1f216b9",
+  "claim": "Not all deserts are hot; Antarctica has a polar desert.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Not all deserts are hot; Antarctic polar context is explicit.",
+  "claim_evidence_interpretation": "Geoscience Australia describes the Antarctic polar desert and temperature context.",
+  "date_assessment": "candidate-p2-general-001-e01: Page last updated 2022-11-25; original publication day unknown.",
+  "provenance_assessment": "Single government geographic summary.",
+  "research_concerns": [
+    "Australian-territory page scope; retain polar definition and do not treat all deserts as having the same climate."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-general-001-e01",
+      "source_url": "https://www.ga.gov.au/scientific-topics/national-location-information/landforms/deserts",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Areas of Australian and territory deserts",
+      "observed_publisher": "Geoscience Australia",
+      "source_role": "institutional geographic summary",
+      "locator": "Opening Antarctica polar-desert paragraph",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "Page last updated 2022-11-25; original publication day unknown.",
+      "context_notes": "Geoscience Australia describes the Antarctic polar desert and temperature context."
+    }
+  ]
+}

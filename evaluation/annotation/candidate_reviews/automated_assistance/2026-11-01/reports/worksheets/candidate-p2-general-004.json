@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-general-004",
+  "candidate_sha256": "ccba06002f155ddbb601158bae72facff40f53d34700c236c6c151b1b277920c",
+  "claim": "Venus’s sidereal rotation period is longer than its orbital period.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Sidereal rotation wording resolves the ambiguous meaning of day.",
+  "claim_evidence_interpretation": "The source gives approximately 243 Earth days per rotation and 225 per orbit.",
+  "date_assessment": "candidate-p2-general-004-e01: Article last updated 2024-03-15; separate site-footer update 2026-07-31. Neither treated as original publication.",
+  "provenance_assessment": "Single NASA educational source; two bullets are not two independent sources.",
+  "research_concerns": [
+    "Keep sidereal versus solar reference frames explicit and recognize rounded educational values."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-general-004-e01",
+      "source_url": "https://spaceplace.nasa.gov/all-about-venus/en/",
+      "access_status": "opened",
+      "excerpt_match": "structured_extract",
+      "observed_title": "All About Venus",
+      "observed_publisher": "NASA Space Place",
+      "source_role": "official educational planetary summary",
+      "locator": "Time on Venus bullets; explanatory rotation paragraph",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "Article last updated 2024-03-15; separate site-footer update 2026-07-31. Neither treated as original publication.",
+      "context_notes": "The source gives approximately 243 Earth days per rotation and 225 per orbit."
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "collection_id": "truthlens-phase1-15-v1",
+  "collected_on": "2026-11-01",
+  "claim_count": 15,
+  "evidence_count": 22,
+  "topic_distribution": {
+    "cybersecurity_technology": 5,
+    "general_factual": 5,
+    "sustainability_environment": 5
+  },
+  "challenge_category_distribution": {
+    "compound_claim": 2,
+    "conflicting_evidence": 0,
+    "direct_negation": 2,
+    "double_negation": 0,
+    "event_vs_publication_date": 4,
+    "future_intent_vs_event": 1,
+    "insufficient_evidence": 0,
+    "numerical": 8,
+    "ordinary_control": 3,
+    "partial_negation": 0,
+    "quantifier_scope": 0
+  },
+  "evidence_count_per_claim": {
+    "candidate-p1-env-001": 1,
+    "candidate-p1-env-002": 2,
+    "candidate-p1-env-003": 2,
+    "candidate-p1-env-004": 2,
+    "candidate-p1-env-005": 1,
+    "candidate-p1-tech-001": 1,
+    "candidate-p1-tech-002": 1,
+    "candidate-p1-tech-003": 2,
+    "candidate-p1-tech-004": 1,
+    "candidate-p1-tech-005": 2,
+    "candidate-p1-general-001": 2,
+    "candidate-p1-general-002": 1,
+    "candidate-p1-general-003": 1,
+    "candidate-p1-general-004": 2,
+    "candidate-p1-general-005": 1
+  },
+  "metadata_completeness": {
+    "evidence_count": 22,
+    "missing_counts_by_field": {
+      "publication_date": 18
+    }
+  },
+  "duplicate_flags": [],
+  "provenance_flags": [],
+  "publisher_document_counts": {
+    "noaa": 1,
+    "us-eia": 1,
+    "us-nih": 1,
+    "unep": 1,
+    "aaas-science": 1,
+    "unep-ozone-secretariat": 1,
+    "un-treaty-collection": 1,
+    "nasa": 3,
+    "ietf-rfc-editor": 2,
+    "nist": 3,
+    "python-software-foundation": 2,
+    "esa": 2,
+    "cern": 1,
+    "bipm": 2
+  },
+  "publisher_evidence_counts": {
+    "noaa": 1,
+    "us-eia": 1,
+    "us-nih": 1,
+    "unep": 1,
+    "aaas-science": 1,
+    "unep-ozone-secretariat": 1,
+    "un-treaty-collection": 1,
+    "nasa": 3,
+    "ietf-rfc-editor": 2,
+    "nist": 3,
+    "python-software-foundation": 2,
+    "esa": 2,
+    "cern": 1,
+    "bipm": 2
+  },
+  "unique_source_url_count": 22,
+  "source_domain_counts": {
+    "oceanservice.noaa.gov": 1,
+    "www.eia.gov": 1,
+    "nems.nih.gov": 1,
+    "www.unep.org": 1,
+    "pubmed.ncbi.nlm.nih.gov": 1,
+    "ozone.unep.org": 1,
+    "treaties.un.org": 1,
+    "science.nasa.gov": 3,
+    "www.rfc-editor.org": 2,
+    "www.nist.gov": 1,
+    "csrc.nist.gov": 1,
+    "pages.nist.gov": 1,
+    "docs.python.org": 1,
+    "peps.python.org": 1,
+    "www.esa.int": 2,
+    "home.cern": 1,
+    "www.bipm.org": 2
+  },
+  "shared_source_references": {},
+  "shared_provenance_groups": {
+    "source-p1-env-002": [
+      {
+        "claim_id": "candidate-p1-env-002",
+        "evidence_id": "candidate-p1-env-002-e01",
+        "source_url": "https://www.eia.gov/energyexplained/energy-and-the-environment/recycling-and-energy.php",
+        "relation": "unknown",
+        "basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "claim_id": "candidate-p1-env-002",
+        "evidence_id": "candidate-p1-env-002-e02",
+        "source_url": "https://nems.nih.gov/environmental-programs/Pages/Benefits-of-Recycling.aspx",
+        "relation": "related_suspected",
+        "basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ],
+    "source-p1-env-003": [
+      {
+        "claim_id": "candidate-p1-env-003",
+        "evidence_id": "candidate-p1-env-003-e01",
+        "source_url": "https://www.unep.org/en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter",
+        "relation": "unknown",
+        "basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "claim_id": "candidate-p1-env-003",
+        "evidence_id": "candidate-p1-env-003-e02",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/32943526/",
+        "relation": "related_suspected",
+        "basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ],
+    "source-p1-env-004": [
+      {
+        "claim_id": "candidate-p1-env-004",
+        "evidence_id": "candidate-p1-env-004-e01",
+        "source_url": "https://ozone.unep.org/treaties/montreal-protocol",
+        "relation": "unknown",
+        "basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "claim_id": "candidate-p1-env-004",
+        "evidence_id": "candidate-p1-env-004-e02",
+        "source_url": "https://treaties.un.org/Pages/showDetails.aspx?objid=080000028003f7f7",
+        "relation": "same_origin",
+        "basis": "Both documents describe the same registered Montreal Protocol; registry is the original treaty record."
+      }
+    ],
+    "source-p1-tech-003": [
+      {
+        "claim_id": "candidate-p1-tech-003",
+        "evidence_id": "candidate-p1-tech-003-e01",
+        "source_url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+        "relation": "unknown",
+        "basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "claim_id": "candidate-p1-tech-003",
+        "evidence_id": "candidate-p1-tech-003-e02",
+        "source_url": "https://csrc.nist.gov/pubs/fips/203/final",
+        "relation": "related_suspected",
+        "basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ],
+    "source-p1-tech-005": [
+      {
+        "claim_id": "candidate-p1-tech-005",
+        "evidence_id": "candidate-p1-tech-005-e01",
+        "source_url": "https://docs.python.org/3.13/glossary.html#term-global-interpreter-lock",
+        "relation": "unknown",
+        "basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "claim_id": "candidate-p1-tech-005",
+        "evidence_id": "candidate-p1-tech-005-e02",
+        "source_url": "https://peps.python.org/pep-0703/",
+        "relation": "related_suspected",
+        "basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ],
+    "source-p1-general-001": [
+      {
+        "claim_id": "candidate-p1-general-001",
+        "evidence_id": "candidate-p1-general-001-e01",
+        "source_url": "https://science.nasa.gov/mars/moons/",
+        "relation": "unknown",
+        "basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "claim_id": "candidate-p1-general-001",
+        "evidence_id": "candidate-p1-general-001-e02",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_tracks_the_phases_of_Phobos",
+        "relation": "related_suspected",
+        "basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ],
+    "source-p1-general-004": [
+      {
+        "claim_id": "candidate-p1-general-004",
+        "evidence_id": "candidate-p1-general-004-e01",
+        "source_url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "relation": "unknown",
+        "basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "claim_id": "candidate-p1-general-004",
+        "evidence_id": "candidate-p1-general-004-e02",
+        "source_url": "https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-1",
+        "relation": "related_suspected",
+        "basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ]
+  },
+  "collector_source_review": {
+    "method": "Opened-page excerpt checks recorded by collector; offline QC only verifies saved hashes and joins.",
+    "independent_human_review_completed": false,
+    "source_checks_with_recheck_date": 22
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-001 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-001-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-002 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-002-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-002 evidence[1] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-002-e02",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-003 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-003-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-004 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-004-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-004 evidence[1] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-004-e02",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-env-005 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-env-005-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-tech-001 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-tech-001-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-tech-002 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-tech-002-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-tech-004 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-tech-004-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-tech-005 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-tech-005-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-tech-005 evidence[1] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-tech-005-e02",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-001 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-001-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-002 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-002-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-003 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-003-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-004 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-004-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-004 evidence[1] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-004-e02",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p1-general-005 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p1-general-005-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "informational",
+      "code": "metadata_completeness",
+      "message": "Metadata completeness summary for publication_date.",
+      "field": "publication_date",
+      "missing_count": 18,
+      "evidence_count": 22
+    },
+    {
+      "severity": "informational",
+      "code": "dates_checked_separately",
+      "message": "Publication dates and event dates are checked as separate fields; an event date is never inferred from a publication date."
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category conflicting_evidence.",
+      "category": "conflicting_evidence"
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category double_negation.",
+      "category": "double_negation"
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category insufficient_evidence.",
+      "category": "insufficient_evidence"
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category partial_negation.",
+      "category": "partial_negation"
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category quantifier_scope.",
+      "category": "quantifier_scope"
+    },
+    {
+      "severity": "informational",
+      "code": "future_split_grouping",
+      "message": "For future development/diagnostic/final-test splits, keep claim-family, event, and documented provenance groups together; do not create a split in this audit."
+    }
+  ],
+  "finding_counts": {
+    "error": 0,
+    "warning": 23,
+    "informational": 3
+  },
+  "human_review_status": "pending_for_all_candidates",
+  "candidates_requiring_human_review": [
+    "candidate-p1-env-001",
+    "candidate-p1-env-002",
+    "candidate-p1-env-003",
+    "candidate-p1-env-004",
+    "candidate-p1-env-005",
+    "candidate-p1-general-001",
+    "candidate-p1-general-002",
+    "candidate-p1-general-003",
+    "candidate-p1-general-004",
+    "candidate-p1-general-005",
+    "candidate-p1-tech-001",
+    "candidate-p1-tech-002",
+    "candidate-p1-tech-003",
+    "candidate-p1-tech-004",
+    "candidate-p1-tech-005"
+  ],
+  "candidates_without_collector_located_passages": [],
+  "selection_limitations": [
+    "Convenience sample authored from accessible official pages, not a sample of organically occurring online claims.",
+    "Evidence coverage varies by claim; additional documents include partial or historically scoped evidence, and source independence remains unverified.",
+    "No NLI predictions, annotator submissions or adjudications were generated.",
+    "Institutional summaries are not necessarily the original research underlying the statement.",
+    "No target verdict distribution; no claim of balanced stance classes."
+  ],
+  "retrieval_failures": [
+    {
+      "url": "https://www.cisa.gov/secure-our-world/turn-mfa",
+      "outcome": "403 Forbidden; not used as evidence"
+    },
+    {
+      "url": "https://home.cern/science/computing/birth-web",
+      "outcome": "404; canonical CERN page subsequently opened"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc9110",
+      "outcome": "Timeout; .html form subsequently opened"
+    },
+    {
+      "url": "https://www.un.org/sites/un2.un.org/files/fasct_fact_-_ocean_oct_2022.pdf",
+      "outcome": "403 Forbidden; not used as evidence"
+    }
+  ],
+  "offline_check_limitation": "Schema, hashes and QC were checked offline; this command does not refetch pages or establish truth or human approval."
+}

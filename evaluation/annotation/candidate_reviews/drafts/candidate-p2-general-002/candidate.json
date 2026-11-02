@@ -1,0 +1,28 @@
+{
+  "claim_id": "candidate-p2-general-002",
+  "claim_text": "It is not true that no woman has ever won a Nobel Prize.",
+  "claim_family_id": "family-p2-general-002",
+  "event_group_id": null,
+  "claim_category": [
+    "double_negation",
+    "quantifier_scope"
+  ],
+  "split": "pilot",
+  "annotation_status": "unannotated",
+  "evidence": [
+    {
+      "evidence_id": "candidate-p2-general-002-e01",
+      "passage": "She was the first woman to win a Nobel Prize",
+      "source_title": "Marie Curie",
+      "source_identifier": "https://oumnh.ox.ac.uk/learn-marie-curie",
+      "source_url": "https://oumnh.ox.ac.uk/learn-marie-curie",
+      "publisher_id": "university-of-oxford",
+      "publication_date": null,
+      "event_date": null,
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-candidate-p2-general-002",
+      "provenance_relation": "unknown",
+      "provenance_basis": "Publisher-hosted document located; source independence has not been established."
+    }
+  ]
+}

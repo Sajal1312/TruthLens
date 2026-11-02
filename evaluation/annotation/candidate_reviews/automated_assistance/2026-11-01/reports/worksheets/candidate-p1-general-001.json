@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-general-001",
+  "candidate_sha256": "402dd9ac4a7af5fb9580e9fb32027928d2135188ec9fb6354cae93e9fbdd91b1",
+  "claim": "Mars has two moons named Phobos and Deimos.",
+  "human_review_priority": "routine",
+  "claim_clarity_assessment": "Both named moons are specified.",
+  "claim_evidence_interpretation": "NASA and ESA both name Phobos and Deimos in the retrieved context.",
+  "date_assessment": "candidate-p1-general-001-e01: No original publication day established; footer last-updated field is not publication. candidate-p1-general-001-e02: Article 2019-12-12; described image sequence 2019-11-17. Neither is a date when Mars acquired its moons.",
+  "provenance_assessment": "NASA and ESA mission summaries; no shared-copy text beyond the basic fact observed, but independence not established.",
+  "research_concerns": [
+    "Different institutional publishers do not prove independent underlying observations."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-general-001-e01",
+      "source_url": "https://science.nasa.gov/mars/moons/",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Mars Moons",
+      "observed_publisher": "NASA Science",
+      "source_role": "institutional planetary summary",
+      "locator": "Opening moon overview",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "No original publication day established; footer last-updated field is not publication.",
+      "context_notes": "NASA and ESA both name Phobos and Deimos in the retrieved context."
+    },
+    {
+      "evidence_id": "candidate-p1-general-001-e02",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_tracks_the_phases_of_Phobos",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Mars Express tracks the phases of Phobos",
+      "observed_publisher": "European Space Agency",
+      "source_role": "original mission communication",
+      "locator": "Opening explanation of two moons; displayed article date",
+      "publication_date_status": "matched_existing_date",
+      "observed_publication_date": "2019-12-12",
+      "other_date_notes": "Article 2019-12-12; described image sequence 2019-11-17. Neither is a date when Mars acquired its moons.",
+      "context_notes": "NASA and ESA both name Phobos and Deimos in the retrieved context."
+    }
+  ]
+}

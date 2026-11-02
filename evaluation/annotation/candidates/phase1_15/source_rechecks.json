@@ -1,0 +1,242 @@
+[
+  {
+    "claim_id": "candidate-p1-env-001",
+    "evidence_id": "candidate-p1-env-001-e01",
+    "url": "https://oceanservice.noaa.gov/facts/acidification.html",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='oceanservice.noaa.gov', port=443): Max retries exceeded with url: /facts/acidification.html (Caused by NameResolutionError(\"HTTPSConnection(host='oceanservice.noaa.gov', port=443): Failed to resolve 'oceanservice.noaa.gov' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "NOAA shows Last updated 09/23/26, not an original publication date. Exact original publication day remains unknown.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-env-002",
+    "evidence_id": "candidate-p1-env-002-e01",
+    "url": "https://www.eia.gov/energyexplained/energy-and-the-environment/recycling-and-energy.php",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='www.eia.gov', port=443): Max retries exceeded with url: /energyexplained/energy-and-the-environment/recycling-and-energy.php (Caused by NameResolutionError(\"HTTPSConnection(host='www.eia.gov', port=443): Failed to resolve 'www.eia.gov' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "Opened source page and checked visible title, publisher, excerpt and date information. No authoritative original publication day located; date remains unknown.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-env-003",
+    "evidence_id": "candidate-p1-env-003-e01",
+    "url": "https://www.unep.org/en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='www.unep.org', port=443): Max retries exceeded with url: /en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter (Caused by NameResolutionError(\"HTTPSConnection(host='www.unep.org', port=443): Failed to resolve 'www.unep.org' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "Opened source page and checked visible title, publisher, excerpt and date information. No authoritative original publication day located; date remains unknown.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-env-004",
+    "evidence_id": "candidate-p1-env-004-e01",
+    "url": "https://ozone.unep.org/treaties/montreal-protocol",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='ozone.unep.org', port=443): Max retries exceeded with url: /treaties/montreal-protocol (Caused by NameResolutionError(\"HTTPSConnection(host='ozone.unep.org', port=443): Failed to resolve 'ozone.unep.org' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "Opened source page and checked visible title, publisher, excerpt and date information. No authoritative original publication day located; date remains unknown.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-env-005",
+    "evidence_id": "candidate-p1-env-005-e01",
+    "url": "https://science.nasa.gov/climate-change/causes/",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='science.nasa.gov', port=443): Max retries exceeded with url: /climate-change/causes/ (Caused by NameResolutionError(\"HTTPSConnection(host='science.nasa.gov', port=443): Failed to resolve 'science.nasa.gov' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "NASA footer gives Page Last Updated: Oct 23, 2026. This is not treated as original publication date.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-tech-001",
+    "evidence_id": "candidate-p1-tech-001-e01",
+    "url": "https://www.rfc-editor.org/rfc/rfc8446",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='www.rfc-editor.org', port=443): Max retries exceeded with url: /rfc/rfc8446 (Caused by NameResolutionError(\"HTTPSConnection(host='www.rfc-editor.org', port=443): Failed to resolve 'www.rfc-editor.org' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "RFC header gives August 2018 only. Original publication day remains unknown; no day imputed. Version-scoped historical document.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-tech-002",
+    "evidence_id": "candidate-p1-tech-002-e01",
+    "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='www.rfc-editor.org', port=443): Max retries exceeded with url: /rfc/rfc9110.html (Caused by NameResolutionError(\"HTTPSConnection(host='www.rfc-editor.org', port=443): Failed to resolve 'www.rfc-editor.org' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "RFC header gives June 2022 only. Original publication day remains unknown; no day imputed.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-tech-003",
+    "evidence_id": "candidate-p1-tech-003-e01",
+    "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='www.nist.gov', port=443): Max retries exceeded with url: /news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards (Caused by NameResolutionError(\"HTTPSConnection(host='www.nist.gov', port=443): Failed to resolve 'www.nist.gov' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "Publication date and separately stated updated date reconfirmed in NIST article.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-tech-004",
+    "evidence_id": "candidate-p1-tech-004-e01",
+    "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='pages.nist.gov', port=443): Max retries exceeded with url: /800-63-4/sp800-63b.html (Caused by NameResolutionError(\"HTTPSConnection(host='pages.nist.gov', port=443): Failed to resolve 'pages.nist.gov' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "Official NIST catalog https://csrc.nist.gov/pubs/sp/800/63/b/4/final gives Date Published: July 2025, only month precision. HTML build timestamp is not original publication date.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-tech-005",
+    "evidence_id": "candidate-p1-tech-005-e01",
+    "url": "https://docs.python.org/3.13/glossary.html#term-global-interpreter-lock",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='docs.python.org', port=443): Max retries exceeded with url: /3.13/glossary.html (Caused by NameResolutionError(\"HTTPSConnection(host='docs.python.org', port=443): Failed to resolve 'docs.python.org' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "Opened source page and checked visible title, publisher, excerpt and date information. No authoritative original publication day located; date remains unknown.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-general-001",
+    "evidence_id": "candidate-p1-general-001-e01",
+    "url": "https://science.nasa.gov/mars/moons/",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='science.nasa.gov', port=443): Max retries exceeded with url: /mars/moons/ (Caused by NameResolutionError(\"HTTPSConnection(host='science.nasa.gov', port=443): Failed to resolve 'science.nasa.gov' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "NASA footer gives Page Last Updated: Nov 05, 2024. Original publication date remains unknown.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-general-002",
+    "evidence_id": "candidate-p1-general-002-e01",
+    "url": "https://science.nasa.gov/venus/venus-facts/",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='science.nasa.gov', port=443): Max retries exceeded with url: /venus/venus-facts/ (Caused by NameResolutionError(\"HTTPSConnection(host='science.nasa.gov', port=443): Failed to resolve 'science.nasa.gov' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "NASA footer gives Page Last Updated: Oct 15, 2026. Original publication date remains unknown.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-general-003",
+    "evidence_id": "candidate-p1-general-003-e01",
+    "url": "https://home.cern/science/computing/the-birth-of-the-web/where-web-was-born/",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='home.cern', port=443): Max retries exceeded with url: /science/computing/the-birth-of-the-web/where-web-was-born/ (Caused by NameResolutionError(\"HTTPSConnection(host='home.cern', port=443): Failed to resolve 'home.cern' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "Opened source page and checked visible title, publisher, excerpt and date information. No authoritative original publication day located; date remains unknown.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-general-004",
+    "evidence_id": "candidate-p1-general-004-e01",
+    "url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='www.bipm.org', port=443): Max retries exceeded with url: /en/measurement-units/si-defining-constants (Caused by NameResolutionError(\"HTTPSConnection(host='www.bipm.org', port=443): Failed to resolve 'www.bipm.org' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "Opened source page and checked visible title, publisher, excerpt and date information. No authoritative original publication day located; date remains unknown.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "claim_id": "candidate-p1-general-005",
+    "evidence_id": "candidate-p1-general-005-e01",
+    "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+    "rechecked_on": "2026-11-01",
+    "method": "Requests GET; HTMLParser text and date metadata extraction; no source code executed",
+    "retrieval_error": "ConnectionError: HTTPSConnectionPool(host='www.esa.int', port=443): Max retries exceeded with url: /Science_Exploration/Space_Science/Gaia (Caused by NameResolutionError(\"HTTPSConnection(host='www.esa.int', port=443): Failed to resolve 'www.esa.int' ([Errno 8] nodename nor servname provided, or not known)\"))",
+    "web_recheck": {
+      "status": "excerpt_relocated",
+      "method": "Public web open and text/locator inspection; separate from failed local Requests attempt",
+      "source_title_and_publisher": "consistent_with_record",
+      "publication_date_check": "Opened source page and checked visible title, publisher, excerpt and date information. No authoritative original publication day located; date remains unknown.",
+      "meaning_check": "Original claim and stored excerpt retained; context concerns remain in collection notes.",
+      "human_review_status": "pending"
+    }
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-env-002",
+  "candidate_sha256": "97f6c7ee44992daa1c214944016c9e9ff35d12cd191cac2d059298acb9e20ceb",
+  "claim": "A single year above 1.5°C does not by itself establish failure of the Paris Agreement long-term temperature goal.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Annual observation versus long-term Paris goal is a clear distinction.",
+  "claim_evidence_interpretation": "The surrounding quotation explicitly makes the distinction, but the saved fragment contains only its trailing long-term-goal clause.",
+  "date_assessment": "candidate-p2-env-002-e01: Published 2025-01-10; temperature event covers calendar year 2024, not a single day.",
+  "provenance_assessment": "WMO aggregates international datasets; that does not make this single saved passage multiple independent sources.",
+  "research_concerns": [
+    "For a standalone annotation bundle, preserve the preceding single-year qualification or an approved context note."
+  ],
+  "recommended_action": "needs revision",
+  "recommendation_reason": "For a standalone annotation bundle, preserve the preceding single-year qualification or an approved context note.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-env-002-e01",
+      "source_url": "https://wmo.int/news/media-centre/wmo-confirms-2024-warmest-year-record-about-155degc-above-pre-industrial-level",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "WMO confirms 2024 as warmest year on record at about 1.55°C above pre-industrial level",
+      "observed_publisher": "World Meteorological Organization",
+      "source_role": "official institutional climate announcement",
+      "locator": "Celeste Saulo quotation on annual versus long-term temperature goals",
+      "publication_date_status": "matched_existing_date",
+      "observed_publication_date": "2025-01-10",
+      "other_date_notes": "Published 2025-01-10; temperature event covers calendar year 2024, not a single day.",
+      "context_notes": "The surrounding quotation explicitly makes the distinction, but the saved fragment contains only its trailing long-term-goal clause."
+    }
+  ]
+}

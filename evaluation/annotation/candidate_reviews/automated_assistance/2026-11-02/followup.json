@@ -1,0 +1,745 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_source_followup",
+  "automated_checked_on": "2026-11-02",
+  "source_checks": [
+    {
+      "check_id": "check-001",
+      "url": "https://oceanservice.noaa.gov/facts/acidification.html",
+      "title": "What is Ocean Acidification?",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-002",
+      "url": "https://www.eia.gov/energyexplained/energy-and-the-environment/recycling-and-energy.php",
+      "title": "Recycling and energy",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-003",
+      "url": "https://nems.nih.gov/environmental-programs/Pages/Benefits-of-Recycling.aspx",
+      "title": "Benefits of Recycling",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-004",
+      "url": "https://www.unep.org/en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter",
+      "title": "Plastic pollution & marine litter",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-005",
+      "url": "https://ozone.unep.org/treaties/montreal-protocol",
+      "title": "The Montreal Protocol on Substances that Deplete the Ozone Layer",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-006",
+      "url": "https://treaties.un.org/Pages/showDetails.aspx?objid=080000028003f7f7",
+      "title": "Montreal Protocol on Substances that Deplete the Ozone Layer",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-007",
+      "url": "https://science.nasa.gov/climate-change/causes/",
+      "title": "Causes",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-008",
+      "url": "https://www.rfc-editor.org/rfc/rfc8446",
+      "title": "RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "month",
+      "publication_label": "August 2018 (month only)"
+    },
+    {
+      "check_id": "check-009",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "title": "RFC 9110: HTTP Semantics",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "month",
+      "publication_label": "June 2022 (month only)"
+    },
+    {
+      "check_id": "check-010",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "title": "NIST Special Publication 800-63B",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-011",
+      "url": "https://docs.python.org/3.13/glossary.html#term-global-interpreter-lock",
+      "title": "Glossary — Python 3.13.18 documentation",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-012",
+      "url": "https://peps.python.org/pep-0703/",
+      "title": "PEP 703 – Making the Global Interpreter Lock Optional in CPython",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-013",
+      "url": "https://science.nasa.gov/mars/moons/",
+      "title": "Mars Moons",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-014",
+      "url": "https://science.nasa.gov/venus/venus-facts/",
+      "title": "Venus: Facts",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-015",
+      "url": "https://home.cern/science/computing/the-birth-of-the-web/where-web-was-born/",
+      "title": "Where the web was born",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-016",
+      "url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+      "title": null,
+      "access_status": "inaccessible",
+      "finding": "Retry still returned Timeout fetching; the original excerpt and page publication metadata remain unverified.",
+      "locator": "Original URL open and metadata lookup; inaccessible",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-017",
+      "url": "https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-1",
+      "title": "Resolution 1 of the 26th CGPM (2018)",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-018",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+      "title": "Gaia",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-019",
+      "url": "https://www.epa.gov/trash-free-waters/frequently-asked-questions-about-plastic-recycling-and-composting",
+      "title": "Frequently Asked Questions about Plastic Recycling and Composting",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-020",
+      "url": "https://consumer.ftc.gov/articles/online-shopping",
+      "title": "Online Shopping",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-021",
+      "url": "https://www.first.org/cvss/v4.0/user-guide",
+      "title": "CVSS v4.0 User Guide",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-022",
+      "url": "https://www.ga.gov.au/scientific-topics/national-location-information/landforms/deserts",
+      "title": "Areas of Australian and territory deserts",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-023",
+      "url": "https://oumnh.ox.ac.uk/learn-marie-curie",
+      "title": "Marie Curie",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-024",
+      "url": "https://science.nasa.gov/jupiter/jupiter-moons/europa/",
+      "title": "Europa",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-025",
+      "url": "https://spaceplace.nasa.gov/all-about-venus/en/",
+      "title": "All About Venus",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-026",
+      "url": "https://science.gsfc.nasa.gov/attic/cosmicopia.gsfc.nasa.gov/qa_earth.html",
+      "title": "NASA's Cosmicopia -- Ask Us -- Earth and Moon",
+      "access_status": "opened",
+      "finding": "Rendered source metadata checked again. No authoritative original publication day established; update/event/version dates are not substituted.",
+      "locator": "Web-tool date/Updated lookup plus available page metadata; see per-evidence notes",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-027",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32943526/",
+      "title": "Predicted growth in plastic waste exceeds efforts to mitigate plastic pollution",
+      "access_status": "opened",
+      "finding": "Abstract specifies the 2016 plastic-waste estimate; online publication and journal issue dates remain distinct.",
+      "locator": "Abstract; PMID 32943526; Epub 17 September and issue 18 September 2020",
+      "publication_date": "2020-09-17",
+      "publication_precision": "day",
+      "publication_label": "2020-09-17"
+    },
+    {
+      "check_id": "check-028",
+      "url": "https://wmo.int/news/media-centre/wmo-confirms-2024-warmest-year-record-about-155degc-above-pre-industrial-level",
+      "title": "WMO confirms 2024 as warmest year on record at about 1.55°C above pre-industrial level",
+      "access_status": "opened",
+      "finding": "The full quotation and Paris Agreement section explicitly distinguish annual exceedance from the long-term goal. The saved trailing fragment omits that leading distinction.",
+      "locator": "Celeste Saulo quotation; Paris Agreement section",
+      "publication_date": "2025-01-10",
+      "publication_precision": "day",
+      "publication_label": "2025-01-10"
+    },
+    {
+      "check_id": "check-029",
+      "url": "https://www.nature.com/articles/s41467-023-39810-w",
+      "title": "Warning of a forthcoming collapse of the Atlantic meridional overturning circulation",
+      "access_status": "opened",
+      "finding": "Conditional AMOC model estimate has a reported 2037–2109 interval, extending past 2100. It is not a certain before-2100 event. Readable article despite cookie-error redirect.",
+      "locator": "Abstract; model result and discussion",
+      "publication_date": "2023-07-25",
+      "publication_precision": "day",
+      "publication_label": "2023-07-25"
+    },
+    {
+      "check_id": "check-030",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2025/climate-change-amoc-likely-to-withstand-future-warming",
+      "title": "Climate change: AMOC likely to withstand future warming",
+      "access_status": "opened",
+      "finding": "A different modelling study says collapse over the next 75 years is unlikely. Neither passage observes the future or guarantees a definite event.",
+      "locator": "Lead-author quotation; timestamp 16:00 UTC on Wed 26 Feb 2025",
+      "publication_date": "2025-02-26",
+      "publication_precision": "day",
+      "publication_label": "2025-02-26"
+    },
+    {
+      "check_id": "check-031",
+      "url": "https://www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crackdown-on-plastic-pollution",
+      "title": "WHO calls for more research into microplastics and a crackdown on plastic pollution",
+      "access_status": "opened",
+      "finding": "The full quotation begins with limited-information uncertainty and calls for further research. The categorical current harmlessness claim is not established by this historical statement.",
+      "locator": "Maria Neira quotation; displayed publication date",
+      "publication_date": "2019-08-22",
+      "publication_precision": "day",
+      "publication_label": "2019-08-22"
+    },
+    {
+      "check_id": "check-032",
+      "url": "https://www.bipm.org/en/publications/si-brochure",
+      "title": "SI Brochure: The International System of Units (SI)",
+      "access_status": "opened",
+      "finding": "Official BIPM landing page links the English brochure, 9th edition 2019 updated in 2026.",
+      "locator": "English text download; citation",
+      "publication_date": null,
+      "publication_precision": "year",
+      "publication_label": "Citation year 2026; 9th edition 2019; no exact original publication day"
+    },
+    {
+      "check_id": "check-033",
+      "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf/2d2b50bf-f2b4-9661-f402-5f9d66e4b507?download=true&t=1780410776583&version=7.0",
+      "title": "The International System of Units (SI), 9th edition, V4.01",
+      "access_status": "opened",
+      "finding": "Section 1.1 explicitly establishes the SI units in terms of seven defining constants. Primary replacement material is accessible; this does not verify the failed original webpage.",
+      "locator": "Section 1.1, printed page 121 / PDF page 11; cover: V4.01 June 2026",
+      "publication_date": null,
+      "publication_precision": "month",
+      "publication_label": "Version V4.01 June 2026; 9th edition 2019, no original publication day inferred"
+    },
+    {
+      "check_id": "check-034",
+      "url": "https://www.nobelprize.org/prizes/physics/1903/summary/",
+      "title": null,
+      "access_status": "inaccessible",
+      "finding": "Official Nobel source attempt returned 403 Forbidden; no award record or date verified from this response.",
+      "locator": "Requested original official resource",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Not established because access was blocked"
+    },
+    {
+      "check_id": "check-035",
+      "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/",
+      "title": null,
+      "access_status": "inaccessible",
+      "finding": "Official Nobel source attempt returned 403 Forbidden; no award record or date verified from this response.",
+      "locator": "Requested original official resource",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Not established because access was blocked"
+    },
+    {
+      "check_id": "check-036",
+      "url": "https://api.nobelprize.org/2.1/laureate/6",
+      "title": null,
+      "access_status": "inaccessible",
+      "finding": "Official Nobel source attempt returned 403 Forbidden; no award record or date verified from this response.",
+      "locator": "Requested original official resource",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Not established because access was blocked"
+    },
+    {
+      "check_id": "check-037",
+      "url": "https://www.who.int/publications/i/item/9789240054608",
+      "title": "Dietary and inhalation exposure to nano- and microplastic particles and potential implications for human health",
+      "access_status": "opened",
+      "finding": "WHO overview describes review of evidence through December 2021 and continuing research uncertainties. The full 154-page report was not downloaded or audited.",
+      "locator": "Publication overview and date; ISBN 978-92-4-005460-8",
+      "publication_date": "2022-08-30",
+      "publication_precision": "day",
+      "publication_label": "2022-08-30"
+    },
+    {
+      "check_id": "check-038",
+      "url": "https://science.nasa.gov/mission/europa-clipper/mission-faq/",
+      "title": "Europa Clipper Mission FAQ",
+      "access_status": "opened",
+      "finding": "Official FAQ distinguishes habitability assessment from life detection; it supplies no observation establishing Europa life.",
+      "locator": "What will Europa Clipper do? and Will the spacecraft discover life?",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-039",
+      "url": "https://eol.jsc.nasa.gov/FAQ/",
+      "title": "Frequently Asked Questions",
+      "access_status": "opened",
+      "finding": "NASA Earth-observation FAQ names the Great Wall explicitly and says it is not visible from the Moon; astronaut photographs and naked-eye observations are distinct.",
+      "locator": "How much detail is in astronaut photography?",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    },
+    {
+      "check_id": "check-040",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/b/4/final",
+      "title": "SP 800-63B-4, Digital Identity Guidelines: Authentication and Authenticator Management",
+      "access_status": "opened",
+      "finding": "Official catalog gives July 2025 only. The October 2026 planning note and HTML build timestamp are not original publication dates.",
+      "locator": "Date Published field; planning note",
+      "publication_date": null,
+      "publication_precision": "month",
+      "publication_label": "July 2025 (month only)"
+    },
+    {
+      "check_id": "check-041",
+      "url": "https://science.nasa.gov/europa/",
+      "title": "Europa",
+      "access_status": "opened",
+      "finding": "Requested alias redirected to the original saved Europa URL. Opening summary concerns environments where life could exist, not observed life.",
+      "locator": "Alias redirect to https://science.nasa.gov/jupiter/jupiter-moons/europa/",
+      "publication_date": null,
+      "publication_precision": "unknown",
+      "publication_label": "Original publication day not established"
+    }
+  ],
+  "candidate_followups": [
+    {
+      "candidate_id": "candidate-p1-env-003",
+      "candidate_sha256": "401ed6e2115124d8c7764ba01aece4f943082983cd5a9f74bbb68243960f4228",
+      "status": "unresolved",
+      "source_check_ids": [
+        "check-004",
+        "check-027"
+      ],
+      "findings": "UNEP still uses annual framing; the Science abstract concerns plastic waste generated in 2016. A direct citation relationship was not established.",
+      "remaining_concerns": [
+        "Reference-year scope and possible common estimate remain unresolved; no two-source independence assumed."
+      ],
+      "proposed_context_note": "Retain the exact attributed claim. Explain separately that the research abstract estimates 2016 and that its relationship to the UNEP annual summary remains unverified.",
+      "recommended_inclusion_action": "Hold for temporal-scope review; do not treat matching ranges as independent contemporary measurements."
+    },
+    {
+      "candidate_id": "candidate-p1-general-004",
+      "candidate_sha256": "0c279298a43bee32924edb0ff92437c4762b6cd2d70a315d9bc99eb3bae5370a",
+      "status": "authoritative_replacement_available",
+      "source_check_ids": [
+        "check-016",
+        "check-017",
+        "check-032",
+        "check-033"
+      ],
+      "findings": "The original defining-constants URL still times out. Accessible official BIPM brochure section 1.1 directly defines the SI using seven constants; the operative resolution takes effect 20 May 2019.",
+      "remaining_concerns": [
+        "Original URL and excerpt remain unverified. Replacement has not been adopted. Publication day remains unknown; shared BIPM origin is not independent corroboration."
+      ],
+      "proposed_context_note": "Propose replacing the inaccessible evidence with the official English SI Brochure, section 1.1 (printed page 121 / PDF page 11), preserving its actual wording and edition/version. Use the resolution operative decision rather than only its 2011 considering clause.",
+      "recommended_inclusion_action": "Prepare a versioned context/source revision, then obtain a genuine human inclusion decision. Current candidate is not silently repaired."
+    },
+    {
+      "candidate_id": "candidate-p2-env-002",
+      "candidate_sha256": "97f6c7ee44992daa1c214944016c9e9ff35d12cd191cac2d059298acb9e20ceb",
+      "status": "resolved_context_gap",
+      "source_check_ids": [
+        "check-028"
+      ],
+      "findings": "The reopened WMO quotation and Paris Agreement section explicitly state the annual-versus-long-term distinction. The omitted context is identifiable.",
+      "remaining_concerns": [
+        "Saved evidence is still only a trailing clause. Any expanded frozen context requires a versioned candidate review; no new claim wording was selected."
+      ],
+      "proposed_context_note": "Proposed source-context paraphrase, not a quotation: WMO distinguishes a single year above 1.5°C from assessment of Paris long-term warming goals over decades; annual exceedance alone does not establish failure of that goal.",
+      "recommended_inclusion_action": "Prepare a versioned context/source revision, then obtain a genuine human inclusion decision. Current candidate is not silently repaired."
+    },
+    {
+      "candidate_id": "candidate-p2-env-003",
+      "candidate_sha256": "f5aa2363b1bbc4e55d23e364df4e6dddfcf41ac752e851022ff54734a057a0c8",
+      "status": "unresolved",
+      "source_check_ids": [
+        "check-029",
+        "check-030"
+      ],
+      "findings": "The conditional 2023 estimate has a 2037–2109 interval; the 2025 modelling announcement describes collapse as unlikely this century. Neither establishes an unconditional before-2100 event.",
+      "remaining_concerns": [
+        "Different methods/scenarios are not automatically a genuine contradiction. Claim lacks as-of conditions; full model and data independence were not audited."
+      ],
+      "proposed_context_note": "Keep a future proposition under test separate from attributed model projections. Human coordinator must decide the intended temporal/scenario scope before preparing a fixed annotation bundle.",
+      "recommended_inclusion_action": "Hold for scope and comparability review; do not force a prediction or replace the claim with a different proposition."
+    },
+    {
+      "candidate_id": "candidate-p2-env-004",
+      "candidate_sha256": "ae6f9886611f1835eabb8c8e160d22a671a2400b9045f3da112a68b91c396c3a",
+      "status": "unresolved",
+      "source_check_ids": [
+        "check-031",
+        "check-037"
+      ],
+      "findings": "The 2019 quotation is explicitly limited-information language. A 2022 WHO publication overview reviews evidence through December 2021 and still identifies research uncertainties.",
+      "remaining_concerns": [
+        "No present-day harmlessness demonstration was established. The full 2022 report and later research were not exhaustively reviewed. Missing proof of harmlessness does not establish harm."
+      ],
+      "proposed_context_note": "Restore the 2019 uncertainty qualification as context. Any later WHO overview is a separate dated supplementary source, not a replacement date for the original passage.",
+      "recommended_inclusion_action": "Hold as insufficient evidence for the categorical present-day proposition, or deliberately include a limited bundle only after an explicit human protocol decision."
+    },
+    {
+      "candidate_id": "candidate-p2-tech-002",
+      "candidate_sha256": "ebc4593f3ffc47fe1b9f2c2091e342a58dfbdbcf8af6838f58a2ecd371ac57cc",
+      "status": "resolved_context_gap",
+      "source_check_ids": [
+        "check-010",
+        "check-040"
+      ],
+      "findings": "The same OTP sentence appears in both single- and multi-factor sections. Section 3.1.5 explicitly defines multi-factor OTP and states the relevant limitation.",
+      "remaining_concerns": [
+        "Saved excerpt lacks its section heading. Shared NIST URL with p1-tech-004 must remain grouped; original day is still unknown."
+      ],
+      "proposed_context_note": "Proposed context locator: NIST SP 800-63B-4, section 3.1.5 Multi-Factor OTPs. Preserve the definition requiring an activation factor and identify this occurrence of the saved sentence, not the single-factor occurrence.",
+      "recommended_inclusion_action": "Prepare a versioned context/source revision, then obtain a genuine human inclusion decision. Current candidate is not silently repaired."
+    },
+    {
+      "candidate_id": "candidate-p2-general-002",
+      "candidate_sha256": "f3f79f9f2eebd17d33009e503bd566ddf5b30b0ec08b08a6e1298557ca2bf221",
+      "status": "resolved_context_gap",
+      "source_check_ids": [
+        "check-023",
+        "check-034",
+        "check-035",
+        "check-036"
+      ],
+      "findings": "Oxford names Marie Curie in the immediately preceding sentence, resolving the pronoun. Three attempted official Nobel resources returned 403 and were not verified.",
+      "remaining_concerns": [
+        "Saved fragment still omits its antecedent. Double negation is collector-authored. Official award-record corroboration was blocked, not assumed."
+      ],
+      "proposed_context_note": "Proposed context note, not a quotation: the pronoun in the Oxford passage refers to Marie Curie, named in the preceding sentence. Retain that antecedent in any expanded versioned excerpt.",
+      "recommended_inclusion_action": "Prepare a versioned context/source revision, then obtain a genuine human inclusion decision. Current candidate is not silently repaired."
+    },
+    {
+      "candidate_id": "candidate-p2-general-003",
+      "candidate_sha256": "93a6b126357964ecc658301a086db6e14e76e024582a89d70ea7abf9c48b89ed",
+      "status": "unresolved",
+      "source_check_ids": [
+        "check-024",
+        "check-038",
+        "check-041"
+      ],
+      "findings": "The original Europa page and an official mission FAQ discuss possible habitability. The FAQ explicitly says Europa Clipper is not a life-detection mission.",
+      "remaining_concerns": [
+        "No life-detection evidence was established. This is not proof that no life exists. A habitability goal cannot supply a directional life-existence assessment."
+      ],
+      "proposed_context_note": "Keep the mission goal separate from the existence claim. Include this fixed insufficient bundle only if the human coordinator intentionally approves that research design.",
+      "recommended_inclusion_action": "Hold as insufficient evidence; do not manufacture either supporting evidence or an absence-of-life conclusion."
+    },
+    {
+      "candidate_id": "candidate-p2-general-005",
+      "candidate_sha256": "d10cc91eb1c099fdeb20922ac6d0a08e6fc7dea2a6d8cd78ca65a4cfd9610030",
+      "status": "resolved_context_gap",
+      "source_check_ids": [
+        "check-026",
+        "check-039"
+      ],
+      "findings": "The original question 99 identifies the Great Wall. A separate official NASA Earth-observation FAQ names it explicitly and addresses visibility from the Moon.",
+      "remaining_concerns": [
+        "Original archive answer date and new FAQ publication day are unknown. Same NASA institution does not provide independent corroboration; Moon, orbit and photographic visibility must remain separate."
+      ],
+      "proposed_context_note": "Proposed context note, not a quotation: the pronoun in Cosmicopia answer 99 refers to the Great Wall of China named in its question. The supplementary NASA FAQ can provide a named-subject source if a replacement is versioned and reviewed.",
+      "recommended_inclusion_action": "Prepare a versioned context/source revision, then obtain a genuine human inclusion decision. Current candidate is not silently repaired."
+    }
+  ],
+  "missing_date_checks": [
+    {
+      "evidence_id": "candidate-p1-env-001-e01",
+      "source_check_id": "check-001",
+      "finding": "Last updated 2026-09-23 only; no original day established. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-env-002-e01",
+      "source_check_id": "check-002",
+      "finding": "No original publication day visible in the retrieved text. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-env-002-e02",
+      "source_check_id": "check-003",
+      "finding": "No original publication day established; older statistics and a funding-lapse currency warning are visible. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-env-003-e01",
+      "source_check_id": "check-004",
+      "finding": "No original publication day established. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-env-004-e01",
+      "source_check_id": "check-005",
+      "finding": "1987 and 1989 are event years; no page publication day established. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-env-004-e02",
+      "source_check_id": "check-006",
+      "finding": "Conclusion 1987-09-16; entry into force 1989-01-01. These are not publication dates. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-env-005-e01",
+      "source_check_id": "check-007",
+      "finding": "Original publication day not established; last-updated date is separate metadata. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-tech-001-e01",
+      "source_check_id": "check-008",
+      "finding": "Published August 2018 only. Current landing page lists RFC 9846 as obsoleting RFC 8446. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-tech-002-e01",
+      "source_check_id": "check-009",
+      "finding": "Header gives June 2022 only; no publication day imputed. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-tech-004-e01",
+      "source_check_id": "check-010",
+      "finding": "Official catalog confirms July 2025 (month only); HTML build and planning-note dates do not supply the original day. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-tech-005-e01",
+      "source_check_id": "check-011",
+      "finding": "Build/update 2026-10-26 only; original entry publication day unknown. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-tech-005-e02",
+      "source_check_id": "check-012",
+      "finding": "Created 2023-01-09; Python-Version 3.13; Status Final. Creation is not assumed to be publication. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-general-001-e01",
+      "source_check_id": "check-013",
+      "finding": "Last updated 2024-11-05 only; original publication day unknown. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-general-002-e01",
+      "source_check_id": "check-014",
+      "finding": "Last updated 2026-10-15 only; original publication day unknown. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-general-003-e01",
+      "source_check_id": "check-015",
+      "finding": "Event 1993-04-30; original page publication day not established. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-general-004-e01",
+      "source_check_id": "check-016",
+      "finding": "Original publication day and current page contents could not be rechecked. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-general-004-e02",
+      "source_check_id": "check-017",
+      "finding": "Resolution year 2018 and effective date 2019-05-20 are distinct; exact page publication day not established. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p1-general-005-e01",
+      "source_check_id": "check-018",
+      "finding": "Expected month December 2026; no day invented and no completed release inferred. Page publication day unknown. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p2-env-005-e01",
+      "source_check_id": "check-019",
+      "finding": "Last updated 2026-10-26 only; linked strategy release is not this page publication. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p2-tech-001-e01",
+      "source_check_id": "check-020",
+      "finding": "No original publication day established in the opened text. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p2-tech-002-e01",
+      "source_check_id": "check-010",
+      "finding": "Official catalog confirms July 2025 (month only); HTML build and planning-note dates do not supply the original day. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p2-tech-005-e01",
+      "source_check_id": "check-021",
+      "finding": "Document Version 1.2; original publication day not established. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p2-general-001-e01",
+      "source_check_id": "check-022",
+      "finding": "Page last updated 2022-11-25; original publication day unknown. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p2-general-002-e01",
+      "source_check_id": "check-023",
+      "finding": "No original publication day established. Passage itself gives no award event day. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p2-general-003-e01",
+      "source_check_id": "check-024",
+      "finding": "Last updated 2026-09-24 only; original publication day unknown. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p2-general-004-e01",
+      "source_check_id": "check-025",
+      "finding": "Article last updated 2024-03-15; separate site-footer update 2026-07-31. Neither treated as original publication. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    },
+    {
+      "evidence_id": "candidate-p2-general-005-e01",
+      "source_check_id": "check-026",
+      "finding": "No original date for this specific answer established; dates on other Q&As must not be borrowed. Retain null; visible-text lookup is not an exhaustive metadata/archive search."
+    }
+  ],
+  "search_notes": [
+    "Web search screened for UNEP 19–23 million tonnes / 2016, official NASA Europa mission purpose, and Great Wall Moon visibility. Only opened primary/institutional pages in source_checks are used; result snippets alone were not treated as verified evidence."
+  ],
+  "limitations": [
+    "Four context gaps resolved at assistance level, one authoritative replacement available, four substantive issues unresolved. No frozen candidate was repaired.",
+    "Web tool can return cached/indexed text. Opened is not a measured HTTP 200 or an exhaustive metadata audit.",
+    "Source independence, unknown publication days, human inclusion decisions and later independent annotations remain unestablished.",
+    "No new gold labels, submitted reviews, adjudications or imports are created."
+  ]
+}

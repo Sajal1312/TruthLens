@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-tech-001",
+  "candidate_sha256": "0cd641a6cff4dda4bd550a4159f7f27ac72d27d01871e119d26191a04c4d830d",
+  "claim": "RFC 8446 specifies version 1.3 of the Transport Layer Security protocol.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Claim explicitly names RFC 8446, not the latest TLS standard.",
+  "claim_evidence_interpretation": "Abstract specifies TLS 1.3. The landing page now marks RFC 8446 obsoleted by RFC 9846.",
+  "date_assessment": "candidate-p1-tech-001-e01: Published August 2018 only. Current landing page lists RFC 9846 as obsoleting RFC 8446.",
+  "provenance_assessment": "Single normative document, not multiple corroborating sources.",
+  "research_concerns": [
+    "Retain the document-version scope; do not describe RFC 8446 as the current standard."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-tech-001-e01",
+      "source_url": "https://www.rfc-editor.org/rfc/rfc8446",
+      "access_status": "opened",
+      "excerpt_match": "format_normalized",
+      "observed_title": "RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3",
+      "observed_publisher": "IETF / RFC Editor",
+      "source_role": "normative protocol document",
+      "locator": "Abstract, first sentence; About this RFC, Obsoleted by",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "Published August 2018 only. Current landing page lists RFC 9846 as obsoleting RFC 8446.",
+      "context_notes": "Abstract specifies TLS 1.3. The landing page now marks RFC 8446 obsoleted by RFC 9846."
+    }
+  ]
+}

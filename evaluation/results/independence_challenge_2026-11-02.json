@@ -1,0 +1,1064 @@
+{
+  "scope": "Preliminary developer-authored synthetic diagnostics; no independent benchmark or proven independence",
+  "network_used": false,
+  "model_used": false,
+  "case_count": 19,
+  "source_count": 40,
+  "pair_count": 23,
+  "metrics": {
+    "exact": {
+      "count": 23,
+      "labels": [
+        "detected",
+        "not_detected"
+      ],
+      "confusion_matrix": {
+        "detected": {
+          "detected": 2,
+          "not_detected": 0
+        },
+        "not_detected": {
+          "detected": 0,
+          "not_detected": 21
+        }
+      },
+      "per_class": {
+        "detected": {
+          "support": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "not_detected": {
+          "support": 21,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "macro_f1": 1.0,
+      "macro_f1_class_count": 2,
+      "macro_f1_labels": [
+        "detected",
+        "not_detected"
+      ],
+      "accuracy": 1.0
+    },
+    "near": {
+      "count": 23,
+      "labels": [
+        "detected",
+        "not_detected"
+      ],
+      "confusion_matrix": {
+        "detected": {
+          "detected": 1,
+          "not_detected": 1
+        },
+        "not_detected": {
+          "detected": 0,
+          "not_detected": 21
+        }
+      },
+      "per_class": {
+        "detected": {
+          "support": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "not_detected": {
+          "support": 21,
+          "precision": 0.9545454545454546,
+          "recall": 1.0,
+          "f1": 0.9767441860465117
+        }
+      },
+      "macro_f1": 0.8217054263565892,
+      "macro_f1_class_count": 2,
+      "macro_f1_labels": [
+        "detected",
+        "not_detected"
+      ],
+      "accuracy": 0.9565217391304348
+    },
+    "explicit": {
+      "count": 23,
+      "labels": [
+        "detected",
+        "not_detected"
+      ],
+      "confusion_matrix": {
+        "detected": {
+          "detected": 4,
+          "not_detected": 0
+        },
+        "not_detected": {
+          "detected": 0,
+          "not_detected": 19
+        }
+      },
+      "per_class": {
+        "detected": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "not_detected": {
+          "support": 19,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "macro_f1": 1.0,
+      "macro_f1_class_count": 2,
+      "macro_f1_labels": [
+        "detected",
+        "not_detected"
+      ],
+      "accuracy": 1.0
+    },
+    "group": {
+      "count": 23,
+      "labels": [
+        "detected",
+        "not_detected"
+      ],
+      "confusion_matrix": {
+        "detected": {
+          "detected": 9,
+          "not_detected": 1
+        },
+        "not_detected": {
+          "detected": 0,
+          "not_detected": 13
+        }
+      },
+      "per_class": {
+        "detected": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "not_detected": {
+          "support": 13,
+          "precision": 0.9285714285714286,
+          "recall": 1.0,
+          "f1": 0.962962962962963
+        }
+      },
+      "macro_f1": 0.9551656920077973,
+      "macro_f1_class_count": 2,
+      "macro_f1_labels": [
+        "detected",
+        "not_detected"
+      ],
+      "accuracy": 0.9565217391304348
+    }
+  },
+  "false_positive_grouping": {
+    "false_grouped_pairs": 0,
+    "gold_ungrouped_pairs": 13,
+    "rate": 0.0
+  },
+  "cases": [
+    {
+      "id": "p01",
+      "category": "identical_same_url",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": true,
+            "near": false,
+            "explicit": false,
+            "group": true
+          },
+          "actual": {
+            "exact": true,
+            "near": false,
+            "explicit": false,
+            "group": true
+          },
+          "category": "Exact duplicate",
+          "signals": [
+            {
+              "kind": "observed",
+              "code": "same_url",
+              "message": "Same normalized document URL; passages can still differ"
+            },
+            {
+              "kind": "observed",
+              "code": "exact_text",
+              "message": "Passage text matches after whitespace normalization; copying or authorship is not established"
+            },
+            {
+              "kind": "observed",
+              "code": "same_host",
+              "message": "Same exact host; not proof of one publisher, article or reporting chain"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "reason": "Every member pair has a direct observed reference/document/text match or qualifying inferred wording match"
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "category": "identical_different_domains",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": true,
+            "near": false,
+            "explicit": false,
+            "group": true
+          },
+          "actual": {
+            "exact": true,
+            "near": false,
+            "explicit": false,
+            "group": true
+          },
+          "category": "Exact duplicate",
+          "signals": [
+            {
+              "kind": "observed",
+              "code": "exact_text",
+              "message": "Passage text matches after whitespace normalization; copying or authorship is not established"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "reason": "Every member pair has a direct observed reference/document/text match or qualifying inferred wording match"
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "category": "lightly_edited_copy",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": true,
+            "explicit": false,
+            "group": true
+          },
+          "actual": {
+            "exact": false,
+            "near": true,
+            "explicit": false,
+            "group": true
+          },
+          "category": "Near duplicate",
+          "signals": [
+            {
+              "kind": "heuristic",
+              "code": "near_text",
+              "message": "3-word-shingle Jaccard 0.860; near-duplicate wording, not proof of copying"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "reason": "Every member pair has a direct observed reference/document/text match or qualifying inferred wording match"
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "category": "substantial_paraphrase",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": true,
+            "explicit": false,
+            "group": true
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Independence not established",
+          "signals": []
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "category": "shared_original_report",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": true,
+            "group": true
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": true,
+            "group": true
+          },
+          "category": "Explicit shared-source dependency",
+          "signals": [
+            {
+              "kind": "observed",
+              "code": "citation_url",
+              "message": "Explicit reference in supplied snippet(s): https://reports.example/survey-2025; reporting dependence beyond that reference is unverified"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "reason": "Every member pair has a direct observed reference/document/text match or qualifying inferred wording match"
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "category": "different_articles_one_organization",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Possible dependency",
+          "signals": [
+            {
+              "kind": "observed",
+              "code": "same_host",
+              "message": "Same exact host; not proof of one publisher, article or reporting chain"
+            },
+            {
+              "kind": "observed",
+              "code": "same_declared_publisher",
+              "message": "Matching supplied publisher labels; identity/ownership is not independently verified"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "category": "unknown_provenance",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Independence not established",
+          "signals": []
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "category": "distinct_same_event_evidence",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Independence not established",
+          "signals": []
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "category": "tracking_url_variation",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": true
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": true
+          },
+          "category": "Possible dependency",
+          "signals": [
+            {
+              "kind": "observed",
+              "code": "same_url",
+              "message": "Same normalized document URL; passages can still differ"
+            },
+            {
+              "kind": "observed",
+              "code": "same_host",
+              "message": "Same exact host; not proof of one publisher, article or reporting chain"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "reason": "Every member pair has a direct observed reference/document/text match or qualifying inferred wording match"
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "category": "malformed_missing_urls",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Independence not established",
+          "signals": []
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "category": "similar_wording_different_meaning",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Possible dependency",
+          "signals": [
+            {
+              "kind": "heuristic",
+              "code": "similar_text_caution",
+              "message": "3-word-shingle Jaccard 0.853; short text or changed numbers/negation/scope prevents near-duplicate grouping"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "category": "shared_institution_not_one_report",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Possible dependency",
+          "signals": [
+            {
+              "kind": "heuristic",
+              "code": "shared_organization_attribution",
+              "message": "Both snippets reference nasa; a shared institution/title or uncategorized URL does not identify one originating report or prove copying"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "category": "multiple_passages_one_document",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": true
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": true
+          },
+          "category": "Possible dependency",
+          "signals": [
+            {
+              "kind": "observed",
+              "code": "same_url",
+              "message": "Same normalized document URL; passages can still differ"
+            },
+            {
+              "kind": "observed",
+              "code": "same_host",
+              "message": "Same exact host; not proof of one publisher, article or reporting chain"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "reason": "Every member pair has a direct observed reference/document/text match or qualifying inferred wording match"
+        }
+      ]
+    },
+    {
+      "id": "p14",
+      "category": "shared_unverified_report_title",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Possible dependency",
+          "signals": [
+            {
+              "kind": "heuristic",
+              "code": "shared_report_title",
+              "message": "Both snippets reference demo survey; a shared institution/title or uncategorized URL does not identify one originating report or prove copying"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p15",
+      "category": "different_article_query_ids",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Possible dependency",
+          "signals": [
+            {
+              "kind": "observed",
+              "code": "same_host",
+              "message": "Same exact host; not proof of one publisher, article or reporting chain"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p16",
+      "category": "shared_navigation_url",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Possible dependency",
+          "signals": [
+            {
+              "kind": "heuristic",
+              "code": "shared_mentioned_url",
+              "message": "Both snippets reference https://portal.example/home; a shared institution/title or uncategorized URL does not identify one originating report or prove copying"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p17",
+      "category": "direct_report_citation",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": true,
+            "group": true
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": true,
+            "group": true
+          },
+          "category": "Explicit shared-source dependency",
+          "signals": [
+            {
+              "kind": "observed",
+              "code": "direct_citation",
+              "message": "Explicit reference in supplied snippet(s): https://reports.example/original; reporting dependence beyond that reference is unverified"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "reason": "Every member pair has a direct observed reference/document/text match or qualifying inferred wording match"
+        }
+      ]
+    },
+    {
+      "id": "p18",
+      "category": "weak_attribution_bridge",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Possible dependency",
+          "signals": [
+            {
+              "kind": "heuristic",
+              "code": "shared_organization_attribution",
+              "message": "Both snippets reference nasa; a shared institution/title or uncategorized URL does not identify one originating report or prove copying"
+            }
+          ]
+        },
+        {
+          "left": 0,
+          "right": 2,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Independence not established",
+          "signals": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Possible dependency",
+          "signals": [
+            {
+              "kind": "heuristic",
+              "code": "shared_organization_attribution",
+              "message": "Both snippets reference reuters; a shared institution/title or uncategorized URL does not identify one originating report or prove copying"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            1
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        },
+        {
+          "members": [
+            2
+          ],
+          "reason": "No qualifying grouping link was detected; independence remains unknown"
+        }
+      ]
+    },
+    {
+      "id": "p19",
+      "category": "explicit_citation_bridge",
+      "pairs": [
+        {
+          "left": 0,
+          "right": 1,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": true,
+            "group": true
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": true,
+            "group": true
+          },
+          "category": "Explicit shared-source dependency",
+          "signals": [
+            {
+              "kind": "observed",
+              "code": "citation_url",
+              "message": "Explicit reference in supplied snippet(s): https://reports.example/first; reporting dependence beyond that reference is unverified"
+            }
+          ]
+        },
+        {
+          "left": 0,
+          "right": 2,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": false,
+            "group": false
+          },
+          "category": "Independence not established",
+          "signals": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "expected": {
+            "exact": false,
+            "near": false,
+            "explicit": true,
+            "group": true
+          },
+          "actual": {
+            "exact": false,
+            "near": false,
+            "explicit": true,
+            "group": true
+          },
+          "category": "Explicit shared-source dependency",
+          "signals": [
+            {
+              "kind": "observed",
+              "code": "citation_url",
+              "message": "Explicit reference in supplied snippet(s): https://reports.example/second; reporting dependence beyond that reference is unverified"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            0,
+            1
+          ],
+          "reason": "Every member pair has a direct observed reference/document/text match or qualifying inferred wording match"
+        },
+        {
+          "members": [
+            1,
+            2
+          ],
+          "reason": "Every member pair has a direct observed reference/document/text match or qualifying inferred wording match"
+        }
+      ]
+    }
+  ],
+  "limitations": "Pair labels are authored diagnostic expectations, not verified reporting chains. Cases are small, clustered within documents and developed alongside code. Shared references can be critical or incidental. Lexical similarity misses substantial paraphrases. Undefined metrics are null."
+}

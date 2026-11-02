@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-env-003",
+  "candidate_sha256": "f5aa2363b1bbc4e55d23e364df4e6dddfcf41ac752e851022ff54734a057a0c8",
+  "claim": "The Atlantic Meridional Overturning Circulation will collapse before 2100.",
+  "human_review_priority": "high",
+  "claim_clarity_assessment": "Unqualified future certainty and deadline contrast with conditional research estimates.",
+  "claim_evidence_interpretation": "One study projects conditional collapse; another modelling announcement describes collapse as unlikely. These are not observations of a future event.",
+  "date_assessment": "candidate-p2-env-003-e01: Published 2023-07-25; conditional future estimate, not observed collapse. Article text readable despite cookie-error query on redirect. candidate-p2-env-003-e02: Displayed 16:00 UTC, 2025-02-26; next 75 years is a projection interval, not an event date.",
+  "provenance_assessment": "Different research teams and methods are identified; full data/citation dependence was not audited. Met Office announcement is dependent on its own paper.",
+  "research_concerns": [
+    "Define the intended prediction/as-of scope and compare assumptions before presenting this as a genuine evidence-conflict case."
+  ],
+  "recommended_action": "needs revision",
+  "recommendation_reason": "Define the intended prediction/as-of scope and compare assumptions before presenting this as a genuine evidence-conflict case.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-env-003-e01",
+      "source_url": "https://www.nature.com/articles/s41467-023-39810-w",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Warning of a forthcoming collapse of the Atlantic meridional overturning circulation",
+      "observed_publisher": "Nature Communications / Springer Nature; authors Peter Ditlevsen and Susanne Ditlevsen",
+      "source_role": "primary research article",
+      "locator": "Abstract, conditional mid-century estimate; Published field",
+      "publication_date_status": "matched_existing_date",
+      "observed_publication_date": "2023-07-25",
+      "other_date_notes": "Published 2023-07-25; conditional future estimate, not observed collapse. Article text readable despite cookie-error query on redirect.",
+      "context_notes": "One study projects conditional collapse; another modelling announcement describes collapse as unlikely. These are not observations of a future event."
+    },
+    {
+      "evidence_id": "candidate-p2-env-003-e02",
+      "source_url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2025/climate-change-amoc-likely-to-withstand-future-warming",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Climate change: AMOC likely to withstand future warming",
+      "observed_publisher": "UK Met Office; author Grahame Madge",
+      "source_role": "research-team announcement about a modelling paper",
+      "locator": "Lead-author quotation; article timestamp",
+      "publication_date_status": "matched_existing_date",
+      "observed_publication_date": "2025-02-26",
+      "other_date_notes": "Displayed 16:00 UTC, 2025-02-26; next 75 years is a projection interval, not an event date.",
+      "context_notes": "One study projects conditional collapse; another modelling announcement describes collapse as unlikely. These are not observations of a future event."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-tech-002",
+  "candidate_sha256": "ebc4593f3ffc47fe1b9f2c2091e342a58dfbdbcf8af6838f58a2ecd371ac57cc",
+  "claim": "Not all multifactor authentication methods are phishing-resistant.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Limited MFA quantifier is clear, but generic OTP wording needs a section locator.",
+  "claim_evidence_interpretation": "The same OTP sentence occurs in single-factor and multi-factor sections. The multi-factor section is the relevant context.",
+  "date_assessment": "candidate-p2-tech-002-e01: HTML build timestamp 2025-08-26 is not established as the original publication day.",
+  "provenance_assessment": "Same NIST document as p1-tech-004: shared-source leakage group, not independent evidence.",
+  "research_concerns": [
+    "Preserve section 3.1.5 and its second-factor definition in approved context so an annotator need not guess which occurrence was collected."
+  ],
+  "recommended_action": "needs revision",
+  "recommendation_reason": "Preserve section 3.1.5 and its second-factor definition in approved context so an annotator need not guess which occurrence was collected.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-tech-002-e01",
+      "source_url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "NIST Special Publication 800-63B",
+      "observed_publisher": "NIST",
+      "source_role": "normative authentication guidance",
+      "locator": "Password requirements item 6; Multi-Factor OTP section 3.1.5",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "HTML build timestamp 2025-08-26 is not established as the original publication day.",
+      "context_notes": "The same OTP sentence occurs in single-factor and multi-factor sections. The multi-factor section is the relevant context."
+    }
+  ]
+}

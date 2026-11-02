@@ -1,0 +1,42 @@
+{
+  "claim_id": "candidate-p1-env-004",
+  "claim_text": "The Montreal Protocol was signed in 1987 and entered into force in 1989.",
+  "claim_family_id": "family-p1-env-004",
+  "event_group_id": null,
+  "claim_category": [
+    "compound_claim",
+    "event_vs_publication_date"
+  ],
+  "split": "pilot",
+  "annotation_status": "unannotated",
+  "evidence": [
+    {
+      "evidence_id": "candidate-p1-env-004-e01",
+      "passage": "The landmark agreement was signed in 1987 and entered into force in 1989.",
+      "source_title": "The Montreal Protocol on Substances that Deplete the Ozone Layer",
+      "source_identifier": "https://ozone.unep.org/treaties/montreal-protocol",
+      "source_url": "https://ozone.unep.org/treaties/montreal-protocol",
+      "publisher_id": "unep-ozone-secretariat",
+      "publication_date": null,
+      "event_date": null,
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-p1-env-004",
+      "provenance_relation": "unknown",
+      "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+    },
+    {
+      "evidence_id": "candidate-p1-env-004-e02",
+      "passage": "Places/dates of conclusion\nMontreal 16/09/1987\nEIF information\n1 January 1989",
+      "source_title": "Montreal Protocol on Substances that Deplete the Ozone Layer — UN Treaty Collection",
+      "source_identifier": "https://treaties.un.org/Pages/showDetails.aspx?objid=080000028003f7f7",
+      "source_url": "https://treaties.un.org/Pages/showDetails.aspx?objid=080000028003f7f7",
+      "publisher_id": "un-treaty-collection",
+      "publication_date": null,
+      "event_date": "1989-01-01",
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-p1-env-004",
+      "provenance_relation": "same_origin",
+      "provenance_basis": "Both documents describe the same registered Montreal Protocol; registry is the original treaty record."
+    }
+  ]
+}

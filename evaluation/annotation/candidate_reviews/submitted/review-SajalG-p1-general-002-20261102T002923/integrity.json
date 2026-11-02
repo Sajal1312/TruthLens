@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "review-SajalG-p1-general-002-20261102T002923",
+  "candidate_id": "candidate-p1-general-002",
+  "candidate_sha256": "10f369652b165aedcee9fdf36e14990de9f864f7be77b0364117969938126474",
+  "review_file_sha256": "622fd9e90ba5323fc25dd2a92389d78e8293a9a627955eb31a80cbf782a65732",
+  "snapshot_file_sha256": "bb69593b54209a3a9e250403f6faea53111bceb5e8a88515409d098fa2996fef",
+  "sealed_at": "2026-11-01T19:06:22.070812+00:00"
+}

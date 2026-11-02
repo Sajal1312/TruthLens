@@ -1,0 +1,272 @@
+{
+  "collection_id": "truthlens-phase2-15-v1",
+  "collected_on": "2026-11-01",
+  "claim_records_file": "claim_records.json",
+  "target_claim_count": 15,
+  "target_topics": {
+    "sustainability_environment": 5,
+    "cybersecurity_technology": 5,
+    "general_factual": 5
+  },
+  "topics_by_claim": {
+    "candidate-p2-env-001": "sustainability_environment",
+    "candidate-p2-env-002": "sustainability_environment",
+    "candidate-p2-env-003": "sustainability_environment",
+    "candidate-p2-env-004": "sustainability_environment",
+    "candidate-p2-env-005": "sustainability_environment",
+    "candidate-p2-tech-001": "cybersecurity_technology",
+    "candidate-p2-tech-002": "cybersecurity_technology",
+    "candidate-p2-tech-003": "cybersecurity_technology",
+    "candidate-p2-tech-004": "cybersecurity_technology",
+    "candidate-p2-tech-005": "cybersecurity_technology",
+    "candidate-p2-general-001": "general_factual",
+    "candidate-p2-general-002": "general_factual",
+    "candidate-p2-general-003": "general_factual",
+    "candidate-p2-general-004": "general_factual",
+    "candidate-p2-general-005": "general_factual"
+  },
+  "source_checks": {
+    "candidate-p2-env-001-e01": {
+      "claim_id": "candidate-p2-env-001",
+      "source_url": "https://www.unep.org/en/news-and-stories/press-release/biodegradable-plastics-are-not-answer-reducing-marine-litter-says-un",
+      "source_role": "institutional_report_summary",
+      "locator": "Second paragraph, report findings",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "510fad32834fa3e00aeb0933ce06495cc736c70b2fc7a3c3f2cd7be3b30fc317",
+      "human_review_status": "pending",
+      "review_notes": "Faithful collector paraphrase of the report summary; not a verbatim organically occurring claim. Conditions, polymer type and time horizon require review.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-env-002-e01": {
+      "claim_id": "candidate-p2-env-002",
+      "source_url": "https://wmo.int/news/media-centre/wmo-confirms-2024-warmest-year-record-about-155degc-above-pre-industrial-level",
+      "source_role": "institutional_assessment",
+      "locator": "Secretary-General quote beginning It is important to emphasize",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "b13f8f77102444c3bf49aede5662e3bb79b996e7d4fcfacf50ab9366243ad8e4",
+      "human_review_status": "pending",
+      "review_notes": "Claim preserves the single-year versus long-term qualifier. Event period is 2024, not the January 2025 publication day. Stored fragment needs surrounding quote checked; do not infer that the long-term goal is secure.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-env-003-e01": {
+      "claim_id": "candidate-p2-env-003",
+      "source_url": "https://www.nature.com/articles/s41467-023-39810-w",
+      "source_role": "primary_research",
+      "locator": "Abstract, concluding sentence",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "950638547e3a1e410e9ca227370fd4e784b1618a6ce74ab8899f0689da453b30",
+      "human_review_status": "pending",
+      "review_notes": "Collector-formulated proposition for reviewing differing published projections; not presented as a study quotation or established event. 2023 estimate is scenario-dependent; its interval extends beyond 2100. Compare assumptions and definitions, not just opposite-sounding snippets.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-env-004-e01": {
+      "claim_id": "candidate-p2-env-004",
+      "source_url": "https://www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crackdown-on-plastic-pollution",
+      "source_role": "institutional_research_summary",
+      "locator": "Maria Neira quotation",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "6da0145e701063159b4aa2b696914ff1f8a5ca2ce233f7fcab62c65ed45096ab",
+      "human_review_status": "pending",
+      "review_notes": "Collector-formulated stronger proposition, not attributed as WHO wording. Source explicitly qualifies the evidence; a 2019 limited assessment cannot settle all current exposure, particle-size and health outcomes. Requires updated research and human review.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-env-005-e01": {
+      "claim_id": "candidate-p2-env-005",
+      "source_url": "https://www.epa.gov/trash-free-waters/frequently-asked-questions-about-plastic-recycling-and-composting",
+      "source_role": "official_guidance",
+      "locator": "If a plastic product is labeled compostable, can I add it to my home compost pile?",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "6d6975aabd006e979a68022041ad26e544fe639a51bfcd7fe752fcad0c2b0cbf",
+      "human_review_status": "pending",
+      "review_notes": "Collector paraphrase of conditional guidance. Industrial and home composting differ. Visible strategy date is an event on the page, not this page original publication date.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-tech-001-e01": {
+      "claim_id": "candidate-p2-tech-001",
+      "source_url": "https://consumer.ftc.gov/articles/online-shopping",
+      "source_role": "official_consumer_guidance",
+      "locator": "Pay by Credit Card When Possible",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "81f2b51c814a3db1b183ad34243f738ec9bb09fff31cc1c881203ac619ffdccc",
+      "human_review_status": "pending",
+      "review_notes": "Verification proposition based on an actual misconception addressed by the FTC; not attributed as FTC advice. Encryption and seller trustworthiness are different properties.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-tech-002-e01": {
+      "claim_id": "candidate-p2-tech-002",
+      "source_url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "source_role": "primary_standard",
+      "locator": "Section 3.1.5 Multi-Factor OTPs",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "04b39bab0bd0294aa539c7c93034596dd265455a12b9712bdc16fe27cdf4d8ee",
+      "human_review_status": "pending",
+      "review_notes": "Collector scope paraphrase; this sentence appears in both single-factor and multi-factor OTP sections, and the locator identifies multi-factor context. Same source as Phase 1 password claim: keep linked provenance together in future splits. Catalog publication precision is July 2025.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-tech-003-e01": {
+      "claim_id": "candidate-p2-tech-003",
+      "source_url": "https://www.cwi.nl/en/news/cwi-and-google-announce-first-collision-for-industry-security-standard-sha-1/",
+      "source_role": "primary_research_announcement",
+      "locator": "Signature forgeries; opening announcement and Publication date fields",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "0a168813b614cf0ffef75ededa4598639df68ec8a3869b3fb768eac358daf175",
+      "human_review_status": "pending",
+      "review_notes": "Collector-authored double-negation paraphrase of a real documented result, not a naturally occurring quotation. The body announces 23 February while the page labels Publication date 27 February 2017. Do not confuse either with access date.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-tech-004-e01": {
+      "claim_id": "candidate-p2-tech-004",
+      "source_url": "https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption",
+      "source_role": "original_announcement",
+      "locator": "Key messages, third bullet; heading and dated selection context",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "ff619b933fa76799e3940299d3b4ff63f45797f4d6856b6318e2cddfbf72750b",
+      "human_review_status": "pending",
+      "review_notes": "Historical as-of claim: selection is the 2025 event; the 2027 final standard is a forecast, not a confirmed release. The event_date field records selection only. Do not replace forecast with actual delivery without new evidence.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-tech-005-e01": {
+      "claim_id": "candidate-p2-tech-005",
+      "source_url": "https://www.first.org/cvss/v4.0/user-guide",
+      "source_role": "primary_specification_guidance",
+      "locator": "Heading before guidance on Environmental and Threat metrics",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "d666b82804983c2c9f7ba7e9cfa06eef1478b3e99c0fa51023057b041b10208b",
+      "human_review_status": "pending",
+      "review_notes": "Scope is the Base score, not all possible CVSS metric combinations. Guide version 1.2 is visible; original publication day is not established.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-general-001-e01": {
+      "claim_id": "candidate-p2-general-001",
+      "source_url": "https://www.ga.gov.au/scientific-topics/national-location-information/landforms/deserts",
+      "source_role": "official_geoscience_reference",
+      "locator": "Opening climate-classification paragraphs",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "a3d0d641c4bbf5eb845c2e5b7697d9ad7d8c224d0751df91d4618894655cf4d5",
+      "human_review_status": "pending",
+      "review_notes": "Collector paraphrase, with a counterexample to a universal statement. Page last updated 25 November 2022; original publication date unknown. Source classification refers to Australian Antarctic Territories; review geographic scope.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-general-002-e01": {
+      "claim_id": "candidate-p2-general-002",
+      "source_url": "https://oumnh.ox.ac.uk/learn-marie-curie",
+      "source_role": "institutional_historical_summary",
+      "locator": "Opening Marie Curie biography",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "984feb6053ac1e2862f3ba53d9ed2e88145a64cece469a3752c02a7bb8fb68e9",
+      "human_review_status": "pending",
+      "review_notes": "Collector-authored double-negation paraphrase, not a source quotation. She refers to Marie Curie in the preceding sentence. Official Nobel pages returned 403; this university museum summary is secondary, and primary award records remain follow-up.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-general-003-e01": {
+      "claim_id": "candidate-p2-general-003",
+      "source_url": "https://science.nasa.gov/jupiter/jupiter-moons/europa/",
+      "source_role": "mission_agency_summary",
+      "locator": "Europa Clipper Website section",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "b170557e7b803abf2f345cf9a6611c1d4716eb5ff6191fcca102207576846ecb",
+      "human_review_status": "pending",
+      "review_notes": "Collector-formulated proposition about a real open research question; NASA does not assert this proposition here. Habitability and detected life are different. Mission goals and missing evidence do not establish absence or presence of life.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-general-004-e01": {
+      "claim_id": "candidate-p2-general-004",
+      "source_url": "https://spaceplace.nasa.gov/all-about-venus/en/",
+      "source_role": "mission_agency_education",
+      "locator": "Time on Venus, two adjacent bullets",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "1011b71ce280f79dccc22e955d056217a4dd910e50bdec5249cb3176897d1e87",
+      "human_review_status": "pending",
+      "review_notes": "Collector makes sidereal reference frame explicit; solar-day length is about 117 Earth days in surrounding text. Requires numerical comparison and reference-frame interpretation, not an unqualified claim about every meaning of day.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-general-005-e01": {
+      "claim_id": "candidate-p2-general-005",
+      "source_url": "https://science.gsfc.nasa.gov/attic/cosmicopia.gsfc.nasa.gov/qa_earth.html",
+      "source_role": "archived_agency_explanation",
+      "locator": "Question 99, See Great Wall from the Moon?, answer by Beth Barbier",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "5e5500212bcf79db49eb1862f385f8879cbe1caae2ab03fbef1501baad3e78b4",
+      "human_review_status": "pending",
+      "review_notes": "Candidate expresses the public misconception addressed by the archived NASA question. Pronoun it refers to the Great Wall. Archived page contains dates for other answers; do not assign them to this answer.",
+      "rechecked_on": "2026-11-01"
+    },
+    "candidate-p2-env-003-e02": {
+      "claim_id": "candidate-p2-env-003",
+      "source_url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2025/climate-change-amoc-likely-to-withstand-future-warming",
+      "source_role": "study_team_announcement",
+      "locator": "Jonathan Baker quotation, paragraph beginning Although our study shows",
+      "collection_method": "Public web tool opened the cited page and located this excerpt; collector review, not independent human annotation.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extracted; whitespace normalized; no wording synthesized.",
+      "passage_sha256": "faa27f32809b1be0540e493fa806c1920d69c0255abee2bc0a5782a8cccf6444",
+      "human_review_status": "pending",
+      "review_notes": "Excerpt stops before the consequence clause while retaining likelihood and AMOC context. The next 75 years is relative to the February 2025 publication. Study-team communication concerns its own modelling; 2023 paper uses statistical extrapolation. Newer full Nature page failed retrieval. Compare definitions and scenarios; neither projection is a future observation.",
+      "rechecked_on": "2026-11-01"
+    }
+  },
+  "intended_use": "Unannotated staging candidates with challenge tags; no truth distribution is imposed.",
+  "selection_limitations": [
+    "Purposive collector-authored candidates and scope/double-negation paraphrases from real sources; not a blind or representative sample of naturally occurring claims.",
+    "Challenge tags describe review tasks, not gold evidence relevance, stance or final verdict labels.",
+    "Some propositions are deliberately stronger than the source or address an open scientific question; they are not attributed as publisher assertions.",
+    "Most claims still have one short excerpt; provenance and sufficient context require human review.",
+    "Publication dates remain null when only updated, month-only or unrelated dates are available."
+  ],
+  "retrieval_failures": [
+    {
+      "url": "https://www.nature.com/articles/s41586-024-08544-0",
+      "outcome": "Full-page open failed with publisher cookie redirect; accessible study-team communication used instead."
+    },
+    {
+      "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/",
+      "outcome": "403; Oxford museum secondary source used, primary award record still needed."
+    },
+    {
+      "url": "https://blog.chromium.org/2023/05/an-update-on-lock-icon.html",
+      "outcome": "Google challenge redirect; FTC guidance used instead."
+    },
+    {
+      "url": "https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html",
+      "outcome": "Google challenge redirect; primary CWI announcement used instead."
+    },
+    {
+      "url": "https://www.bas.ac.uk/about/antarctica/geography/",
+      "outcome": "Robot verification page; Geoscience Australia source used instead."
+    },
+    {
+      "url": "https://www.cosmos.esa.int/web/gaia/release",
+      "outcome": "451; no additional Gaia excerpt admitted."
+    }
+  ]
+}

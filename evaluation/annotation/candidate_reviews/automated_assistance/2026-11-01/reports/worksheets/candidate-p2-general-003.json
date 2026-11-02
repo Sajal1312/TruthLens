@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-general-003",
+  "candidate_sha256": "93a6b126357964ecc658301a086db6e14e76e024582a89d70ea7abf9c48b89ed",
+  "claim": "There is life beneath Europa’s surface.",
+  "human_review_priority": "high",
+  "claim_clarity_assessment": "Existence of life is a much stronger proposition than potential habitability.",
+  "claim_evidence_interpretation": "The saved source describes a mission goal to assess environments that could support life; it reports no detection in this passage.",
+  "date_assessment": "candidate-p2-general-003-e01: No original publication day established; mission goal is not a discovery event date.",
+  "provenance_assessment": "Single NASA mission summary; no detection report is supplied or invented.",
+  "research_concerns": [
+    "Do not turn an unestablished event into a false claim. A deliberately insufficient bundle may still be included after explicit human review."
+  ],
+  "recommended_action": "insufficient evidence",
+  "recommendation_reason": "Do not turn an unestablished event into a false claim. A deliberately insufficient bundle may still be included after explicit human review.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-general-003-e01",
+      "source_url": "https://science.nasa.gov/jupiter/jupiter-moons/europa/",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Europa",
+      "observed_publisher": "NASA Science",
+      "source_role": "official mission / planetary summary",
+      "locator": "Europa Clipper mission science-goal paragraph",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "No original publication day established; mission goal is not a discovery event date.",
+      "context_notes": "The saved source describes a mission goal to assess environments that could support life; it reports no detection in this passage."
+    }
+  ]
+}

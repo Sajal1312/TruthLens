@@ -1,0 +1,29 @@
+{
+  "claim_id": "candidate-p2-general-001",
+  "claim_text": "Not all deserts are hot; Antarctica has a polar desert.",
+  "claim_family_id": "family-p2-general-001",
+  "event_group_id": null,
+  "claim_category": [
+    "quantifier_scope",
+    "partial_negation",
+    "compound_claim"
+  ],
+  "split": "pilot",
+  "annotation_status": "unannotated",
+  "evidence": [
+    {
+      "evidence_id": "candidate-p2-general-001-e01",
+      "passage": "Antarctica’s desert is classified as polar, (external frost/ice cap); precipitation falling as snow; temperatures range below 10°C",
+      "source_title": "Areas of Australian and territory deserts",
+      "source_identifier": "https://www.ga.gov.au/scientific-topics/national-location-information/landforms/deserts",
+      "source_url": "https://www.ga.gov.au/scientific-topics/national-location-information/landforms/deserts",
+      "publisher_id": "geoscience-australia",
+      "publication_date": null,
+      "event_date": null,
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-candidate-p2-general-001",
+      "provenance_relation": "unknown",
+      "provenance_basis": "Publisher-hosted document located; source independence has not been established."
+    }
+  ]
+}

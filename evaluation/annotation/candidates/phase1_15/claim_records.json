@@ -1,0 +1,510 @@
+[
+  {
+    "claim_id": "candidate-p1-env-001",
+    "claim_text": "The ocean absorbs about 30 percent of carbon dioxide released into the atmosphere, according to NOAA.",
+    "claim_family_id": "family-p1-env-001",
+    "event_group_id": null,
+    "claim_category": [
+      "numerical"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-env-001-e01",
+        "passage": "The ocean absorbs about 30 percent of the CO2 that is released in the atmosphere",
+        "source_title": "What is Ocean Acidification?",
+        "source_identifier": "https://oceanservice.noaa.gov/facts/acidification.html",
+        "source_url": "https://oceanservice.noaa.gov/facts/acidification.html",
+        "publisher_id": "noaa",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-env-001",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-env-002",
+    "claim_text": "Making new aluminum cans from recycled cans uses 95 percent less energy than making them from bauxite ore.",
+    "claim_family_id": "family-p1-env-002",
+    "event_group_id": null,
+    "claim_category": [
+      "numerical"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-env-002-e01",
+        "passage": "using recycled aluminum cans to make new aluminum cans uses 95% less energy than using bauxite ore",
+        "source_title": "Energy and the environment explained: Recycling and energy",
+        "source_identifier": "https://www.eia.gov/energyexplained/energy-and-the-environment/recycling-and-energy.php",
+        "source_url": "https://www.eia.gov/energyexplained/energy-and-the-environment/recycling-and-energy.php",
+        "publisher_id": "us-eia",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-env-002",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "evidence_id": "candidate-p1-env-002-e02",
+        "passage": "It takes 95% less energy to recycle aluminum than it does to make it from raw materials.",
+        "source_title": "Benefits of Recycling",
+        "source_identifier": "https://nems.nih.gov/environmental-programs/Pages/Benefits-of-Recycling.aspx",
+        "source_url": "https://nems.nih.gov/environmental-programs/Pages/Benefits-of-Recycling.aspx",
+        "publisher_id": "us-nih",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-env-002",
+        "provenance_relation": "related_suspected",
+        "provenance_basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-env-003",
+    "claim_text": "UNEP estimates that 19–23 million tonnes of plastic waste enter aquatic ecosystems each year.",
+    "claim_family_id": "family-p1-env-003",
+    "event_group_id": null,
+    "claim_category": [
+      "numerical"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-env-003-e01",
+        "passage": "Every year, 19-23 million tonnes of plastic waste leak into aquatic ecosystems, polluting lakes, rivers and seas.",
+        "source_title": "Plastic pollution & marine litter",
+        "source_identifier": "https://www.unep.org/en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter",
+        "source_url": "https://www.unep.org/en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter",
+        "publisher_id": "unep",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-env-003",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "evidence_id": "candidate-p1-env-003-e02",
+        "passage": "We estimate that 19 to 23 million metric tons, or 11%, of plastic waste generated globally in 2016 entered aquatic ecosystems.",
+        "source_title": "Predicted growth in plastic waste exceeds efforts to mitigate plastic pollution",
+        "source_identifier": "https://pubmed.ncbi.nlm.nih.gov/32943526/",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/32943526/",
+        "publisher_id": "aaas-science",
+        "publication_date": "2020-09-17",
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-env-003",
+        "provenance_relation": "related_suspected",
+        "provenance_basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-env-004",
+    "claim_text": "The Montreal Protocol was signed in 1987 and entered into force in 1989.",
+    "claim_family_id": "family-p1-env-004",
+    "event_group_id": null,
+    "claim_category": [
+      "compound_claim",
+      "event_vs_publication_date"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-env-004-e01",
+        "passage": "The landmark agreement was signed in 1987 and entered into force in 1989.",
+        "source_title": "The Montreal Protocol on Substances that Deplete the Ozone Layer",
+        "source_identifier": "https://ozone.unep.org/treaties/montreal-protocol",
+        "source_url": "https://ozone.unep.org/treaties/montreal-protocol",
+        "publisher_id": "unep-ozone-secretariat",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-env-004",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "evidence_id": "candidate-p1-env-004-e02",
+        "passage": "Places/dates of conclusion\nMontreal 16/09/1987\nEIF information\n1 January 1989",
+        "source_title": "Montreal Protocol on Substances that Deplete the Ozone Layer — UN Treaty Collection",
+        "source_identifier": "https://treaties.un.org/Pages/showDetails.aspx?objid=080000028003f7f7",
+        "source_url": "https://treaties.un.org/Pages/showDetails.aspx?objid=080000028003f7f7",
+        "publisher_id": "un-treaty-collection",
+        "publication_date": null,
+        "event_date": "1989-01-01",
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-env-004",
+        "provenance_relation": "same_origin",
+        "provenance_basis": "Both documents describe the same registered Montreal Protocol; registry is the original treaty record."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-env-005",
+    "claim_text": "Current global warming cannot be explained by changes in energy from the Sun.",
+    "claim_family_id": "family-p1-env-005",
+    "event_group_id": null,
+    "claim_category": [
+      "direct_negation"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-env-005-e01",
+        "passage": "But several lines of evidence show that current global warming cannot be explained by changes in energy from the Sun:",
+        "source_title": "Causes",
+        "source_identifier": "https://science.nasa.gov/climate-change/causes/",
+        "source_url": "https://science.nasa.gov/climate-change/causes/",
+        "publisher_id": "nasa",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-env-005",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-tech-001",
+    "claim_text": "RFC 8446 specifies version 1.3 of the Transport Layer Security protocol.",
+    "claim_family_id": "family-p1-tech-001",
+    "event_group_id": null,
+    "claim_category": [
+      "numerical",
+      "ordinary_control"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-tech-001-e01",
+        "passage": "This document specifies version 1.3 of the Transport Layer Security (TLS) protocol.",
+        "source_title": "RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3",
+        "source_identifier": "https://www.rfc-editor.org/rfc/rfc8446",
+        "source_url": "https://www.rfc-editor.org/rfc/rfc8446",
+        "publisher_id": "ietf-rfc-editor",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-tech-001",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-tech-002",
+    "claim_text": "RFC 9110 defines HTTP as a stateless application-level protocol.",
+    "claim_family_id": "family-p1-tech-002",
+    "event_group_id": null,
+    "claim_category": [
+      "ordinary_control"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-tech-002-e01",
+        "passage": "The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems.",
+        "source_title": "RFC 9110: HTTP Semantics",
+        "source_identifier": "https://www.rfc-editor.org/rfc/rfc9110.html",
+        "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+        "publisher_id": "ietf-rfc-editor",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-tech-002",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-tech-003",
+    "claim_text": "NIST announced its first three finalized post-quantum encryption standards on 13 August 2024.",
+    "claim_family_id": "family-p1-tech-003",
+    "event_group_id": "nist-pqc-standardization",
+    "claim_category": [
+      "numerical",
+      "event_vs_publication_date"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-tech-003-e01",
+        "passage": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards\n\nAugust 13, 2024",
+        "source_title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+        "source_identifier": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+        "source_url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+        "publisher_id": "nist",
+        "publication_date": "2024-08-13",
+        "event_date": "2024-08-13",
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-tech-003",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "evidence_id": "candidate-p1-tech-003-e02",
+        "passage": "FIPS 203\nModule-Lattice-Based Key-Encapsulation Mechanism Standard\nDate Published: August 13, 2024",
+        "source_title": "FIPS 203: Module-Lattice-Based Key-Encapsulation Mechanism Standard",
+        "source_identifier": "https://csrc.nist.gov/pubs/fips/203/final",
+        "source_url": "https://csrc.nist.gov/pubs/fips/203/final",
+        "publisher_id": "nist",
+        "publication_date": "2024-08-13",
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-tech-003",
+        "provenance_relation": "related_suspected",
+        "provenance_basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-tech-004",
+    "claim_text": "NIST SP 800-63B-4 says verifiers and CSPs must not require periodic password changes.",
+    "claim_family_id": "family-p1-tech-004",
+    "event_group_id": null,
+    "claim_category": [
+      "direct_negation"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-tech-004-e01",
+        "passage": "Verifiers and CSPs SHALL NOT require subscribers to change passwords periodically.",
+        "source_title": "NIST Special Publication 800-63B-4: Authentication and Authenticator Management",
+        "source_identifier": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "source_url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "publisher_id": "nist",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-tech-004",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-tech-005",
+    "claim_text": "Python 3.13 provides a build configuration that can disable the global interpreter lock.",
+    "claim_family_id": "family-p1-tech-005",
+    "event_group_id": null,
+    "claim_category": [
+      "numerical"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-tech-005-e01",
+        "passage": "As of Python 3.13, the GIL can be disabled using the --disable-gil build configuration.",
+        "source_title": "Python 3.13 Glossary: global interpreter lock",
+        "source_identifier": "https://docs.python.org/3.13/glossary.html#term-global-interpreter-lock",
+        "source_url": "https://docs.python.org/3.13/glossary.html#term-global-interpreter-lock",
+        "publisher_id": "python-software-foundation",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-tech-005",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "evidence_id": "candidate-p1-tech-005-e02",
+        "passage": "This PEP proposes adding a build configuration (--disable-gil) to CPython to let it run Python code without the global interpreter lock",
+        "source_title": "PEP 703 – Making the Global Interpreter Lock Optional in CPython",
+        "source_identifier": "https://peps.python.org/pep-0703/",
+        "source_url": "https://peps.python.org/pep-0703/",
+        "publisher_id": "python-software-foundation",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-tech-005",
+        "provenance_relation": "related_suspected",
+        "provenance_basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-general-001",
+    "claim_text": "Mars has two moons named Phobos and Deimos.",
+    "claim_family_id": "family-p1-general-001",
+    "event_group_id": null,
+    "claim_category": [
+      "numerical",
+      "compound_claim"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-general-001-e01",
+        "passage": "Mars has two moons, Phobos and Deimos.",
+        "source_title": "Moons of Mars",
+        "source_identifier": "https://science.nasa.gov/mars/moons/",
+        "source_url": "https://science.nasa.gov/mars/moons/",
+        "publisher_id": "nasa",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-001",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "evidence_id": "candidate-p1-general-001-e02",
+        "passage": "Mars has two moons: Phobos and the smaller and more distant Deimos",
+        "source_title": "Mars Express tracks the phases of Phobos",
+        "source_identifier": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_tracks_the_phases_of_Phobos",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_tracks_the_phases_of_Phobos",
+        "publisher_id": "esa",
+        "publication_date": "2019-12-12",
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-001",
+        "provenance_relation": "related_suspected",
+        "provenance_basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-general-002",
+    "claim_text": "Venus is the hottest planet in our solar system.",
+    "claim_family_id": "family-p1-general-002",
+    "event_group_id": "topic-venus",
+    "claim_category": [
+      "ordinary_control"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-general-002-e01",
+        "passage": "Venus is the hottest planet in our solar system",
+        "source_title": "Venus Facts",
+        "source_identifier": "https://science.nasa.gov/venus/venus-facts/",
+        "source_url": "https://science.nasa.gov/venus/venus-facts/",
+        "publisher_id": "nasa",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-002",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-general-003",
+    "claim_text": "CERN placed the World Wide Web software in the public domain on 30 April 1993.",
+    "claim_family_id": "family-p1-general-003",
+    "event_group_id": null,
+    "claim_category": [
+      "event_vs_publication_date"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-general-003-e01",
+        "passage": "On 30 April 1993, CERN put the World Wide Web software in the public domain.",
+        "source_title": "Where the web was born",
+        "source_identifier": "https://home.cern/science/computing/the-birth-of-the-web/where-web-was-born/",
+        "source_url": "https://home.cern/science/computing/the-birth-of-the-web/where-web-was-born/",
+        "publisher_id": "cern",
+        "publication_date": null,
+        "event_date": "1993-04-30",
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-003",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-general-004",
+    "claim_text": "The International System of Units is defined using seven defining constants.",
+    "claim_family_id": "family-p1-general-004",
+    "event_group_id": null,
+    "claim_category": [
+      "numerical"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-general-004-e01",
+        "passage": "The SI is defined in terms of a set of seven defining constants.",
+        "source_title": "The International System of Units (SI): Defining constants",
+        "source_identifier": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "source_url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "publisher_id": "bipm",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-004",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "evidence_id": "candidate-p1-general-004-e02",
+        "passage": "a new way of defining the SI based on a set of seven defining constants",
+        "source_title": "Resolution 1 of the 26th CGPM (2018)",
+        "source_identifier": "https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-1",
+        "source_url": "https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-1",
+        "publisher_id": "bipm",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-004",
+        "provenance_relation": "related_suspected",
+        "provenance_basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-general-005",
+    "claim_text": "ESA lists Gaia Data Release 4 as expected in December 2026.",
+    "claim_family_id": "family-p1-general-005",
+    "event_group_id": null,
+    "claim_category": [
+      "future_intent_vs_event",
+      "event_vs_publication_date"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-general-005-e01",
+        "passage": "Data Release 4 (based on 66 months of data): expected December 2026",
+        "source_title": "Gaia",
+        "source_identifier": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+        "publisher_id": "esa",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-005",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  }
+]

@@ -229,13 +229,13 @@ def _comparison_metrics(cases, output_cases, mode):
             "errors": errors}
 
 
-def _semantic_comparison(cases, output_cases):
+def _semantic_comparison(cases, output_cases, field="experimental_semantic"):
     expected = [case["expected_final_verdict"] for case in cases]
-    predicted = [result["experimental_semantic"]["verdict"] for result in output_cases]
+    predicted = [result[field]["verdict"] for result in output_cases]
     errors = [{"case_id": case["case_id"], "expected": case["expected_final_verdict"],
-               "predicted": result["experimental_semantic"]["verdict"], "tags": case["tags"]}
+               "predicted": result[field]["verdict"], "tags": case["tags"]}
               for case, result in zip(cases, output_cases)
-              if case["expected_final_verdict"] != result["experimental_semantic"]["verdict"]]
+              if case["expected_final_verdict"] != result[field]["verdict"]]
     by_error_tag = defaultdict(int)
     for error in errors:
         for tag in error["tags"]:
@@ -243,7 +243,7 @@ def _semantic_comparison(cases, output_cases):
     expected_stance, effective_stance, raw_expected, raw_predicted = [], [], [], []
     expected_relevance, actual_relevance = [], []
     for case, result in zip(cases, output_cases):
-        for evidence, assessed in zip(case["evidence"], result["experimental_semantic"]["evidence"]):
+        for evidence, assessed in zip(case["evidence"], result[field]["evidence"]):
             components = assessed.get("part_assessments", [])
             first = components[0] if components else {}
             label = first.get("effective_label", "NOT ENOUGH INFORMATION")
@@ -280,6 +280,12 @@ def evaluate_cases(cases, predictor):
         assessment = assess_evidence_nli(case["claim"], items, predictor)
         experimental_assessment = assess_evidence_nli(
             case["claim"], items, predictor, experimental_semantic=True)
+        quantifier_assessment = assess_evidence_nli(
+            case["claim"], items, predictor, experimental_semantic=True,
+            experimental_quantifier_guard=True)
+        temporal_assessment = assess_evidence_nli(
+            case["claim"], items, predictor, experimental_semantic=True,
+            experimental_temporal_guard=True)
         rows = []
         # Preserve input order: a URL-keyed map collapses duplicate URLs and
         # can assign one result's assessment to another annotated passage.
@@ -346,6 +352,60 @@ def evaluate_cases(cases, predictor):
                     "passage": assessment.get("passage"),
                 } for assessment in assessed.get("part_assessments", [])],
             })
+        quantifier_evidence = []
+        for evidence, assessed in zip(case["evidence"], quantifier_assessment["per_source"]):
+            part = assessed.get("part_assessments", [{}])[0]
+            quantifier_evidence.append({
+                "evidence_id": evidence["evidence_id"],
+                "source_kind": evidence["source"]["kind"],
+                "title": evidence["source"]["title"],
+                "url": evidence["source"].get("url"),
+                "expected_relevance": evidence["expected_relevance"],
+                "actual_relevance": _actual_relevance(assessed.get("relevance", "Unrelated")),
+                "expected_stance": evidence["expected_stance"],
+                "raw_model_label": part.get("model_label"),
+                "effective_assessment": part.get("label", "NOT ENOUGH INFORMATION"),
+                "contributed": bool(part.get("contributed")),
+                "status": part.get("status", "No passage assessment"),
+                "assessed_passage": part.get("passage"),
+                "part_assessments": [{
+                    "claim_part": component.get("claim_part"),
+                    "model_label": component.get("model_label"),
+                    "effective_label": component.get("label", "NOT ENOUGH INFORMATION"),
+                    "confidence": component.get("confidence"),
+                    "margin": component.get("margin"),
+                    "contributed": bool(component.get("contributed")),
+                    "status": component.get("status"),
+                    "passage": component.get("passage"),
+                } for component in assessed.get("part_assessments", [])],
+            })
+        temporal_evidence = []
+        for evidence, assessed in zip(case["evidence"], temporal_assessment["per_source"]):
+            part = assessed.get("part_assessments", [{}])[0]
+            temporal_evidence.append({
+                "evidence_id": evidence["evidence_id"],
+                "source_kind": evidence["source"]["kind"],
+                "title": evidence["source"]["title"],
+                "url": evidence["source"].get("url"),
+                "expected_relevance": evidence["expected_relevance"],
+                "actual_relevance": _actual_relevance(assessed.get("relevance", "Unrelated")),
+                "expected_stance": evidence["expected_stance"],
+                "raw_model_label": part.get("model_label"),
+                "effective_assessment": part.get("label", "NOT ENOUGH INFORMATION"),
+                "contributed": bool(part.get("contributed")),
+                "status": part.get("status", "No passage assessment"),
+                "assessed_passage": part.get("passage"),
+                "part_assessments": [{
+                    "claim_part": component.get("claim_part"),
+                    "model_label": component.get("model_label"),
+                    "effective_label": component.get("label", "NOT ENOUGH INFORMATION"),
+                    "confidence": component.get("confidence"),
+                    "margin": component.get("margin"),
+                    "contributed": bool(component.get("contributed")),
+                    "status": component.get("status"),
+                    "passage": component.get("passage"),
+                } for component in assessed.get("part_assessments", [])],
+            })
         output_cases.append({"case_id": case["case_id"], "split": case["split"],
                              "tags": case["tags"], "claim": case["claim"],
                              "annotation_notes": case.get("annotation_notes", ""),
@@ -357,6 +417,18 @@ def evaluate_cases(cases, predictor):
                                  "reasoning": experimental_assessment["reasoning"],
                                  "part_outcomes": experimental_assessment.get("part_outcomes", []),
                                  "evidence": experimental_evidence,
+                             },
+                             "experimental_quantifier_guard": {
+                                 "verdict": quantifier_assessment["verdict"].upper(),
+                                 "reasoning": quantifier_assessment["reasoning"],
+                                 "part_outcomes": quantifier_assessment.get("part_outcomes", []),
+                                 "evidence": quantifier_evidence,
+                             },
+                             "experimental_temporal_guard": {
+                                 "verdict": temporal_assessment["verdict"].upper(),
+                                 "reasoning": temporal_assessment["reasoning"],
+                                 "part_outcomes": temporal_assessment.get("part_outcomes", []),
+                                 "evidence": temporal_evidence,
                              },
                              "experimental_verdicts": experimental,
                              "source_diversity": _source_diversity(case["evidence"], rows)})
@@ -438,7 +510,11 @@ def evaluate_cases(cases, predictor):
                            if case["expected_final_verdict"] != result["actual_final_verdict"]],
             },
             "experimental_semantic": _semantic_comparison(cases, output_cases),
-            "note": "The experimental mode is opt-in in the assessor and evaluation-only in this report; production call sites use the unchanged default.",
+            "experimental_quantifier_guard": _semantic_comparison(
+                cases, output_cases, field="experimental_quantifier_guard"),
+            "experimental_temporal_guard": _semantic_comparison(
+                cases, output_cases, field="experimental_temporal_guard"),
+            "note": "Semantic, quantifier-scope, and future-intent abstention experiments are opt-in in the assessor and evaluation-only in this report; production call sites use the unchanged default.",
         },
         "stress_groups": stress,
         "source_diversity": source_diversity_summary,
@@ -458,11 +534,15 @@ def evaluate_cases(cases, predictor):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--split", choices=("development", "diagnostics", "held_out", "all"), default="held_out")
+    # Normal runs should stay on development data; require an explicit
+    # --split held_out to inspect the reserved evaluation set.
+    parser.add_argument("--split", choices=("development", "diagnostics", "held_out", "all"), default="development")
     parser.add_argument("--output", help="Optional path for a JSON report")
     args = parser.parse_args(argv)
     if args.split == "all":
-        data_paths = [DATA_DIR / "development.jsonl", DATA_DIR / "diagnostics.jsonl", DATA_DIR / "held_out.jsonl"]
+        # `all` combines visible data only; avoid even reading the reserved
+        # holdout file while preparing routine combined reports.
+        data_paths = [DATA_DIR / "development.jsonl", DATA_DIR / "diagnostics.jsonl"]
         cases = load_cases(data_paths[0]) + load_cases(data_paths[1])
     else:
         data_paths = [DATA_DIR / (args.split + ".jsonl")]

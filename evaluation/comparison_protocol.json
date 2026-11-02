@@ -1,0 +1,29 @@
+{
+  "protocol_version": "1.0",
+  "reference_date": "2026-11-02",
+  "purpose": "Offline diagnostic comparison, not a test of improved verdict accuracy or independent generalization",
+  "datasets": [
+    {"id": "development", "path": "data/development.jsonl", "provenance": "developer_authored_development", "annotation": "Developer expectations; mixture of saved public excerpts and synthetic passages"},
+    {"id": "diagnostics", "path": "data/diagnostics.jsonl", "provenance": "developer_authored_diagnostics", "annotation": "Inspected developer cases; mixture of saved public excerpts and synthetic passages; not blind"},
+    {"id": "temporal", "path": "temporal_challenge.json", "provenance": "developer_authored_synthetic", "annotation": "Synthetic temporal challenge labels"},
+    {"id": "independence", "path": "independence_challenge.json", "provenance": "developer_authored_synthetic", "annotation": "Synthetic pairwise dependency expectations, not proof of independence"},
+    {"id": "numerical", "path": "numerical_challenge.json", "provenance": "developer_authored_synthetic", "annotation": "Synthetic quantity/comparison expectations"},
+    {"id": "uncertainty", "path": "uncertainty_challenge.json", "provenance": "developer_authored_synthetic_snapshots", "annotation": "Synthetic saved diagnostic/decision projections; not upstream detector evaluation"}
+  ],
+  "conditions": {
+    "baseline": {"visible_modules": [], "description": "Unmodified production assessment, including its existing explanation and safeguards"},
+    "temporal_only": {"visible_modules": ["temporal"], "description": "Baseline plus temporal diagnostic output"},
+    "independence_only": {"visible_modules": ["independence"], "description": "Baseline plus dependency diagnostic output"},
+    "numerical_only": {"visible_modules": ["numerical"], "description": "Baseline plus quantity/scope diagnostic output"},
+    "uncertainty_only": {"visible_modules": ["uncertainty"], "description": "Baseline plus uncertainty summary; consumes hidden temporal, independence and numerical views"},
+    "enhanced": {"visible_modules": ["explainability", "temporal", "independence", "numerical", "uncertainty"], "description": "Baseline plus all five diagnostic views"}
+  },
+  "unmeasured": [
+    "Current production NLI re-execution: no model inference authorized in this protocol",
+    "Independent human-annotated performance: no completed independent dataset supplied",
+    "Explanation usefulness, comprehension and causal faithfulness: require human judgments",
+    "Live retrieval quality, runtime/memory gains and UI usability: not tested here",
+    "Held-out generalization: protected datasets are not opened or hashed",
+    "Five imported unannotated pilot claims: collection progress only, excluded from scoring"
+  ]
+}

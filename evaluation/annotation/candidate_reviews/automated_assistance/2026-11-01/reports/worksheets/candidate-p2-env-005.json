@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-env-005",
+  "candidate_sha256": "beb1d2f710ab465d6370894dd7c13bf2c03ab485736c64dfde907f940d81514e",
+  "claim": "Not every plastic item labelled compostable is suitable for a home compost pile.",
+  "human_review_priority": "routine",
+  "claim_clarity_assessment": "Home composting is distinguished from industrial composting.",
+  "claim_evidence_interpretation": "EPA gives the label-dependent warning and explains the different conditions.",
+  "date_assessment": "candidate-p2-env-005-e01: No original publication day established. The 2024-11-21 strategy date refers to a linked strategy, not this FAQ publication.",
+  "provenance_assessment": "Single EPA guidance page.",
+  "research_concerns": [
+    "U.S. guidance and product-specific labels; do not treat all compostability certifications as identical."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-env-005-e01",
+      "source_url": "https://www.epa.gov/trash-free-waters/frequently-asked-questions-about-plastic-recycling-and-composting",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Frequently Asked Questions about Plastic Recycling and Composting",
+      "observed_publisher": "U.S. Environmental Protection Agency",
+      "source_role": "official consumer guidance",
+      "locator": "If a plastic product is labeled compostable, can I add it to my home compost pile?",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "No original publication day established. The 2024-11-21 strategy date refers to a linked strategy, not this FAQ publication.",
+      "context_notes": "EPA gives the label-dependent warning and explains the different conditions."
+    }
+  ]
+}

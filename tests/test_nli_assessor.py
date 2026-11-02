@@ -76,6 +76,126 @@ def test_identical_passages_on_different_urls_do_not_count_as_independent_source
     assert "Repeated passage" in result["per_source"][1]["part_assessments"][0]["status"]
 
 
+def test_same_run_exact_input_cache_preserves_assessments_and_skips_duplicate_inference():
+    repeated = "The Eiffel Tower is located in Paris, France."
+    results = [tavily_result(1, repeated), tavily_result(2, repeated)]
+    uncached_predictor = Mock(return_value=prediction("ENTAILMENT"))
+    cached_predictor = Mock(return_value=prediction("ENTAILMENT"))
+    timings = {}
+
+    uncached = assess_evidence_nli(CLAIM, results, uncached_predictor)
+    cached = assess_evidence_nli(CLAIM, results, cached_predictor,
+                                 cache_predictions=True, timings=timings)
+
+    assert uncached_predictor.call_count == 2
+    assert cached_predictor.call_count == 1
+    assert cached["verdict"] == uncached["verdict"] == "Inconclusive"
+    for index in range(2):
+        before = uncached["per_source"][index]["part_assessments"][0]
+        after = cached["per_source"][index]["part_assessments"][0]
+        for key in ("label", "confidence", "margin", "scores", "contributed", "status"):
+            assert after[key] == before[key]
+    assert cached["per_source"][1]["part_assessments"][0]["inference_cache_hit"] is True
+    assert cached["per_source"][0]["part_assessments"][0]["inference_cache_hit"] is False
+    assert timings["nli_model_calls"] == 1
+    assert timings["nli_cache_hits"] == 1
+
+
+def test_prediction_cache_never_persists_between_verifications():
+    result = tavily_result(1, "The Eiffel Tower is located in Paris, France.")
+    predictor = Mock(side_effect=[prediction("ENTAILMENT"), prediction("CONTRADICTION")])
+
+    first = assess_evidence_nli(CLAIM, [result], predictor, cache_predictions=True)
+    second = assess_evidence_nli(CLAIM, [result], predictor, cache_predictions=True)
+
+    assert predictor.call_count == 2
+    assert first["per_source"][0]["part_assessments"][0]["label"] == "SUPPORTS"
+    assert second["per_source"][0]["part_assessments"][0]["label"] == "CONTRADICTS"
+
+
+@pytest.mark.parametrize("claim, passage", [
+    ("Not all planets have moons.", "Some planets have moons."),
+    ("All planets have moons.", "Some planets have no moons."),
+    ("No planets have moons.", "Some planets have moons."),
+    ("Most students passed the examination.", "Some students passed the examination."),
+    ("At least five students passed the examination.", "Some students passed the examination."),
+    ("At most four students passed the examination.", "Some students passed the examination."),
+    ("Only one student passed the examination.", "Some students passed the examination."),
+    ("Not every student passed the examination.",
+     "Not every student passed the examination; some students failed."),
+    ("The team never lost a match.", "The team lost a match in 2024."),
+])
+def test_experimental_quantifier_scope_guard_abstains_but_keeps_raw_model_label(claim, passage):
+    result = assess_evidence_nli(
+        claim, [tavily_result(1, passage)],
+        Mock(return_value=prediction("ENTAILMENT")), experimental_quantifier_guard=True)
+    part = result["per_source"][0]["part_assessments"][0]
+
+    assert result["verdict"] == "Inconclusive"
+    assert part["model_label"] == "SUPPORTS"
+    assert part["label"] in ("UNCERTAIN", "NOT ENOUGH INFORMATION")
+    assert not part["contributed"]
+    assert "quantifier scope" in part["status"].lower()
+
+
+def test_experimental_quantifier_guard_does_not_change_production_path():
+    claim = "Not all planets have moons."
+    results = [
+        tavily_result(1, "Some planets have moons."),
+        tavily_result(2, "Some planets in the Solar System have moons orbiting them."),
+    ]
+    production = assess_evidence_nli(claim, results, Mock(return_value=prediction("ENTAILMENT")))
+    experimental = assess_evidence_nli(
+        claim, results, Mock(return_value=prediction("ENTAILMENT")),
+        experimental_semantic=True, experimental_quantifier_guard=True)
+
+    assert production["verdict"] == "Supported"
+    assert experimental["verdict"] == "Inconclusive"
+    assert all(row["part_assessments"][0]["model_label"] == "SUPPORTS"
+               for row in experimental["per_source"])
+
+
+def test_experimental_temporal_guard_abstains_on_reported_intent_not_event():
+    claim = "The company will launch the product in 2030."
+    passage = "In 2025, the company said it plans to launch the product in 2030."
+    item = tavily_result(1, passage)
+    raw_assessment = assess_evidence_nli(
+        claim, [item], Mock(return_value=prediction("ENTAILMENT")), experimental_semantic=True)
+    guarded_assessment = assess_evidence_nli(
+        claim, [item], Mock(return_value=prediction("ENTAILMENT")), experimental_semantic=True,
+        experimental_temporal_guard=True)
+    raw_part = raw_assessment["per_source"][0]["part_assessments"][0]
+    guarded_part = guarded_assessment["per_source"][0]["part_assessments"][0]
+
+    assert raw_part["model_label"] == guarded_part["model_label"] == "SUPPORTS"
+    assert raw_part["label"] == "SUPPORTS"
+    assert guarded_part["label"] in ("UNCERTAIN", "NOT ENOUGH INFORMATION")
+    assert "future intent" in guarded_part["status"].lower()
+    assert not guarded_part["contributed"]
+    assert guarded_assessment["verdict"] == "Inconclusive"
+
+
+def test_cached_prediction_still_reapplies_source_specific_context_filters():
+    claim = "The Eiffel Tower is located in Paris."
+    repeated = "The Eiffel Tower is located in Paris."
+    results = [
+        {"title": "What if the Eiffel Tower is located in Paris?", "url": "https://source-1.example/page",
+         "content": repeated, "published_date": ""},
+        {"title": "Paris landmark overview", "url": "https://source-2.example/page",
+         "content": repeated, "published_date": ""},
+    ]
+    predictor = Mock(return_value=prediction("ENTAILMENT"))
+    result = assess_evidence_nli(claim, results, predictor, cache_predictions=True)
+
+    assert predictor.call_count == 1
+    historical, plain = [row["part_assessments"][0] for row in result["per_source"]]
+    assert "hypothetical" in historical["status"].lower()
+    assert not historical["contributed"]
+    assert plain["contributed"]
+    assert plain["inference_cache_hit"]
+    assert result["verdict"] == "Inconclusive"
+
+
 def test_near_duplicate_passages_are_not_independent_confirmations():
     base = ("The Eiffel Tower is located in Paris France and visitors can see the monument near the Champ de Mars "
             "beside the Seine River with public gardens and museums nearby according to this travel information page")
@@ -310,6 +430,42 @@ def test_experimental_reverse_rule_preserves_model_support_for_negated_claims():
     assert result["original_claim"] == claim
     assert result["verdict"] == "Supported"
     assert all(row["part_assessments"][0]["label"] == "SUPPORTS" for row in result["per_source"])
+
+
+def test_singly_negated_claim_with_conflicting_passage_predictions_abstains():
+    claim = "The Sun does not revolve around the Earth."
+    results = [tavily_result(1, "Earth revolves around the Sun."),
+               tavily_result(2, "Earth moves around the Sun in an elliptical orbit.")]
+    predictor = Mock(side_effect=[prediction("ENTAILMENT"), prediction("CONTRADICTION")])
+    result = assess_evidence_nli(claim, results, predictor, experimental_semantic=True)
+    assert result["verdict"] == "Inconclusive"
+    assert [row["part_assessments"][0]["label"] for row in result["per_source"]] == [
+        "SUPPORTS", "CONTRADICTS"]
+
+
+def test_explicit_negative_passages_can_contradict_positive_claim():
+    claim = "The Sun revolves around the Earth."
+    results = [tavily_result(1, "The Sun does not revolve around Earth."),
+               tavily_result(2, "The Sun does not revolve around the Earth in its yearly path.")]
+    result = assess_evidence_nli(claim, results, Mock(return_value=prediction("CONTRADICTION")))
+    assert result["verdict"] == "Contradicted"
+    assert all(row["part_assessments"][0]["label"] == "CONTRADICTS" for row in result["per_source"])
+
+
+def test_nli_timing_breakdown_is_opt_in_and_contains_no_claim_or_secret():
+    results = [tavily_result(1, "The Eiffel Tower is located in Paris, France."),
+               tavily_result(2, "The Eiffel Tower is located in Paris near the Champ de Mars.")]
+    timings = {}
+    claim = "The Eiffel Tower is located in Paris."
+    result = assess_with_optional_nli(claim, results,
+                                      lambda: lambda _premise, _hypothesis: prediction("ENTAILMENT"),
+                                      timings=timings)
+    assert result["verdict"] == "Supported"
+    assert {"model_load_ms", "evidence_filtering_ms", "nli_inference_ms",
+            "aggregation_ms", "assessment_total_ms", "nli_model_calls"} <= set(timings)
+    assert all(value >= 0 for key, value in timings.items() if key.endswith("_ms"))
+    assert timings["nli_model_calls"] == 2
+    assert claim not in repr(timings)
 
 
 def test_experimental_reverse_rule_abstains_on_double_negation():
@@ -671,13 +827,15 @@ def test_tavily_response_is_mocked_offline(monkeypatch):
     response = Mock()
     response.status_code = 200
     response.ok = True
-    response.json.return_value = {"results": [tavily_result(1, "A retrieved snippet.")]}
+    response.json.return_value = {"results": [dict(tavily_result(1, "A retrieved snippet."), publisher="NASA")]}
     post = Mock(return_value=response)
     monkeypatch.setattr("verifier.requests.post", post)
     results = search_evidence("A test claim", "mock-key")
     assert results[0]["title"] == "Mock source 1"
     assert results[0]["url"] == "https://source-1.example/page"
     assert results[0]["content"] == "A retrieved snippet."
+    assert results[0]["publisher"] == "NASA"
+    assert results[0]["retrieved_at"].endswith("+00:00")
     assert post.call_args.kwargs["json"]["api_key"] == "mock-key"
     assert post.call_args.kwargs["json"]["query"] == "A test claim"
     post.assert_called_once()
@@ -697,9 +855,11 @@ def test_search_preserves_original_snippet_and_deduplicates_tracking_url(monkeyp
     monkeypatch.setattr("verifier.requests.post", Mock(return_value=response))
     results = search_evidence("claim", "mock-key")
     assert len(results) == 1
-    assert results[0] == {"title": "## Original title",
-                          "url": "https://example.com/Case?utm_source=one",
-                          "content": original, "published_date": "2026-01-02"}
+    assert results[0]["title"] == "## Original title"
+    assert results[0]["url"] == "https://example.com/Case?utm_source=one"
+    assert results[0]["content"] == original
+    assert results[0]["published_date"] == "2026-01-02"
+    assert results[0]["retrieved_at"].endswith("+00:00")
 
 
 def test_search_handles_malformed_optional_metadata_and_bad_entries(monkeypatch):
@@ -713,4 +873,10 @@ def test_search_handles_malformed_optional_metadata_and_bad_entries(monkeypatch)
     ]}
     monkeypatch.setattr("verifier.requests.post", Mock(return_value=response))
     results = search_evidence("claim", "mock-key")
-    assert results == [{"title": "", "url": "https://example.com/page", "content": "", "published_date": ""}]
+    assert len(results) == 1
+    assert results[0]["title"] == ""
+    assert results[0]["url"] == "https://example.com/page"
+    assert results[0]["content"] == ""
+    assert results[0]["published_date"] == ""
+    assert results[0]["publisher"] == ""
+    assert results[0]["retrieved_at"].endswith("+00:00")

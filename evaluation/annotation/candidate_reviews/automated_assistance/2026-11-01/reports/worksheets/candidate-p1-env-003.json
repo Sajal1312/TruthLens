@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-env-003",
+  "candidate_sha256": "401ed6e2115124d8c7764ba01aece4f943082983cd5a9f74bbb68243960f4228",
+  "claim": "UNEP estimates that 19–23 million tonnes of plastic waste enter aquatic ecosystems each year.",
+  "human_review_priority": "high",
+  "claim_clarity_assessment": "Attribution is clear but annual framing can conceal the reference year.",
+  "claim_evidence_interpretation": "UNEP states an annual estimate; the research abstract estimates plastic generated in 2016. Numeric agreement does not erase this scope difference.",
+  "date_assessment": "candidate-p1-env-003-e01: No original publication day established. candidate-p1-env-003-e02: Epub 2020-09-17; journal issue 2020-09-18. Estimate concerns 2016, not the access year.",
+  "provenance_assessment": "UNEP and the study may share an estimate; a direct citation chain was not established.",
+  "research_concerns": [
+    "Explain the reference-year relationship in the fixed evidence context before inclusion; do not silently rewrite the claim."
+  ],
+  "recommended_action": "needs revision",
+  "recommendation_reason": "Explain the reference-year relationship in the fixed evidence context before inclusion; do not silently rewrite the claim.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-env-003-e01",
+      "source_url": "https://www.unep.org/en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Plastic pollution & marine litter",
+      "observed_publisher": "UN Environment Programme",
+      "source_role": "institutional environmental summary",
+      "locator": "Facts, first annual-leakage bullet",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "No original publication day established.",
+      "context_notes": "UNEP states an annual estimate; the research abstract estimates plastic generated in 2016. Numeric agreement does not erase this scope difference."
+    },
+    {
+      "evidence_id": "candidate-p1-env-003-e02",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/32943526/",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Predicted growth in plastic waste exceeds efforts to mitigate plastic pollution",
+      "observed_publisher": "Science / AAAS; abstract indexed by U.S. National Library of Medicine PubMed",
+      "source_role": "primary research abstract, not full study review",
+      "locator": "PMID 32943526, abstract and bibliographic header",
+      "publication_date_status": "matched_existing_date",
+      "observed_publication_date": "2020-09-17",
+      "other_date_notes": "Epub 2020-09-17; journal issue 2020-09-18. Estimate concerns 2016, not the access year.",
+      "context_notes": "UNEP states an annual estimate; the research abstract estimates plastic generated in 2016. Numeric agreement does not erase this scope difference."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-general-005",
+  "candidate_sha256": "d10cc91eb1c099fdeb20922ac6d0a08e6fc7dea2a6d8cd78ca65a4cfd9610030",
+  "claim": "The Great Wall of China can be seen from the Moon with the naked eye.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Moon and naked-eye scope are explicit, not low Earth orbit.",
+  "claim_evidence_interpretation": "The archived answer opposes the claim; the saved fragment uses it without the Great Wall antecedent.",
+  "date_assessment": "candidate-p2-general-005-e01: No original date for this specific answer established; dates on other Q&As must not be borrowed.",
+  "provenance_assessment": "Single archived NASA Q&A; no modern observational source was reviewed.",
+  "research_concerns": [
+    "Preserve question 99 context or request an excerpt revision. Archived status and missing answer date require acknowledgment, not an invented date."
+  ],
+  "recommended_action": "needs revision",
+  "recommendation_reason": "Preserve question 99 context or request an excerpt revision. Archived status and missing answer date require acknowledgment, not an invented date.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-general-005-e01",
+      "source_url": "https://science.gsfc.nasa.gov/attic/cosmicopia.gsfc.nasa.gov/qa_earth.html",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "NASA's Cosmicopia -- Ask Us -- Earth and Moon",
+      "observed_publisher": "NASA Goddard Cosmicopia",
+      "source_role": "archived institutional Q&A",
+      "locator": "Question 99, Great Wall from the Moon; answer credited to Beth Barbier",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "No original date for this specific answer established; dates on other Q&As must not be borrowed.",
+      "context_notes": "The archived answer opposes the claim; the saved fragment uses it without the Great Wall antecedent."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": null,
+  "candidate_id": "candidate-p2-tech-004",
+  "candidate_sha256": "ac56fbf1f87060ba2b19c9602b213b6a591fbc455742fc81437bc3f6fc8c71de",
+  "reviewer_alias": null,
+  "review_timestamp": null,
+  "source_verification_status": null,
+  "claim_scope_assessment": {
+    "status": null,
+    "rationale": ""
+  },
+  "evidence_context_assessment": {
+    "status": null,
+    "rationale": ""
+  },
+  "evidence_reviews": [
+    {
+      "evidence_id": "candidate-p2-tech-004-e01",
+      "source_status": null,
+      "source_verification_basis": "",
+      "publication_date_status": null,
+      "verified_publication_date": null,
+      "date_rationale": "",
+      "provenance_assessment": null,
+      "provenance_rationale": ""
+    }
+  ],
+  "decision": null,
+  "review_rationale": "",
+  "supersedes": null
+}

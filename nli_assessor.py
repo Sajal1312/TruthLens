@@ -1,10 +1,12 @@
 """Optional local NLI assessment. Heavy ML packages load only when enabled."""
 from functools import lru_cache
 import re
+import time
 from typing import Callable, Dict, List, Optional
 
 from verifier import assess_evidence
-from evidence_quality import publication_date_signal, source_context
+from evidence_quality import (NEAR_DUPLICATE_JACCARD_THRESHOLD, passage_similarity,
+                              publication_date_signal, source_context)
 
 MODEL_ID = "cross-encoder/nli-deberta-v3-xsmall"
 MODEL_REVISION = "03d06b2f6f06023bd596151a16477e2fcec601fb"
@@ -29,6 +31,15 @@ _BELIEF_ATTRIBUTION_CUES = re.compile(
     r"\b(believ(?:e|es|ed|ing)|beliefs?|thought|proposed|claimed|according to the (?:old|ancient|geocentric|ptolemaic) "
     r"(?:view|model)|once (?:widely )?(?:accepted|held|thought)|idea that|appears to|hold that|world view)\b", re.I)
 _CLAIM_ABOUT_BELIEF = re.compile(r"\b(believ(?:e|es|ed|ing)|beliefs?|thought|histor(?:y|ical|ically))\b", re.I)
+_QUANTIFIER_SCOPE_CUES = re.compile(
+    r"\b(?:all|every|each|some|most|none|no|only|never)\b|"
+    r"\b(?:at\s+least|at\s+most)\b", re.I
+)
+_FUTURE_CLAIM_CUES = re.compile(r"\b(?:will|shall|going\s+to)\b", re.I)
+_REPORTED_INTENT_CUES = re.compile(
+    r"\b(?:plan|plans|planned|planning|intend|intends|intended|intending|aim|aims|aimed|expect|expects|expected|hope|hopes|hoped)\s+to\b|"
+    r"\b(?:announced|stated|reported)\s+(?:a\s+)?plan\s+to\b", re.I
+)
 _CURRENT_REFUTATION_CUES = re.compile(
     r"\b(now )?(debunked|disproved|false|incorrect|not true|no longer accepted|refuted)\b", re.I)
 _HISTORICAL_TITLE_CUES = re.compile(r"\b(geocentr(?:ic|ism)|ptolemaic|history|historical)\b", re.I)
@@ -45,7 +56,6 @@ _GRAVITY_ORBIT_RELATIONS = (
                r"(?P<orbiter>[a-z][a-z'-]*)\s+(?:into|in)\s+(?:its|their|an?)\s+orbit\b", re.I),
 )
 _YEAR_PATTERN = re.compile(r"\b(?:1[0-9]{3}|20\d{2})\b")
-NEAR_DUPLICATE_JACCARD_THRESHOLD = 0.80
 _CLAUSE_PREDICATE = re.compile(
     r"\b(?:is|are|was|were|has|have|had|does|do|did|can|could|will|would|may|might|must|should|"
     r"revolv\w*|orbit\w*|mov\w*|located|lies|lie|contains|contain|launch\w*|promis\w*)\b", re.I)
@@ -150,21 +160,8 @@ def _relevance_level(part: str, window: str) -> str:
     return "Unrelated"
 
 
-def _passage_shingles(text: str) -> set:
-    words = re.findall(r"[a-z0-9]+", text.casefold())
-    if not words:
-        return set()
-    if len(words) < 3:
-        return {tuple(words)}
-    return {tuple(words[index:index + 3]) for index in range(len(words) - 2)}
-
-
 def _near_duplicate(left: str, right: str) -> bool:
-    left_shingles, right_shingles = _passage_shingles(left), _passage_shingles(right)
-    if not left_shingles or not right_shingles:
-        return False
-    similarity = len(left_shingles & right_shingles) / len(left_shingles | right_shingles)
-    return similarity >= NEAR_DUPLICATE_JACCARD_THRESHOLD
+    return passage_similarity(left, right) >= NEAR_DUPLICATE_JACCARD_THRESHOLD
 
 
 def _windows(content: str) -> List[str]:
@@ -321,6 +318,38 @@ def load_local_nli_model() -> Callable[[str, str], Dict[str, object]]:
         # The selected model card documents this three-class order.
         labels = {0: "CONTRADICTS", 1: "SUPPORTS", 2: "NOT ENOUGH INFORMATION"}
 
+    def predictions_from_logits(logits) -> List[Dict[str, object]]:
+        probability_rows = torch.softmax(logits, dim=-1).detach().cpu().tolist()
+        predictions = []
+        for probabilities in probability_rows:
+            ordered = sorted(enumerate(probabilities), key=lambda pair: pair[1], reverse=True)
+            best_id, confidence = ordered[0]
+            margin = confidence - ordered[1][1] if len(ordered) > 1 else confidence
+            predictions.append({
+                "label": labels.get(best_id, "UNKNOWN"),
+                "confidence": float(confidence),
+                "margin": float(margin),
+                "scores": {labels.get(index, "UNKNOWN"): float(score)
+                           for index, score in enumerate(probabilities)},
+            })
+        return predictions
+
+    def predict_batch(pairs):
+        if not pairs:
+            return []
+        encoded = tokenizer(
+            [premise for premise, _hypothesis in pairs],
+            [_hypothesis for _premise, _hypothesis in pairs],
+            return_tensors="pt",
+            padding=True,
+            truncation=True,
+            max_length=512,
+        )
+        encoded = {name: tensor.to(device) for name, tensor in encoded.items()}
+        with torch.inference_mode():
+            logits = model(**encoded).logits
+        return predictions_from_logits(logits)
+
     def predict(premise: str, hypothesis: str) -> Dict[str, object]:
         encoded = tokenizer(
             premise,
@@ -331,18 +360,12 @@ def load_local_nli_model() -> Callable[[str, str], Dict[str, object]]:
         )
         encoded = {name: tensor.to(device) for name, tensor in encoded.items()}
         with torch.inference_mode():
-            logits = model(**encoded).logits[0]
-            probabilities = torch.softmax(logits, dim=-1).detach().cpu().tolist()
-        ordered = sorted(enumerate(probabilities), key=lambda pair: pair[1], reverse=True)
-        best_id, confidence = ordered[0]
-        margin = confidence - ordered[1][1] if len(ordered) > 1 else confidence
-        return {
-            "label": labels.get(best_id, "UNKNOWN"),
-            "confidence": float(confidence),
-            "margin": float(margin),
-            "scores": {labels.get(index, "UNKNOWN"): float(score) for index, score in enumerate(probabilities)},
-        }
+            logits = model(**encoded).logits
+        return predictions_from_logits(logits)[0]
 
+    # Used by the offline benchmark to compare batch inference. Production
+    # assessment remains sequential until an end-to-end integration is proven.
+    predict.predict_batch = predict_batch
     return predict
 
 
@@ -374,13 +397,23 @@ def assess_evidence_nli(
     predict: Callable[[str, str], Dict[str, object]],
     *,
     experimental_semantic: bool = False,
+    experimental_quantifier_guard: bool = False,
+    experimental_temporal_guard: bool = False,
+    cache_predictions: bool = False,
+    timings: Optional[Dict[str, float]] = None,
 ) -> Dict[str, object]:
     """Assess relevant passages; experimental semantic behavior is opt-in only."""
+    assessment_started = time.perf_counter()
     parts = _claim_parts_experimental(claim) if experimental_semantic else _claim_parts(claim)
     claim_years = set(_YEAR_PATTERN.findall(claim))
     per_source = []
     votes = {part: {} for part in parts}
     vote_passages = {part: {} for part in parts}
+    candidate_phase_started = time.perf_counter()
+    inference_seconds = 0.0
+    model_calls = 0
+    cache_hits = 0
+    prediction_cache = {}
     for item in results:
         title = item.get("title") or item.get("url") or "Retrieved source"
         row = {"title": title, "url": item.get("url", ""), "label": "UNCERTAIN", "confidence": None,
@@ -415,7 +448,20 @@ def assess_evidence_nli(
                         continue
                     matching_claim_year_seen = True
                 try:
-                    output = predict(window, part)  # Retrieved passage is premise; claim component is hypothesis.
+                    cache_key = (window, part)
+                    cache_hit = cache_predictions and cache_key in prediction_cache
+                    if cache_hit:
+                        output = prediction_cache[cache_key]
+                        cache_hits += 1
+                    else:
+                        inference_started = time.perf_counter()
+                        try:
+                            output = predict(window, part)  # Passage is premise; claim component is hypothesis.
+                        finally:
+                            inference_seconds += time.perf_counter() - inference_started
+                            model_calls += 1
+                        if cache_predictions and isinstance(output, dict):
+                            prediction_cache[cache_key] = output
                     model_label = _canonical_label(output.get("label"))
                     label = model_label
                     confidence = float(output.get("confidence", 0.0))
@@ -437,6 +483,20 @@ def assess_evidence_nli(
                             # SUPPORTS or CONTRADICTS vote when scope is unclear.
                             label = "NOT ENOUGH INFORMATION"
                             context_exclusion = "Multiple negation cues make the motion-relation claim ambiguous"
+                    if (experimental_quantifier_guard and not context_exclusion
+                            and _QUANTIFIER_SCOPE_CUES.search(part)):
+                        # This is an abstention guard, not a lexical verdict rule:
+                        # keep the raw NLI output for inspection, but do not let
+                        # an unvalidated scope interpretation create a direction.
+                        label = "NOT ENOUGH INFORMATION"
+                        context_exclusion = "Experimental abstention: quantifier scope is not reliably resolved"
+                    if (experimental_temporal_guard and not context_exclusion
+                            and _FUTURE_CLAIM_CUES.search(part)
+                            and _REPORTED_INTENT_CUES.search(window)):
+                        # A reported intention is evidence of a plan, not proof
+                        # that a future event will occur. Keep this opt-in.
+                        label = "NOT ENOUGH INFORMATION"
+                        context_exclusion = "Experimental abstention: reported future intent does not establish that the event will occur"
                     if not context_exclusion and model_label == "SUPPORTS":
                         if experimental_semantic:
                             direction = _experimental_motion_relation_direction(part, window)
@@ -478,7 +538,7 @@ def assess_evidence_nli(
                         context_exclusion = "Passage qualifies the claim by reference frame or scope"
                     accepted = confidence >= MIN_CONFIDENCE and margin >= MIN_MARGIN and label in ("SUPPORTS", "CONTRADICTS")
                     candidates.append((confidence, margin, label, accepted, scores, window,
-                                       model_label, context_exclusion, semantic_adjustment))
+                                       model_label, context_exclusion, semantic_adjustment, cache_hit))
                 except Exception:
                     continue
             if candidates:
@@ -491,12 +551,13 @@ def assess_evidence_nli(
                                   "status": "Relevant passages on this URL conflict; no directional vote counted",
                                   "passages": [{"text": candidate[5], "label": candidate[2],
                                                 "model_label": candidate[6], "confidence": candidate[0],
-                                                "margin": candidate[1]} for candidate in clear]}
+                                                "margin": candidate[1], "inference_cache_hit": candidate[9]}
+                                               for candidate in clear]}
                     row["independence"] = "Conflicting passages from this source; no directional vote counted"
                     row["status"] = "Relevant passages conflict; no directional vote counted"
                 else:
                     chosen = max(clear or candidates, key=lambda entry: entry[0])
-                    confidence, margin, label, accepted, scores, chosen_window, model_label, context_exclusion, semantic_adjustment = chosen
+                    confidence, margin, label, accepted, scores, chosen_window, model_label, context_exclusion, semantic_adjustment, cache_hit = chosen
                     passage_key = re.sub(r"\s+", " ", chosen_window).strip().casefold()
                     repeated_passage = any(
                         _near_duplicate(passage_key, prior)
@@ -508,6 +569,7 @@ def assess_evidence_nli(
                                   "confidence": confidence, "margin": margin,
                                   "passage": chosen_window,
                                   "scores": scores, "contributed": bool(accepted and not repeated_passage),
+                                  "inference_cache_hit": cache_hit,
                                   "status": ("Excluded as directional evidence: " + context_exclusion if context_exclusion
                                              else semantic_adjustment if semantic_adjustment
                                              else "Repeated passage; not counted as independent evidence" if accepted and repeated_passage
@@ -551,6 +613,8 @@ def assess_evidence_nli(
             row["label"] = "NOT ENOUGH INFORMATION"
         per_source.append(row)
 
+    candidate_phase_finished = time.perf_counter()
+    aggregation_started = candidate_phase_finished
     part_outcomes = []
     for part in parts:
         labels_by_source = votes[part]
@@ -607,7 +671,7 @@ def assess_evidence_nli(
                  for by_source in votes.values() for label in ("SUPPORTS", "CONTRADICTS")):
             reasoning = "Only one distinct URL produced a clear directional NLI result. TruthLens requires agreement from at least two distinct URLs."
 
-    return {
+    result = {
         "original_claim": claim,
         "experimental_semantic": experimental_semantic,
         "verdict": verdict,
@@ -619,16 +683,31 @@ def assess_evidence_nli(
         "part_outcomes": [{"claim_part": part, "verdict": outcome} for part, outcome in part_outcomes],
         "fallback_used": False,
     }
+    if timings is not None:
+        aggregation_finished = time.perf_counter()
+        timings.update({
+            "evidence_filtering_ms": max(0.0, (candidate_phase_finished - candidate_phase_started - inference_seconds) * 1000),
+            "nli_inference_ms": inference_seconds * 1000,
+            "aggregation_ms": (aggregation_finished - aggregation_started) * 1000,
+            "assessment_total_ms": (aggregation_finished - assessment_started) * 1000,
+            "nli_model_calls": model_calls,
+            "nli_cache_hits": cache_hits,
+        })
+    return result
 
 
 def assess_with_optional_nli(
     claim: str,
     results: List[Dict[str, str]],
     model_loader: Optional[Callable[[], Callable[[str, str], Dict[str, object]]]] = None,
+    *,
+    cache_predictions: bool = False,
+    timings: Optional[Dict[str, float]] = None,
 ) -> Dict[str, object]:
     """Use local NLI when possible; fall back to the existing rule-based method."""
+    wrapper_started = time.perf_counter()
     if not results:
-        return {
+        result = {
             "verdict": "Inconclusive",
             "method": "Local NLI not run (no retrieved snippets)",
             "reasoning": "No usable search snippets were returned, so there is no evidence to classify.",
@@ -637,10 +716,18 @@ def assess_with_optional_nli(
             "per_source": [],
             "fallback_used": False,
         }
+        if timings is not None:
+            timings.update({"model_load_ms": 0.0, "nli_inference_ms": 0.0,
+                            "assessment_total_ms": (time.perf_counter() - wrapper_started) * 1000,
+                            "nli_model_calls": 0})
+        return result
     loader = model_loader or load_local_nli_model
+    model_load_started = time.perf_counter()
     try:
         predictor = loader()
+        model_load_seconds = time.perf_counter() - model_load_started
     except Exception:
+        model_load_seconds = time.perf_counter() - model_load_started
         fallback = assess_evidence(claim, results)
         fallback["method"] = "Rule-based fallback (local NLI model unavailable)"
         fallback["reasoning"] = ("The local NLI model could not be loaded, so the existing conservative rule-based "
@@ -653,8 +740,19 @@ def assess_with_optional_nli(
              "status": "Existing rule-based fallback was used"}
             for item in results
         ]
+        if timings is not None:
+            timings.update({"model_load_ms": model_load_seconds * 1000,
+                            "nli_inference_ms": 0.0,
+                            "rule_assessment_ms": (time.perf_counter() - model_load_started) * 1000 - model_load_seconds * 1000,
+                            "assessment_total_ms": (time.perf_counter() - wrapper_started) * 1000,
+                            "nli_model_calls": 0})
         return fallback
-    return assess_evidence_nli(claim, results, predictor)
+    result = assess_evidence_nli(claim, results, predictor,
+                                 cache_predictions=cache_predictions, timings=timings)
+    if timings is not None:
+        timings["model_load_ms"] = model_load_seconds * 1000
+        timings["assessment_total_ms"] = (time.perf_counter() - wrapper_started) * 1000
+    return result
 
 
 def _canonical_label(label: object) -> str:

@@ -3,7 +3,7 @@
 - Evaluation date:
 - Code revision:
 - Model ID and pinned revision:
-- Split: development / held_out / all
+- Split: development / diagnostics / final_test
 - Search requests made: **No** (offline harness)
 - Dataset version / checksum:
 - Resource benchmark repeats / probe cases:
@@ -16,23 +16,29 @@
 
 | Metric | Measured result | Sample count | Interpretation / uncertainty |
 |---|---:|---:|---|
-| Expected final verdict class counts | Not measured | — | — |
-| Final verdict macro-F1 | Not measured | — | Pilot only |
-| Final verdict confusion matrix | Not measured | — | Rows: expected; columns: predicted |
-| Relevance macro-F1 | Not measured | — | Classes: relevant / weakly related / unrelated |
-| Raw NLI stance macro-F1 | Not measured | — | Raw model outputs only |
-| Effective stance macro-F1 | Not measured | — | Includes downstream abstentions |
-| Selective accuracy | Not measured | — | Directional predictions only |
-| Coverage | Not measured | — | Supported/Contradicted fraction |
-| Abstention rate | Not measured | — | Inconclusive fraction |
+| Gold final verdict counts | Not measured | — | Include Supported / Contradicted / Inconclusive |
+| Predicted final verdict counts | Not measured | — | Report separately from gold counts |
+| Final verdict accuracy / macro-F1 | Not measured | — | State labels included in macro-F1 |
+| Final verdict per-class precision / recall / F1 | Not measured | — | Include support and undefined values |
+| Final verdict confusion matrix | Not measured | — | Rows: gold; columns: predicted |
+| Passage relevance per-class metrics / macro-F1 | Not measured | — | Relevant / weakly related / unrelated |
+| Raw NLI stance per-class metrics / macro-F1 | Not measured | — | Raw model labels and their own denominator |
+| Effective passage stance per-class metrics / macro-F1 | Not measured | — | After filtering and abstentions |
+| Passage stance confusion matrices | Not measured | — | Keep raw and effective matrices separate |
+| Selective accuracy | Not measured | — | Exact verdict match among directional predictions |
+| Coverage / abstention rate | Not measured | — | Report counts and denominator |
+| Missing / unadjudicated annotations | Not measured | — | Exclude from gold metrics and disclose |
+| Claim verdict inter-annotator agreement | Not measured | — | Raw agreement and Cohen's kappa before adjudication |
+| Evidence relevance / stance agreement | Not measured | — | Separate agreement per label task |
 
 ## Aggregation comparison
 
 | Mode | Accuracy | Macro-F1 (gold-supported labels only) | Coverage | Abstention | Errors |
 |---|---:|---:|---:|---:|---:|
 | Production default | Not measured | Not measured | Not measured | Not measured | Not measured |
-| One vote per normalized publisher | Not measured | Not measured | Not measured | Not measured | Not measured |
-| Distinct declared publishers only | Not measured | Not measured | Not measured | Not measured | Not measured |
+| Experimental semantic path | Not measured | Not measured | Not measured | Not measured | Not measured |
+| Experimental quantifier abstention guard | Not measured | Not measured | Not measured | Not measured | Not measured |
+| Experimental future-intent abstention guard | Not measured | Not measured | Not measured | Not measured | Not measured |
 
 Production verdict behavior is the reference. Experimental modes are
 post-hoc evaluator outputs; publisher IDs do not establish independent

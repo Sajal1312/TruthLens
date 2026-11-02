@@ -1,6 +1,8 @@
 """Tavily search and conservative, explainable claim/evidence assessment."""
 import os
 import re
+import time
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
@@ -31,29 +33,38 @@ def get_tavily_key() -> Optional[str]:
     return os.environ.get("TAVILY_API_KEY", "").strip() or None
 
 
-def search_evidence(claim: str, api_key: str) -> List[Dict[str, str]]:
+def search_evidence(claim: str, api_key: str, *, timings: Optional[Dict[str, float]] = None) -> List[Dict[str, str]]:
     payload = {"api_key": api_key, "query": claim, "search_depth": "advanced", "max_results": MAX_RESULTS,
                "include_answer": False, "include_raw_content": False}
+    total_started = time.perf_counter()
+    request_started = time.perf_counter()
     try:
-        response = requests.post(TAVILY_URL, json=payload, timeout=TIMEOUT_SECONDS)
+        # Keep the credential-bearing JSON body on the configured Tavily host.
+        response = requests.post(TAVILY_URL, json=payload, timeout=TIMEOUT_SECONDS,
+                                 allow_redirects=False)
     except requests.Timeout as exc:
         raise VerificationError("The web search took too long. Please try again in a moment.") from exc
     except requests.RequestException as exc:
         raise VerificationError("Could not connect to the web search service. Check your internet connection and try again.") from exc
+    request_finished = time.perf_counter()
     if response.status_code in (401, 403):
         raise VerificationError("Tavily rejected the API key. Check that it is copied correctly and still active.")
     if response.status_code == 429:
         raise VerificationError("Tavily search limit reached. Wait a little and try again.")
     if response.status_code >= 500:
         raise VerificationError("Tavily is temporarily unavailable. Please try again later.")
+    if 300 <= response.status_code < 400:
+        raise VerificationError("Tavily returned an unexpected redirect. Please try again later.")
     if not response.ok:
         raise VerificationError("Tavily could not complete the search. Check your key and claim, then try again.")
+    processing_started = time.perf_counter()
     try:
         data = response.json()
     except ValueError as exc:
         raise VerificationError("The search service returned an unreadable response. Please try again.") from exc
     if not isinstance(data, dict):
         raise VerificationError("The search service returned an unexpected response format. Please try again.")
+    retrieved_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     # Retrieved page text is data only; never execute or follow instructions contained in it.
     results = data.get("results", [])
     if not isinstance(results, list):
@@ -71,13 +82,30 @@ def search_evidence(claim: str, api_key: str) -> List[Dict[str, str]]:
         content = result.get("content") if isinstance(result.get("content"), str) else ""
         title = result.get("title") if isinstance(result.get("title"), str) else ""
         published_date = result.get("published_date") if isinstance(result.get("published_date"), str) else ""
+        publisher = result.get("publisher") if isinstance(result.get("publisher"), str) else ""
         dedupe_key = (_normalized_url(url), content)
         if dedupe_key in seen_results:
             continue
         seen_results.add(dedupe_key)
         clean.append({"title": title, "url": url, "content": content,
-                      "published_date": published_date})
-    return clean[:MAX_RESULTS]
+                      "published_date": published_date, "publisher": publisher,
+                      "retrieved_at": retrieved_at})
+    clean = clean[:MAX_RESULTS]
+    if timings is not None:
+        processing_finished = time.perf_counter()
+        timings.update({
+            "search_request_ms": (request_finished - request_started) * 1000,
+            "response_processing_ms": (processing_finished - processing_started) * 1000,
+            "retrieval_total_ms": (processing_finished - total_started) * 1000,
+        })
+    return clean
+
+
+def search_evidence_with_metrics(claim: str, api_key: str):
+    """Return normal results plus local timing measurements; never logs inputs."""
+    timings = {}
+    results = search_evidence(claim, api_key, timings=timings)
+    return results, timings
 
 
 def _words(text: str) -> List[str]:
@@ -153,12 +181,18 @@ def assess_evidence(claim: str, results: List[Dict[str, str]]) -> Dict[str, obje
     supporting_sources: Dict[str, str] = {}
     contradicting_sources: Dict[str, str] = {}
     seen_urls = set()
+    per_source = []
     for item in results:
         key = _source_key(item)
+        title = item.get("title") or item.get("url") or "Retrieved source"
+        row = {"title": title, "url": item.get("url", ""), "label": "NOT ENOUGH INFORMATION",
+               "relevance": "Not semantically assessed by rule-based matching", "contributed": False,
+               "status": "Snippet did not contain the complete claim wording or recognized opposite wording"}
         if not key or key in seen_urls:
+            row["status"] = "Excluded: source URL is invalid" if not key else "Excluded: duplicate normalized URL"
+            per_source.append(row)
             continue
         seen_urls.add(key)
-        title = item.get("title") or key
         content = item.get("content") or ""
         # Titles are not evidence: only retrieved snippet text can match a claim.
         exact_claim = _contains_phrase(content, claim_words)
@@ -167,6 +201,16 @@ def assess_evidence(claim: str, results: List[Dict[str, str]]) -> Dict[str, obje
             supporting_sources[key] = title
         if exact_opposite:
             contradicting_sources[key] = title
+        if exact_claim and exact_opposite:
+            row.update({"label": "CONFLICTING", "contributed": True,
+                        "status": "Snippet contains both the complete claim and recognized opposite wording"})
+        elif exact_claim:
+            row.update({"label": "SUPPORTS", "contributed": True,
+                        "status": "Complete claim wording matched in retrieved snippet"})
+        elif exact_opposite:
+            row.update({"label": "CONTRADICTS", "contributed": True,
+                        "status": "Recognized opposite wording matched in retrieved snippet"})
+        per_source.append(row)
     support_count = len(supporting_sources)
     contradiction_count = len(contradicting_sources)
     evidence_used = []
@@ -194,8 +238,10 @@ def assess_evidence(claim: str, results: List[Dict[str, str]]) -> Dict[str, obje
         verdict = "Inconclusive"
         reasoning = ("The retrieved snippets did not state the complete claim or its narrowly recognized opposite. "
                      "Related words alone are insufficient, so there is not enough direct textual evidence to assess it.")
-    return {"verdict": verdict, "method": "Exact-proposition text matching with a limited explicit-negation check",
-            "reasoning": reasoning, "evidence_used": evidence_used, "limitations": _limitations()}
+    return {"original_claim": claim, "verdict": verdict,
+            "method": "Exact-proposition text matching with a limited explicit-negation check",
+            "reasoning": reasoning, "evidence_used": evidence_used, "limitations": _limitations(),
+            "per_source": per_source, "part_outcomes": []}
 
 
 def _limitations() -> str:

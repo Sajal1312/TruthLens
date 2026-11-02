@@ -1,0 +1,152 @@
+[
+  {
+    "claim_id": "candidate-p1-general-001",
+    "claim_text": "Mars has two moons named Phobos and Deimos.",
+    "claim_family_id": "family-p1-general-001",
+    "event_group_id": null,
+    "claim_category": [
+      "numerical",
+      "compound_claim"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-general-001-e01",
+        "passage": "Mars has two moons, Phobos and Deimos.",
+        "source_title": "Moons of Mars",
+        "source_identifier": "https://science.nasa.gov/mars/moons/",
+        "source_url": "https://science.nasa.gov/mars/moons/",
+        "publisher_id": "nasa",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-001",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      },
+      {
+        "evidence_id": "candidate-p1-general-001-e02",
+        "passage": "Mars has two moons: Phobos and the smaller and more distant Deimos",
+        "source_title": "Mars Express tracks the phases of Phobos",
+        "source_identifier": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_tracks_the_phases_of_Phobos",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_tracks_the_phases_of_Phobos",
+        "publisher_id": "esa",
+        "publication_date": "2019-12-12",
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-001",
+        "provenance_relation": "related_suspected",
+        "provenance_basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-general-002",
+    "claim_text": "Venus is the hottest planet in our solar system.",
+    "claim_family_id": "family-p1-general-002",
+    "event_group_id": "topic-venus",
+    "claim_category": [
+      "ordinary_control"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-general-002-e01",
+        "passage": "Venus is the hottest planet in our solar system",
+        "source_title": "Venus Facts",
+        "source_identifier": "https://science.nasa.gov/venus/venus-facts/",
+        "source_url": "https://science.nasa.gov/venus/venus-facts/",
+        "publisher_id": "nasa",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-002",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-general-003",
+    "claim_text": "CERN placed the World Wide Web software in the public domain on 30 April 1993.",
+    "claim_family_id": "family-p1-general-003",
+    "event_group_id": null,
+    "claim_category": [
+      "event_vs_publication_date"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-general-003-e01",
+        "passage": "On 30 April 1993, CERN put the World Wide Web software in the public domain.",
+        "source_title": "Where the web was born",
+        "source_identifier": "https://home.cern/science/computing/the-birth-of-the-web/where-web-was-born/",
+        "source_url": "https://home.cern/science/computing/the-birth-of-the-web/where-web-was-born/",
+        "publisher_id": "cern",
+        "publication_date": null,
+        "event_date": "1993-04-30",
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-general-003",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-tech-002",
+    "claim_text": "RFC 9110 defines HTTP as a stateless application-level protocol.",
+    "claim_family_id": "family-p1-tech-002",
+    "event_group_id": null,
+    "claim_category": [
+      "ordinary_control"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-tech-002-e01",
+        "passage": "The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems.",
+        "source_title": "RFC 9110: HTTP Semantics",
+        "source_identifier": "https://www.rfc-editor.org/rfc/rfc9110.html",
+        "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+        "publisher_id": "ietf-rfc-editor",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-tech-002",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  },
+  {
+    "claim_id": "candidate-p1-env-001",
+    "claim_text": "The ocean absorbs about 30 percent of carbon dioxide released into the atmosphere, according to NOAA.",
+    "claim_family_id": "family-p1-env-001",
+    "event_group_id": null,
+    "claim_category": [
+      "numerical"
+    ],
+    "split": "pilot",
+    "annotation_status": "unannotated",
+    "evidence": [
+      {
+        "evidence_id": "candidate-p1-env-001-e01",
+        "passage": "The ocean absorbs about 30 percent of the CO2 that is released in the atmosphere",
+        "source_title": "What is Ocean Acidification?",
+        "source_identifier": "https://oceanservice.noaa.gov/facts/acidification.html",
+        "source_url": "https://oceanservice.noaa.gov/facts/acidification.html",
+        "publisher_id": "noaa",
+        "publication_date": null,
+        "event_date": null,
+        "checked_on": "2026-11-01",
+        "provenance_group_id": "source-p1-env-001",
+        "provenance_relation": "unknown",
+        "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+      }
+    ]
+  }
+]

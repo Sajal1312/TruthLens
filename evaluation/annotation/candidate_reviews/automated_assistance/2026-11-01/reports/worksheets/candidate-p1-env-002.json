@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-env-002",
+  "candidate_sha256": "87bd0de9b465921b20ef0ea13b394132aab8ca7433c97519b58e1d6734dcce35",
+  "claim": "Making new aluminum cans from recycled cans uses 95 percent less energy than making them from bauxite ore.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Comparison specifies cans, recycled feedstock and bauxite route.",
+  "claim_evidence_interpretation": "EIA matches the can-specific claim. NIH gives a broader aluminum comparison, not a separate measurement.",
+  "date_assessment": "candidate-p1-env-002-e01: No original publication day visible in the retrieved text. candidate-p1-env-002-e02: No original publication day established; older statistics and a funding-lapse currency warning are visible.",
+  "provenance_assessment": "EIA and NIH are different agencies; a shared underlying calculation is unresolved. Do not count them as two independent measurements.",
+  "research_concerns": [
+    "Underlying 95% calculation and lifecycle boundaries were not checked; NIH carries a currency warning."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-env-002-e01",
+      "source_url": "https://www.eia.gov/energyexplained/energy-and-the-environment/recycling-and-energy.php",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Recycling and energy",
+      "observed_publisher": "U.S. Energy Information Administration",
+      "source_role": "institutional explanatory summary",
+      "locator": "Recycling saves energy and other resources, aluminum-can comparison",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "No original publication day visible in the retrieved text.",
+      "context_notes": "EIA matches the can-specific claim. NIH gives a broader aluminum comparison, not a separate measurement."
+    },
+    {
+      "evidence_id": "candidate-p1-env-002-e02",
+      "source_url": "https://nems.nih.gov/environmental-programs/Pages/Benefits-of-Recycling.aspx",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Benefits of Recycling",
+      "observed_publisher": "NIH National Environmental Management System",
+      "source_role": "institutional recycling guidance",
+      "locator": "Energy savings bullet under Benefits of Recycling",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "No original publication day established; older statistics and a funding-lapse currency warning are visible.",
+      "context_notes": "Broader aluminum comparison, not can-specific raw-material process data; visible currency warning and old statistics. Calculation lineage not established."
+    }
+  ]
+}

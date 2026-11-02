@@ -1,0 +1,827 @@
+{
+  "scope": "Preliminary developer-authored synthetic diagnostics; not an independent or blind benchmark",
+  "network_used": false,
+  "model_used": false,
+  "production_verdicts_changed": false,
+  "claim_count": 25,
+  "evidence_count": 26,
+  "classification": {
+    "count": 25,
+    "labels": [
+      "historical",
+      "current_status",
+      "relative",
+      "future",
+      "explicit",
+      "timeless_candidate"
+    ],
+    "confusion_matrix": {
+      "historical": {
+        "historical": 11,
+        "current_status": 0,
+        "relative": 0,
+        "future": 0,
+        "explicit": 0,
+        "timeless_candidate": 0
+      },
+      "current_status": {
+        "historical": 0,
+        "current_status": 5,
+        "relative": 0,
+        "future": 0,
+        "explicit": 0,
+        "timeless_candidate": 0
+      },
+      "relative": {
+        "historical": 0,
+        "current_status": 0,
+        "relative": 2,
+        "future": 0,
+        "explicit": 0,
+        "timeless_candidate": 0
+      },
+      "future": {
+        "historical": 0,
+        "current_status": 0,
+        "relative": 0,
+        "future": 2,
+        "explicit": 0,
+        "timeless_candidate": 0
+      },
+      "explicit": {
+        "historical": 0,
+        "current_status": 0,
+        "relative": 0,
+        "future": 0,
+        "explicit": 1,
+        "timeless_candidate": 0
+      },
+      "timeless_candidate": {
+        "historical": 0,
+        "current_status": 0,
+        "relative": 0,
+        "future": 0,
+        "explicit": 1,
+        "timeless_candidate": 3
+      }
+    },
+    "per_class": {
+      "historical": {
+        "support": 11,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "current_status": {
+        "support": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "relative": {
+        "support": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "future": {
+        "support": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "explicit": {
+        "support": 1,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+      },
+      "timeless_candidate": {
+        "support": 4,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571
+      }
+    },
+    "macro_f1": 0.9206349206349206,
+    "macro_f1_class_count": 6,
+    "macro_f1_labels": [
+      "historical",
+      "current_status",
+      "relative",
+      "future",
+      "explicit",
+      "timeless_candidate"
+    ],
+    "accuracy": 0.96
+  },
+  "expression_detection": {
+    "scope": "Exact expression text/occurrence counts in claims only; not date-resolution accuracy",
+    "tp": 18,
+    "fp": 1,
+    "fn": 0,
+    "precision": 0.9473684210526315,
+    "recall": 1.0,
+    "f1": 0.972972972972973
+  },
+  "mismatch_detection": {
+    "count": 26,
+    "labels": [
+      "mismatch",
+      "no_mismatch"
+    ],
+    "confusion_matrix": {
+      "mismatch": {
+        "mismatch": 7,
+        "no_mismatch": 0
+      },
+      "no_mismatch": {
+        "mismatch": 0,
+        "no_mismatch": 19
+      }
+    },
+    "per_class": {
+      "mismatch": {
+        "support": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "no_mismatch": {
+        "support": 19,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "macro_f1": 1.0,
+    "macro_f1_class_count": 2,
+    "macro_f1_labels": [
+      "mismatch",
+      "no_mismatch"
+    ],
+    "accuracy": 1.0
+  },
+  "timeless_warning_rate": {
+    "claims": 4,
+    "claims_with_mismatch_warning": 0,
+    "rate": 0.0,
+    "note": "Missing-date informational notices are excluded"
+  },
+  "cases": [
+    {
+      "id": "t01",
+      "category": "historical_day",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [
+        "30 April 1993"
+      ],
+      "actual_expressions": [
+        "30 April 1993"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t02",
+      "category": "current_old_evidence",
+      "expected_classification": "current_status",
+      "actual_classification": "current_status",
+      "expected_expressions": [
+        "currently"
+      ],
+      "actual_expressions": [
+        "currently"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": true,
+          "actual_mismatch": true,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing",
+            "different_time_period",
+            "publication_predates_claim_period",
+            "historical_evidence_for_current"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t03",
+      "category": "timeless_science",
+      "expected_classification": "timeless_candidate",
+      "actual_classification": "timeless_candidate",
+      "expected_expressions": [],
+      "actual_expressions": [],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing",
+            "event_date_missing",
+            "event_period_unknown"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t04",
+      "category": "future_prediction",
+      "expected_classification": "future",
+      "actual_classification": "future",
+      "expected_expressions": [
+        "2030"
+      ],
+      "actual_expressions": [
+        "2030"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": true,
+          "actual_mismatch": true,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing",
+            "publication_predates_claim_period",
+            "prediction_not_confirmed_outcome"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t05",
+      "category": "relative_year",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [
+        "last year"
+      ],
+      "actual_expressions": [
+        "last year"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t06",
+      "category": "vague_relative",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [
+        "recently"
+      ],
+      "actual_expressions": [
+        "recently"
+      ],
+      "unresolved": [
+        "recently"
+      ],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing",
+            "event_date_missing",
+            "event_period_unknown"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t07",
+      "category": "unknown_publication",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [
+        "2018"
+      ],
+      "actual_expressions": [
+        "2018"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing",
+            "event_date_missing"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t08",
+      "category": "publication_vs_event",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [
+        "2025"
+      ],
+      "actual_expressions": [
+        "2025"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": true,
+          "actual_mismatch": true,
+          "warning_codes": [
+            "updated_date_missing",
+            "different_time_period"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t09",
+      "category": "updated_old_evidence",
+      "expected_classification": "current_status",
+      "actual_classification": "current_status",
+      "expected_expressions": [
+        "currently"
+      ],
+      "actual_expressions": [
+        "currently"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": true,
+          "actual_mismatch": true,
+          "warning_codes": [
+            "event_date_missing",
+            "different_time_period",
+            "publication_predates_claim_period",
+            "historical_evidence_for_current"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t10",
+      "category": "conflicting_periods",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [
+        "2020"
+      ],
+      "actual_expressions": [
+        "2020"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": true,
+          "actual_mismatch": true,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing",
+            "different_time_period"
+          ]
+        },
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing"
+          ]
+        }
+      ],
+      "global_codes": [
+        "mixed_evidence_periods"
+      ],
+      "expected_global_codes": [
+        "mixed_evidence_periods"
+      ]
+    },
+    {
+      "id": "t11",
+      "category": "malformed_date",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [
+        "2025-02-30"
+      ],
+      "actual_expressions": [
+        "2025-02-30"
+      ],
+      "unresolved": [
+        "2025-02-30"
+      ],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_invalid",
+            "updated_date_missing",
+            "event_date_missing"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t12",
+      "category": "ambiguous_date_locale",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [
+        "03/04/2025"
+      ],
+      "actual_expressions": [
+        "03/04/2025"
+      ],
+      "unresolved": [
+        "03/04/2025"
+      ],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing",
+            "event_date_missing"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t13",
+      "category": "intention_vs_completion",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [
+        "2025"
+      ],
+      "actual_expressions": [
+        "2025"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": true,
+          "actual_mismatch": true,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing",
+            "publication_predates_claim_period",
+            "prediction_not_confirmed_outcome"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t14",
+      "category": "new_publication_old_event",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [
+        "2019"
+      ],
+      "actual_expressions": [
+        "2019"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t15",
+      "category": "timeless_old_publication",
+      "expected_classification": "timeless_candidate",
+      "actual_classification": "timeless_candidate",
+      "expected_expressions": [],
+      "actual_expressions": [],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing",
+            "event_period_unknown"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t16",
+      "category": "implicit_current_role",
+      "expected_classification": "current_status",
+      "actual_classification": "current_status",
+      "expected_expressions": [],
+      "actual_expressions": [],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": true,
+          "actual_mismatch": true,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing",
+            "event_date_missing",
+            "historical_evidence_for_current"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t17",
+      "category": "missing_reference",
+      "expected_classification": "future",
+      "actual_classification": "future",
+      "expected_expressions": [
+        "tomorrow"
+      ],
+      "actual_expressions": [
+        "tomorrow"
+      ],
+      "unresolved": [
+        "tomorrow"
+      ],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing",
+            "event_date_missing",
+            "event_period_unknown"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t18",
+      "category": "source_relative_anchor_unknown",
+      "expected_classification": "current_status",
+      "actual_classification": "current_status",
+      "expected_expressions": [
+        "today"
+      ],
+      "actual_expressions": [
+        "today"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing",
+            "unresolved_evidence_expressions",
+            "event_period_unknown"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t19",
+      "category": "quantity_looks_like_year",
+      "expected_classification": "timeless_candidate",
+      "actual_classification": "explicit",
+      "expected_expressions": [],
+      "actual_expressions": [
+        "2020"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing",
+            "event_date_missing"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t20",
+      "category": "current_not_temporal",
+      "expected_classification": "timeless_candidate",
+      "actual_classification": "timeless_candidate",
+      "expected_expressions": [],
+      "actual_expressions": [],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing",
+            "event_date_missing",
+            "event_period_unknown"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t21",
+      "category": "historical_context_with_current_assertion",
+      "expected_classification": "current_status",
+      "actual_classification": "current_status",
+      "expected_expressions": [],
+      "actual_expressions": [],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing",
+            "unresolved_evidence_expressions"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t22",
+      "category": "historical_belief",
+      "expected_classification": "historical",
+      "actual_classification": "historical",
+      "expected_expressions": [],
+      "actual_expressions": [],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing",
+            "event_date_missing",
+            "event_period_unknown"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t23",
+      "category": "explicit_interval",
+      "expected_classification": "explicit",
+      "actual_classification": "explicit",
+      "expected_expressions": [
+        "2010–2012"
+      ],
+      "actual_expressions": [
+        "2010–2012"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t24",
+      "category": "relative_vague_context",
+      "expected_classification": "relative",
+      "actual_classification": "relative",
+      "expected_expressions": [
+        "recently"
+      ],
+      "actual_expressions": [
+        "recently"
+      ],
+      "unresolved": [
+        "recently"
+      ],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "publication_date_missing",
+            "updated_date_missing",
+            "event_date_missing",
+            "event_period_unknown"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    },
+    {
+      "id": "t25",
+      "category": "relative_calendar_period",
+      "expected_classification": "relative",
+      "actual_classification": "relative",
+      "expected_expressions": [
+        "last year"
+      ],
+      "actual_expressions": [
+        "last year"
+      ],
+      "unresolved": [],
+      "sources": [
+        {
+          "expected_mismatch": false,
+          "actual_mismatch": false,
+          "warning_codes": [
+            "updated_date_missing",
+            "event_date_missing"
+          ]
+        }
+      ],
+      "global_codes": [],
+      "expected_global_codes": null
+    }
+  ],
+  "limitations": "Authored together with the implementation; small convenience sample. No stance, factual accuracy, live retrieval quality or human comprehension is measured. Undefined metrics are null."
+}

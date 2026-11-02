@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-general-002",
+  "candidate_sha256": "f3f79f9f2eebd17d33009e503bd566ddf5b30b0ec08b08a6e1298557ca2bf221",
+  "claim": "It is not true that no woman has ever won a Nobel Prize.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Double negation is deliberate; saved evidence uses an unresolved pronoun when read alone.",
+  "claim_evidence_interpretation": "The opened page identifies Marie Curie before the excerpt, but the saved sentence fragment alone does not name her.",
+  "date_assessment": "candidate-p2-general-002-e01: No original publication day established. Passage itself gives no award event day.",
+  "provenance_assessment": "Secondary museum biography; original award registry not checked in this inspection.",
+  "research_concerns": [
+    "Preserve the antecedent context or request a versioned excerpt revision; identify collector-authored linguistic transformation."
+  ],
+  "recommended_action": "needs revision",
+  "recommendation_reason": "Preserve the antecedent context or request a versioned excerpt revision; identify collector-authored linguistic transformation.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-general-002-e01",
+      "source_url": "https://oumnh.ox.ac.uk/learn-marie-curie",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Marie Curie",
+      "observed_publisher": "Oxford University Museum of Natural History",
+      "source_role": "secondary biographical education page",
+      "locator": "Opening Marie Curie biographical summary",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "No original publication day established. Passage itself gives no award event day.",
+      "context_notes": "The opened page identifies Marie Curie before the excerpt, but the saved sentence fragment alone does not name her."
+    }
+  ]
+}

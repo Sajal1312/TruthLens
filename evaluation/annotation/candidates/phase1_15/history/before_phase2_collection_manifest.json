@@ -1,0 +1,236 @@
+{
+  "collection_id": "truthlens-phase1-15-v1",
+  "collected_on": "2026-11-01",
+  "claim_records_file": "claim_records.json",
+  "intended_use": "Unannotated source-derived candidates for independent human review; staged outside pilot_90.",
+  "target_claim_count": 15,
+  "target_topics": {
+    "sustainability_environment": 5,
+    "cybersecurity_technology": 5,
+    "general_factual": 5
+  },
+  "topics_by_claim": {
+    "candidate-p1-env-001": "sustainability_environment",
+    "candidate-p1-env-002": "sustainability_environment",
+    "candidate-p1-env-003": "sustainability_environment",
+    "candidate-p1-env-004": "sustainability_environment",
+    "candidate-p1-env-005": "sustainability_environment",
+    "candidate-p1-tech-001": "cybersecurity_technology",
+    "candidate-p1-tech-002": "cybersecurity_technology",
+    "candidate-p1-tech-003": "cybersecurity_technology",
+    "candidate-p1-tech-004": "cybersecurity_technology",
+    "candidate-p1-tech-005": "cybersecurity_technology",
+    "candidate-p1-general-001": "general_factual",
+    "candidate-p1-general-002": "general_factual",
+    "candidate-p1-general-003": "general_factual",
+    "candidate-p1-general-004": "general_factual",
+    "candidate-p1-general-005": "general_factual"
+  },
+  "source_checks": {
+    "candidate-p1-env-001-e01": {
+      "claim_id": "candidate-p1-env-001",
+      "source_url": "https://oceanservice.noaa.gov/facts/acidification.html",
+      "source_role": "institutional_summary",
+      "locator": "Opening explanatory paragraph",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "8726f89eca4c2feb8eb1f3b3fa8b88650b0242908eb540920a43367676dcae16",
+      "human_review_status": "pending",
+      "review_notes": "CO2 subscript normalized to plain text. Approximate fraction: reviewers must retain the denominator and scope; no claim of a constant fraction for every year. Page last-updated date is not an original publication date."
+    },
+    "candidate-p1-env-002-e01": {
+      "claim_id": "candidate-p1-env-002",
+      "source_url": "https://www.eia.gov/energyexplained/energy-and-the-environment/recycling-and-energy.php",
+      "source_role": "institutional_summary",
+      "locator": "Recycling saves energy and other resources, final paragraph",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "ee39fa26cb2d18b610389826fd07b992a38eda84310d0386d0a5f613e4c3ca60",
+      "human_review_status": "pending",
+      "review_notes": "Keep the comparison limited to aluminum cans and the specified raw-material route. Underlying energy calculation was not independently checked."
+    },
+    "candidate-p1-env-003-e01": {
+      "claim_id": "candidate-p1-env-003",
+      "source_url": "https://www.unep.org/en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter",
+      "source_role": "institutional_summary",
+      "locator": "Facts, first bullet",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "5205f938529f744ad83738364ed83276cf6ab41a7897b33cc769ba579aecfb78",
+      "human_review_status": "pending",
+      "review_notes": "This is an estimate and includes lakes and rivers as well as seas. Original estimation study and its reference year still require review."
+    },
+    "candidate-p1-env-004-e01": {
+      "claim_id": "candidate-p1-env-004",
+      "source_url": "https://ozone.unep.org/treaties/montreal-protocol",
+      "source_role": "official_documentation",
+      "locator": "Introductory treaty overview, first paragraph",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "7d1599830964ee6dbb65c3ad871a5d6c09d45d647ac9fa96bdf6ccc68a523976",
+      "human_review_status": "pending",
+      "review_notes": "The excerpt gives two event years, not publication dates. No exact day is inferred; event_date remains null. Review both components against the treaty record."
+    },
+    "candidate-p1-env-005-e01": {
+      "claim_id": "candidate-p1-env-005",
+      "source_url": "https://science.nasa.gov/climate-change/causes/",
+      "source_role": "institutional_summary",
+      "locator": "Evidence Shows That Current Global Warming Cannot Be Explained by Solar Irradiance",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "c7b9b7db8697073346a42e3c5c42754910ce11a3cc0d5132da8e80d6ce3aa4a0",
+      "human_review_status": "pending",
+      "review_notes": "The excerpt introduces a list of reasons. Review the surrounding list and cited research; it does not deny solar influence on past climates. Original studies were not fetched."
+    },
+    "candidate-p1-tech-001-e01": {
+      "claim_id": "candidate-p1-tech-001",
+      "source_url": "https://www.rfc-editor.org/rfc/rfc8446",
+      "source_role": "normative_document",
+      "locator": "Abstract, opening sentence",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "154a8ead66b3b309508d96ac5678f2adf93bcbbaed243e35182e4b6f0461ada9",
+      "human_review_status": "pending",
+      "review_notes": "The header gives August 2018 only; no day is inferred. The current RFC landing page marks this RFC obsolete and links RFC 9846. This candidate is explicitly about RFC 8446, not the current standard."
+    },
+    "candidate-p1-tech-002-e01": {
+      "claim_id": "candidate-p1-tech-002",
+      "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "source_role": "normative_document",
+      "locator": "Abstract, opening sentence",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "24cf16a4f2c9c538840302b37835d2e7cc966edd65dd1c865c2640a83d82b6f9",
+      "human_review_status": "pending",
+      "review_notes": "Header publication date is June 2022 only; no day is inferred. Stateless protocol semantics do not mean web applications cannot maintain session state."
+    },
+    "candidate-p1-tech-003-e01": {
+      "claim_id": "candidate-p1-tech-003",
+      "source_url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+      "source_role": "original_announcement",
+      "locator": "Article heading and publication date",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "d7ec17984702517c1e924c30c81025b9c8de51c3264fec3e5ef0d41fe853f99d",
+      "human_review_status": "pending",
+      "review_notes": "Title and date are adjacent source elements. Page footer separately says updated 29 August 2025. Review standard identifiers and avoid claiming all three have the same cryptographic purpose."
+    },
+    "candidate-p1-tech-004-e01": {
+      "claim_id": "candidate-p1-tech-004",
+      "source_url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "source_role": "normative_document",
+      "locator": "Section 3.1.1, password requirements, item 6",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "ad4e28c27c6b0438d60eb8733b17ccf9048294e94ed7d734a3bcdad7694c8c54",
+      "human_review_status": "pending",
+      "review_notes": "The immediately following sentence requires a change when compromise is evidenced. This is not a ban on all password changes. The HTML build timestamp is not recorded as the original publication date."
+    },
+    "candidate-p1-tech-005-e01": {
+      "claim_id": "candidate-p1-tech-005",
+      "source_url": "https://docs.python.org/3.13/glossary.html#term-global-interpreter-lock",
+      "source_role": "official_documentation",
+      "locator": "Glossary, global interpreter lock, third paragraph",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "5484b018f147da1bf634bd932b9176c363a23b2e19fcb5cccd41e2fdd68738cc",
+      "human_review_status": "pending",
+      "review_notes": "Conditional on build and runtime configuration; does not assert that every Python installation has no GIL. Documentation is version-specific and can be updated."
+    },
+    "candidate-p1-general-001-e01": {
+      "claim_id": "candidate-p1-general-001",
+      "source_url": "https://science.nasa.gov/mars/moons/",
+      "source_role": "institutional_summary",
+      "locator": "Moons of Mars, opening sentence",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "2ce76c0b81aab0c9f4bd2a35696e6a72ca6458429f62abbe84c625f0f022dfa1",
+      "human_review_status": "pending",
+      "review_notes": "Named-entity list is a single proposition, not two independent clauses. Reviewer should check count and both names."
+    },
+    "candidate-p1-general-002-e01": {
+      "claim_id": "candidate-p1-general-002",
+      "source_url": "https://science.nasa.gov/venus/venus-facts/",
+      "source_role": "institutional_summary",
+      "locator": "Surface section, opening sentence",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "c9cb94ae47b9d04f93256180f9e0cc93c129c252b3bb2a37d20189f405c50576",
+      "human_review_status": "pending",
+      "review_notes": "Scope is planets and surface temperature; not the Sun, and not every atmospheric altitude. Original requested URL redirected to this canonical URL."
+    },
+    "candidate-p1-general-003-e01": {
+      "claim_id": "candidate-p1-general-003",
+      "source_url": "https://home.cern/science/computing/the-birth-of-the-web/where-web-was-born/",
+      "source_role": "official_documentation",
+      "locator": "Where the web was born, public-domain paragraph",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "a8dbb2b58677e3a061b2b0656d15d950b0db72f6d7b6f9153a51e4cb640a4aab",
+      "human_review_status": "pending",
+      "review_notes": "Do not confuse the software release event with the 1989 invention or later open-licence releases. An earlier CERN URL returned 404; the canonical page was opened successfully."
+    },
+    "candidate-p1-general-004-e01": {
+      "claim_id": "candidate-p1-general-004",
+      "source_url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+      "source_role": "normative_document",
+      "locator": "SI - Defining constants, opening sentence",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "f08a6e35dfa4a4dc8a41da7c9ea04cde82dcd8ac9e7828190504f9e3a06aadf8",
+      "human_review_status": "pending",
+      "review_notes": "The official metrology page is a current explanatory entry point. No publication date was visible; linked historical resolutions were not treated as this page publication date."
+    },
+    "candidate-p1-general-005-e01": {
+      "claim_id": "candidate-p1-general-005",
+      "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+      "source_role": "official_documentation",
+      "locator": "The mission, Upcoming data releases",
+      "collection_method": "Public web tool opened the source page; collector located the quoted extract. This is not independent human review.",
+      "passage_match": "collector_located_in_opened_page",
+      "normalization": "HTML text extraction; whitespace normalized; NOAA CO2 subscript rendered as plain text.",
+      "passage_sha256": "d2eaec2b4c4763288c496c3fdc96ddfcf7438164c450c37f824a0988e0617843",
+      "human_review_status": "pending",
+      "review_notes": "A scheduled release is not a completed release. December 2026 is month precision; event_date remains null rather than inventing a day. Recheck the schedule before annotation."
+    }
+  },
+  "selection_limitations": [
+    "Convenience sample authored from accessible official pages, not a sample of organically occurring online claims.",
+    "One short source excerpt per claim; no source independence established; no claim-level verdicts assigned.",
+    "No NLI predictions, annotator submissions or adjudications were generated.",
+    "Institutional summaries are not necessarily the original research underlying the statement.",
+    "No target verdict distribution; no claim of balanced stance classes."
+  ],
+  "retrieval_failures": [
+    {
+      "url": "https://www.cisa.gov/secure-our-world/turn-mfa",
+      "outcome": "403 Forbidden; not used as evidence"
+    },
+    {
+      "url": "https://home.cern/science/computing/birth-web",
+      "outcome": "404; canonical CERN page subsequently opened"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc9110",
+      "outcome": "Timeout; .html form subsequently opened"
+    },
+    {
+      "url": "https://www.un.org/sites/un2.un.org/files/fasct_fact_-_ocean_oct_2022.pdf",
+      "outcome": "403 Forbidden; not used as evidence"
+    }
+  ]
+}

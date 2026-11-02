@@ -1,0 +1,812 @@
+{
+  "scope": "Preliminary developer-authored synthetic snapshot mapping; not independent evaluation, upstream accuracy or causal-model faithfulness",
+  "network_used": false,
+  "model_used": false,
+  "upstream_diagnostics_recomputed": false,
+  "case_count": 24,
+  "source_count": 37,
+  "category_metrics": {
+    "Insufficient evidence": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "tn": 12,
+      "support": 12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "Conflicting evidence": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 20,
+      "support": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "Uncertain provenance": {
+      "tp": 22,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "support": 22,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "Temporal uncertainty": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 19,
+      "support": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "Numerical ambiguity": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 20,
+      "support": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "Model assessment limitation": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "tn": 12,
+      "support": 12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0
+    },
+    "No identified diagnostic issue": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 24,
+      "support": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "false_positive_rate": 0.0
+    }
+  },
+  "micro_all_categories": {
+    "tp": 59,
+    "fp": 0,
+    "fn": 0,
+    "tn": 109,
+    "support": 59,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "false_positive_rate": 0.0
+  },
+  "present_category_micro": {
+    "tp": 59,
+    "fp": 0,
+    "fn": 0,
+    "tn": 85,
+    "support": 59,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "false_positive_rate": 0.0
+  },
+  "macro_f1": 1.0,
+  "macro_labels": [
+    "Insufficient evidence",
+    "Conflicting evidence",
+    "Uncertain provenance",
+    "Temporal uncertainty",
+    "Numerical ambiguity",
+    "Model assessment limitation"
+  ],
+  "absent_gold_categories": [
+    "No identified diagnostic issue"
+  ],
+  "exact_label_set_accuracy": 1.0,
+  "missing_information_detection": {
+    "tp": 5,
+    "fp": 0,
+    "fn": 0,
+    "tn": 19,
+    "support": 5,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "false_positive_rate": 0.0
+  },
+  "missing_information_definition": "Decision/view trace availability or alignment gaps; unknown dates and provenance are scored separately as categories",
+  "incorrect_attribution_contract": {
+    "violating_cases": 0,
+    "cases": 24,
+    "rate": 0.0,
+    "note": "Structural attribution contract only, not independently annotated causal correctness"
+  },
+  "cases": [
+    {
+      "id": "u01",
+      "category": "no_evidence",
+      "expected_categories": [
+        "Insufficient evidence"
+      ],
+      "actual_categories": [
+        "Insufficient evidence"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "No usable search sources were returned, so there is not enough evidence to assess this claim.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "no_retrieved_evidence",
+      "agreement": "no_directional_evidence_as_recorded",
+      "finding_codes": [
+        "no_evidence"
+      ]
+    },
+    {
+      "id": "u02",
+      "category": "irrelevant_evidence",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "No relevant passage established a direction.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "no_directly_relevant_evidence_as_recorded",
+      "agreement": "no_directional_evidence_as_recorded",
+      "finding_codes": [
+        "no_counted_direction",
+        "no_relevant_evidence",
+        "independence_not_established"
+      ]
+    },
+    {
+      "id": "u03",
+      "category": "one_directional_source",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "Only one distinct URL produced a clear directional NLI result. TruthLens requires agreement from at least two distinct URLs.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "relevant_evidence_with_unresolved_outcome",
+      "agreement": "supporting_only_as_recorded",
+      "finding_codes": [
+        "minimum_requirement_reported",
+        "independence_not_established"
+      ]
+    },
+    {
+      "id": "u04",
+      "category": "cross_source_conflict",
+      "expected_categories": [
+        "Conflicting evidence",
+        "Uncertain provenance"
+      ],
+      "actual_categories": [
+        "Conflicting evidence",
+        "Uncertain provenance"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "The local NLI model found both supporting and contradicting snippets. The evidence conflicts, so TruthLens cannot choose a direction.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "relevant_evidence_with_unresolved_outcome",
+      "agreement": "mixed_within_component",
+      "finding_codes": [
+        "directional_conflict",
+        "independence_not_established"
+      ]
+    },
+    {
+      "id": "u05",
+      "category": "exact_duplicate_exclusion",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "Only one distinct URL produced a clear directional NLI result.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "supporting_only_as_recorded",
+      "finding_codes": [
+        "minimum_requirement_reported",
+        "exact_duplicates",
+        "independence_not_established",
+        "recorded_exclusions"
+      ]
+    },
+    {
+      "id": "u06",
+      "category": "near_duplicate_warning",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "Only one distinct URL produced a clear directional NLI result.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "supporting_only_as_recorded",
+      "finding_codes": [
+        "minimum_requirement_reported",
+        "independence_not_established",
+        "near_duplicates",
+        "recorded_exclusions"
+      ]
+    },
+    {
+      "id": "u07",
+      "category": "decisive_unknown_provenance",
+      "expected_categories": [
+        "Uncertain provenance"
+      ],
+      "actual_categories": [
+        "Uncertain provenance"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": null,
+        "origin": "not_determined",
+        "note": "No primary uncertainty cause inferred; inspect the recorded explanation and additional limitations"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "supporting_only_as_recorded",
+      "finding_codes": [
+        "independence_not_established"
+      ]
+    },
+    {
+      "id": "u08",
+      "category": "missing_publication_date",
+      "expected_categories": [
+        "Uncertain provenance",
+        "Temporal uncertainty"
+      ],
+      "actual_categories": [
+        "Uncertain provenance",
+        "Temporal uncertainty"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": null,
+        "origin": "not_determined",
+        "note": "No primary uncertainty cause inferred; inspect the recorded explanation and additional limitations"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "supporting_only_as_recorded",
+      "finding_codes": [
+        "independence_not_established",
+        "temporal_information_unknown"
+      ]
+    },
+    {
+      "id": "u09",
+      "category": "time_mismatch_and_exclusion",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance",
+        "Temporal uncertainty",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance",
+        "Temporal uncertainty",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "evidence_available",
+      "agreement": "no_directional_evidence_as_recorded",
+      "finding_codes": [
+        "minimum_requirement_reported",
+        "independence_not_established",
+        "temporal_review",
+        "raw_effective_difference",
+        "recorded_exclusions"
+      ]
+    },
+    {
+      "id": "u10",
+      "category": "decisive_quantity_mismatch",
+      "expected_categories": [
+        "Uncertain provenance",
+        "Numerical ambiguity"
+      ],
+      "actual_categories": [
+        "Uncertain provenance",
+        "Numerical ambiguity"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": null,
+        "origin": "not_determined",
+        "note": "No primary uncertainty cause inferred; inspect the recorded explanation and additional limitations"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "supporting_only_as_recorded",
+      "finding_codes": [
+        "independence_not_established",
+        "quantity_mismatch"
+      ]
+    },
+    {
+      "id": "u11",
+      "category": "unresolved_quantity_context",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance",
+        "Numerical ambiguity"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance",
+        "Numerical ambiguity"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "relevant_evidence_with_unresolved_outcome",
+      "agreement": "no_directional_evidence_as_recorded",
+      "finding_codes": [
+        "minimum_requirement_reported",
+        "independence_not_established",
+        "quantity_comparison_unresolved"
+      ]
+    },
+    {
+      "id": "u12",
+      "category": "multiple_simultaneous_categories",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Conflicting evidence",
+        "Uncertain provenance",
+        "Temporal uncertainty",
+        "Numerical ambiguity",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Conflicting evidence",
+        "Uncertain provenance",
+        "Temporal uncertainty",
+        "Numerical ambiguity",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "Relevant passages conflict, or different parts point in opposite directions; TruthLens cannot choose an overall direction.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "mixed_within_component",
+      "finding_codes": [
+        "unresolved_component",
+        "directional_conflict",
+        "independence_not_established",
+        "near_duplicates",
+        "shared_reference",
+        "future_outcome_unconfirmed",
+        "temporal_information_unknown",
+        "temporal_review",
+        "quantifier_scope",
+        "quantity_comparison_unresolved",
+        "quantity_mismatch",
+        "raw_effective_difference"
+      ]
+    },
+    {
+      "id": "u13",
+      "category": "fallback_trace_unavailable",
+      "expected_categories": [
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": true,
+      "actual_information_gap": true,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": null,
+        "origin": "not_determined",
+        "note": "No primary uncertainty cause inferred; inspect the recorded explanation and additional limitations"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "direction_unknown",
+      "finding_codes": [
+        "independence_not_established",
+        "decision_trace_unavailable",
+        "nli_fallback"
+      ]
+    },
+    {
+      "id": "u14",
+      "category": "absent_decision_trace",
+      "expected_categories": [
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": true,
+      "actual_information_gap": true,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": null,
+        "origin": "not_determined",
+        "note": "No primary uncertainty cause inferred; inspect the recorded explanation and additional limitations"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "direction_unknown",
+      "finding_codes": [
+        "independence_not_established",
+        "decision_trace_unavailable"
+      ]
+    },
+    {
+      "id": "u15",
+      "category": "raw_vs_effective_historical_exclusion",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "At least one claim component lacks two distinct relevant, high-confidence URLs agreeing on a direction.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "no_directional_evidence_as_recorded",
+      "finding_codes": [
+        "minimum_requirement_reported",
+        "independence_not_established",
+        "raw_effective_difference",
+        "recorded_exclusions"
+      ]
+    },
+    {
+      "id": "u16",
+      "category": "excluded_internal_conflict_decisive_verdict",
+      "expected_categories": [
+        "Conflicting evidence",
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Conflicting evidence",
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": null,
+        "origin": "not_determined",
+        "note": "No primary uncertainty cause inferred; inspect the recorded explanation and additional limitations"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "conflict_recorded",
+      "finding_codes": [
+        "directional_conflict",
+        "independence_not_established",
+        "raw_effective_difference"
+      ]
+    },
+    {
+      "id": "u17",
+      "category": "contradicted_with_remaining_warnings",
+      "expected_categories": [
+        "Uncertain provenance",
+        "Temporal uncertainty",
+        "Numerical ambiguity"
+      ],
+      "actual_categories": [
+        "Uncertain provenance",
+        "Temporal uncertainty",
+        "Numerical ambiguity"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": null,
+        "origin": "not_determined",
+        "note": "No primary uncertainty cause inferred; inspect the recorded explanation and additional limitations"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "contradicting_only_as_recorded",
+      "finding_codes": [
+        "independence_not_established",
+        "temporal_information_unknown",
+        "quantity_comparison_unresolved"
+      ]
+    },
+    {
+      "id": "u18",
+      "category": "missing_diagnostic_views",
+      "expected_categories": [
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": true,
+      "actual_information_gap": true,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": null,
+        "origin": "not_determined",
+        "note": "No primary uncertainty cause inferred; inspect the recorded explanation and additional limitations"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "supporting_only_as_recorded",
+      "finding_codes": [
+        "independence_not_established",
+        "diagnostic_views_unavailable"
+      ]
+    },
+    {
+      "id": "u19",
+      "category": "contradictory_snapshot_counts",
+      "expected_categories": [
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": true,
+      "actual_information_gap": true,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": null,
+        "origin": "not_determined",
+        "note": "No primary uncertainty cause inferred; inspect the recorded explanation and additional limitations"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "supporting_only_as_recorded",
+      "finding_codes": [
+        "independence_not_established",
+        "diagnostic_count_mismatch"
+      ]
+    },
+    {
+      "id": "u20",
+      "category": "decisive_trace_tension",
+      "expected_categories": [
+        "Conflicting evidence",
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Conflicting evidence",
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": null,
+        "origin": "not_determined",
+        "note": "No primary uncertainty cause inferred; inspect the recorded explanation and additional limitations"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "mixed_within_component",
+      "finding_codes": [
+        "directional_conflict",
+        "independence_not_established",
+        "trace_tension"
+      ]
+    },
+    {
+      "id": "u21",
+      "category": "source_trace_url_mismatch",
+      "expected_categories": [
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "actual_categories": [
+        "Uncertain provenance",
+        "Model assessment limitation"
+      ],
+      "expected_information_gap": true,
+      "actual_information_gap": true,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "The original decision trace is not aligned with these source records.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "direction_unknown",
+      "finding_codes": [
+        "independence_not_established",
+        "decision_trace_unavailable"
+      ]
+    },
+    {
+      "id": "u22",
+      "category": "relevant_no_direction",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "The available text cannot establish a direction.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "relevant_evidence_with_unresolved_outcome",
+      "agreement": "no_directional_evidence_as_recorded",
+      "finding_codes": [
+        "no_counted_direction",
+        "independence_not_established"
+      ]
+    },
+    {
+      "id": "u23",
+      "category": "rule_mode_semantic_relevance_unknown",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Uncertain provenance"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "The snippets did not contain complete claim wording.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "semantic_relevance_unknown",
+      "agreement": "no_directional_evidence_as_recorded",
+      "finding_codes": [
+        "no_counted_direction",
+        "independence_not_established"
+      ]
+    },
+    {
+      "id": "u24",
+      "category": "no_evidence_unresolved_claim_date",
+      "expected_categories": [
+        "Insufficient evidence",
+        "Temporal uncertainty"
+      ],
+      "actual_categories": [
+        "Insufficient evidence",
+        "Temporal uncertainty"
+      ],
+      "expected_information_gap": false,
+      "actual_information_gap": false,
+      "attribution_contract_violations": [],
+      "primary_reason": {
+        "text": "No usable search snippets were returned, so there is no evidence to classify.",
+        "origin": "recorded_explanation",
+        "note": "Verbatim decision explanation, not independently established causality"
+      },
+      "availability": "no_retrieved_evidence",
+      "agreement": "no_directional_evidence_as_recorded",
+      "finding_codes": [
+        "no_evidence",
+        "temporal_information_unknown"
+      ]
+    }
+  ],
+  "limitations": "Snapshots and labels were authored alongside code. Categories can overlap and provenance uncertainty is common. No identified diagnostic issue is not evidence certification. Undefined metrics are null; absent gold labels are excluded from macro-F1."
+}

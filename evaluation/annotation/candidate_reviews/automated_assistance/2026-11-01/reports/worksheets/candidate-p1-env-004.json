@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-env-004",
+  "candidate_sha256": "0a24219473c288ee72f56bdf45af962b45cbd1e9d61e0635c9312635341ed626",
+  "claim": "The Montreal Protocol was signed in 1987 and entered into force in 1989.",
+  "human_review_priority": "routine",
+  "claim_clarity_assessment": "Two independently checkable treaty-event components are explicit.",
+  "claim_evidence_interpretation": "The overview states both years; the registry supplies conclusion and entry-into-force dates.",
+  "date_assessment": "candidate-p1-env-004-e01: 1987 and 1989 are event years; no page publication day established. candidate-p1-env-004-e02: Conclusion 1987-09-16; entry into force 1989-01-01. These are not publication dates.",
+  "provenance_assessment": "Both records concern the same original treaty; not independent event observations.",
+  "research_concerns": [
+    "Table-cell excerpt is an assembled extract, not a continuous sentence. Review both event components."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-env-004-e01",
+      "source_url": "https://ozone.unep.org/treaties/montreal-protocol",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "The Montreal Protocol on Substances that Deplete the Ozone Layer",
+      "observed_publisher": "UNEP Ozone Secretariat",
+      "source_role": "official treaty overview",
+      "locator": "Opening treaty overview",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "1987 and 1989 are event years; no page publication day established.",
+      "context_notes": "The overview states both years; the registry supplies conclusion and entry-into-force dates."
+    },
+    {
+      "evidence_id": "candidate-p1-env-004-e02",
+      "source_url": "https://treaties.un.org/Pages/showDetails.aspx?objid=080000028003f7f7",
+      "access_status": "opened",
+      "excerpt_match": "structured_extract",
+      "observed_title": "Montreal Protocol on Substances that Deplete the Ozone Layer",
+      "observed_publisher": "United Nations Treaty Collection",
+      "source_role": "primary treaty registry",
+      "locator": "Registration 26369; conclusion and EIF table cells",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "Conclusion 1987-09-16; entry into force 1989-01-01. These are not publication dates.",
+      "context_notes": "The overview states both years; the registry supplies conclusion and entry-into-force dates."
+    }
+  ]
+}

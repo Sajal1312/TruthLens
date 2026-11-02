@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-general-004",
+  "candidate_sha256": "0c279298a43bee32924edb0ff92437c4762b6cd2d70a315d9bc99eb3bae5370a",
+  "claim": "The International System of Units is defined using seven defining constants.",
+  "human_review_priority": "high",
+  "claim_clarity_assessment": "Current SI formulation is clear but the evidence bundle has incomplete verification and historical context.",
+  "claim_evidence_interpretation": "The main definition URL timed out twice. The accessible resolution fragment describes a 2011 proposal; its later decision takes effect in 2019.",
+  "date_assessment": "candidate-p1-general-004-e01: Original publication day and current page contents could not be rechecked. candidate-p1-general-004-e02: Resolution year 2018 and effective date 2019-05-20 are distinct; exact page publication day not established.",
+  "provenance_assessment": "Both sources originate in BIPM/CGPM standards; same institutional lineage.",
+  "research_concerns": [
+    "Retry the definition page and review the operative resolution, not only the considering clause."
+  ],
+  "recommended_action": "needs revision",
+  "recommendation_reason": "Retry the definition page and review the operative resolution, not only the considering clause.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-general-004-e01",
+      "source_url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+      "access_status": "inaccessible",
+      "excerpt_match": "incomplete",
+      "observed_title": null,
+      "observed_publisher": null,
+      "source_role": "institutional SI definition page, not accessible in this check",
+      "locator": "Requested original URL twice through web open; both attempts returned Timeout fetching",
+      "publication_date_status": "incomplete",
+      "observed_publication_date": null,
+      "other_date_notes": "Original publication day and current page contents could not be rechecked.",
+      "context_notes": "Original source timed out in both attempts; previous collection claims are not counted as verification in this run."
+    },
+    {
+      "evidence_id": "candidate-p1-general-004-e02",
+      "source_url": "https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-1",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Resolution 1 of the 26th CGPM (2018)",
+      "observed_publisher": "BIPM / General Conference on Weights and Measures",
+      "source_role": "primary standards resolution",
+      "locator": "Considering clause referring to 2011 proposal; decision effective 20 May 2019",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "Resolution year 2018 and effective date 2019-05-20 are distinct; exact page publication day not established.",
+      "context_notes": "Saved fragment is in a considering clause about the 2011 proposal. Later operative decision takes effect 2019-05-20; not an independent present-tense assertion by this fragment alone."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-tech-004",
+  "candidate_sha256": "76cfe0dce15a17566540586e95b252c81bbb2c7da285745d8a00955dc92743f3",
+  "claim": "NIST SP 800-63B-4 says verifiers and CSPs must not require periodic password changes.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Periodic changes are distinct from compromise-triggered changes.",
+  "claim_evidence_interpretation": "The requirement matches; the immediately following sentence mandates changes on compromise evidence.",
+  "date_assessment": "candidate-p1-tech-004-e01: HTML build timestamp 2025-08-26 is not established as the original publication day.",
+  "provenance_assessment": "Same document is reused by p2-tech-002; group these for leakage review.",
+  "research_concerns": [
+    "Retain the adjacent exception in reviewer context; a ban on all password changes would misrepresent the source."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-tech-004-e01",
+      "source_url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "NIST Special Publication 800-63B",
+      "observed_publisher": "NIST",
+      "source_role": "normative authentication guidance",
+      "locator": "Password requirements item 6; Multi-Factor OTP section 3.1.5",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "HTML build timestamp 2025-08-26 is not established as the original publication day.",
+      "context_notes": "The requirement matches; the immediately following sentence mandates changes on compromise evidence."
+    }
+  ]
+}

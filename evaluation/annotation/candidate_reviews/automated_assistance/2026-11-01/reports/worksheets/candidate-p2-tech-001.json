@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p2-tech-001",
+  "candidate_sha256": "cd630bcbac72b5a163b9a0a773600c866524964737bedd58e6a6f479f9f3227a",
+  "claim": "Every website using HTTPS is legitimate.",
+  "human_review_priority": "routine",
+  "claim_clarity_assessment": "Universal HTTPS legitimacy proposition is easy to interpret as a claim under test.",
+  "claim_evidence_interpretation": "FTC explicitly distinguishes encryption from legitimacy. The claim is not a faithful paraphrase of the source, intentionally providing an opposing-evidence candidate.",
+  "date_assessment": "candidate-p2-tech-001-e01: No original publication day established in the opened text.",
+  "provenance_assessment": "Single FTC guidance page.",
+  "research_concerns": [
+    "A source challenging the claim does not invalidate the candidate. Humans must assign stance and verdict independently."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p2-tech-001-e01",
+      "source_url": "https://consumer.ftc.gov/articles/online-shopping",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "Online Shopping",
+      "observed_publisher": "U.S. Federal Trade Commission Consumer Advice",
+      "source_role": "official consumer guidance",
+      "locator": "Pay by credit card section, HTTPS/encryption warning",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "No original publication day established in the opened text.",
+      "context_notes": "FTC explicitly distinguishes encryption from legitimacy. The claim is not a faithful paraphrase of the source, intentionally providing an opposing-evidence candidate."
+    }
+  ]
+}

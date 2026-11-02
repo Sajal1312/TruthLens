@@ -1,0 +1,49 @@
+{
+  "transaction_id": "20261101T191033662113Z-c99f7433ba9f",
+  "candidate_ids": [
+    "candidate-p1-general-001",
+    "candidate-p1-general-002",
+    "candidate-p1-general-003",
+    "candidate-p1-tech-002",
+    "candidate-p1-env-001"
+  ],
+  "candidate_sha256": {
+    "candidate-p1-general-001": "402dd9ac4a7af5fb9580e9fb32027928d2135188ec9fb6354cae93e9fbdd91b1",
+    "candidate-p1-general-002": "10f369652b165aedcee9fdf36e14990de9f864f7be77b0364117969938126474",
+    "candidate-p1-general-003": "3421b49b145d268c64fd3a99615f183cb3aa526c0d8ea60702a10a4fa0f01317",
+    "candidate-p1-tech-002": "4ccf1d38c49032319639c866849b4c1624bac74ec8975782966a0c01d1f72234",
+    "candidate-p1-env-001": "cdd39ec6b8cf0d996aae898651e375cb9a82113469bd8ce5a8b29286e274a567"
+  },
+  "review_references": {
+    "candidate-p1-general-001": {
+      "review_id": "review-SajalG-p1-general-001-20261102T002800",
+      "integrity_sha256": "1bdd7f522da74cb693ee73396e2af3fa323ffc53f543a5add35f0f9f65a5db85"
+    },
+    "candidate-p1-general-002": {
+      "review_id": "review-SajalG-p1-general-002-20261102T002923",
+      "integrity_sha256": "e4dc1f44f7c3e36c0293eb3d3b8742ad8a2dbb03450859f14339554a57a23c3f"
+    },
+    "candidate-p1-general-003": {
+      "review_id": "review-SajalG-p1-general-003-20261102T003024",
+      "integrity_sha256": "675b0c987a31735f09ed3d3ae620113c089efc858f924de0a1e3e289d0afbe02"
+    },
+    "candidate-p1-tech-002": {
+      "review_id": "review-SajalG-p1-tech-002-20261102T003108",
+      "integrity_sha256": "f8047049191c62422a33d8daeadd7afa5d4ec3fd964a7fce84ef2fc06c77fe12"
+    },
+    "candidate-p1-env-001": {
+      "review_id": "review-SajalG-p1-env-001-20261102T003200",
+      "integrity_sha256": "cd8627136c5c79af7358ea0d5c8e8bebb5132d6a104bf39474ff1b201bca0d53"
+    }
+  },
+  "completed_at": "2026-11-01T19:10:33.797416+00:00",
+  "before_claim_count": 0,
+  "after_claim_count": 5,
+  "after_claim_records_sha256": "f05753e1e92ddeca8113c41ba08fde295fad4fb5cf5b5fea1f6b2e2b74fcf1dd",
+  "after_manifest_sha256": "c363c4dc27efdfb8bb1a25c2ab0b5fa89bb4034d9e6497233862793e803b5ffd",
+  "preserved_files_sha256": {
+    "before_claim_records.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "before_manifest.json": "b8713501a709f064fffeab658a4e78b0569e1b1026449037b0f5d8677be18372",
+    "plan.json": "66c83fc4a654cbb5a5686b189a60ed2094d4be3da3d47d1e994871f80e752142"
+  }
+}

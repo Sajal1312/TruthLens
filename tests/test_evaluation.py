@@ -5,7 +5,8 @@ from pathlib import Path
 import pytest
 
 from evaluation.metrics import classification_metrics, selective_metrics
-from evaluation.run_evaluation import DATA_DIR, evaluate_cases, load_cases, validate_cases
+from evaluation.run_evaluation import (DATA_DIR, _semantic_comparison, evaluate_cases,
+                                       load_cases, validate_cases)
 
 
 def test_metrics_report_fixed_confusion_matrix_and_macro_f1():
@@ -23,7 +24,7 @@ def test_selective_metrics_make_abstention_denominator_explicit():
                       "coverage": pytest.approx(1 / 3), "abstention_rate": pytest.approx(2 / 3)}
 
 
-@pytest.mark.parametrize("filename, expected_count", [("development.jsonl", 9), ("diagnostics.jsonl", 16), ("held_out.jsonl", 3)])
+@pytest.mark.parametrize("filename, expected_count", [("development.jsonl", 9), ("diagnostics.jsonl", 37), ("held_out.jsonl", 3)])
 def test_dataset_loads_and_declares_expected_counts(filename, expected_count):
     cases = load_cases(DATA_DIR / filename)
     assert len(cases) == expected_count
@@ -54,6 +55,22 @@ def test_evaluator_uses_fixed_evidence_and_never_calls_search(monkeypatch):
     assert report["case_count"] == 1
     assert report["cases"][0]["actual_final_verdict"] == "SUPPORTED"
     assert report["semantic_interpretation_comparison"]["experimental_semantic"]["verdict_metrics"]["count"] == 1
+    assert report["semantic_interpretation_comparison"]["experimental_temporal_guard"]["verdict_metrics"]["count"] == 1
+
+
+def test_semantic_comparison_errors_use_the_selected_mode():
+    case = {"case_id": "guard-case", "expected_final_verdict": "INCONCLUSIVE",
+            "tags": [], "evidence": []}
+    output = [{
+        "experimental_semantic": {"verdict": "SUPPORTED", "evidence": []},
+        "experimental_quantifier_guard": {"verdict": "INCONCLUSIVE", "evidence": []},
+    }]
+
+    comparison = _semantic_comparison(
+        [case], output, field="experimental_quantifier_guard")
+
+    assert comparison["errors"] == []
+    assert comparison["verdict_metrics"]["accuracy"] == 1.0
 
 
 def test_evaluation_report_is_reproducible_for_fixed_predictor():
@@ -67,6 +84,39 @@ def test_evaluation_report_is_reproducible_for_fixed_predictor():
     assert first["cases"] == second["cases"]
     assert first["assessment_thresholds"] == {
         "confidence": 0.70, "margin": 0.15, "directional_sources": 2}
+
+
+def test_evaluation_cli_defaults_to_development_not_reserved_holdout(monkeypatch, capsys):
+    import json
+    import evaluation.run_evaluation as runner
+
+    monkeypatch.setattr(runner, "load_local_nli_model", lambda: lambda _premise, _hypothesis: {
+        "label": "NOT ENOUGH INFORMATION", "confidence": 0.80, "margin": 0.60})
+    assert runner.main([]) == 0
+    report = json.loads(capsys.readouterr().out)
+    assert report["split"] == "development"
+    assert "held_out.jsonl" not in report["dataset_sha256"]
+
+
+def test_combined_evaluation_never_reads_or_hashes_heldout(monkeypatch, capsys):
+    import json
+    import evaluation.run_evaluation as runner
+
+    original_load_cases = runner.load_cases
+    loaded_paths = []
+
+    def record_load(path):
+        loaded_paths.append(Path(path).name)
+        return original_load_cases(path)
+
+    monkeypatch.setattr(runner, "load_cases", record_load)
+    monkeypatch.setattr(runner, "load_local_nli_model", lambda: lambda _premise, _hypothesis: {
+        "label": "NOT ENOUGH INFORMATION", "confidence": 0.80, "margin": 0.60})
+    assert runner.main(["--split", "all"]) == 0
+    report = json.loads(capsys.readouterr().out)
+    assert report["case_count"] == 46
+    assert "held_out.jsonl" not in loaded_paths
+    assert "held_out.jsonl" not in report["dataset_sha256"]
 
 
 def test_same_publisher_concentration_is_reported_without_changing_verdict():

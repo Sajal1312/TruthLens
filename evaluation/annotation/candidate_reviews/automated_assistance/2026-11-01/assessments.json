@@ -1,0 +1,1164 @@
+[
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-env-001",
+    "candidate_sha256": "cdd39ec6b8cf0d996aae898651e375cb9a82113469bd8ce5a8b29286e274a567",
+    "claim": "The ocean absorbs about 30 percent of carbon dioxide released into the atmosphere, according to NOAA.",
+    "human_review_priority": "routine",
+    "claim_clarity_assessment": "Clear attributed approximate fraction; not a constant annual carbon-budget measurement.",
+    "claim_evidence_interpretation": "The NOAA summary states the same approximate fraction and atmosphere-to-ocean scope.",
+    "date_assessment": "candidate-p1-env-001-e01: Last updated 2026-09-23; original publication day not established.",
+    "provenance_assessment": "Single NOAA summary; no independent corroboration is claimed.",
+    "research_concerns": [
+      "Retain approximation and attribution; underlying carbon-budget measurements were not independently audited."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-env-001-e01",
+        "source_url": "https://oceanservice.noaa.gov/facts/acidification.html",
+        "access_status": "opened",
+        "excerpt_match": "format_normalized",
+        "observed_title": "What is Ocean Acidification?",
+        "observed_publisher": "NOAA National Ocean Service",
+        "source_role": "institutional explanatory summary",
+        "locator": "Opening ocean-carbon paragraph",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Last updated 2026-09-23; original publication day not established.",
+        "context_notes": "The NOAA summary states the same approximate fraction and atmosphere-to-ocean scope."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-env-002",
+    "candidate_sha256": "87bd0de9b465921b20ef0ea13b394132aab8ca7433c97519b58e1d6734dcce35",
+    "claim": "Making new aluminum cans from recycled cans uses 95 percent less energy than making them from bauxite ore.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Comparison specifies cans, recycled feedstock and bauxite route.",
+    "claim_evidence_interpretation": "EIA matches the can-specific claim. NIH gives a broader aluminum comparison, not a separate measurement.",
+    "date_assessment": "candidate-p1-env-002-e01: No original publication day visible in the retrieved text. candidate-p1-env-002-e02: No original publication day established; older statistics and a funding-lapse currency warning are visible.",
+    "provenance_assessment": "EIA and NIH are different agencies; a shared underlying calculation is unresolved. Do not count them as two independent measurements.",
+    "research_concerns": [
+      "Underlying 95% calculation and lifecycle boundaries were not checked; NIH carries a currency warning."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-env-002-e01",
+        "source_url": "https://www.eia.gov/energyexplained/energy-and-the-environment/recycling-and-energy.php",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Recycling and energy",
+        "observed_publisher": "U.S. Energy Information Administration",
+        "source_role": "institutional explanatory summary",
+        "locator": "Recycling saves energy and other resources, aluminum-can comparison",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "No original publication day visible in the retrieved text.",
+        "context_notes": "EIA matches the can-specific claim. NIH gives a broader aluminum comparison, not a separate measurement."
+      },
+      {
+        "evidence_id": "candidate-p1-env-002-e02",
+        "source_url": "https://nems.nih.gov/environmental-programs/Pages/Benefits-of-Recycling.aspx",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Benefits of Recycling",
+        "observed_publisher": "NIH National Environmental Management System",
+        "source_role": "institutional recycling guidance",
+        "locator": "Energy savings bullet under Benefits of Recycling",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "No original publication day established; older statistics and a funding-lapse currency warning are visible.",
+        "context_notes": "Broader aluminum comparison, not can-specific raw-material process data; visible currency warning and old statistics. Calculation lineage not established."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-env-003",
+    "candidate_sha256": "401ed6e2115124d8c7764ba01aece4f943082983cd5a9f74bbb68243960f4228",
+    "claim": "UNEP estimates that 19–23 million tonnes of plastic waste enter aquatic ecosystems each year.",
+    "human_review_priority": "high",
+    "claim_clarity_assessment": "Attribution is clear but annual framing can conceal the reference year.",
+    "claim_evidence_interpretation": "UNEP states an annual estimate; the research abstract estimates plastic generated in 2016. Numeric agreement does not erase this scope difference.",
+    "date_assessment": "candidate-p1-env-003-e01: No original publication day established. candidate-p1-env-003-e02: Epub 2020-09-17; journal issue 2020-09-18. Estimate concerns 2016, not the access year.",
+    "provenance_assessment": "UNEP and the study may share an estimate; a direct citation chain was not established.",
+    "research_concerns": [
+      "Explain the reference-year relationship in the fixed evidence context before inclusion; do not silently rewrite the claim."
+    ],
+    "recommended_action": "needs revision",
+    "recommendation_reason": "Explain the reference-year relationship in the fixed evidence context before inclusion; do not silently rewrite the claim.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-env-003-e01",
+        "source_url": "https://www.unep.org/en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Plastic pollution & marine litter",
+        "observed_publisher": "UN Environment Programme",
+        "source_role": "institutional environmental summary",
+        "locator": "Facts, first annual-leakage bullet",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "No original publication day established.",
+        "context_notes": "UNEP states an annual estimate; the research abstract estimates plastic generated in 2016. Numeric agreement does not erase this scope difference."
+      },
+      {
+        "evidence_id": "candidate-p1-env-003-e02",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/32943526/",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Predicted growth in plastic waste exceeds efforts to mitigate plastic pollution",
+        "observed_publisher": "Science / AAAS; abstract indexed by U.S. National Library of Medicine PubMed",
+        "source_role": "primary research abstract, not full study review",
+        "locator": "PMID 32943526, abstract and bibliographic header",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2020-09-17",
+        "other_date_notes": "Epub 2020-09-17; journal issue 2020-09-18. Estimate concerns 2016, not the access year.",
+        "context_notes": "UNEP states an annual estimate; the research abstract estimates plastic generated in 2016. Numeric agreement does not erase this scope difference."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-env-004",
+    "candidate_sha256": "0a24219473c288ee72f56bdf45af962b45cbd1e9d61e0635c9312635341ed626",
+    "claim": "The Montreal Protocol was signed in 1987 and entered into force in 1989.",
+    "human_review_priority": "routine",
+    "claim_clarity_assessment": "Two independently checkable treaty-event components are explicit.",
+    "claim_evidence_interpretation": "The overview states both years; the registry supplies conclusion and entry-into-force dates.",
+    "date_assessment": "candidate-p1-env-004-e01: 1987 and 1989 are event years; no page publication day established. candidate-p1-env-004-e02: Conclusion 1987-09-16; entry into force 1989-01-01. These are not publication dates.",
+    "provenance_assessment": "Both records concern the same original treaty; not independent event observations.",
+    "research_concerns": [
+      "Table-cell excerpt is an assembled extract, not a continuous sentence. Review both event components."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-env-004-e01",
+        "source_url": "https://ozone.unep.org/treaties/montreal-protocol",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "The Montreal Protocol on Substances that Deplete the Ozone Layer",
+        "observed_publisher": "UNEP Ozone Secretariat",
+        "source_role": "official treaty overview",
+        "locator": "Opening treaty overview",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "1987 and 1989 are event years; no page publication day established.",
+        "context_notes": "The overview states both years; the registry supplies conclusion and entry-into-force dates."
+      },
+      {
+        "evidence_id": "candidate-p1-env-004-e02",
+        "source_url": "https://treaties.un.org/Pages/showDetails.aspx?objid=080000028003f7f7",
+        "access_status": "opened",
+        "excerpt_match": "structured_extract",
+        "observed_title": "Montreal Protocol on Substances that Deplete the Ozone Layer",
+        "observed_publisher": "United Nations Treaty Collection",
+        "source_role": "primary treaty registry",
+        "locator": "Registration 26369; conclusion and EIF table cells",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Conclusion 1987-09-16; entry into force 1989-01-01. These are not publication dates.",
+        "context_notes": "The overview states both years; the registry supplies conclusion and entry-into-force dates."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-env-005",
+    "candidate_sha256": "8d40ed6415a0896527e0fa4a8f83bef8e38cf302bfb4a013c92daf2cc75520d3",
+    "claim": "Current global warming cannot be explained by changes in energy from the Sun.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Current warming is narrower than all historical climate changes.",
+    "claim_evidence_interpretation": "NASA states the same conclusion and supplies surrounding reasons; solar effects on past climates are acknowledged.",
+    "date_assessment": "candidate-p1-env-005-e01: Original publication day not established; last-updated date is separate metadata.",
+    "provenance_assessment": "NASA summary links research, but no independence among those studies was audited.",
+    "research_concerns": [
+      "Single synthesis and a list-introduction excerpt; underlying cited studies were not separately reviewed."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-env-005-e01",
+        "source_url": "https://science.nasa.gov/climate-change/causes/",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Causes",
+        "observed_publisher": "NASA Science",
+        "source_role": "institutional climate synthesis with study references",
+        "locator": "Evidence Shows That Current Global Warming Cannot Be Explained by Solar Irradiance",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Original publication day not established; last-updated date is separate metadata.",
+        "context_notes": "NASA states the same conclusion and supplies surrounding reasons; solar effects on past climates are acknowledged."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-tech-001",
+    "candidate_sha256": "0cd641a6cff4dda4bd550a4159f7f27ac72d27d01871e119d26191a04c4d830d",
+    "claim": "RFC 8446 specifies version 1.3 of the Transport Layer Security protocol.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Claim explicitly names RFC 8446, not the latest TLS standard.",
+    "claim_evidence_interpretation": "Abstract specifies TLS 1.3. The landing page now marks RFC 8446 obsoleted by RFC 9846.",
+    "date_assessment": "candidate-p1-tech-001-e01: Published August 2018 only. Current landing page lists RFC 9846 as obsoleting RFC 8446.",
+    "provenance_assessment": "Single normative document, not multiple corroborating sources.",
+    "research_concerns": [
+      "Retain the document-version scope; do not describe RFC 8446 as the current standard."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-tech-001-e01",
+        "source_url": "https://www.rfc-editor.org/rfc/rfc8446",
+        "access_status": "opened",
+        "excerpt_match": "format_normalized",
+        "observed_title": "RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3",
+        "observed_publisher": "IETF / RFC Editor",
+        "source_role": "normative protocol document",
+        "locator": "Abstract, first sentence; About this RFC, Obsoleted by",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Published August 2018 only. Current landing page lists RFC 9846 as obsoleting RFC 8446.",
+        "context_notes": "Abstract specifies TLS 1.3. The landing page now marks RFC 8446 obsoleted by RFC 9846."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-tech-002",
+    "candidate_sha256": "4ccf1d38c49032319639c866849b4c1624bac74ec8975782966a0c01d1f72234",
+    "claim": "RFC 9110 defines HTTP as a stateless application-level protocol.",
+    "human_review_priority": "routine",
+    "claim_clarity_assessment": "Document-specific protocol definition is clear.",
+    "claim_evidence_interpretation": "The abstract contains the stateless application-level definition; application sessions are not denied.",
+    "date_assessment": "candidate-p1-tech-002-e01: Header gives June 2022 only; no publication day imputed.",
+    "provenance_assessment": "Single normative document.",
+    "research_concerns": [
+      "Avoid interpreting stateless protocol semantics as absence of all application state."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-tech-002-e01",
+        "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "RFC 9110: HTTP Semantics",
+        "observed_publisher": "IETF / RFC Editor",
+        "source_role": "normative protocol document",
+        "locator": "Abstract, first sentence",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Header gives June 2022 only; no publication day imputed.",
+        "context_notes": "The abstract contains the stateless application-level definition; application sessions are not denied."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-tech-003",
+    "candidate_sha256": "12a363dbcf1152c6ff234726ce1bf6e0535dbd20a1e87560477628804da46618",
+    "claim": "NIST announced its first three finalized post-quantum encryption standards on 13 August 2024.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Announcement date and three-standard count are explicit.",
+    "claim_evidence_interpretation": "The announcement heading/date match. FIPS 203 supplies only one standard/date, not all three.",
+    "date_assessment": "candidate-p1-tech-003-e01: Released 2024-08-13; updated 2025-08-29. Announcement event is 2024-08-13. candidate-p1-tech-003-e02: Date Published 2024-08-13; later planning notes are not the publication date.",
+    "provenance_assessment": "Both passages are from NIST and the same release program, not independent corroboration.",
+    "research_concerns": [
+      "Heading/date assembly and partial second-passage coverage need acknowledgment; the three standards have different cryptographic roles."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-tech-003-e01",
+        "source_url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+        "access_status": "opened",
+        "excerpt_match": "structured_extract",
+        "observed_title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+        "observed_publisher": "NIST",
+        "source_role": "original institutional announcement",
+        "locator": "Article heading and date; Released/Updated footer",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2024-08-13",
+        "other_date_notes": "Released 2024-08-13; updated 2025-08-29. Announcement event is 2024-08-13.",
+        "context_notes": "The announcement heading/date match. FIPS 203 supplies only one standard/date, not all three."
+      },
+      {
+        "evidence_id": "candidate-p1-tech-003-e02",
+        "source_url": "https://csrc.nist.gov/pubs/fips/203/final",
+        "access_status": "opened",
+        "excerpt_match": "structured_extract",
+        "observed_title": "FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard",
+        "observed_publisher": "NIST CSRC",
+        "source_role": "primary standard catalog",
+        "locator": "FIPS 203 heading and Date Published",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2024-08-13",
+        "other_date_notes": "Date Published 2024-08-13; later planning notes are not the publication date.",
+        "context_notes": "The announcement heading/date match. FIPS 203 supplies only one standard/date, not all three."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-tech-004",
+    "candidate_sha256": "76cfe0dce15a17566540586e95b252c81bbb2c7da285745d8a00955dc92743f3",
+    "claim": "NIST SP 800-63B-4 says verifiers and CSPs must not require periodic password changes.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Periodic changes are distinct from compromise-triggered changes.",
+    "claim_evidence_interpretation": "The requirement matches; the immediately following sentence mandates changes on compromise evidence.",
+    "date_assessment": "candidate-p1-tech-004-e01: HTML build timestamp 2025-08-26 is not established as the original publication day.",
+    "provenance_assessment": "Same document is reused by p2-tech-002; group these for leakage review.",
+    "research_concerns": [
+      "Retain the adjacent exception in reviewer context; a ban on all password changes would misrepresent the source."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-tech-004-e01",
+        "source_url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "NIST Special Publication 800-63B",
+        "observed_publisher": "NIST",
+        "source_role": "normative authentication guidance",
+        "locator": "Password requirements item 6; Multi-Factor OTP section 3.1.5",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "HTML build timestamp 2025-08-26 is not established as the original publication day.",
+        "context_notes": "The requirement matches; the immediately following sentence mandates changes on compromise evidence."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-tech-005",
+    "candidate_sha256": "34dd77cbc7a5fd271f5f2ca99c637feba71bf43c7d232e37356fe17858d4136a",
+    "claim": "Python 3.13 provides a build configuration that can disable the global interpreter lock.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Version 3.13 and optional build configuration are explicit.",
+    "claim_evidence_interpretation": "The versioned glossary describes the option. PEP 703 is the accepted design, not independent evidence of deployment.",
+    "date_assessment": "candidate-p1-tech-005-e01: Version 3.13 documentation; no original publication day for this entry established. candidate-p1-tech-005-e02: Created 2023-01-09; Python-Version 3.13; Status Final. Creation is not assumed to be publication.",
+    "provenance_assessment": "The glossary directly cites PEP 703: linked implementation/design lineage, not independent reports.",
+    "research_concerns": [
+      "Keep build/runtime conditions; do not imply every default Python build has the GIL disabled."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-tech-005-e01",
+        "source_url": "https://docs.python.org/3.13/glossary.html#term-global-interpreter-lock",
+        "access_status": "opened",
+        "excerpt_match": "format_normalized",
+        "observed_title": "Glossary — Python 3.13.18 documentation",
+        "observed_publisher": "Python Software Foundation / Python documentation project",
+        "source_role": "versioned official implementation documentation",
+        "locator": "global interpreter lock glossary entry",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Version 3.13 documentation; no original publication day for this entry established.",
+        "context_notes": "The versioned glossary describes the option. PEP 703 is the accepted design, not independent evidence of deployment."
+      },
+      {
+        "evidence_id": "candidate-p1-tech-005-e02",
+        "source_url": "https://peps.python.org/pep-0703/",
+        "access_status": "opened",
+        "excerpt_match": "format_normalized",
+        "observed_title": "PEP 703 – Making the Global Interpreter Lock Optional in CPython",
+        "observed_publisher": "Python PEP project; author Sam Gross",
+        "source_role": "accepted design proposal",
+        "locator": "Abstract; Created, Status and Python-Version fields",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Created 2023-01-09; Python-Version 3.13; Status Final. Creation is not assumed to be publication.",
+        "context_notes": "The versioned glossary describes the option. PEP 703 is the accepted design, not independent evidence of deployment."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-general-001",
+    "candidate_sha256": "402dd9ac4a7af5fb9580e9fb32027928d2135188ec9fb6354cae93e9fbdd91b1",
+    "claim": "Mars has two moons named Phobos and Deimos.",
+    "human_review_priority": "routine",
+    "claim_clarity_assessment": "Both named moons are specified.",
+    "claim_evidence_interpretation": "NASA and ESA both name Phobos and Deimos in the retrieved context.",
+    "date_assessment": "candidate-p1-general-001-e01: No original publication day established; footer last-updated field is not publication. candidate-p1-general-001-e02: Article 2019-12-12; described image sequence 2019-11-17. Neither is a date when Mars acquired its moons.",
+    "provenance_assessment": "NASA and ESA mission summaries; no shared-copy text beyond the basic fact observed, but independence not established.",
+    "research_concerns": [
+      "Different institutional publishers do not prove independent underlying observations."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-general-001-e01",
+        "source_url": "https://science.nasa.gov/mars/moons/",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Mars Moons",
+        "observed_publisher": "NASA Science",
+        "source_role": "institutional planetary summary",
+        "locator": "Opening moon overview",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "No original publication day established; footer last-updated field is not publication.",
+        "context_notes": "NASA and ESA both name Phobos and Deimos in the retrieved context."
+      },
+      {
+        "evidence_id": "candidate-p1-general-001-e02",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express/Mars_Express_tracks_the_phases_of_Phobos",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Mars Express tracks the phases of Phobos",
+        "observed_publisher": "European Space Agency",
+        "source_role": "original mission communication",
+        "locator": "Opening explanation of two moons; displayed article date",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2019-12-12",
+        "other_date_notes": "Article 2019-12-12; described image sequence 2019-11-17. Neither is a date when Mars acquired its moons.",
+        "context_notes": "NASA and ESA both name Phobos and Deimos in the retrieved context."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-general-002",
+    "candidate_sha256": "10f369652b165aedcee9fdf36e14990de9f864f7be77b0364117969938126474",
+    "claim": "Venus is the hottest planet in our solar system.",
+    "human_review_priority": "routine",
+    "claim_clarity_assessment": "Planetary comparison is clear with surface-temperature context.",
+    "claim_evidence_interpretation": "NASA explicitly makes the comparison and discusses surface conditions.",
+    "date_assessment": "candidate-p1-general-002-e01: No original publication day established; footer last-updated field is separate.",
+    "provenance_assessment": "Single NASA summary.",
+    "research_concerns": [
+      "Do not confuse hottest surface with closest planet to the Sun."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-general-002-e01",
+        "source_url": "https://science.nasa.gov/venus/venus-facts/",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Venus: Facts",
+        "observed_publisher": "NASA Science",
+        "source_role": "institutional planetary summary",
+        "locator": "Surface section and opening overview",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "No original publication day established; footer last-updated field is separate.",
+        "context_notes": "NASA explicitly makes the comparison and discusses surface conditions."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-general-003",
+    "candidate_sha256": "3421b49b145d268c64fd3a99615f183cb3aa526c0d8ea60702a10a4fa0f01317",
+    "claim": "CERN placed the World Wide Web software in the public domain on 30 April 1993.",
+    "human_review_priority": "routine",
+    "claim_clarity_assessment": "Software public-domain event is separate from inventing the Web.",
+    "claim_evidence_interpretation": "CERN supplies the event date; later open licensing is described separately.",
+    "date_assessment": "candidate-p1-general-003-e01: Event 1993-04-30; original page publication day not established.",
+    "provenance_assessment": "Institutional participant historical account; no independent archival record checked.",
+    "research_concerns": [
+      "Keep the named software-release event and avoid mixing it with the 1989 invention date."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-general-003-e01",
+        "source_url": "https://home.cern/science/computing/the-birth-of-the-web/where-web-was-born/",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Where the web was born",
+        "observed_publisher": "CERN",
+        "source_role": "institutional historical account",
+        "locator": "Public-domain release paragraph",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Event 1993-04-30; original page publication day not established.",
+        "context_notes": "CERN supplies the event date; later open licensing is described separately."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-general-004",
+    "candidate_sha256": "0c279298a43bee32924edb0ff92437c4762b6cd2d70a315d9bc99eb3bae5370a",
+    "claim": "The International System of Units is defined using seven defining constants.",
+    "human_review_priority": "high",
+    "claim_clarity_assessment": "Current SI formulation is clear but the evidence bundle has incomplete verification and historical context.",
+    "claim_evidence_interpretation": "The main definition URL timed out twice. The accessible resolution fragment describes a 2011 proposal; its later decision takes effect in 2019.",
+    "date_assessment": "candidate-p1-general-004-e01: Original publication day and current page contents could not be rechecked. candidate-p1-general-004-e02: Resolution year 2018 and effective date 2019-05-20 are distinct; exact page publication day not established.",
+    "provenance_assessment": "Both sources originate in BIPM/CGPM standards; same institutional lineage.",
+    "research_concerns": [
+      "Retry the definition page and review the operative resolution, not only the considering clause."
+    ],
+    "recommended_action": "needs revision",
+    "recommendation_reason": "Retry the definition page and review the operative resolution, not only the considering clause.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-general-004-e01",
+        "source_url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "access_status": "inaccessible",
+        "excerpt_match": "incomplete",
+        "observed_title": null,
+        "observed_publisher": null,
+        "source_role": "institutional SI definition page, not accessible in this check",
+        "locator": "Requested original URL twice through web open; both attempts returned Timeout fetching",
+        "publication_date_status": "incomplete",
+        "observed_publication_date": null,
+        "other_date_notes": "Original publication day and current page contents could not be rechecked.",
+        "context_notes": "Original source timed out in both attempts; previous collection claims are not counted as verification in this run."
+      },
+      {
+        "evidence_id": "candidate-p1-general-004-e02",
+        "source_url": "https://www.bipm.org/en/committees/cg/cgpm/26-2018/resolution-1",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Resolution 1 of the 26th CGPM (2018)",
+        "observed_publisher": "BIPM / General Conference on Weights and Measures",
+        "source_role": "primary standards resolution",
+        "locator": "Considering clause referring to 2011 proposal; decision effective 20 May 2019",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Resolution year 2018 and effective date 2019-05-20 are distinct; exact page publication day not established.",
+        "context_notes": "Saved fragment is in a considering clause about the 2011 proposal. Later operative decision takes effect 2019-05-20; not an independent present-tense assertion by this fragment alone."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p1-general-005",
+    "candidate_sha256": "9916f1a1be3a2b2b6d399c20db0f1c7cd77f07853e82290409734350f86c0cfb",
+    "claim": "ESA lists Gaia Data Release 4 as expected in December 2026.",
+    "human_review_priority": "high",
+    "claim_clarity_assessment": "Explicitly an ESA forecast, not a completed release.",
+    "claim_evidence_interpretation": "The opened ESA schedule still lists the expected month.",
+    "date_assessment": "candidate-p1-general-005-e01: Expected month December 2026; no day invented and no completed release inferred. Page publication day unknown.",
+    "provenance_assessment": "Single official mission schedule; linked release-planning material was not independently checked.",
+    "research_concerns": [
+      "Time-sensitive: freeze an as-of observation and recheck at approval; this does not establish that a release will occur."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p1-general-005-e01",
+        "source_url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Gaia",
+        "observed_publisher": "European Space Agency",
+        "source_role": "official mission schedule",
+        "locator": "Fact sheet, Data Release 4 schedule bullet",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Expected month December 2026; no day invented and no completed release inferred. Page publication day unknown.",
+        "context_notes": "The opened ESA schedule still lists the expected month."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-env-001",
+    "candidate_sha256": "29175cdaba8774af89665cbb90f7b44b857a9e3ca9167101f5649baa570100b5",
+    "claim": "Not all plastics labelled biodegradable will fully biodegrade under marine conditions.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Limited quantifier and marine conditions are specified.",
+    "claim_evidence_interpretation": "The report summary describes conditions rarely met in marine environments and industrial-composting requirements.",
+    "date_assessment": "candidate-p2-env-001-e01: Dateline 2015-11-17; historical report, not a current polymer-by-polymer survey.",
+    "provenance_assessment": "UNEP press release summarizes its report; report methods were not independently audited.",
+    "research_concerns": [
+      "2015 summary is not an exhaustive current survey of every polymer; preserve conditions and limited quantifier."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-env-001-e01",
+        "source_url": "https://www.unep.org/en/news-and-stories/press-release/biodegradable-plastics-are-not-answer-reducing-marine-litter-says-un",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Biodegradable Plastics Are Not the Answer to Reducing Marine Litter, Says UN",
+        "observed_publisher": "UN Environment Programme",
+        "source_role": "press release summarizing a UN report",
+        "locator": "Opening report-findings paragraph",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2015-11-17",
+        "other_date_notes": "Dateline 2015-11-17; historical report, not a current polymer-by-polymer survey.",
+        "context_notes": "The report summary describes conditions rarely met in marine environments and industrial-composting requirements."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-env-002",
+    "candidate_sha256": "97f6c7ee44992daa1c214944016c9e9ff35d12cd191cac2d059298acb9e20ceb",
+    "claim": "A single year above 1.5°C does not by itself establish failure of the Paris Agreement long-term temperature goal.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Annual observation versus long-term Paris goal is a clear distinction.",
+    "claim_evidence_interpretation": "The surrounding quotation explicitly makes the distinction, but the saved fragment contains only its trailing long-term-goal clause.",
+    "date_assessment": "candidate-p2-env-002-e01: Published 2025-01-10; temperature event covers calendar year 2024, not a single day.",
+    "provenance_assessment": "WMO aggregates international datasets; that does not make this single saved passage multiple independent sources.",
+    "research_concerns": [
+      "For a standalone annotation bundle, preserve the preceding single-year qualification or an approved context note."
+    ],
+    "recommended_action": "needs revision",
+    "recommendation_reason": "For a standalone annotation bundle, preserve the preceding single-year qualification or an approved context note.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-env-002-e01",
+        "source_url": "https://wmo.int/news/media-centre/wmo-confirms-2024-warmest-year-record-about-155degc-above-pre-industrial-level",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "WMO confirms 2024 as warmest year on record at about 1.55°C above pre-industrial level",
+        "observed_publisher": "World Meteorological Organization",
+        "source_role": "official institutional climate announcement",
+        "locator": "Celeste Saulo quotation on annual versus long-term temperature goals",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2025-01-10",
+        "other_date_notes": "Published 2025-01-10; temperature event covers calendar year 2024, not a single day.",
+        "context_notes": "The surrounding quotation explicitly makes the distinction, but the saved fragment contains only its trailing long-term-goal clause."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-env-003",
+    "candidate_sha256": "f5aa2363b1bbc4e55d23e364df4e6dddfcf41ac752e851022ff54734a057a0c8",
+    "claim": "The Atlantic Meridional Overturning Circulation will collapse before 2100.",
+    "human_review_priority": "high",
+    "claim_clarity_assessment": "Unqualified future certainty and deadline contrast with conditional research estimates.",
+    "claim_evidence_interpretation": "One study projects conditional collapse; another modelling announcement describes collapse as unlikely. These are not observations of a future event.",
+    "date_assessment": "candidate-p2-env-003-e01: Published 2023-07-25; conditional future estimate, not observed collapse. Article text readable despite cookie-error query on redirect. candidate-p2-env-003-e02: Displayed 16:00 UTC, 2025-02-26; next 75 years is a projection interval, not an event date.",
+    "provenance_assessment": "Different research teams and methods are identified; full data/citation dependence was not audited. Met Office announcement is dependent on its own paper.",
+    "research_concerns": [
+      "Define the intended prediction/as-of scope and compare assumptions before presenting this as a genuine evidence-conflict case."
+    ],
+    "recommended_action": "needs revision",
+    "recommendation_reason": "Define the intended prediction/as-of scope and compare assumptions before presenting this as a genuine evidence-conflict case.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-env-003-e01",
+        "source_url": "https://www.nature.com/articles/s41467-023-39810-w",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Warning of a forthcoming collapse of the Atlantic meridional overturning circulation",
+        "observed_publisher": "Nature Communications / Springer Nature; authors Peter Ditlevsen and Susanne Ditlevsen",
+        "source_role": "primary research article",
+        "locator": "Abstract, conditional mid-century estimate; Published field",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2023-07-25",
+        "other_date_notes": "Published 2023-07-25; conditional future estimate, not observed collapse. Article text readable despite cookie-error query on redirect.",
+        "context_notes": "One study projects conditional collapse; another modelling announcement describes collapse as unlikely. These are not observations of a future event."
+      },
+      {
+        "evidence_id": "candidate-p2-env-003-e02",
+        "source_url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2025/climate-change-amoc-likely-to-withstand-future-warming",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Climate change: AMOC likely to withstand future warming",
+        "observed_publisher": "UK Met Office; author Grahame Madge",
+        "source_role": "research-team announcement about a modelling paper",
+        "locator": "Lead-author quotation; article timestamp",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2025-02-26",
+        "other_date_notes": "Displayed 16:00 UTC, 2025-02-26; next 75 years is a projection interval, not an event date.",
+        "context_notes": "One study projects conditional collapse; another modelling announcement describes collapse as unlikely. These are not observations of a future event."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-env-004",
+    "candidate_sha256": "ae6f9886611f1835eabb8c8e160d22a671a2400b9045f3da112a68b91c396c3a",
+    "claim": "Microplastics in drinking water are harmless at current exposure levels.",
+    "human_review_priority": "high",
+    "claim_clarity_assessment": "Harmless is categorical; current exposure has no fixed as-of date.",
+    "claim_evidence_interpretation": "The 2019 source expresses limited-information uncertainty, not demonstrated absence of harm at all current exposures.",
+    "date_assessment": "candidate-p2-env-004-e01: Published 2019-08-22; current levels refers to the information available then.",
+    "provenance_assessment": "One WHO review summary, not independent contemporary measurements.",
+    "research_concerns": [
+      "A short historical risk statement cannot establish present-day harmlessness. Missing initial qualification needs reviewer attention."
+    ],
+    "recommended_action": "insufficient evidence",
+    "recommendation_reason": "A short historical risk statement cannot establish present-day harmlessness. Missing initial qualification needs reviewer attention.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-env-004-e01",
+        "source_url": "https://www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crackdown-on-plastic-pollution",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "WHO calls for more research into microplastics and a crackdown on plastic pollution",
+        "observed_publisher": "World Health Organization",
+        "source_role": "institutional press release summarizing a review",
+        "locator": "Maria Neira quotation; displayed date",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2019-08-22",
+        "other_date_notes": "Published 2019-08-22; current levels refers to the information available then.",
+        "context_notes": "The 2019 source expresses limited-information uncertainty, not demonstrated absence of harm at all current exposures."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-env-005",
+    "candidate_sha256": "beb1d2f710ab465d6370894dd7c13bf2c03ab485736c64dfde907f940d81514e",
+    "claim": "Not every plastic item labelled compostable is suitable for a home compost pile.",
+    "human_review_priority": "routine",
+    "claim_clarity_assessment": "Home composting is distinguished from industrial composting.",
+    "claim_evidence_interpretation": "EPA gives the label-dependent warning and explains the different conditions.",
+    "date_assessment": "candidate-p2-env-005-e01: No original publication day established. The 2024-11-21 strategy date refers to a linked strategy, not this FAQ publication.",
+    "provenance_assessment": "Single EPA guidance page.",
+    "research_concerns": [
+      "U.S. guidance and product-specific labels; do not treat all compostability certifications as identical."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-env-005-e01",
+        "source_url": "https://www.epa.gov/trash-free-waters/frequently-asked-questions-about-plastic-recycling-and-composting",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Frequently Asked Questions about Plastic Recycling and Composting",
+        "observed_publisher": "U.S. Environmental Protection Agency",
+        "source_role": "official consumer guidance",
+        "locator": "If a plastic product is labeled compostable, can I add it to my home compost pile?",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "No original publication day established. The 2024-11-21 strategy date refers to a linked strategy, not this FAQ publication.",
+        "context_notes": "EPA gives the label-dependent warning and explains the different conditions."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-tech-001",
+    "candidate_sha256": "cd630bcbac72b5a163b9a0a773600c866524964737bedd58e6a6f479f9f3227a",
+    "claim": "Every website using HTTPS is legitimate.",
+    "human_review_priority": "routine",
+    "claim_clarity_assessment": "Universal HTTPS legitimacy proposition is easy to interpret as a claim under test.",
+    "claim_evidence_interpretation": "FTC explicitly distinguishes encryption from legitimacy. The claim is not a faithful paraphrase of the source, intentionally providing an opposing-evidence candidate.",
+    "date_assessment": "candidate-p2-tech-001-e01: No original publication day established in the opened text.",
+    "provenance_assessment": "Single FTC guidance page.",
+    "research_concerns": [
+      "A source challenging the claim does not invalidate the candidate. Humans must assign stance and verdict independently."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-tech-001-e01",
+        "source_url": "https://consumer.ftc.gov/articles/online-shopping",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Online Shopping",
+        "observed_publisher": "U.S. Federal Trade Commission Consumer Advice",
+        "source_role": "official consumer guidance",
+        "locator": "Pay by credit card section, HTTPS/encryption warning",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "No original publication day established in the opened text.",
+        "context_notes": "FTC explicitly distinguishes encryption from legitimacy. The claim is not a faithful paraphrase of the source, intentionally providing an opposing-evidence candidate."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-tech-002",
+    "candidate_sha256": "ebc4593f3ffc47fe1b9f2c2091e342a58dfbdbcf8af6838f58a2ecd371ac57cc",
+    "claim": "Not all multifactor authentication methods are phishing-resistant.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Limited MFA quantifier is clear, but generic OTP wording needs a section locator.",
+    "claim_evidence_interpretation": "The same OTP sentence occurs in single-factor and multi-factor sections. The multi-factor section is the relevant context.",
+    "date_assessment": "candidate-p2-tech-002-e01: HTML build timestamp 2025-08-26 is not established as the original publication day.",
+    "provenance_assessment": "Same NIST document as p1-tech-004: shared-source leakage group, not independent evidence.",
+    "research_concerns": [
+      "Preserve section 3.1.5 and its second-factor definition in approved context so an annotator need not guess which occurrence was collected."
+    ],
+    "recommended_action": "needs revision",
+    "recommendation_reason": "Preserve section 3.1.5 and its second-factor definition in approved context so an annotator need not guess which occurrence was collected.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-tech-002-e01",
+        "source_url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "NIST Special Publication 800-63B",
+        "observed_publisher": "NIST",
+        "source_role": "normative authentication guidance",
+        "locator": "Password requirements item 6; Multi-Factor OTP section 3.1.5",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "HTML build timestamp 2025-08-26 is not established as the original publication day.",
+        "context_notes": "The same OTP sentence occurs in single-factor and multi-factor sections. The multi-factor section is the relevant context."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-tech-003",
+    "candidate_sha256": "297e2a48f4f3a9ada7c3e186d346d514995083406a3095d3e5f056073f59cd96",
+    "claim": "It is not the case that no practical SHA-1 collision has ever been demonstrated.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Double-negation wording is intentional and cognitively demanding.",
+    "claim_evidence_interpretation": "The participant announcement describes a practical collision; the collector-authored double-negation claim is not quoted from the source.",
+    "date_assessment": "candidate-p2-tech-003-e01: Displayed publication 2017-02-27; body announcement 2017-02-23. The distinct dates match the candidate fields.",
+    "provenance_assessment": "CWI and Google jointly performed the work; one announcement, not two independent confirmations.",
+    "research_concerns": [
+      "Retain the documented collector-paraphrase origin and avoid conflating collision attacks with all cryptographic breaks."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-tech-003-e01",
+        "source_url": "https://www.cwi.nl/en/news/cwi-and-google-announce-first-collision-for-industry-security-standard-sha-1/",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "CWI and Google announce first collision for Industry Security Standard SHA-1",
+        "observed_publisher": "Centrum Wiskunde & Informatica, with Google collaborators",
+        "source_role": "original research-team announcement",
+        "locator": "Second explanatory paragraph; article date and opening dateline",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2017-02-27",
+        "other_date_notes": "Displayed publication 2017-02-27; body announcement 2017-02-23. The distinct dates match the candidate fields.",
+        "context_notes": "The participant announcement describes a practical collision; the collector-authored double-negation claim is not quoted from the source."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-tech-004",
+    "candidate_sha256": "ac56fbf1f87060ba2b19c9602b213b6a591fbc455742fc81437bc3f6fc8c71de",
+    "claim": "On 11 March 2025, NIST selected HQC for standardization and expected a finalized standard in 2027.",
+    "human_review_priority": "high",
+    "claim_clarity_assessment": "Historical selection and an expectation as of that announcement are explicit components.",
+    "claim_evidence_interpretation": "NIST identifies selection and the expected 2027 standard in its March 2025 announcement.",
+    "date_assessment": "candidate-p2-tech-004-e01: Released 2025-03-11; updated 2025-03-20. Final standard expected in 2027 in this announcement.",
+    "provenance_assessment": "Original NIST announcement; no independent implementation or later completion evidence reviewed.",
+    "research_concerns": [
+      "Future intent must remain attributed and time-bound; no completed standard is inferred."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-tech-004-e01",
+        "source_url": "https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "NIST Selects HQC as Fifth Algorithm for Post-Quantum Encryption",
+        "observed_publisher": "NIST",
+        "source_role": "original institutional selection announcement",
+        "locator": "Key Takeaways, selection paragraph and Released/Updated footer",
+        "publication_date_status": "matched_existing_date",
+        "observed_publication_date": "2025-03-11",
+        "other_date_notes": "Released 2025-03-11; updated 2025-03-20. Final standard expected in 2027 in this announcement.",
+        "context_notes": "NIST identifies selection and the expected 2027 standard in its March 2025 announcement."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-tech-005",
+    "candidate_sha256": "52f0629632d5285920b49fcb50506f3d2a49880f7daa3a8c51b2de370be87754",
+    "claim": "A CVSS v4.0 base score measures vulnerability severity and does not alone measure organizational risk.",
+    "human_review_priority": "routine",
+    "claim_clarity_assessment": "Base score is distinguished from organization-specific risk.",
+    "claim_evidence_interpretation": "The official guide has the matching severity-versus-risk heading and surrounding risk-factor discussion.",
+    "date_assessment": "candidate-p2-tech-005-e01: Document Version 1.2; original publication day not established.",
+    "provenance_assessment": "Single FIRST/CVSS normative explanatory guide.",
+    "research_concerns": [
+      "Do not extend this claim to say all CVSS metric groups ignore environmental or threat context."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-tech-005-e01",
+        "source_url": "https://www.first.org/cvss/v4.0/user-guide",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "CVSS v4.0 User Guide",
+        "observed_publisher": "FIRST.org / CVSS Special Interest Group",
+        "source_role": "official scoring-system documentation",
+        "locator": "CVSS Base Score (CVSS-B) Measures Severity, not Risk",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Document Version 1.2; original publication day not established.",
+        "context_notes": "The official guide has the matching severity-versus-risk heading and surrounding risk-factor discussion."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-general-001",
+    "candidate_sha256": "e28463e61654863ab4cd55aa303ebc809c3aaa853d4fef7e2209cc10c1f216b9",
+    "claim": "Not all deserts are hot; Antarctica has a polar desert.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Not all deserts are hot; Antarctic polar context is explicit.",
+    "claim_evidence_interpretation": "Geoscience Australia describes the Antarctic polar desert and temperature context.",
+    "date_assessment": "candidate-p2-general-001-e01: Page last updated 2022-11-25; original publication day unknown.",
+    "provenance_assessment": "Single government geographic summary.",
+    "research_concerns": [
+      "Australian-territory page scope; retain polar definition and do not treat all deserts as having the same climate."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-general-001-e01",
+        "source_url": "https://www.ga.gov.au/scientific-topics/national-location-information/landforms/deserts",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Areas of Australian and territory deserts",
+        "observed_publisher": "Geoscience Australia",
+        "source_role": "institutional geographic summary",
+        "locator": "Opening Antarctica polar-desert paragraph",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Page last updated 2022-11-25; original publication day unknown.",
+        "context_notes": "Geoscience Australia describes the Antarctic polar desert and temperature context."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-general-002",
+    "candidate_sha256": "f3f79f9f2eebd17d33009e503bd566ddf5b30b0ec08b08a6e1298557ca2bf221",
+    "claim": "It is not true that no woman has ever won a Nobel Prize.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Double negation is deliberate; saved evidence uses an unresolved pronoun when read alone.",
+    "claim_evidence_interpretation": "The opened page identifies Marie Curie before the excerpt, but the saved sentence fragment alone does not name her.",
+    "date_assessment": "candidate-p2-general-002-e01: No original publication day established. Passage itself gives no award event day.",
+    "provenance_assessment": "Secondary museum biography; original award registry not checked in this inspection.",
+    "research_concerns": [
+      "Preserve the antecedent context or request a versioned excerpt revision; identify collector-authored linguistic transformation."
+    ],
+    "recommended_action": "needs revision",
+    "recommendation_reason": "Preserve the antecedent context or request a versioned excerpt revision; identify collector-authored linguistic transformation.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-general-002-e01",
+        "source_url": "https://oumnh.ox.ac.uk/learn-marie-curie",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Marie Curie",
+        "observed_publisher": "Oxford University Museum of Natural History",
+        "source_role": "secondary biographical education page",
+        "locator": "Opening Marie Curie biographical summary",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "No original publication day established. Passage itself gives no award event day.",
+        "context_notes": "The opened page identifies Marie Curie before the excerpt, but the saved sentence fragment alone does not name her."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-general-003",
+    "candidate_sha256": "93a6b126357964ecc658301a086db6e14e76e024582a89d70ea7abf9c48b89ed",
+    "claim": "There is life beneath Europa’s surface.",
+    "human_review_priority": "high",
+    "claim_clarity_assessment": "Existence of life is a much stronger proposition than potential habitability.",
+    "claim_evidence_interpretation": "The saved source describes a mission goal to assess environments that could support life; it reports no detection in this passage.",
+    "date_assessment": "candidate-p2-general-003-e01: No original publication day established; mission goal is not a discovery event date.",
+    "provenance_assessment": "Single NASA mission summary; no detection report is supplied or invented.",
+    "research_concerns": [
+      "Do not turn an unestablished event into a false claim. A deliberately insufficient bundle may still be included after explicit human review."
+    ],
+    "recommended_action": "insufficient evidence",
+    "recommendation_reason": "Do not turn an unestablished event into a false claim. A deliberately insufficient bundle may still be included after explicit human review.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-general-003-e01",
+        "source_url": "https://science.nasa.gov/jupiter/jupiter-moons/europa/",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "Europa",
+        "observed_publisher": "NASA Science",
+        "source_role": "official mission / planetary summary",
+        "locator": "Europa Clipper mission science-goal paragraph",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "No original publication day established; mission goal is not a discovery event date.",
+        "context_notes": "The saved source describes a mission goal to assess environments that could support life; it reports no detection in this passage."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-general-004",
+    "candidate_sha256": "ccba06002f155ddbb601158bae72facff40f53d34700c236c6c151b1b277920c",
+    "claim": "Venus’s sidereal rotation period is longer than its orbital period.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Sidereal rotation wording resolves the ambiguous meaning of day.",
+    "claim_evidence_interpretation": "The source gives approximately 243 Earth days per rotation and 225 per orbit.",
+    "date_assessment": "candidate-p2-general-004-e01: Article last updated 2024-03-15; separate site-footer update 2026-07-31. Neither treated as original publication.",
+    "provenance_assessment": "Single NASA educational source; two bullets are not two independent sources.",
+    "research_concerns": [
+      "Keep sidereal versus solar reference frames explicit and recognize rounded educational values."
+    ],
+    "recommended_action": "suitable for human approval",
+    "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-general-004-e01",
+        "source_url": "https://spaceplace.nasa.gov/all-about-venus/en/",
+        "access_status": "opened",
+        "excerpt_match": "structured_extract",
+        "observed_title": "All About Venus",
+        "observed_publisher": "NASA Space Place",
+        "source_role": "official educational planetary summary",
+        "locator": "Time on Venus bullets; explanatory rotation paragraph",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "Article last updated 2024-03-15; separate site-footer update 2026-07-31. Neither treated as original publication.",
+        "context_notes": "The source gives approximately 243 Earth days per rotation and 225 per orbit."
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0.0",
+    "record_type": "automated_preliminary_assessment",
+    "automated_checked_on": "2026-11-01",
+    "method": "web_tool_rendered_source_inspection",
+    "candidate_id": "candidate-p2-general-005",
+    "candidate_sha256": "d10cc91eb1c099fdeb20922ac6d0a08e6fc7dea2a6d8cd78ca65a4cfd9610030",
+    "claim": "The Great Wall of China can be seen from the Moon with the naked eye.",
+    "human_review_priority": "medium",
+    "claim_clarity_assessment": "Moon and naked-eye scope are explicit, not low Earth orbit.",
+    "claim_evidence_interpretation": "The archived answer opposes the claim; the saved fragment uses it without the Great Wall antecedent.",
+    "date_assessment": "candidate-p2-general-005-e01: No original date for this specific answer established; dates on other Q&As must not be borrowed.",
+    "provenance_assessment": "Single archived NASA Q&A; no modern observational source was reviewed.",
+    "research_concerns": [
+      "Preserve question 99 context or request an excerpt revision. Archived status and missing answer date require acknowledgment, not an invented date."
+    ],
+    "recommended_action": "needs revision",
+    "recommendation_reason": "Preserve question 99 context or request an excerpt revision. Archived status and missing answer date require acknowledgment, not an invented date.",
+    "evidence_checks": [
+      {
+        "evidence_id": "candidate-p2-general-005-e01",
+        "source_url": "https://science.gsfc.nasa.gov/attic/cosmicopia.gsfc.nasa.gov/qa_earth.html",
+        "access_status": "opened",
+        "excerpt_match": "exact_fragment",
+        "observed_title": "NASA's Cosmicopia -- Ask Us -- Earth and Moon",
+        "observed_publisher": "NASA Goddard Cosmicopia",
+        "source_role": "archived institutional Q&A",
+        "locator": "Question 99, Great Wall from the Moon; answer credited to Beth Barbier",
+        "publication_date_status": "publication_day_not_established",
+        "observed_publication_date": null,
+        "other_date_notes": "No original date for this specific answer established; dates on other Q&As must not be borrowed.",
+        "context_notes": "The archived answer opposes the claim; the saved fragment uses it without the Great Wall antecedent."
+      }
+    ]
+  }
+]

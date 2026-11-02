@@ -1,9 +1,11 @@
 """Offline tests for conservative claim assessment; no network calls are made."""
 import pytest
+import requests
 
 from unittest.mock import Mock
 
-from verifier import VerificationError, assess_evidence, search_evidence
+from verifier import (VerificationError, assess_evidence, search_evidence,
+                      search_evidence_with_metrics)
 
 
 CLAIM = "The Eiffel Tower is located in Paris."
@@ -76,3 +78,40 @@ def test_search_rejects_non_object_json_with_friendly_error(monkeypatch, malform
 
     with pytest.raises(VerificationError, match="unexpected response format"):
         search_evidence("A sufficiently clear test claim", "mock-key")
+
+
+def test_search_timeout_has_a_friendly_error(monkeypatch):
+    monkeypatch.setattr("verifier.requests.post", Mock(side_effect=requests.Timeout))
+    with pytest.raises(VerificationError, match="took too long"):
+        search_evidence("A sufficiently clear test claim", "mock-key")
+
+
+def test_search_timing_reports_request_and_response_stages_without_inputs(monkeypatch):
+    response = Mock(status_code=200, ok=True)
+    response.json.return_value = {"results": [{
+        "title": "A source", "url": "https://example.com/article",
+        "content": "The Eiffel Tower is located in Paris.",
+        "published_date": "2026-10-01", "publisher": "Example News",
+    }]}
+    monkeypatch.setattr("verifier.requests.post", Mock(return_value=response))
+    claim = "The Eiffel Tower is located in Paris."
+    results, timings = search_evidence_with_metrics(claim, "mock-key")
+    assert results[0]["publisher"] == "Example News"
+    assert results[0]["retrieved_at"].endswith("+00:00")
+    assert {"search_request_ms", "response_processing_ms", "retrieval_total_ms"} <= set(timings)
+    assert all(value >= 0 for value in timings.values())
+    assert claim not in repr(timings) and "mock-key" not in repr(timings)
+
+
+@pytest.mark.parametrize("status_code, expected", [
+    (302, "unexpected redirect"),
+    (429, "limit reached"),
+    (503, "temporarily unavailable"),
+])
+def test_search_service_status_errors_are_friendly(monkeypatch, status_code, expected):
+    response = Mock(status_code=status_code, ok=False)
+    post = Mock(return_value=response)
+    monkeypatch.setattr("verifier.requests.post", post)
+    with pytest.raises(VerificationError, match=expected):
+        search_evidence("A sufficiently clear test claim", "mock-key")
+    assert post.call_args.kwargs["allow_redirects"] is False

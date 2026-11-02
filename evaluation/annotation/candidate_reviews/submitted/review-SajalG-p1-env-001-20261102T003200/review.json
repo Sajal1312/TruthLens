@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "review-SajalG-p1-env-001-20261102T003200",
+  "candidate_id": "candidate-p1-env-001",
+  "candidate_sha256": "cdd39ec6b8cf0d996aae898651e375cb9a82113469bd8ce5a8b29286e274a567",
+  "reviewer_alias": "SajalG",
+  "review_timestamp": "2026-11-02T00:32:00+05:30",
+  "source_verification_status": "verified",
+  "claim_scope_assessment": {
+    "status": "clear",
+    "rationale": "Reviewer considers the attributed claim clearly worded and appropriately qualified: about 30 percent is an approximate estimate, not a fixed fraction for every year."
+  },
+  "evidence_context_assessment": {
+    "status": "adequate",
+    "rationale": "Reviewer explicitly confirmed that the saved evidence matches the original NOAA source and finds its attribution, relevance and traceability suitable for annotation inclusion."
+  },
+  "evidence_reviews": [
+    {
+      "evidence_id": "candidate-p1-env-001-e01",
+      "source_status": "verified",
+      "source_verification_basis": "SajalG explicitly verified the saved NOAA passage against the original source in this conversation. review_timestamp records entry of the approval, not a claimed webpage-access time.",
+      "publication_date_status": "publication_date_unknown",
+      "verified_publication_date": null,
+      "date_rationale": "Reviewer explicitly acknowledges the original publication date is unknown; a last-updated date is not substituted.",
+      "provenance_assessment": "unknown",
+      "provenance_rationale": "Reviewer acknowledges one institutional summary and that underlying measurements have not been independently audited. No independent observational or reporting chain is asserted."
+    }
+  ],
+  "decision": "approved",
+  "review_rationale": "The claim is clearly worded, appropriately qualified, and suitable for independent factual annotation. NOAA's official ocean acidification webpage directly states that the ocean absorbs about 30 percent of carbon dioxide released into the atmosphere. The saved evidence matches the original source. The word \"about\" correctly communicates that this is an approximate estimate rather than a fixed percentage applicable to every year. The webpage's original publication date remains unknown, and its last-updated date should not be treated as the publication date. Although the underlying measurements have not been independently audited and the evidence comes from one institutional source, the attribution to NOAA is explicit and the evidence is directly traceable. The candidate is suitable for inclusion in the annotation dataset.",
+  "supersedes": null
+}

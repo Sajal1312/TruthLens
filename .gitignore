@@ -6,3 +6,6 @@ __pycache__/
 .env
 .streamlit/secrets.toml
 .DS_Store
+
+# Local explanation-study allocations, keys and eventual human responses.
+evaluation/explanation_study/runs/

@@ -1,0 +1,199 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_type",
+    "automated_checked_on",
+    "source_checks",
+    "candidate_followups",
+    "missing_date_checks",
+    "search_notes",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "record_type": {
+      "const": "automated_source_followup"
+    },
+    "automated_checked_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "source_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "check_id",
+          "url",
+          "title",
+          "access_status",
+          "finding",
+          "locator",
+          "publication_date",
+          "publication_precision",
+          "publication_label"
+        ],
+        "properties": {
+          "check_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "access_status": {
+            "enum": [
+              "opened",
+              "inaccessible"
+            ]
+          },
+          "finding": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publication_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "publication_precision": {
+            "enum": [
+              "day",
+              "month",
+              "year",
+              "unknown"
+            ]
+          },
+          "publication_label": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "candidate_followups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidate_id",
+          "candidate_sha256",
+          "status",
+          "source_check_ids",
+          "findings",
+          "remaining_concerns",
+          "proposed_context_note",
+          "recommended_inclusion_action"
+        ],
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "candidate_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "status": {
+            "enum": [
+              "resolved_context_gap",
+              "authoritative_replacement_available",
+              "unresolved"
+            ]
+          },
+          "source_check_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "findings": {
+            "type": "string",
+            "minLength": 1
+          },
+          "remaining_concerns": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "proposed_context_note": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recommended_inclusion_action": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "missing_date_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "evidence_id",
+          "source_check_id",
+          "finding"
+        ],
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_check_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "finding": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "search_notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:truthlens:schema:source-review-followup:v1",
+  "title": "Machine source follow-up, no authentic human decision fields"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "review-SajalG-p1-general-002-20261102T002923",
+  "candidate_id": "candidate-p1-general-002",
+  "candidate_sha256": "10f369652b165aedcee9fdf36e14990de9f864f7be77b0364117969938126474",
+  "reviewer_alias": "SajalG",
+  "review_timestamp": "2026-11-02T00:29:23+05:30",
+  "source_verification_status": "verified",
+  "claim_scope_assessment": {
+    "status": "clear",
+    "rationale": "Reviewer describes the claim as clear and specific, with planetary surface temperature as its scope."
+  },
+  "evidence_context_assessment": {
+    "status": "adequate",
+    "rationale": "Reviewer confirmed the saved evidence matches the original NASA page and considers its relevance and traceability sufficient for annotation inclusion."
+  },
+  "evidence_reviews": [
+    {
+      "evidence_id": "candidate-p1-general-002-e01",
+      "source_status": "verified",
+      "source_verification_basis": "SajalG explicitly confirmed the saved NASA passage against the original source in this conversation. review_timestamp is the time this approval was recorded, not a claimed webpage-access time.",
+      "publication_date_status": "publication_date_unknown",
+      "verified_publication_date": null,
+      "date_rationale": "Reviewer explicitly acknowledges that the original publication date is unknown and that a page-update date must not be substituted.",
+      "provenance_assessment": "unknown",
+      "provenance_rationale": "Reviewer acknowledges one institutional NASA source; independent underlying observations or corroboration are not established."
+    }
+  ],
+  "decision": "approved",
+  "review_rationale": "The claim is clear, specific, and suitable for independent factual annotation. NASA's official Venus Facts page directly supports the statement and explains that Venus has the highest planetary surface temperature in our solar system, approximately 467°C, because its dense atmosphere traps heat. The saved evidence matches the original source. The original publication date is unknown, and the page-update date should not be treated as the publication date. Although the evidence comes from one institutional source, it is sufficiently relevant and traceable for inclusion in the annotation dataset.",
+  "supersedes": null
+}

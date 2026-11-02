@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-tech-005",
+  "candidate_sha256": "34dd77cbc7a5fd271f5f2ca99c637feba71bf43c7d232e37356fe17858d4136a",
+  "claim": "Python 3.13 provides a build configuration that can disable the global interpreter lock.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Version 3.13 and optional build configuration are explicit.",
+  "claim_evidence_interpretation": "The versioned glossary describes the option. PEP 703 is the accepted design, not independent evidence of deployment.",
+  "date_assessment": "candidate-p1-tech-005-e01: Version 3.13 documentation; no original publication day for this entry established. candidate-p1-tech-005-e02: Created 2023-01-09; Python-Version 3.13; Status Final. Creation is not assumed to be publication.",
+  "provenance_assessment": "The glossary directly cites PEP 703: linked implementation/design lineage, not independent reports.",
+  "research_concerns": [
+    "Keep build/runtime conditions; do not imply every default Python build has the GIL disabled."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-tech-005-e01",
+      "source_url": "https://docs.python.org/3.13/glossary.html#term-global-interpreter-lock",
+      "access_status": "opened",
+      "excerpt_match": "format_normalized",
+      "observed_title": "Glossary — Python 3.13.18 documentation",
+      "observed_publisher": "Python Software Foundation / Python documentation project",
+      "source_role": "versioned official implementation documentation",
+      "locator": "global interpreter lock glossary entry",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "Version 3.13 documentation; no original publication day for this entry established.",
+      "context_notes": "The versioned glossary describes the option. PEP 703 is the accepted design, not independent evidence of deployment."
+    },
+    {
+      "evidence_id": "candidate-p1-tech-005-e02",
+      "source_url": "https://peps.python.org/pep-0703/",
+      "access_status": "opened",
+      "excerpt_match": "format_normalized",
+      "observed_title": "PEP 703 – Making the Global Interpreter Lock Optional in CPython",
+      "observed_publisher": "Python PEP project; author Sam Gross",
+      "source_role": "accepted design proposal",
+      "locator": "Abstract; Created, Status and Python-Version fields",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "Created 2023-01-09; Python-Version 3.13; Status Final. Creation is not assumed to be publication.",
+      "context_notes": "The versioned glossary describes the option. PEP 703 is the accepted design, not independent evidence of deployment."
+    }
+  ]
+}

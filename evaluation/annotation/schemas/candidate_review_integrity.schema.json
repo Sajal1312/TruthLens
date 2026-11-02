@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:truthlens:schema:candidate-review-integrity:v1",
+  "title": "TruthLens candidate review snapshot integrity",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "review_id", "candidate_id", "candidate_sha256", "review_file_sha256", "snapshot_file_sha256", "sealed_at"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "review_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"},
+    "candidate_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"},
+    "candidate_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "review_file_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "snapshot_file_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "sealed_at": {"type": "string", "format": "date-time"}
+  }
+}

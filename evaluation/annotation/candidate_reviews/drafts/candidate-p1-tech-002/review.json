@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "review-SajalG-p1-tech-002-20261102T003108",
+  "candidate_id": "candidate-p1-tech-002",
+  "candidate_sha256": "4ccf1d38c49032319639c866849b4c1624bac74ec8975782966a0c01d1f72234",
+  "reviewer_alias": "SajalG",
+  "review_timestamp": "2026-11-02T00:31:08+05:30",
+  "source_verification_status": "verified",
+  "claim_scope_assessment": {
+    "status": "clear",
+    "rationale": "Reviewer describes a precise claim about what RFC 9110 itself states, distinguishing HTTP protocol semantics from application sessions or state."
+  },
+  "evidence_context_assessment": {
+    "status": "adequate",
+    "rationale": "Reviewer verified the saved passage in the original normative Abstract and considers the directly traceable specification suitable for annotation inclusion."
+  },
+  "evidence_reviews": [
+    {
+      "evidence_id": "candidate-p1-tech-002-e01",
+      "source_status": "verified",
+      "source_verification_basis": "SajalG explicitly verified the saved RFC passage against its original normative specification in this conversation. review_timestamp records entry of the approval, not a claimed webpage-access time.",
+      "publication_date_status": "publication_date_unknown",
+      "verified_publication_date": null,
+      "date_rationale": "Reviewer confirms publication month June 2022 without an exact day. The schema uses a day-level field, so it remains null; no day is imputed.",
+      "provenance_assessment": "unknown",
+      "provenance_rationale": "One normative source establishes what the named RFC states; reviewer considers independent corroboration unnecessary for this scope. No independent observational or reporting chain is asserted."
+    }
+  ],
+  "decision": "approved",
+  "review_rationale": "The claim is precise, technically well-defined, and suitable for independent factual annotation. RFC 9110 explicitly describes HTTP as a stateless application-level protocol in its Abstract. The saved evidence matches the original normative specification, providing direct and authoritative support. The term \"stateless\" refers to HTTP's protocol semantics and does not imply that web applications cannot maintain sessions or application state. The document identifies June 2022 as its publication month without specifying an exact day. Although the evidence relies on one normative source, independent corroboration is unnecessary for establishing what RFC 9110 itself states. The candidate is suitable for inclusion in the annotation dataset.",
+  "supersedes": null
+}

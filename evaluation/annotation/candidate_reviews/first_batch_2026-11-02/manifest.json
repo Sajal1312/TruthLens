@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "unsubmitted_human_review_batch",
+  "prepared_on": "2026-11-02",
+  "selection_basis": "Five routine-priority current-version candidates, ordered for a simple first review. No random-sample or independent benchmark claim.",
+  "inputs_sha256": {
+    "evaluation/annotation/candidate_reviews/automated_assistance/2026-11-01/assessments.json": "62099d4cab7047a2ffdcaacb96cdddb369b694efb583489d9a8ebf43a2135597",
+    "evaluation/annotation/candidate_reviews/automated_assistance/2026-11-02/followup.json": "3eeda77995ea54e5d4ec18467b3158875f605051e01cfaaa13acf34aa70ae969",
+    "evaluation/annotation/candidate_reviews/automated_assistance/2026-11-02/prepared/human_review_sheet.md": "cdf779080e9db9de2463bb67d84e245c7287315fd4158e58ee845313037091b6"
+  },
+  "candidates": [
+    {
+      "candidate_id": "candidate-p1-general-001",
+      "candidate_sha256": "402dd9ac4a7af5fb9580e9fb32027928d2135188ec9fb6354cae93e9fbdd91b1",
+      "selection_reason": "Short named-entity claim with two traceable institutional passages.",
+      "evidence_sha256": {
+        "candidate-p1-general-001-e01": "bc55e4d9f463afcb9ce9f156804bed59b488118858e81787dfe57456e1e16c5b",
+        "candidate-p1-general-001-e02": "5db6bba6c4735cbb77f2b3b74675178891bc238471431927392a8539cf3c1562"
+      },
+      "packet_files_sha256": {
+        "evaluation/annotation/candidate_reviews/drafts/candidate-p1-general-001/candidate.json": "32684079936ffea10ca025ce58137bb6272f64b92023f1a94fd95ddc237a8c4a",
+        "evaluation/annotation/candidate_reviews/drafts/candidate-p1-general-001/review.json": "c23faf8b9ccbf06cc6e1cd38a248151f80ffb0902aabec2eb26d4e4678a27286"
+      }
+    },
+    {
+      "candidate_id": "candidate-p1-general-002",
+      "candidate_sha256": "10f369652b165aedcee9fdf36e14990de9f864f7be77b0364117969938126474",
+      "selection_reason": "Single clear planetary comparison with an explicit source sentence.",
+      "evidence_sha256": {
+        "candidate-p1-general-002-e01": "e8a8fb67aa1432d87d67137e49c02a18ee4fb81545cb6228f07c33159bac57ad"
+      },
+      "packet_files_sha256": {
+        "evaluation/annotation/candidate_reviews/drafts/candidate-p1-general-002/candidate.json": "bb69593b54209a3a9e250403f6faea53111bceb5e8a88515409d098fa2996fef",
+        "evaluation/annotation/candidate_reviews/drafts/candidate-p1-general-002/review.json": "cfc7cd569da9c58bf0c385e190eb4b8fc1271f0d35554cfe0fd516e87db1fdde"
+      }
+    },
+    {
+      "candidate_id": "candidate-p1-general-003",
+      "candidate_sha256": "3421b49b145d268c64fd3a99615f183cb3aa526c0d8ea60702a10a4fa0f01317",
+      "selection_reason": "Specific historical software-release event stated by the institution involved.",
+      "evidence_sha256": {
+        "candidate-p1-general-003-e01": "9ad7446cba059ba6624cf24c6489656d27b05c0696cdd1edb8a97edf65bc8a32"
+      },
+      "packet_files_sha256": {
+        "evaluation/annotation/candidate_reviews/drafts/candidate-p1-general-003/candidate.json": "53a8ceae0f96f9a95d7a7c30cedf52b1e8e4d23ffceeec989c81b91a9822d246",
+        "evaluation/annotation/candidate_reviews/drafts/candidate-p1-general-003/review.json": "874b36f6e7abdaf14e6f1aea2ea541f28eaff6180496860bd456b7400c51e0c9"
+      }
+    },
+    {
+      "candidate_id": "candidate-p1-tech-002",
+      "candidate_sha256": "4ccf1d38c49032319639c866849b4c1624bac74ec8975782966a0c01d1f72234",
+      "selection_reason": "Version-scoped normative definition with a matching abstract sentence.",
+      "evidence_sha256": {
+        "candidate-p1-tech-002-e01": "d19e8a856c58ab76fadf9e3f027fce5ac1c33748d3d321cfcb487463c9e753c4"
+      },
+      "packet_files_sha256": {
+        "evaluation/annotation/candidate_reviews/drafts/candidate-p1-tech-002/candidate.json": "8d21c4f0b111b4626ffa4a2eebbbbd7d32f3449cee545ffeaac440ed9f56e569",
+        "evaluation/annotation/candidate_reviews/drafts/candidate-p1-tech-002/review.json": "664cda611d7648b4e1ae822778a5010d6f5d2e00b130c05e7198556bda2ae0a7"
+      }
+    },
+    {
+      "candidate_id": "candidate-p1-env-001",
+      "candidate_sha256": "cdd39ec6b8cf0d996aae898651e375cb9a82113469bd8ce5a8b29286e274a567",
+      "selection_reason": "Clearly attributed approximate fraction with a short matching source fragment.",
+      "evidence_sha256": {
+        "candidate-p1-env-001-e01": "f0cce8da6bbc2af34cee3b9e0719f9585e029e2b5950d2f0e3cb07f65f03db2d"
+      },
+      "packet_files_sha256": {
+        "evaluation/annotation/candidate_reviews/drafts/candidate-p1-env-001/candidate.json": "66ce3c309336a4e79b9d5b12ea13120f38d9b5ac709dac90721fdb09e631c419",
+        "evaluation/annotation/candidate_reviews/drafts/candidate-p1-env-001/review.json": "36cb2140cd559639dc5cc5dddcdfd7a68b2f03f580cca0d00fb5d4d58420e2e1"
+      }
+    }
+  ],
+  "document": {
+    "path": "evaluation/annotation/candidate_reviews/first_batch_2026-11-02/REVIEW_BATCH.md",
+    "sha256": "d835a6f79b98faadca0175f99185f9ed3ed6f722a33cc911f728d1b23433611a"
+  }
+}

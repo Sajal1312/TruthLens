@@ -1,0 +1,254 @@
+{
+  "collection_id": "truthlens-phase2-15-v1",
+  "collected_on": "2026-11-01",
+  "claim_count": 15,
+  "evidence_count": 16,
+  "topic_distribution": {
+    "cybersecurity_technology": 5,
+    "general_factual": 5,
+    "sustainability_environment": 5
+  },
+  "challenge_category_distribution": {
+    "compound_claim": 4,
+    "conflicting_evidence": 1,
+    "direct_negation": 0,
+    "double_negation": 2,
+    "event_vs_publication_date": 3,
+    "future_intent_vs_event": 2,
+    "insufficient_evidence": 3,
+    "numerical": 2,
+    "ordinary_control": 1,
+    "partial_negation": 6,
+    "quantifier_scope": 8
+  },
+  "evidence_count_per_claim": {
+    "candidate-p2-env-001": 1,
+    "candidate-p2-env-002": 1,
+    "candidate-p2-env-003": 2,
+    "candidate-p2-env-004": 1,
+    "candidate-p2-env-005": 1,
+    "candidate-p2-tech-001": 1,
+    "candidate-p2-tech-002": 1,
+    "candidate-p2-tech-003": 1,
+    "candidate-p2-tech-004": 1,
+    "candidate-p2-tech-005": 1,
+    "candidate-p2-general-001": 1,
+    "candidate-p2-general-002": 1,
+    "candidate-p2-general-003": 1,
+    "candidate-p2-general-004": 1,
+    "candidate-p2-general-005": 1
+  },
+  "metadata_completeness": {
+    "evidence_count": 16,
+    "missing_counts_by_field": {
+      "publication_date": 9
+    }
+  },
+  "duplicate_flags": [],
+  "provenance_flags": [],
+  "publisher_document_counts": {
+    "unep": 1,
+    "wmo": 1,
+    "springer-nature": 1,
+    "uk-met-office": 1,
+    "who": 1,
+    "us-epa": 1,
+    "us-ftc": 1,
+    "nist": 2,
+    "cwi": 1,
+    "first-org": 1,
+    "geoscience-australia": 1,
+    "university-of-oxford": 1,
+    "nasa": 2,
+    "nasa-goddard": 1
+  },
+  "publisher_evidence_counts": {
+    "unep": 1,
+    "wmo": 1,
+    "springer-nature": 1,
+    "uk-met-office": 1,
+    "who": 1,
+    "us-epa": 1,
+    "us-ftc": 1,
+    "nist": 2,
+    "cwi": 1,
+    "first-org": 1,
+    "geoscience-australia": 1,
+    "university-of-oxford": 1,
+    "nasa": 2,
+    "nasa-goddard": 1
+  },
+  "unique_source_url_count": 16,
+  "source_domain_counts": {
+    "www.unep.org": 1,
+    "wmo.int": 1,
+    "www.nature.com": 1,
+    "www.metoffice.gov.uk": 1,
+    "www.who.int": 1,
+    "www.epa.gov": 1,
+    "consumer.ftc.gov": 1,
+    "pages.nist.gov": 1,
+    "www.cwi.nl": 1,
+    "www.nist.gov": 1,
+    "www.first.org": 1,
+    "www.ga.gov.au": 1,
+    "oumnh.ox.ac.uk": 1,
+    "science.nasa.gov": 1,
+    "spaceplace.nasa.gov": 1,
+    "science.gsfc.nasa.gov": 1
+  },
+  "shared_source_references": {},
+  "shared_provenance_groups": {},
+  "collector_source_review": {
+    "method": "Opened-page excerpt checks recorded by collector; offline QC only verifies saved hashes and joins.",
+    "independent_human_review_completed": false,
+    "source_checks_with_recheck_date": 16
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p2-env-005 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p2-env-005-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p2-tech-001 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p2-tech-001-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p2-tech-002 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p2-tech-002-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p2-tech-005 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p2-tech-005-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p2-general-001 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p2-general-001-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p2-general-002 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p2-general-002-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p2-general-003 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p2-general-003-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p2-general-004 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p2-general-004-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "warning",
+      "code": "missing_metadata",
+      "message": "claim candidate-p2-general-005 evidence[0] is missing optional metadata: publication_date.",
+      "evidence_id": "candidate-p2-general-005-e01",
+      "field": "publication_date"
+    },
+    {
+      "severity": "informational",
+      "code": "metadata_completeness",
+      "message": "Metadata completeness summary for publication_date.",
+      "field": "publication_date",
+      "missing_count": 9,
+      "evidence_count": 16
+    },
+    {
+      "severity": "informational",
+      "code": "dates_checked_separately",
+      "message": "Publication dates and event dates are checked as separate fields; an event date is never inferred from a publication date."
+    },
+    {
+      "severity": "warning",
+      "code": "challenge_category_unrepresented",
+      "message": "No current claim is tagged with planned challenge category direct_negation.",
+      "category": "direct_negation"
+    },
+    {
+      "severity": "informational",
+      "code": "future_split_grouping",
+      "message": "For future development/diagnostic/final-test splits, keep claim-family, event, and documented provenance groups together; do not create a split in this audit."
+    }
+  ],
+  "finding_counts": {
+    "error": 0,
+    "warning": 10,
+    "informational": 3
+  },
+  "human_review_status": "pending_for_all_candidates",
+  "candidates_requiring_human_review": [
+    "candidate-p2-env-001",
+    "candidate-p2-env-002",
+    "candidate-p2-env-003",
+    "candidate-p2-env-004",
+    "candidate-p2-env-005",
+    "candidate-p2-general-001",
+    "candidate-p2-general-002",
+    "candidate-p2-general-003",
+    "candidate-p2-general-004",
+    "candidate-p2-general-005",
+    "candidate-p2-tech-001",
+    "candidate-p2-tech-002",
+    "candidate-p2-tech-003",
+    "candidate-p2-tech-004",
+    "candidate-p2-tech-005"
+  ],
+  "candidates_without_collector_located_passages": [],
+  "selection_limitations": [
+    "Purposive collector-authored candidates and scope/double-negation paraphrases from real sources; not a blind or representative sample of naturally occurring claims.",
+    "Challenge tags describe review tasks, not gold evidence relevance, stance or final verdict labels.",
+    "Some propositions are deliberately stronger than the source or address an open scientific question; they are not attributed as publisher assertions.",
+    "Most claims still have one short excerpt; provenance and sufficient context require human review.",
+    "Publication dates remain null when only updated, month-only or unrelated dates are available."
+  ],
+  "retrieval_failures": [
+    {
+      "url": "https://www.nature.com/articles/s41586-024-08544-0",
+      "outcome": "Full-page open failed with publisher cookie redirect; accessible study-team communication used instead."
+    },
+    {
+      "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/",
+      "outcome": "403; Oxford museum secondary source used, primary award record still needed."
+    },
+    {
+      "url": "https://blog.chromium.org/2023/05/an-update-on-lock-icon.html",
+      "outcome": "Google challenge redirect; FTC guidance used instead."
+    },
+    {
+      "url": "https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html",
+      "outcome": "Google challenge redirect; primary CWI announcement used instead."
+    },
+    {
+      "url": "https://www.bas.ac.uk/about/antarctica/geography/",
+      "outcome": "Robot verification page; Geoscience Australia source used instead."
+    },
+    {
+      "url": "https://www.cosmos.esa.int/web/gaia/release",
+      "outcome": "451; no additional Gaia excerpt admitted."
+    }
+  ],
+  "offline_check_limitation": "Schema, hashes and QC were checked offline; this command does not refetch pages or establish truth or human approval."
+}

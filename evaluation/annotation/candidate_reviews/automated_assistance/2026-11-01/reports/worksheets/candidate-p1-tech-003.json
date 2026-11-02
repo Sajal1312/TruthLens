@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-tech-003",
+  "candidate_sha256": "12a363dbcf1152c6ff234726ce1bf6e0535dbd20a1e87560477628804da46618",
+  "claim": "NIST announced its first three finalized post-quantum encryption standards on 13 August 2024.",
+  "human_review_priority": "medium",
+  "claim_clarity_assessment": "Announcement date and three-standard count are explicit.",
+  "claim_evidence_interpretation": "The announcement heading/date match. FIPS 203 supplies only one standard/date, not all three.",
+  "date_assessment": "candidate-p1-tech-003-e01: Released 2024-08-13; updated 2025-08-29. Announcement event is 2024-08-13. candidate-p1-tech-003-e02: Date Published 2024-08-13; later planning notes are not the publication date.",
+  "provenance_assessment": "Both passages are from NIST and the same release program, not independent corroboration.",
+  "research_concerns": [
+    "Heading/date assembly and partial second-passage coverage need acknowledgment; the three standards have different cryptographic roles."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-tech-003-e01",
+      "source_url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+      "access_status": "opened",
+      "excerpt_match": "structured_extract",
+      "observed_title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+      "observed_publisher": "NIST",
+      "source_role": "original institutional announcement",
+      "locator": "Article heading and date; Released/Updated footer",
+      "publication_date_status": "matched_existing_date",
+      "observed_publication_date": "2024-08-13",
+      "other_date_notes": "Released 2024-08-13; updated 2025-08-29. Announcement event is 2024-08-13.",
+      "context_notes": "The announcement heading/date match. FIPS 203 supplies only one standard/date, not all three."
+    },
+    {
+      "evidence_id": "candidate-p1-tech-003-e02",
+      "source_url": "https://csrc.nist.gov/pubs/fips/203/final",
+      "access_status": "opened",
+      "excerpt_match": "structured_extract",
+      "observed_title": "FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard",
+      "observed_publisher": "NIST CSRC",
+      "source_role": "primary standard catalog",
+      "locator": "FIPS 203 heading and Date Published",
+      "publication_date_status": "matched_existing_date",
+      "observed_publication_date": "2024-08-13",
+      "other_date_notes": "Date Published 2024-08-13; later planning notes are not the publication date.",
+      "context_notes": "The announcement heading/date match. FIPS 203 supplies only one standard/date, not all three."
+    }
+  ]
+}

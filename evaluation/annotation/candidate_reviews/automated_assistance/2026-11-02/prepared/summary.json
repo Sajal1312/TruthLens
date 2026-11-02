@@ -1,0 +1,27 @@
+{
+  "record_type": "automated_followup_summary",
+  "candidate_count": 30,
+  "previous_recommendations": {
+    "suitable for human approval": 21,
+    "needs revision": 7,
+    "insufficient evidence": 2
+  },
+  "followup_issue_counts": {
+    "unresolved": 4,
+    "authoritative_replacement_available": 1,
+    "resolved_context_gap": 4
+  },
+  "updated_preliminary_routes": {
+    "review_current_candidate": 21,
+    "versioned_context_or_source_revision_prepared": 5,
+    "hold_for_scope_or_evidence_review": 4
+  },
+  "source_checks": 41,
+  "source_access": {
+    "opened": 37,
+    "inaccessible": 4
+  },
+  "unknown_publication_dates_checked": 27,
+  "new_original_publication_days_established": 0,
+  "note": "Context remedies are proposals only; no candidate, review packet or pilot was changed. No human approval is inferred."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "automated_preliminary_assessment",
+  "automated_checked_on": "2026-11-01",
+  "method": "web_tool_rendered_source_inspection",
+  "candidate_id": "candidate-p1-tech-002",
+  "candidate_sha256": "4ccf1d38c49032319639c866849b4c1624bac74ec8975782966a0c01d1f72234",
+  "claim": "RFC 9110 defines HTTP as a stateless application-level protocol.",
+  "human_review_priority": "routine",
+  "claim_clarity_assessment": "Document-specific protocol definition is clear.",
+  "claim_evidence_interpretation": "The abstract contains the stateless application-level definition; application sessions are not denied.",
+  "date_assessment": "candidate-p1-tech-002-e01: Header gives June 2022 only; no publication day imputed.",
+  "provenance_assessment": "Single normative document.",
+  "research_concerns": [
+    "Avoid interpreting stateless protocol semantics as absence of all application state."
+  ],
+  "recommended_action": "suitable for human approval",
+  "recommendation_reason": "Excerpt fidelity and claim scope are traceable; a real reviewer must accept the stated date, context and provenance limitations before inclusion.",
+  "evidence_checks": [
+    {
+      "evidence_id": "candidate-p1-tech-002-e01",
+      "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "access_status": "opened",
+      "excerpt_match": "exact_fragment",
+      "observed_title": "RFC 9110: HTTP Semantics",
+      "observed_publisher": "IETF / RFC Editor",
+      "source_role": "normative protocol document",
+      "locator": "Abstract, first sentence",
+      "publication_date_status": "publication_day_not_established",
+      "observed_publication_date": null,
+      "other_date_notes": "Header gives June 2022 only; no publication day imputed.",
+      "context_notes": "The abstract contains the stateless application-level definition; application sessions are not denied."
+    }
+  ]
+}

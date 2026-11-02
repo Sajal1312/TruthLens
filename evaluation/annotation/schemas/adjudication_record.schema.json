@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:truthlens:schema:adjudication-record:v1",
+  "title": "TruthLens adjudication record",
+  "description": "Final labels after preserving independent annotations and resolving disagreements.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["claim_id", "adjudication_status", "adjudicator_id", "annotator_submission_manifests", "gold_verdict", "rationale", "evidence_labels", "notes"],
+  "properties": {
+    "claim_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"},
+    "adjudication_status": {"enum": ["pending", "adjudicated"]},
+    "adjudicator_id": {"type": ["string", "null"], "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,63}$"},
+    "annotator_submission_manifests": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["annotator_1", "annotator_2"],
+      "properties": {
+          "annotator_1": {"type": "string", "minLength": 1},
+          "annotator_2": {"type": "string", "minLength": 1}
+      }
+    },
+    "gold_verdict": {"enum": ["SUPPORTED", "CONTRADICTED", "INCONCLUSIVE", null]},
+    "rationale": {"type": "string"},
+    "evidence_labels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "gold_relevance", "gold_stance", "rationale"],
+        "properties": {
+          "evidence_id": {"type": "string", "minLength": 1},
+          "gold_relevance": {"enum": ["relevant", "weakly_related", "unrelated", null]},
+          "gold_stance": {"enum": ["SUPPORTS", "CONTRADICTS", "NOT ENOUGH INFORMATION", null]},
+          "rationale": {"type": "string"}
+        }
+      }
+    },
+    "notes": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"adjudication_status": {"const": "adjudicated"}}},
+      "then": {
+        "properties": {
+        "adjudicator_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,63}$"},
+          "gold_verdict": {"enum": ["SUPPORTED", "CONTRADICTED", "INCONCLUSIVE"]},
+          "rationale": {"minLength": 1},
+          "evidence_labels": {
+            "items": {
+              "properties": {
+                "gold_relevance": {"enum": ["relevant", "weakly_related", "unrelated"]},
+                "gold_stance": {"enum": ["SUPPORTS", "CONTRADICTS", "NOT ENOUGH INFORMATION"]}
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

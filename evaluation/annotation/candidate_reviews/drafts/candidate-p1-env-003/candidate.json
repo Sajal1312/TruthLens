@@ -1,0 +1,41 @@
+{
+  "claim_id": "candidate-p1-env-003",
+  "claim_text": "UNEP estimates that 19–23 million tonnes of plastic waste enter aquatic ecosystems each year.",
+  "claim_family_id": "family-p1-env-003",
+  "event_group_id": null,
+  "claim_category": [
+    "numerical"
+  ],
+  "split": "pilot",
+  "annotation_status": "unannotated",
+  "evidence": [
+    {
+      "evidence_id": "candidate-p1-env-003-e01",
+      "passage": "Every year, 19-23 million tonnes of plastic waste leak into aquatic ecosystems, polluting lakes, rivers and seas.",
+      "source_title": "Plastic pollution & marine litter",
+      "source_identifier": "https://www.unep.org/en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter",
+      "source_url": "https://www.unep.org/en/what-we-do/ocean-seas-and-coasts/ecosystem-degradation-pollution/plastic-pollution-marine-litter",
+      "publisher_id": "unep",
+      "publication_date": null,
+      "event_date": null,
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-p1-env-003",
+      "provenance_relation": "unknown",
+      "provenance_basis": "Official publisher-hosted document observed; underlying reporting-chain independence has not been established."
+    },
+    {
+      "evidence_id": "candidate-p1-env-003-e02",
+      "passage": "We estimate that 19 to 23 million metric tons, or 11%, of plastic waste generated globally in 2016 entered aquatic ecosystems.",
+      "source_title": "Predicted growth in plastic waste exceeds efforts to mitigate plastic pollution",
+      "source_identifier": "https://pubmed.ncbi.nlm.nih.gov/32943526/",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/32943526/",
+      "publisher_id": "aaas-science",
+      "publication_date": "2020-09-17",
+      "event_date": null,
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-p1-env-003",
+      "provenance_relation": "related_suspected",
+      "provenance_basis": "Documented common topic or institutional program; shared underlying origin may exist and independence is not verified."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "record_type": "automated_preliminary_summary",
+  "candidate_count": 30,
+  "evidence_count": 38,
+  "distinct_source_urls": 37,
+  "distinct_sources_opened": 36,
+  "inaccessible_source_urls": [
+    "https://www.bipm.org/en/measurement-units/si-defining-constants"
+  ],
+  "passages_located": 37,
+  "excerpt_status_counts": {
+    "format_normalized": 4,
+    "exact_fragment": 29,
+    "structured_extract": 4,
+    "incomplete": 1
+  },
+  "candidates_with_inaccessible_sources": [
+    "candidate-p1-general-004"
+  ],
+  "missing_candidate_publication_dates": 27,
+  "publication_status_counts": {
+    "publication_day_not_established": 26,
+    "matched_existing_date": 11,
+    "incomplete": 1
+  },
+  "recommendation_counts": {
+    "suitable for human approval": 21,
+    "needs revision": 7,
+    "insufficient evidence": 2
+  },
+  "human_approval_status": "Not established by this report; all recommendations require a real reviewer."
+}

@@ -1,0 +1,13 @@
+{
+  "purpose": "Collection file identity only; no human approval or digital signature implied",
+  "revision": "phase2-collection-v1",
+  "checked_on": "2026-11-01",
+  "files_sha256": {
+    "phase1_15/claim_records.json": "0728cde42c5b5368a2f5c538fd31334705dde4538f579d952e355fce36d65cee",
+    "phase1_15/collection_manifest.json": "0fda781b3582380ba86113a3f40bd058020dfc36799a32a4f51b66d634ac70ac",
+    "phase2_15/claim_records.json": "b200359545ebdc1d5ff03334ccb632d4b364fb71e202c4c9ec79efb2a8cdd35a",
+    "phase2_15/collection_manifest.json": "37bbe4cef95d4abfd956ec96747644bb6a14a1dd27fcae1a54835803798437e3"
+  },
+  "original_phase1_claims_and_excerpts_retained": true,
+  "pilot_import_performed": false
+}

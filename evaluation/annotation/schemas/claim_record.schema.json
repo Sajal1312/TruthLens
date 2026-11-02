@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:truthlens:schema:claim-record:v1",
+  "title": "TruthLens claim and evidence record",
+  "description": "Unlabeled source material for annotation. This schema contains no gold labels.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["claim_id", "claim_text", "claim_family_id", "event_group_id", "claim_category", "split", "annotation_status", "evidence"],
+  "properties": {
+    "claim_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"},
+    "claim_text": {"type": "string", "minLength": 1},
+    "claim_family_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$", "description": "Shared ID for paraphrases or near-duplicate claims; keep a family in one split."},
+    "event_group_id": {"type": ["string", "null"], "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$", "description": "Shared event/topic ID for leakage control, when applicable."},
+    "claim_category": {
+      "type": "array",
+      "items": {"enum": ["quantifier_scope", "negation", "direct_negation", "double_negation", "partial_negation", "numerical", "temporal", "event_vs_publication_date", "future_intent", "future_intent_vs_event", "compound", "compound_claim", "conflicting_evidence", "insufficient_evidence", "ordinary_control", "other"]},
+      "uniqueItems": true
+    },
+    "split": {"enum": ["pilot", "development", "diagnostics", "final_test"]},
+    "annotation_status": {"enum": ["unannotated", "in_progress", "double_annotated", "adjudicated"]},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "passage", "source_title", "source_identifier", "source_url", "publisher_id", "publication_date", "event_date", "checked_on", "provenance_group_id", "provenance_relation", "provenance_basis"],
+        "properties": {
+          "evidence_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"},
+          "passage": {"type": "string"},
+          "source_title": {"type": ["string", "null"]},
+          "source_identifier": {"type": ["string", "null"]},
+          "source_url": {"type": ["string", "null"], "format": "uri", "pattern": "^https://"},
+          "publisher_id": {"type": ["string", "null"], "description": "Use a declared source/publisher identity; do not infer independence from a domain."},
+          "publication_date": {"type": ["string", "null"], "description": "Date as provided by the source; do not infer if absent."},
+          "event_date": {"type": ["string", "null"], "description": "Event date only when explicitly stated in the evidence."},
+          "checked_on": {"type": ["string", "null"], "description": "Date the annotator or collector checked the source passage."},
+          "provenance_group_id": {"type": ["string", "null"], "description": "Shared source/reporting-chain ID only when supported by observed metadata or documented investigation."},
+          "provenance_relation": {"enum": ["same_origin", "syndicated", "independent_verified", "related_suspected", "unknown"]},
+          "provenance_basis": {"type": "string", "description": "Observed metadata or reason for the relationship label; use unknown when not established."}
+        }
+      }
+    }
+  }
+}

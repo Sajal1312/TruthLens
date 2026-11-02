@@ -1,0 +1,28 @@
+{
+  "claim_id": "candidate-p2-tech-003",
+  "claim_text": "It is not the case that no practical SHA-1 collision has ever been demonstrated.",
+  "claim_family_id": "family-p2-tech-003",
+  "event_group_id": null,
+  "claim_category": [
+    "double_negation",
+    "event_vs_publication_date"
+  ],
+  "split": "pilot",
+  "annotation_status": "unannotated",
+  "evidence": [
+    {
+      "evidence_id": "candidate-p2-tech-003-e01",
+      "passage": "They now successfully broke the industry standard SHA-1 using a so-called collision attack.",
+      "source_title": "CWI and Google announce first collision for Industry Security Standard SHA-1",
+      "source_identifier": "https://www.cwi.nl/en/news/cwi-and-google-announce-first-collision-for-industry-security-standard-sha-1/",
+      "source_url": "https://www.cwi.nl/en/news/cwi-and-google-announce-first-collision-for-industry-security-standard-sha-1/",
+      "publisher_id": "cwi",
+      "publication_date": "2017-02-27",
+      "event_date": "2017-02-23",
+      "checked_on": "2026-11-01",
+      "provenance_group_id": "source-candidate-p2-tech-003",
+      "provenance_relation": "unknown",
+      "provenance_basis": "Publisher-hosted document located; source independence has not been established."
+    }
+  ]
+}

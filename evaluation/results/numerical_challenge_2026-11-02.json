@@ -1,0 +1,2592 @@
+{
+  "scope": "Preliminary developer-authored synthetic diagnostics, not independent benchmark results or factual verification",
+  "network_used": false,
+  "model_used": false,
+  "case_count": 36,
+  "evidence_count": 36,
+  "comparison_count": 38,
+  "reference_date": "2026-11-02",
+  "comparison_metrics": {
+    "count": 38,
+    "labels": [
+      "compatible",
+      "potential_mismatch",
+      "comparison_unresolved"
+    ],
+    "confusion_matrix": {
+      "compatible": {
+        "compatible": 11,
+        "potential_mismatch": 0,
+        "comparison_unresolved": 2
+      },
+      "potential_mismatch": {
+        "compatible": 0,
+        "potential_mismatch": 8,
+        "comparison_unresolved": 2
+      },
+      "comparison_unresolved": {
+        "compatible": 0,
+        "potential_mismatch": 0,
+        "comparison_unresolved": 15
+      }
+    },
+    "per_class": {
+      "compatible": {
+        "support": 13,
+        "precision": 1.0,
+        "recall": 0.8461538461538461,
+        "f1": 0.9166666666666666
+      },
+      "potential_mismatch": {
+        "support": 10,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889
+      },
+      "comparison_unresolved": {
+        "support": 15,
+        "precision": 0.7894736842105263,
+        "recall": 1.0,
+        "f1": 0.8823529411764706
+      }
+    },
+    "macro_f1": 0.8959694989106755,
+    "macro_f1_class_count": 3,
+    "macro_f1_labels": [
+      "compatible",
+      "potential_mismatch",
+      "comparison_unresolved"
+    ],
+    "accuracy": 0.8947368421052632
+  },
+  "quantity_extraction": {
+    "scope": "Exact quantity text/occurrence counts on claims and evidence separately; interval correctness is tested separately",
+    "tp": 68,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.9855072463768116,
+    "f1": 0.9927007299270073
+  },
+  "false_positive_mismatch_rate": {
+    "false_flags": 0,
+    "gold_non_mismatches": 28,
+    "rate": 0.0
+  },
+  "resolved_coverage": 0.5,
+  "unresolved_count": 19,
+  "unresolved_rate": 0.5,
+  "resolved_only_accuracy": 1.0,
+  "cases": [
+    {
+      "id": "n01",
+      "category": "matching_integers",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "compatible"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10",
+          "start": 12,
+          "end": 14,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "10",
+          "start": 12,
+          "end": 14,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n02",
+      "category": "percentage_difference_same_context",
+      "expected_statuses": [
+        "potential_mismatch"
+      ],
+      "actual_statuses": [
+        "potential_mismatch"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "30%",
+          "start": 29,
+          "end": 32,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "30",
+          "upper": "30",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0",
+          "context_frame": "class a pass rate in 2025 is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [
+        {
+          "raw": "2025",
+          "status": "resolved",
+          "precision": "year",
+          "start_date": "2025-01-01",
+          "end_date": "2025-12-31",
+          "text": "2025",
+          "start": 21,
+          "end": 25,
+          "kind": "explicit",
+          "role": "date_mention"
+        }
+      ],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "3%",
+          "start": 29,
+          "end": 31,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "3",
+          "upper": "3",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0",
+          "context_frame": "class a pass rate in 2025 is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "potential_mismatch",
+          "reason": "Normalized intervals are disjoint under a matching wording frame; review context before interpreting this as disagreement",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n03",
+      "category": "equivalent_length_units",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "compatible"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "1000 meters",
+          "start": 21,
+          "end": 32,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "1000",
+          "upper": "1000",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "meters",
+          "tolerance": "0",
+          "context_frame": "the bridge length is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "1 kilometer",
+          "start": 21,
+          "end": 32,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "1000",
+          "upper": "1000",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "kilometer",
+          "tolerance": "0",
+          "context_frame": "the bridge length is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n04",
+      "category": "incompatible_units",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "20 kilograms",
+          "start": 20,
+          "end": 32,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "20",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kilograms",
+          "tolerance": "0",
+          "context_frame": "sensor a reading is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "20 kilometers",
+          "start": 20,
+          "end": 33,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "20000",
+          "upper": "20000",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "kilometers",
+          "tolerance": "0",
+          "context_frame": "sensor a reading is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "comparison_unresolved",
+          "reason": "Incompatible measurement units/concepts; percentages and percentage points require a baseline, not direct equality",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n05",
+      "category": "approximate_overlap",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "compatible"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "about 30%",
+          "start": 29,
+          "end": 38,
+          "status": "resolved",
+          "reason": "",
+          "approximate": true,
+          "comparator": "eq",
+          "lower": "29.4",
+          "upper": "30.6",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0.6",
+          "context_frame": "class a pass rate in 2025 is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [
+        {
+          "raw": "2025",
+          "status": "resolved",
+          "precision": "year",
+          "start_date": "2025-01-01",
+          "end_date": "2025-12-31",
+          "text": "2025",
+          "start": 21,
+          "end": 25,
+          "kind": "explicit",
+          "role": "date_mention"
+        }
+      ],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "29.8%",
+          "start": 29,
+          "end": 34,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "29.8",
+          "upper": "29.8",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0",
+          "context_frame": "class a pass rate in 2025 is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n06",
+      "category": "approximate_disjoint",
+      "expected_statuses": [
+        "potential_mismatch"
+      ],
+      "actual_statuses": [
+        "potential_mismatch"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "roughly 30%",
+          "start": 29,
+          "end": 40,
+          "status": "resolved",
+          "reason": "",
+          "approximate": true,
+          "comparator": "eq",
+          "lower": "29.4",
+          "upper": "30.6",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0.6",
+          "context_frame": "class a pass rate in 2025 is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [
+        {
+          "raw": "2025",
+          "status": "resolved",
+          "precision": "year",
+          "start_date": "2025-01-01",
+          "end_date": "2025-12-31",
+          "text": "2025",
+          "start": 21,
+          "end": 25,
+          "kind": "explicit",
+          "role": "date_mention"
+        }
+      ],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "3%",
+          "start": 29,
+          "end": 31,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "3",
+          "upper": "3",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0",
+          "context_frame": "class a pass rate in 2025 is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "potential_mismatch",
+          "reason": "Normalized intervals are disjoint under a matching wording frame; review context before interpreting this as disagreement",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n07",
+      "category": "overlapping_ranges",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "compatible"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10 to 20 meters",
+          "start": 20,
+          "end": 35,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "range",
+          "lower": "10",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "meters",
+          "tolerance": "0",
+          "context_frame": "sensor a reading is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "15 to 25 meters",
+          "start": 20,
+          "end": 35,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "range",
+          "lower": "15",
+          "upper": "25",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "meters",
+          "tolerance": "0",
+          "context_frame": "sensor a reading is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n08",
+      "category": "disjoint_ranges",
+      "expected_statuses": [
+        "potential_mismatch"
+      ],
+      "actual_statuses": [
+        "potential_mismatch"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "between 10 and 20 meters",
+          "start": 20,
+          "end": 44,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "range",
+          "lower": "10",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "meters",
+          "tolerance": "0",
+          "context_frame": "sensor a reading is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "between 30 and 40 meters",
+          "start": 20,
+          "end": 44,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "range",
+          "lower": "30",
+          "upper": "40",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "meters",
+          "tolerance": "0",
+          "context_frame": "sensor a reading is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "potential_mismatch",
+          "reason": "Normalized intervals are disjoint under a matching wording frame; review context before interpreting this as disagreement",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n09",
+      "category": "percentage_vs_percentage_points",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "30%",
+          "start": 27,
+          "end": 30,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "30",
+          "upper": "30",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0",
+          "context_frame": "class a score increased by numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "30 percentage points",
+          "start": 27,
+          "end": 47,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "30",
+          "upper": "30",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "percentage points",
+          "dimension": "percentage_point",
+          "original_unit": "percentage points",
+          "tolerance": "0",
+          "context_frame": "class a score increased by numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "comparison_unresolved",
+          "reason": "Incompatible measurement units/concepts; percentages and percentage points require a baseline, not direct equality",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n10",
+      "category": "all_vs_some",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [],
+      "claim_dates": [],
+      "claim_quantifiers": [
+        {
+          "text": "All",
+          "start": 0,
+          "end": 3,
+          "kind": "universal",
+          "negated": false
+        }
+      ],
+      "evidence_quantities": [],
+      "comparisons": [
+        {
+          "claim_quantity": null,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "Quantifier wording alone is not a numeric contradiction or proof; scope needs semantic review"
+        }
+      ],
+      "quantifier_warnings": [
+        "Some alone neither establishes nor disproves all; population, scope and possible counterexamples remain unresolved",
+        "Quantifier cues reused from the existing experimental guard; logical scope and population identity are not solved and the guard is not enabled"
+      ]
+    },
+    {
+      "id": "n11",
+      "category": "none_vs_some",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [],
+      "claim_dates": [],
+      "claim_quantifiers": [
+        {
+          "text": "No",
+          "start": 0,
+          "end": 2,
+          "kind": "negative_quantifier",
+          "negated": false
+        }
+      ],
+      "evidence_quantities": [],
+      "comparisons": [
+        {
+          "claim_quantity": null,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "Quantifier wording alone is not a numeric contradiction or proof; scope needs semantic review"
+        }
+      ],
+      "quantifier_warnings": [
+        "None/no versus some uses different scopes; review population identity and negation before drawing a direction",
+        "Quantifier cues reused from the existing experimental guard; logical scope and population identity are not solved and the guard is not enabled"
+      ]
+    },
+    {
+      "id": "n12",
+      "category": "dates_not_quantities",
+      "expected_statuses": [],
+      "actual_statuses": [],
+      "missing_comparison_mapped_to_abstention": [],
+      "claim_quantities": [],
+      "claim_dates": [
+        {
+          "raw": "2020",
+          "status": "resolved",
+          "precision": "year",
+          "start_date": "2020-01-01",
+          "end_date": "2020-12-31",
+          "text": "2020",
+          "start": 18,
+          "end": 22,
+          "kind": "explicit",
+          "role": "date_mention"
+        }
+      ],
+      "claim_quantifiers": [],
+      "evidence_quantities": [],
+      "comparisons": [],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n13",
+      "category": "year_shaped_count",
+      "expected_statuses": [
+        "potential_mismatch"
+      ],
+      "actual_statuses": [
+        "potential_mismatch"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "2020",
+          "start": 19,
+          "end": 23,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "2020",
+          "upper": "2020",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "the array contains numtarget samples",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "2021",
+          "start": 19,
+          "end": 23,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "2021",
+          "upper": "2021",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "the array contains numtarget samples",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "potential_mismatch",
+          "reason": "Normalized intervals are disjoint under a matching wording frame; review context before interpreting this as disagreement",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n14",
+      "category": "different_temperatures",
+      "expected_statuses": [
+        "potential_mismatch"
+      ],
+      "actual_statuses": [
+        "potential_mismatch"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "20°C",
+          "start": 24,
+          "end": 28,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "20",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "°C",
+          "dimension": "temperature",
+          "original_unit": "°C",
+          "tolerance": "0",
+          "context_frame": "sensor a temperature is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "20°F",
+          "start": 24,
+          "end": 28,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "-6.66666666666666666666666667",
+          "upper": "-6.66666666666666666666666667",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "°C",
+          "dimension": "temperature",
+          "original_unit": "°F",
+          "tolerance": "0",
+          "context_frame": "sensor a temperature is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "potential_mismatch",
+          "reason": "Normalized intervals are disjoint under a matching wording frame; review context before interpreting this as disagreement",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n15",
+      "category": "equivalent_temperatures",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "compatible"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "20°C",
+          "start": 24,
+          "end": 28,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "20",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "°C",
+          "dimension": "temperature",
+          "original_unit": "°C",
+          "tolerance": "0",
+          "context_frame": "sensor a temperature is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "68°F",
+          "start": 24,
+          "end": 28,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "20",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "°C",
+          "dimension": "temperature",
+          "original_unit": "°F",
+          "tolerance": "0",
+          "context_frame": "sensor a temperature is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n16",
+      "category": "strict_comparator_boundary",
+      "expected_statuses": [
+        "potential_mismatch"
+      ],
+      "actual_statuses": [
+        "potential_mismatch"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "more than 10",
+          "start": 12,
+          "end": 24,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "gt",
+          "lower": "10",
+          "upper": null,
+          "lower_inclusive": false,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "exactly 10",
+          "start": 12,
+          "end": 22,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "potential_mismatch",
+          "reason": "Normalized intervals are disjoint under a matching wording frame; review context before interpreting this as disagreement",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n17",
+      "category": "inclusive_comparator_boundary",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "compatible"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "at least 10",
+          "start": 12,
+          "end": 23,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "ge",
+          "lower": "10",
+          "upper": null,
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [
+        {
+          "text": "at least",
+          "start": 12,
+          "end": 20,
+          "kind": "cardinal_comparator",
+          "negated": false
+        }
+      ],
+      "evidence_quantities": [
+        {
+          "text": "exactly 10",
+          "start": 12,
+          "end": 22,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n18",
+      "category": "upper_bound_violation",
+      "expected_statuses": [
+        "potential_mismatch"
+      ],
+      "actual_statuses": [
+        "potential_mismatch"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "at most 10",
+          "start": 12,
+          "end": 22,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "le",
+          "lower": null,
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [
+        {
+          "text": "at most",
+          "start": 12,
+          "end": 19,
+          "kind": "cardinal_comparator",
+          "negated": false
+        }
+      ],
+      "evidence_quantities": [
+        {
+          "text": "11",
+          "start": 12,
+          "end": 14,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "11",
+          "upper": "11",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "potential_mismatch",
+          "reason": "Normalized intervals are disjoint under a matching wording frame; review context before interpreting this as disagreement",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n19",
+      "category": "negative_decimal",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "compatible"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "-5.5°C",
+          "start": 24,
+          "end": 30,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "-5.5",
+          "upper": "-5.5",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "°C",
+          "dimension": "temperature",
+          "original_unit": "°C",
+          "tolerance": "0",
+          "context_frame": "sensor a temperature is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "-5.5°C",
+          "start": 24,
+          "end": 30,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "-5.5",
+          "upper": "-5.5",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "°C",
+          "dimension": "temperature",
+          "original_unit": "°C",
+          "tolerance": "0",
+          "context_frame": "sensor a temperature is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n20",
+      "category": "missing_evidence_quantity",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10",
+          "start": 12,
+          "end": 14,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [],
+      "comparisons": [
+        {
+          "claim_quantity": 0,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n21",
+      "category": "different_entities",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10",
+          "start": 12,
+          "end": 14,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "20",
+          "start": 12,
+          "end": 14,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "20",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class b has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "claim_quantity": 0,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n22",
+      "category": "different_properties",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10 kilograms",
+          "start": 17,
+          "end": 29,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kilograms",
+          "tolerance": "0",
+          "context_frame": "sample a mass is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "20 kilograms",
+          "start": 18,
+          "end": 30,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "20",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kilograms",
+          "tolerance": "0",
+          "context_frame": "sample a cargo is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "claim_quantity": 0,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n23",
+      "category": "different_time_periods",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10",
+          "start": 12,
+          "end": 14,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students in 2020",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [
+        {
+          "raw": "2020",
+          "status": "resolved",
+          "precision": "year",
+          "start_date": "2020-01-01",
+          "end_date": "2020-12-31",
+          "text": "2020",
+          "start": 27,
+          "end": 31,
+          "kind": "explicit",
+          "role": "date_mention"
+        }
+      ],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "20",
+          "start": 12,
+          "end": 14,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "20",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students in 2021",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "claim_quantity": 0,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n24",
+      "category": "different_percentage_populations",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "30%",
+          "start": 41,
+          "end": 44,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "30",
+          "upper": "30",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0",
+          "context_frame": "class a students have a response rate of numtarget in 2025",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [
+        {
+          "raw": "2025",
+          "status": "resolved",
+          "precision": "year",
+          "start_date": "2025-01-01",
+          "end_date": "2025-12-31",
+          "text": "2025",
+          "start": 48,
+          "end": 52,
+          "kind": "explicit",
+          "role": "date_mention"
+        }
+      ],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "3%",
+          "start": 41,
+          "end": 43,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "3",
+          "upper": "3",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0",
+          "context_frame": "class a teachers have a response rate of numtarget in 2025",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "claim_quantity": 0,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n25",
+      "category": "multiple_quantities_unit_equivalence",
+      "expected_statuses": [
+        "compatible",
+        "compatible"
+      ],
+      "actual_statuses": [
+        "compatible",
+        "compatible"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false,
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10m",
+          "start": 19,
+          "end": 22,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "m",
+          "tolerance": "0",
+          "context_frame": "sample a length is numtarget and sample a mass is othermass : 2 : 2",
+          "context_explicit": true,
+          "negated_context": false
+        },
+        {
+          "text": "2kg",
+          "start": 44,
+          "end": 47,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "2",
+          "upper": "2",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kg",
+          "tolerance": "0",
+          "context_frame": "sample a length is otherlength : 10 : 10 and sample a mass is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "0.01km",
+          "start": 19,
+          "end": 25,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "km",
+          "tolerance": "0",
+          "context_frame": "sample a length is numtarget and sample a mass is othermass : 2 : 2",
+          "context_explicit": true,
+          "negated_context": false
+        },
+        {
+          "text": "2000g",
+          "start": 47,
+          "end": 52,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "2",
+          "upper": "2",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "g",
+          "tolerance": "0",
+          "context_frame": "sample a length is otherlength : 10 : 10 and sample a mass is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        },
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 1,
+          "evidence_quantity": 1
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n26",
+      "category": "multiple_changed_values",
+      "expected_statuses": [
+        "potential_mismatch",
+        "potential_mismatch"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved",
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false,
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10m",
+          "start": 19,
+          "end": 22,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "m",
+          "tolerance": "0",
+          "context_frame": "sample a length is numtarget and sample a mass is othermass : 2 : 2",
+          "context_explicit": true,
+          "negated_context": false
+        },
+        {
+          "text": "2kg",
+          "start": 44,
+          "end": 47,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "2",
+          "upper": "2",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kg",
+          "tolerance": "0",
+          "context_frame": "sample a length is otherlength : 10 : 10 and sample a mass is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "12m",
+          "start": 19,
+          "end": 22,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "12",
+          "upper": "12",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "m",
+          "tolerance": "0",
+          "context_frame": "sample a length is numtarget and sample a mass is othermass : 3 : 3",
+          "context_explicit": true,
+          "negated_context": false
+        },
+        {
+          "text": "3kg",
+          "start": 44,
+          "end": 47,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "3",
+          "upper": "3",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kg",
+          "tolerance": "0",
+          "context_frame": "sample a length is otherlength : 12 : 12 and sample a mass is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "claim_quantity": 0,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        },
+        {
+          "claim_quantity": 1,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n27",
+      "category": "negated_measurement",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10 kilograms",
+          "start": 21,
+          "end": 33,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kilograms",
+          "tolerance": "0",
+          "context_frame": "sample a mass is not numtarget",
+          "context_explicit": true,
+          "negated_context": true
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "20 kilograms",
+          "start": 17,
+          "end": 29,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "20",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kilograms",
+          "tolerance": "0",
+          "context_frame": "sample a mass is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "claim_quantity": 0,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n28",
+      "category": "pronoun_context",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10 kilograms",
+          "start": 12,
+          "end": 24,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kilograms",
+          "tolerance": "0",
+          "context_frame": "its mass is numtarget",
+          "context_explicit": false,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "20 kilograms",
+          "start": 12,
+          "end": 24,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "20",
+          "upper": "20",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kilograms",
+          "tolerance": "0",
+          "context_frame": "its mass is numtarget",
+          "context_explicit": false,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "comparison_unresolved",
+          "reason": "Entity/property/population context is not explicit enough",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n29",
+      "category": "paraphrased_context",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "1000 meters",
+          "start": 26,
+          "end": 37,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "1000",
+          "upper": "1000",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "meters",
+          "tolerance": "0",
+          "context_frame": "the test bridge length is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "1 kilometer",
+          "start": 40,
+          "end": 51,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "1000",
+          "upper": "1000",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "kilometer",
+          "tolerance": "0",
+          "context_frame": "the measured span of the test bridge is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "claim_quantity": 0,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n30",
+      "category": "number_words",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10",
+          "start": 12,
+          "end": 14,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [],
+      "comparisons": [
+        {
+          "claim_quantity": 0,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n31",
+      "category": "ambiguous_decimal_locale",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "1,5kg",
+          "start": 17,
+          "end": 22,
+          "status": "unresolved",
+          "reason": "Ambiguous comma formatting",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": null,
+          "upper": null,
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "context_frame": "sample a mass is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "1.5kg",
+          "start": 17,
+          "end": 22,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "1.5",
+          "upper": "1.5",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "kg",
+          "dimension": "mass",
+          "original_unit": "kg",
+          "tolerance": "0",
+          "context_frame": "sample a mass is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "comparison_unresolved",
+          "reason": "Unsupported or ambiguous quantity representation",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n32",
+      "category": "current_measurement_unknown_event_time",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "10",
+          "start": 22,
+          "end": 24,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a currently has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [
+        {
+          "status": "resolved",
+          "precision": "day",
+          "start_date": "2026-11-02",
+          "end_date": "2026-11-02",
+          "note": "Anchored to supplied reference; calendar periods, Monday–Sunday weeks",
+          "text": "currently",
+          "start": 8,
+          "end": 17,
+          "kind": "relative",
+          "role": "date_mention"
+        }
+      ],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "10",
+          "start": 22,
+          "end": 24,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "10",
+          "upper": "10",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a currently has numtarget students",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "comparison_unresolved",
+          "reason": "Current-status measurement has no matching explicit source time anchor; publication/update dates are not event dates",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n33",
+      "category": "different_baselines",
+      "expected_statuses": [
+        "comparison_unresolved",
+        "potential_mismatch"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved",
+        "potential_mismatch"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false,
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "30%",
+          "start": 23,
+          "end": 26,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "30",
+          "upper": "30",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0",
+          "context_frame": "class a rate increased numtarget from othernumber : 100 : 100 samples",
+          "context_explicit": true,
+          "negated_context": false
+        },
+        {
+          "text": "100",
+          "start": 32,
+          "end": 35,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "100",
+          "upper": "100",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a rate increased otherpercentage : 30 : 30 from numtarget samples",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "30%",
+          "start": 23,
+          "end": 26,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "30",
+          "upper": "30",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "%",
+          "dimension": "percentage",
+          "original_unit": "%",
+          "tolerance": "0",
+          "context_frame": "class a rate increased numtarget from othernumber : 200 : 200 samples",
+          "context_explicit": true,
+          "negated_context": false
+        },
+        {
+          "text": "200",
+          "start": 32,
+          "end": 35,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "200",
+          "upper": "200",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "",
+          "dimension": "number",
+          "original_unit": "",
+          "tolerance": "0",
+          "context_frame": "class a rate increased otherpercentage : 30 : 30 from numtarget samples",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "claim_quantity": 0,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "No unique matching measurement context; missing quantities are not contradictions"
+        },
+        {
+          "status": "potential_mismatch",
+          "reason": "Normalized intervals are disjoint under a matching wording frame; review context before interpreting this as disagreement",
+          "claim_quantity": 1,
+          "evidence_quantity": 1
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n34",
+      "category": "partial_quantifier_negation",
+      "expected_statuses": [
+        "comparison_unresolved"
+      ],
+      "actual_statuses": [
+        "comparison_unresolved"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [],
+      "claim_dates": [],
+      "claim_quantifiers": [
+        {
+          "text": "all",
+          "start": 4,
+          "end": 7,
+          "kind": "negated_universal",
+          "negated": true
+        }
+      ],
+      "evidence_quantities": [],
+      "comparisons": [
+        {
+          "claim_quantity": null,
+          "evidence_quantity": null,
+          "status": "comparison_unresolved",
+          "reason": "Quantifier wording alone is not a numeric contradiction or proof; scope needs semantic review"
+        }
+      ],
+      "quantifier_warnings": [
+        "Quantifier cues reused from the existing experimental guard; logical scope and population identity are not solved and the guard is not enabled"
+      ]
+    },
+    {
+      "id": "n35",
+      "category": "mixed_unit_range",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "compatible"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "from 1km to 1500m",
+          "start": 21,
+          "end": 38,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "range",
+          "lower": "1000",
+          "upper": "1500",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "km",
+          "tolerance": "0",
+          "context_frame": "the bridge length is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "1.25km",
+          "start": 21,
+          "end": 27,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "1250",
+          "upper": "1250",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "m",
+          "dimension": "length",
+          "original_unit": "km",
+          "tolerance": "0",
+          "context_frame": "the bridge length is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    },
+    {
+      "id": "n36",
+      "category": "approximate_zero_temperature",
+      "expected_statuses": [
+        "compatible"
+      ],
+      "actual_statuses": [
+        "compatible"
+      ],
+      "missing_comparison_mapped_to_abstention": [
+        false
+      ],
+      "claim_quantities": [
+        {
+          "text": "approximately 0°C",
+          "start": 24,
+          "end": 41,
+          "status": "resolved",
+          "reason": "",
+          "approximate": true,
+          "comparator": "eq",
+          "lower": "-0.5",
+          "upper": "0.5",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "°C",
+          "dimension": "temperature",
+          "original_unit": "°C",
+          "tolerance": "0.5",
+          "context_frame": "sensor a temperature is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "claim_dates": [],
+      "claim_quantifiers": [],
+      "evidence_quantities": [
+        {
+          "text": "0.4°C",
+          "start": 24,
+          "end": 29,
+          "status": "resolved",
+          "reason": "",
+          "approximate": false,
+          "comparator": "eq",
+          "lower": "0.4",
+          "upper": "0.4",
+          "lower_inclusive": true,
+          "upper_inclusive": true,
+          "normalized_unit": "°C",
+          "dimension": "temperature",
+          "original_unit": "°C",
+          "tolerance": "0",
+          "context_frame": "sensor a temperature is numtarget",
+          "context_explicit": true,
+          "negated_context": false
+        }
+      ],
+      "comparisons": [
+        {
+          "status": "compatible",
+          "reason": "Intervals overlap under a matching explicit wording frame; compatibility does not establish the claim",
+          "claim_quantity": 0,
+          "evidence_quantity": 0
+        }
+      ],
+      "quantifier_warnings": []
+    }
+  ],
+  "limitations": "Small synthetic convenience sample authored alongside code. Context frames are deliberately conservative. No model truth/stance accuracy or independent human validation is measured. Undefined metrics are null; unresolved outcomes remain in full comparison metrics."
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "review-SajalG-p1-general-001-20261102T002800",
+  "candidate_id": "candidate-p1-general-001",
+  "candidate_sha256": "402dd9ac4a7af5fb9580e9fb32027928d2135188ec9fb6354cae93e9fbdd91b1",
+  "reviewer_alias": "SajalG",
+  "review_timestamp": "2026-11-02T00:28:00+05:30",
+  "source_verification_status": "verified",
+  "claim_scope_assessment": {
+    "status": "clear",
+    "rationale": "Reviewer describes the claim as clearly worded and independently understandable."
+  },
+  "evidence_context_assessment": {
+    "status": "adequate",
+    "rationale": "Reviewer confirmed both saved passages against the original webpages and considers the claim suitable for annotation."
+  },
+  "evidence_reviews": [
+    {
+      "evidence_id": "candidate-p1-general-001-e01",
+      "source_status": "verified",
+      "source_verification_basis": "SajalG explicitly confirmed the saved NASA passage against its original webpage in this conversation. review_timestamp records entry of the approval, not the time the webpage was accessed.",
+      "publication_date_status": "publication_date_unknown",
+      "verified_publication_date": null,
+      "date_rationale": "Reviewer identifies 5 November 2024 as last updated, not original publication; original publication day remains unknown.",
+      "provenance_assessment": "unknown",
+      "provenance_rationale": "Reviewer acknowledges traceable NASA/ESA sources while underlying observational independence is not established."
+    },
+    {
+      "evidence_id": "candidate-p1-general-001-e02",
+      "source_status": "verified",
+      "source_verification_basis": "SajalG explicitly confirmed the saved ESA passage against its original webpage in this conversation. review_timestamp records entry of the approval, not the time the webpage was accessed.",
+      "publication_date_status": "verified_publication_date",
+      "verified_publication_date": "2019-12-12",
+      "date_rationale": "Reviewer explicitly confirmed the ESA publication date as 12 December 2019.",
+      "provenance_assessment": "unknown",
+      "provenance_rationale": "Reviewer acknowledges traceable NASA/ESA sources while underlying observational independence is not established."
+    }
+  ],
+  "decision": "approved",
+  "review_rationale": "The claim is clearly worded, independently understandable, and supported by directly traceable passages from NASA and ESA. Both saved evidence passages were verified against their original webpages. ESA's publication date was confirmed as 12 December 2019. NASA's page displays a last-updated date of 5 November 2024, which should not be treated as its original publication date. The claim is suitable for inclusion in the annotation dataset.",
+  "supersedes": null
+}
